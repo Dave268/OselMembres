@@ -1,0 +1,20 @@
+<div class="row">
+    <div style="display: block; float: left;"><img src="http://www.membres.osel.be/img/logo_osel.png" width="300"></div>
+    <div style="margin-right:0px;">
+        <h1>Bienvenu à l'Osel</h1>
+        <h3>Bonjour {{ name }}</h3>
+        <p>Grâce à ce mail, tu vas pouvoir avoir accès à la « partie membres » du site internet de l'OSEL (pour rappel, le lien général pour pouvoir te connecter sur cette partie est <a href="http://membres.osel.be">membres.osel.be</a>). Voici tout d'abord ton nom d’utilisateur :</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12" style="margin-left:0;margin-right:0;padding-right:50px;padding-left:50px;">
+        <p>username: {{ user }} </p>
+        <p>Pour définir <b>ton propre mot de passe</b>, je t'invite à <a href="http://www.membres.osel.be{{ path('set_passwd', {'id': idUser , 'sha': sha}) }}">cliquer ici.</a></p>
+        <p>Si le lien ne fonctionne pas, copie le lien suivant et recopie le dans la barre d'url de ton navigateur web: http://www.membres.osel.be{{ path('set_passwd', {'id': idUser , 'sha': sha}) }}</p>
+		<p><strong>ATTENTION</strong> : tu n’as que 48h pour t’inscrire sur ce site, avant que le lien n’expire… Donc ne perds pas une seconde et ne résiste pas à l’envie de le découvrir !</p>
+        <p>Dans la « partie membres », tu pourras à la fois télécharger les partitions, t'inscrire aux week-ends et aux tournées, avoir accès aux photos des différents concerts, gérer tes dossiers personnels si tu fais partie du CA, et faire tant d’autres choses encore ! À ce propos, n’oublie pas que l’inscription aux week-ends est obligatoire… heureusement, ce n’est pas une obligation qui devrait te paraître trop pénible !</p>
+		<p>Une fois que tu t’es inscrit, et après avoir mis à jour ton profil de membre OSEL dans la section « Infos Personnelles », n’hésite pas à télécharger les partitions si tu ne l’as pas déjà fait... et bon amusement ! </p>
+        <p>A bientot</p>
+        <p class="text-left"> <em>- l'{{ userName }} -</em></p>
+    </div>
+</div>

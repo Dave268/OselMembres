@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osel Membres: récupération de mot de passe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/spacelab/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href="{{ asset('css/styles.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{{ asset('bundles/core/js/core.js') }}"></script>
+
+</head>
+
+<body>
+<div class="login-card">
+    <div class="page-header">
+        <h2 class="text-center">Mot de passe oublié?</h2></div><img class="img-responsive profile-img-card" src="../img/avatar_2x.png">
+    <p class="profile-name-card"> </p>
+        {{ form_start(form, {'attr': {'class': 'form-signin'}}) }}
+
+            <div class="form-group">
+                {{ form_label(form.username, "Username(prénom+nom):", {'label_attr': {'class': 'control-label'}}) }}
+                {{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.mail, "Adresse mail:", {'label_attr': {'class': 'control-label'}}) }}
+                {{ form_widget(form.mail, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+    {{ form_widget(form.Envoyer, {'attr': {'class': 'btn btn-primary btn-block btn-lg btn-signin'}}) }}
+
+
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+
+    <a href="{{ path('osel_core_home') }}" class="forgot-password">Login</a></div>
+
+<div style="position: absolute; top: 0; width: 100%; z-index: 999;" id="messages">
+    {% for message in app.session.flashbag.get('notice') %}
+        <div class="alert alert-success alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Notice: </strong>{{ message }}
+        </div>
+    {% endfor %}
+
+
+
+    <!-- on affiche les erreurs-->
+    {% for message in app.session.flashbag.get('ERROR') %}
+        <div class="alert alert-danger alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Notice: </strong>{{ message }}
+        </div>
+    {% endfor %}
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

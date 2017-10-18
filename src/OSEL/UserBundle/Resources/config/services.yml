@@ -1,0 +1,18 @@
+services:
+    OSEL_User.userform:
+        class: OSEL\UserBundle\Form\UserType
+        arguments: ['@security.authorization_checker']
+        tags:
+            - { name: form.type }
+
+    OSEL_User.registerMail:
+        class: OSEL\UserBundle\Mails\RegisterMail
+        arguments:
+            - "@mailer"
+            - "@templating"
+
+    OSEL_User.resetMail:
+            class: OSEL\UserBundle\Mails\ResetMail
+            arguments:
+                - "@mailer"
+                - "@templating"

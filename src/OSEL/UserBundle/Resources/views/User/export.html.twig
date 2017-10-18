@@ -1,0 +1,53 @@
+{# src/Osel/UserBundle/Resources/views/User/export.html.twig #}
+
+{% extends "OSELCoreBundle::layout.html.twig" %}
+
+{% block title %}
+    Page d'administration - Options d'export membres
+{% endblock %}
+
+{% block body %}
+	<fieldset id="acceuil">
+		<legend>Csv - Options</legend>
+		<table id="register">
+    	{{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+    	<tr>
+    		<td>{{ form_errors(form) }}</td>
+    	</tr>
+    	<tr>
+    		<td>{{ form_widget(form.ID) }}</td>
+    		<td>{{ form_label(form.ID, "ID") }}</td>
+
+    		<td>{{ form_widget(form.Email) }}</td>
+    		<td>{{ form_label(form.Email, "E-mail") }}</td>
+
+            <td>{{ form_widget(form.Instrument) }}</td>
+            <td>{{ form_label(form.Instrument, "Instruments") }}</td>
+
+    		<td>{{ form_widget(form.Adress) }}</td>
+    		<td>{{ form_label(form.Adress, "Adresse") }}</td>
+    	</tr>
+    	<tr>
+    		<td>{{ form_widget(form.Phone) }}</td>
+    		<td>{{ form_label(form.Phone, "Numéro de téléphone") }}</td>
+    		
+    		<td>{{ form_widget(form.Birthday) }}</td>
+    		<td>{{ form_label(form.Birthday, "Date d'anniversaire") }}</td>
+    		
+    		<td>{{ form_widget(form.Emergency) }}</td>
+    		<td>{{ form_label(form.Emergency, "Contact en cas d'urgence") }}</td>
+    		
+    	</tr>
+    	<tr>
+    		<td colspan = "2">{{ form_widget(form.Exporter, {'attr': {'class': 'btn btn-primary'}}) }}</td>
+    	</tr>
+    	{{ form_rest(form) }}
+    	{{ form_end(form) }}
+	</table>
+
+	</fieldset>
+	
+
+
+{% endblock %}

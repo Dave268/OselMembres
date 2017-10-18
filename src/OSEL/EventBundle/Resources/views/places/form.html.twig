@@ -1,0 +1,127 @@
+{# src/Osel/EventBundle/Resources/views/places/form.html.twig #}
+
+{% extends "OSELCoreBundle::layout.html.twig" %}
+
+{% block head %}
+    <script src="{{ asset('js/jquery.classyedit.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/jquery.classyedit.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ title }}</h3></div>
+                <div class="panel-body">
+                    {{ form_start(form, {'attr': {'class': 'form-horizontal custom-form', 'style': 'margin:15px;'}}) }}
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.title, "Nom du lieu: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.description, "Description: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.description, {'attr': {'class': 'form-control classy-editor1'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.email, "Adresse mail de contact: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.phone, "Numéro de téléphone de contact: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.phone, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.street, "rue: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.street, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.number, "numéro: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.number, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.postal, "Code postal: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.postal, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.city, "Ville: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.city, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.country, "Pays: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.country, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.file, "Photo du lieu: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.file, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.comment, "Notes: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.comment, {'attr': {'class': 'form-control classy-editor2'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="btn-group" role="group">
+                            {{ form_widget(form.save, {'attr': {'class': 'btn btn-success btn-sm submit-button'}}) }}
+                            <button class="btn btn-info btn-sm" type="reset" disabled="disabled">Reset </button>
+                        </div>
+                    </div>
+                    {{ form_rest(form) }}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        $(".classy-editor1").ClassyEdit();
+        $(".classy-editor2").ClassyEdit();
+    });
+    </script>
+
+{% endblock %}

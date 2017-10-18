@@ -1,0 +1,67 @@
+{# src/Osel/UserBundle/Resources/views/User/view.html.twig #}
+
+{% extends "OSELCoreBundle::layout.html.twig" %}
+
+{% block title %}
+    Weekend Osel: {{ weekend.title }}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ asset('css/Jumbotron-Advanced-Responsive-Tint.css') }}">
+
+
+{% endblock %}
+
+{% block body %}
+    <section class="bg-img-responsive" style="background-image:url('{{ asset(weekend.imgPath) }}');">
+        <div class="jumbotron" style="padding:0px;">
+            <div class="container tint">
+                <h1 style="text-align:center;"><strong>{{ weekend.title }}</strong></h1>
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2 col-sm-6 col-xs-12">
+                        <h4 style="text-align:right;"><strong>Début: </strong></h4>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-10">
+                        <h4 style="text-align:left;"><em>{{ weekend.dateStart|date("d/m/Y H:i")  }}</em></h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2 col-sm-6 col-xs-12">
+                        <h4 style="text-align:right;"><strong>Fin: </strong></h4>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-10">
+                        <h4 style="text-align:left;"><em>{{ weekend.dateEnd|date("d/m/Y H:i")  }}</em></h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2 col-sm-6 col-xs-12">
+                        <h4 style="text-align:right;"><strong>Lieu: </strong></h4>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-10">
+                        <h4 style="text-align:left;"><em>{{ weekend.place.title}}</em></h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2 col-sm-6 col-xs-12">
+                        <h4 style="text-align:right;"><strong>Adresse: </strong></h4>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-10">
+                        <h4 style="text-align:left;"><em>{{ weekend.place.street}} {{ weekend.place.number }}<br> {{ weekend.place.postal }} {{ weekend.place.city }} {{ weekend.place.country }}</em></h4>
+                    </div>
+                </div>
+
+                <h4 style="text-align:center;"><strong>Infos sur le lieu:</strong></h4>
+
+                <div style="text-align:center; color:black; font-size: medium"><em>{% autoescape %}{{ weekend.place.description|raw }}{% endautoescape %}</em></div><br><br>
+                <div style="text-align:center; color:black; font-size: medium">{% autoescape %}{{ weekend.infos|raw }}{% endautoescape %}</div><br><br>
+                <p class="text-center"><a class="btn btn-primary" role="button" onclick="window.location.href='{{ path('osel_event_add_inscription') }}'">Inscription</a></p>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}

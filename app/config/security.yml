@@ -1,0 +1,74 @@
+# app/config/security.yml
+
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        Osel\UserBundle\Entity\User: sha512
+
+    role_hierarchy:
+        ROLE_SUPER_ADMIN:   [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+        ROLE_ADMIN:         ROLE_WEBMASTER
+        ROLE_WEBMASTER:     ROLE_PRESIDENT
+        ROLE_PRESIDENT:     ROLE_TRESORIER
+        ROLE_TRESORIER:     ROLE_SECRETAIRE
+        ROLE_SECRETAIRE:    ROLE_SPONSOR
+        ROLE_SPONSOR:       ROLE_PUB
+        ROLE_PUB:           ROLE_PARTITION
+        ROLE_PARTITION:     ROLE_WEEKEND
+        ROLE_WEEKEND:       ROLE_ANIMATION
+        ROLE_ANIMATION:     ROLE_CA
+        ROLE_CA:            ROLE_USER
+
+    providers:
+        chain_provider:
+            chain:
+                providers: [in_memory, user_db]
+
+        user_db:
+            entity:
+                class: OSEL\UserBundle\Entity\User
+                property: username
+
+        in_memory:
+            memory:
+                users:
+                    admin: { password: Zg10gemgm;31 , roles: [ 'ROLE_ADMIN' ] }
+                    user: { password: Zg10gemgm;31 , roles: [ 'ROLE_USER' ] }
+                    secretaire: { password: Zg10gemgm;31 , roles: [ 'ROLE_SECRETAIRE' ] }
+
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main_login:
+            pattern:   ^/login$
+            anonymous: true
+
+        main_set_pass:
+            pattern: ^/setPass
+            anonymous: true
+            
+        main_reset_pass:
+            pattern: ^/resetPass
+            anonymous: true
+
+        main_reset:
+            pattern: ^/resetMail
+            anonymous: true
+
+        main:
+            pattern:   ^/
+            anonymous: false
+            provider:  chain_provider
+            form_login:
+                login_path: login
+                check_path: login_check
+            logout:
+                path:   logout
+                target: /
+
+    access_control:
+        - { path: ^/agenda, roles: ROLE_USER }
+        - { path: ^/Users, roles: ROLE_USER }
+        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }

@@ -1,0 +1,135 @@
+{# src/Osel/EventBundle/Resources/views/events/index.html.twig #}
+
+{% extends "OSELCoreBundle::layout.html.twig" %}
+
+{% block title %}
+    Liste des weekends
+{% endblock %}
+
+{% block head %}
+    <script src="{{ asset('bundles/user/js/actif.js') }}"></script>
+    <script src="{{ asset('js/delete.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>You are about to delete one track, this procedure is irreversible.</p>
+                    <p>Do you want to proceed?</p>
+                    <p class="debug-url"></p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-danger btn-ok">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Liste des weekends</h3></div>
+                <div class="panel-body">
+                    {% if is_granted('ROLE_SECRETAIRE') %}
+                        <!--
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3">
+                                <div class="btn-group" role="group" style="min-width:180px;">
+                                    <button class="btn btn-info btn-xs" type="button" style="width:90px;" onclick="window.open('{{ path('osel_user_csv_options') }}')">Export CSV</button>
+                                    <button class="btn btn-info btn-xs" type="button" style="width:110px;" onclick="window.open('{{ path('osel_user_export_contact') }}')">Export Contacts</button>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-3 col-sm-3">
+                                <select class="input-sm selectMembres" style="width:180px;min-width:180px;height:22px;padding-top:0px;padding-bottom:0px;">
+                                    -												<option value="{{ path('osel_user_index') }}" {% if not active %}selected=""{% endif %}>Tous le membres</option>
+                                    <option value="{{ path('osel_user_index', {'page': page , 'criteria': criteria, 'desc': desc, active: '1', }) }}" {% if active %}selected=""{% endif %}>Membres Actifs</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        </br>-->
+                    {% endif %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-condensed">
+                                    <thead style="font-size:12px;">
+                                    <tr>
+                                        <th><a href="{% if criteria == 'title' and desc == 0 %}{{ path('osel_event_list', {'page': page , 'criteria': 'title', 'desc': '1'}) }}{% else %}{{ path('osel_event_list', {'page': page , 'criteria': 'title', 'desc': '0'}) }}{% endif %}">Nom</a></th>
+                                        <th><a href="{% if criteria == 'dateStart' and desc == 0 %}{{ path('osel_event_list', {'page': page , 'criteria': 'dateStart', 'desc': '1'}) }}{% else %}{{ path('osel_event_list', {'page': page , 'criteria': 'dateStart', 'desc': '0'}) }}{% endif %}">Date Début</a></th>
+                                        <th><a href="{% if criteria == 'dateEnd' and desc == 0 %}{{ path('osel_event_list', {'page': page , 'criteria': 'dateEnd', 'desc': '1'}) }}{% else %}{{ path('osel_event_list', {'page': page , 'criteria': 'dateEnd', 'desc': '0'}) }}{% endif %}">Date Fin</a></th>
+                                        <th><a href="{% if criteria == 'lieu' and desc == 0 %}{{ path('osel_event_list', {'page': page , 'criteria': 'lieu', 'desc': '1'}) }}{% else %}{{ path('osel_event_list', {'page': page , 'criteria': 'lieu', 'desc': '0'}) }}{% endif %}">Lieu</a></th>
+                                        <th class="hidden-xs">action </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody style="font-size:10px;">
+
+                                    {% for event in listEvents%}
+
+                                        <tr>
+
+                                            <td>{% if event.active %}<strong>{{ event.title }}</strong>{% else %}{{ event.title }}{% endif %}</td>
+                                            <td>{% if event.active %}<strong>{{ event.dateStart|date("d/m/Y H:i") }}</strong>{% else %}{{ event.dateStart|date("d/m/Y H:i") }}{% endif %}</td>
+                                            <td>{% if event.active %}<strong>{{ event.dateEnd|date("d/m/Y H:i") }}</strong>{% else %}{{ event.dateEnd|date("d/m/Y H:i") }}{% endif %}</td>
+                                            <td><a href="{{ path('osel_event_view_place', {'id': event.place.id}) }}">{% if event.active %}<strong>{{ event.place.title }}</strong>{% else %}{{ event.place.title }}{% endif %}</a></td>
+
+                                                <td class="hidden-xs">
+                                                    <div class="btn-group" role="group" style="min-width:136px;">
+                                                        <button class="btn btn-info btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('osel_event_view', {'id': event.id}) }}'">voir</button>
+                                                        <button class="btn btn-warning btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('osel_event_list_inscription', {'id': event.id}) }}'">Inscriptions</button>
+                                                        <button class="btn btn-success btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('osel_event_modify', {'id': event.id}) }}'">Modifier </button>
+                                                        <button class="btn btn-danger btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;padding-top:0px;padding-bottom:0px;font-size:10px;"  data-href = "{{ path('osel_event_delete', {'id': event.id}) }}" data-toggle="modal" data-target="#confirm-delete" {% if not is_granted('ROLE_WEBMASTER') %}Disabled{% endif %}>Supprimer </button>
+                                                    </div>
+                                                </td>
+
+                                        </tr>
+                                    {% else %}
+                                        <tr>
+                                            <td colspan="8">Pas encore d'endroits de weekend!!!</td>
+                                        </tr>
+
+                                    {% endfor %}
+
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <td colspan="8">
+                                            <nav style="margin-top:-18px;margin-bottom:-24px;">
+                                                <ul class="pagination pagination-sm">
+                                                    <li><a aria-label="Previous" href="{{ path('osel_user_index', {'page': page - 1}) }}"><span aria-hidden="true">«</span></a></li>
+                                                    {% for p in range(1, nbPages) %}
+                                                        <li{% if p == page %} class="active"{% endif %}>
+                                                            <a href="{{ path('osel_user_index', {'page': p}) }}">{{ p }}</a>
+                                                        </li>
+                                                    {% endfor %}
+                                                    <li><a aria-label="Next" href="{{ path('osel_user_index', {'page': page + 1}) }}"><span aria-hidden="true">»</span></a></li>
+                                                </ul>
+
+                                            </nav>
+                                        </td>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

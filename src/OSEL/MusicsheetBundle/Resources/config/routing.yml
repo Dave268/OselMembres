@@ -1,0 +1,41 @@
+#src/Osel/MusicsheetBundle/Resources/config/routing.yml
+
+osel_musicsheet_get_composers:
+    path:     /Musicsheet/getComposers/{id}
+    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:getComposers, id: 0 }
+    options:
+        expose: true
+
+osel_musicsheet_get_composers_user:
+    path:     /Musicsheet/getComposersUser/{id}
+    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:getComposersUser, id: 0 }
+    options:
+        expose: true
+
+osel_musicsheet_get_musicsheets:
+    path:     /Musicsheet/getMusicsheets/{id}
+    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:getMusicsheets, id: 0 }
+    options:
+        expose: true
+
+osel_musicsheet_get_musicsheets_user:
+    path:     /Musicsheet/getMusicsheetsUser/{id}
+    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:getMusicsheetsUser, id: 0 }
+    options:
+        expose: true
+
+osel_musicsheet_get_parts:
+    path:     /Musicsheet/getParts/{id}
+    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:getParts, id: 0 }
+
+osel_musicsheet_get_parts_user:
+    path:     /Musicsheet/getPartsUser/{id}
+    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:getPartsUser, id: 0 }
+
+osel_musicsheet_download:
+    path:     /Musicsheet/download/{id}
+    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:download, id: 0 }
+
+osel_musicsheet_download_part:
+    path:     /Musicsheet/download/part/{id}
+    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:downloadPart, id: 0 }

@@ -1,0 +1,115 @@
+{# src/Osel/CoreBundle/Resources/views/Core/index.html.twig #}
+
+{% extends "OSELCoreBundle::layout.html.twig" %}
+
+{% block title %}
+    Infos_pratiques
+{% endblock %}
+
+{% block body %}
+
+	{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+		<div class="projects-horizontal">
+			<div class="container">
+				<div class="intro">
+					<h2 class="text-center" style="margin-bottom:0px;margin-top:0px;padding-top:20px;padding-bottom:20px;">Osel: Espace Membres</h2></div>
+				<div class="row projects">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-sm-6 item" style="padding-top:20px;">
+								<div class="row">
+									<div class="col-md-5">
+										<a href="#"><img class="img-responsive" src="assets/img/Copy of _DSC2579.jpg"></a>
+									</div>
+									<div class="col-md-7">
+										<h3 class="name">Portugal </h3>
+										<p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 item" style="padding-top:20px;">
+								<div class="row">
+									<div class="col-md-5">
+										<a href="#"><img class="img-responsive" src="assets/img/Copy of Copy of _DSC2518.jpg"></a>
+									</div>
+									<div class="col-md-7">
+										<h3 class="name">Le Grand Jean-Marc</h3>
+										<p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 item" style="padding-top:20px;">
+								<div class="row">
+									<div class="col-md-5">
+										<a href="#"><img class="img-responsive" src="assets/img/1075417_497810440300245_1781360168_o.jpg"></a>
+									</div>
+									<div class="col-md-7">
+										<h3 class="name">Lettonie </h3>
+										<p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 item" style="padding-top:20px;">
+								<div class="row">
+									<div class="col-md-5">
+										<a href="#"><img class="img-responsive" src="assets/img/Copy of _DSC2697.jpg"></a>
+									</div>
+									<div class="col-md-7">
+										<h3 class="name">Concert Osel</h3>
+										<p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 item" style="padding-top:20px;">
+								<div class="row">
+									<div class="col-md-5">
+										<a href="#"><img class="img-responsive" src="assets/img/1075417_497810440300245_1781360168_o.jpg"></a>
+									</div>
+									<div class="col-md-7">
+										<h3 class="name">Lettonie </h3>
+										<p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 item" style="padding-top:20px;">
+								<div class="row">
+									<div class="col-md-5">
+										<a href="#"><img class="img-responsive" src="assets/img/Copy of _DSC2697.jpg"></a>
+									</div>
+									<div class="col-md-7">
+										<h3 class="name">Concert Osel</h3>
+										<p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div>
+						<nav style="text-align:center;">
+							<ul class="pagination">
+								<li><a aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+								<li><a>1</a></li>
+								<li><a>2</a></li>
+								<li><a>3</a></li>
+								<li><a>4</a></li>
+								<li><a>5</a></li>
+								<li><a aria-label="Next"><span aria-hidden="true">»</span></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	{% endif %}
+
+
+{% endblock %}
+			

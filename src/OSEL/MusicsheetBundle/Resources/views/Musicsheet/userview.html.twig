@@ -1,0 +1,126 @@
+{# src/Osel/MusicsheetBundle/Resources/views/Musicsheet/index.html.twig #}
+
+{% extends "OSELCoreBundle::sublayout.html.twig" %}
+
+{% block title %}
+    Page d'administration - Liste Partitions - {{ parent() }}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="/web/bundles/musicsheets/css/style.css">
+    <script src="/web/bundles/musicsheets/js/modal.js"></script>
+    <script src="/Web/bundles/musicsheets/js/musicsheets_arb.js"></script>
+{% endblock %}
+
+
+{% block subbody %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default" >
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Partitions</h3></div>
+                    <div class="panel-body">
+                        <ol class="breadcrumb" style="padding-bottom:0px;" id="hierarchie">
+                            <!--<li class="globalButton" href="/web/app_dev.php/Musicsheet/getComposers"><a><span>Compositeurs</span></a></li>-->
+                        </ol>
+                        <div style="padding-bottom:14px;padding-top:0px;"><a href="#"><i class="material-icons hidden">arrow_upward</i></a></div>
+                        <ul class="list-group checked-list-box" id="output_list">
+                            {% for composer in composers%}
+                                <li class="list-group-item composerButton" href="{{ path('osel_musicsheet_get_musicsheets', {'id': composer.id}) }}"><span>{{ composer.composer }} </span><i class="glyphicon glyphicon-triangle-right" style="float:right;"></i></li>
+                            {% else %}
+                                <p>Pas encore de Compositeurs!!!</p>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default" id="output_form">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Ajouter des partitions</h3></div>
+                    <div class="panel-body">
+                        {{ form_start(musicsheetForm) }}
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                {{ form_label(musicsheetForm.title, "Titre du morceau:", {'label-attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-md-12">
+                                {{ form_widget(musicsheetForm.title, { 'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                {{ form_label(musicsheetForm.year, "Année du morceau:", {'label-attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-md-12">
+                                {{ form_widget(musicsheetForm.year, { 'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <div class="checkbox">
+                                    <label class="control-label">
+                                        {{ form_widget(musicsheetForm.actif) }}
+                                        Actif
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                {{ form_label(musicsheetForm.composer, "Compositeur du morceau:", {'label-attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-md-12">
+                                {{ form_widget(musicsheetForm.composer, { 'attr': {'class': 'form-control input-sm'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                {{ form_label(musicsheetForm.type, "Type du morceau:", {'label-attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-md-12">
+                                {{ form_widget(musicsheetForm.type, { 'attr': {'class': 'form-control input-sm'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {{ form_widget(musicsheetForm.uploadedFiles, { 'attr': {'class': 'hidden'}}) }}
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12" style="padding:0;padding-top:15px;padding-bottom:15px;padding-right:15px;padding-left:15px;">
+                                <div class="btn-group" role="group">
+                                    <button class="btn btn-primary btn-sm" type="button" style="width:80px;min-width:80px;max-width:120;" id="formFileLaunch">+ Fichiers</button>
+                                    <button class="btn btn-primary btn-sm" type="button" style="width:80px;font-size:12px;max-width:120px;min-width:70px;" id="formTypeLaunch">+ Type</button>
+                                    <button class="btn btn-primary btn-sm" type="button" style="width:100px;font-size:12px;max-width:120px;min-width:80px;" id="formInstrumentLaunch">+ Instrument</button>
+                                    <button class="btn btn-primary btn-sm" type="button" style="width:100px;min-width:100px;max-width:120;" id="formComposerLaunch">+ Compositeur</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12" style="padding:0px;padding-left:15px;padding-right:15px;padding-bottom:0px;" id="filesToUploadBlock">
+                                <div class="list-group" id="output_files" data-prototype="{{ form_widget(musicsheetForm.parts.vars.prototype)|e }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <div class="btn-group" role="group">
+                                    {{ form_widget(musicsheetForm.save, {'attr': {'class': 'btn btn-success btn-sm submit-button'}}) }}
+                                    <!--<button class="btn btn-success btn-sm" type="submit">Envoyer </button>-->
+                                    <button class="btn btn-info btn-sm" type="reset">Reset </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden">
+                            {{ form_rest(musicsheetForm) }}
+                        </div>
+                        <div id="countParts" data="0"></div>
+                        {{ form_end(musicsheetForm) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

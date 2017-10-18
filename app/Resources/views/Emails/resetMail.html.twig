@@ -1,0 +1,15 @@
+{# src/Osel/CoreBundle/Resources/views/layout.html.twig #}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+</head>
+
+<body>
+<h1>Bonjour {{ name }}</h1>
+<p>Vous avez oublié votre mot de passe?<p>
+<p>Pour définir un nouveau mot de passe <a href="http://www.membres.osel.be{{ path('reset_passwd', {'id': idUser , 'sha': sha}) }}">clique ici</a></p>
+</br>
+<p>A bientôt</p>
+<blockquote>{{ userName }}</blockquote>
+</body>
+</html>

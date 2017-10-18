@@ -1,0 +1,80 @@
+osel_news:
+    resource: "@OSELNewsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+osel_media:
+    resource: "@OSELMediaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+osel_event:
+    resource: "@OSELEventBundle/Resources/config/routing.yml"
+    prefix:   /event
+
+osel_info:
+    resource: "@OSELInfoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+osel_musicsheet:
+    resource: "@OSELMusicsheetBundle/Resources/config/routing.yml"
+    prefix:   /
+
+osel_core:
+    resource: "@OSELCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+login:
+    path:   /login
+    defaults:  { _controller: OSELUserBundle:Security:login }
+
+login_check:
+    path:   /login_check
+
+logout:
+    path:   /logout
+
+register:
+    path:   /register
+    defaults:  { _controller: OSELUserBundle:Security:register }
+
+osel_user_register_short:
+    path:   /register_short
+    defaults:  { _controller: OSELUserBundle:Security:registershort }
+
+    
+delete:
+    path:   /delete/{id}
+    defaults:  { _controller: OSELUserBundle:Security:delete, id: 0 }
+
+modify:
+    path:   /modify/{id}
+    defaults:  { _controller: OSELUserBundle:Security:modify, id: 0 }
+
+user_modify_complete:
+    path:   /modifyComplete/{id}
+    defaults:  { _controller: OSELUserBundle:Security:modifyComplete, id: 0 }
+
+set_passwd:
+    path: /setPass/{set}/{id}/{sha}
+    defaults: {_controller: OSELUserBundle:Security:setPass, set: 1 }
+
+reset_passwd:
+    path: /resetPass/{set}/{id}/{sha}
+    defaults: {_controller: OSELUserBundle:Security:setPass, set: 0 }
+
+send_reset_mail:
+    path: /resetMail
+    defaults: {_controller: OSELUserBundle:Security:sendResetMail}
+
+send_inscription_mail:
+    path: /inscriptionMail/{id}
+    defaults: {_controller: OSELUserBundle:Security:sendInscriptionMail, id: 0}
+
+construction:
+    path: /construction
+    defaults: {_controller: OSELCoreBundle:Core:construction}
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

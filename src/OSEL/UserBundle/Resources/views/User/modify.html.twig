@@ -1,0 +1,197 @@
+{# src/Osel/UserBundle/Resources/views/User/add.html.twig #}
+
+{% extends "OSELCoreBundle::layout.html.twig" %}
+
+{% block body %}
+  <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Modifier un membre</h3></div>
+                <div class="panel-body">
+					{{ form_start(form, {'attr': {'class': 'form-horizontal custom-form', 'style': 'margin:15px;'}}) }}
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+								{{ form_label(form.name, "Prénom: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+								{{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.lastname, "Nom: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.lastname, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.email, "Adresse mail: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+						<div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.phone, "Numéro de téléphone: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.phone, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+						<div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.mobilephone, "Numéro de gsm: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.mobilephone, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.birthday, "Date de naissance: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.birthday, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.groupes, "Groupes: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.groupes, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.instruments, "Joue de: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.instruments, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+						{% if is_granted('ROLE_WEBMASTER') %}
+							<div class="form-group">
+								<div class="col-sm-4 label-column">
+									{{ form_label(form.userRoles, "Roles: ", {'label_attr': {'class': 'control-label'}}) }}
+								</div>
+								<div class="col-sm-6 input-column">
+									{{ form_widget(form.userRoles, {'attr': {'class': 'form-control'}}) }}
+								</div>
+							</div>
+						{% endif %}
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.actif, "Membre actif?: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.actif) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.newsletter, "Recevoir la newsletter?: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.newsletter) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.profession, "Profession/Etudes: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.profession, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.street, "Rue: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.street, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.number, "Numéro: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.number, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.postal, "Code Postal: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.postal, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.city, "Commune: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.city, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.country, "Pays: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.country, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.emergencyname, "Prénom de contact en cas d'urgence: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.emergencyname, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.emergencylastname, "Nom de contact en cas d'urgence: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.emergencylastname, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.emergencyrelation, "La relation avec le contact d'urgence: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.emergencyrelation, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 label-column">
+                                {{ form_label(form.emergencyphone, "Numéro de contact en cas d'urgence: ", {'label_attr': {'class': 'control-label'}}) }}
+                            </div>
+                            <div class="col-sm-6 input-column">
+                                {{ form_widget(form.emergencyphone, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="btn-group" role="group">
+								{{ form_widget(form.save, {'attr': {'class': 'btn btn-success btn-sm submit-button'}}) }}
+                                <button class="btn btn-info btn-sm" type="reset" disabled="disabled">Reset </button>
+                            </div>
+                        </div>
+                    {{ form_rest(form) }}
+					{{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

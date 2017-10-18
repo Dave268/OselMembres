@@ -1,0 +1,181 @@
+<?php
+
+namespace OSEL\UserBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\Role\RoleInterface;
+
+/**
+ * Roles
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="OSEL\UserBundle\Entity\RolesRepository")
+ */
+class Roles implements RoleInterface
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="role", type="string", length=255)
+     */
+    private $role;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rank", type="integer")
+     */
+    private $rank;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="OSEL\UserBundle\Entity\User", mappedBy="userRoles")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $users;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="OSEL\DocumentBundle\Entity\Document", mappedBy="role")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $documents;
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set role
+     *
+     * @param string $role
+     * @return Roles
+     */
+    public function setRole($role)
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    /**
+     * Get role
+     *
+     * @see RoleInterface
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \OSEL\UserBundle\Entity\User $user
+     * @return Roles
+     */
+    public function setUser(\OSEL\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \OSEL\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->users = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add user
+     *
+     * @param \OSEL\UserBundle\Entity\User $user
+     *
+     * @return Roles
+     */
+    public function addUser(\OSEL\UserBundle\Entity\User $user)
+    {
+        $this->users[] = $user;
+
+        return $this;
+    }
+
+    /**
+     * Remove user
+     *
+     * @param \OSEL\UserBundle\Entity\User $user
+     */
+    public function removeUser(\OSEL\UserBundle\Entity\User $user)
+    {
+        $this->users->removeElement($user);
+    }
+
+    /**
+     * Get users
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUsers()
+    {
+        return $this->users;
+    }
+
+    /**
+     * Add document
+     *
+     * @param \OSEL\DocumentBundle\Entity\Document $document
+     *
+     * @return Roles
+     */
+    public function addDocument(\OSEL\DocumentBundle\Entity\Document $document)
+    {
+        $this->documents[] = $document;
+
+        return $this;
+    }
+
+    /**
+     * Remove document
+     *
+     * @param \OSEL\DocumentBundle\Entity\Document $document
+     */
+    public function removeDocument(\OSEL\DocumentBundle\Entity\Document $document)
+    {
+        $this->documents->removeElement($document);
+    }
+
+    /**
+     * Get documents
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDocuments()
+    {
+        return $this->documents;
+    }
+}

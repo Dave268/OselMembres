@@ -1,0 +1,7 @@
+services:
+    osel_document.year_listener:
+        class: OSEL\DocBundle\Listener\YearListener
+        arguments:
+          - "@doctrine"
+        tags:
+          - { name: kernel.event_listener, event: osel_document.gestion_doc, method: checkYear }

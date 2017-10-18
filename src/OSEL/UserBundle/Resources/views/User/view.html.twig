@@ -1,0 +1,94 @@
+{# src/Osel/UserBundle/Resources/views/User/view.html.twig #}
+
+{% extends "OSELCoreBundle::layout.html.twig" %}
+
+{% block title %}
+    Page d'administration - {{ user.lastname }} {{ user.name}} - {{ parent() }}
+{% endblock %}
+
+{% block head %}
+	<link rel="stylesheet" href="{{ asset('css/Profile-Edit1.css') }}">
+
+
+{% endblock %}
+
+{% block body %}
+	<div class="container profile profile-view" id="profile">
+		<form>
+			<div class="row profile-row">
+				<div class="col-md-4 relative">
+					<div class="avatar">
+						<div class="avatar-bg center"></div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<h1>{{ user.lastname }} {{ user.name}}</h1>
+					<hr>
+					<div class="row">
+						<div class="col-md-6"><strong>Adresse mail:</strong></div>
+						<div class="col-md-6"><span>{{ user.email }}</span></div>
+					</div>
+					<div class="row">
+						<div class="col-md-6"><strong>Numéro de téléphone:</strong></div>
+						<div class="col-md-6"><span>{{ user.phone }}</span></br><span>{{ user.mobilephone }}</span></div>
+					</div>
+					<div class="row">
+						<div class="col-md-6"><strong>Date de naissance:</strong></div>
+						<div class="col-md-6"><span>{{ user.birthday|date('d/m/Y') }}</span></div>
+					</div>
+					<div class="row">
+						<div class="col-md-6"><strong>Instrument: </strong></div>
+						<div class="col-md-6">
+                            {% for instru in user.instruments %}
+                            <span>{{ instru.instrument }} </span></br>
+                            {% endfor %}</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6"><strong>Groupe(s): </strong></div>
+						<div class="col-md-6">{% for groupe in user.groupes %}
+								<span>{{ groupe.groupe }} </span></br>
+                            {% endfor %}</div>
+					</div>
+                    {% if is_granted('ROLE_SECRETAIRE') %}
+						<div class="row">
+							<div class="col-md-6"><strong>Role: </strong></div>
+							<div class="col-md-6">{% for role in user.roles %}<span>{{ role }}</span><br>{% endfor %}</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6"><strong>Actif: </strong></div>
+							<div class="col-md-6"><span>{{ user.actif }}</span></div>
+						</div>
+                    {% endif %}
+
+					<div class="row">
+						<div class="col-md-6"><strong>Newsletter: </strong></div>
+						<div class="col-md-6"><span>{{ user.newsletter }}</span></div>
+					</div>
+					<div class="row">
+						<div class="col-md-6"><strong>Profession/études </strong></div>
+						<div class="col-md-6"><span>{{ user.profession }}</span></div>
+					</div>
+					<div class="row">
+						<div class="col-md-6"><strong>Adresse: </strong></div>
+						<div class="col-md-6"><span>{% if user.street != '' %}{{ user.street }} {{ user.number }},</span>
+							</br><span>{{ user.postal }} {{ user.city }} - {% endif %}{{ user.country }}</span></div>
+					</div>
+					<div class="row">
+						<div class="col-md-6"><strong>Contact d'urgence:</strong></div>
+						<div class="col-md-6"><span>{% if user.emergencylastname != '' %}{{ user.emergencylastname }} {{ user.emergencyname }}, ({{ user.emergencyrelation }})</span>
+							</br><span>{{ user.emergencyphone }} {% endif %}</span></div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 content-right">
+							<a href="{{ path('modify', {'id': user.id}) }}" class="btn btn-primary form-btn" >Modifier</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+
+{% endblock %}

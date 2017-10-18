@@ -1,0 +1,117 @@
+{# src/Osel/CoreBundle/Resources/views/Core/agenda.html.twig #}
+
+{% extends "OSELCoreBundle::layout.html.twig" %}
+
+{% block title %}
+    Osel Membres - Infos Pratiques - redirections mails
+{% endblock %}
+
+{% block head %}
+    <script src="../../../js/delete.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>You are about to delete one track, this procedure is irreversible.</p>
+                    <p>Do you want to proceed?</p>
+                    <p class="debug-url"></p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-danger btn-ok">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default" >
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Redirections</h3></div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-condensed">
+                                    <thead style="font-size:12px;">
+                                    <tr>
+                                        <th>Adresse Mail</th>
+                                        <th>Description</th>
+                                        {% if is_granted('ROLE_SECRETAIRE') %}
+                                            <th class="hidden-xs">action </th>
+                                        {% endif %}
+                                    </tr>
+                                    </thead>
+                                    <tbody style="font-size:10px;">
+                                    {% for mail in mails%}
+                                        <tr>
+                                            <td>{{ mail.email }}</td>
+                                            <td>{{ mail.description }}</td>
+                                            {% if is_granted('ROLE_SECRETAIRE') %}
+                                                <td class="hidden-xs">
+                                                    <div class="btn-group" role="group" style="min-width:136px;">
+                                                        <button class="btn btn-success btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('osel_info_redirections_modify', {'id': mail.id}) }}'">Modifier </button>
+                                                        <button class="btn btn-danger btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;padding-top:0px;padding-bottom:0px;font-size:10px;" data-href = "{{ path('osel_info_redirections_delete', {'id': mail.id}) }}" data-toggle="modal" data-target="#confirm-delete">Supprimer </button>
+                                                    </div>
+                                                </td>
+                                            {% endif %}
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default" id="output_form">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Ajouter des redirection</h3></div>
+                        <div class="panel-body">
+                            {{ form_start(form) }}
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    {{ form_label(form.email, "Adresse mail:", {'label-attr': {'class': 'control-label'}}) }}
+                                </div>
+                                <div class="col-md-12">
+                                    {{ form_widget(form.email, { 'attr': {'class': 'form-control'}}) }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    {{ form_label(form.description, "Descriptif:", {'label-attr': {'class': 'control-label'}}) }}
+                                </div>
+                                <div class="col-md-12">
+                                    {{ form_widget(form.description, { 'attr': {'class': 'form-control'}}) }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="btn-group" role="group">
+                                        {{ form_widget(form.save, {'attr': {'class': 'btn btn-success btn-sm submit-button'}}) }}
+                                        <button class="btn btn-info btn-sm" type="reset">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                                {{ form_rest(form) }}
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+			

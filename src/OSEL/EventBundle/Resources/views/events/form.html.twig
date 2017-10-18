@@ -1,0 +1,190 @@
+{# src/Osel/EventBundle/Resources/views/events/form.html.twig #}
+
+{% extends "OSELCoreBundle::layout.html.twig" %}
+{% block head %}
+    <script src="{{ asset('js/jquery.classyedit.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/jquery.classyedit.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ title }}</h3></div>
+                <div class="panel-body">
+                    {{ form_start(form, {'attr': {'class': 'form-horizontal custom-form', 'style': 'margin:15px;'}}) }}
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.title, "Titre du Weekend: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.dateStart, "Date et heure de début: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="input-group date col-sm-6 input-column" id='datetimepicker1'>
+                            {{ form_widget(form.dateStart, {'attr': {'class': 'form-control'}}) }}
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.dateEnd, "Date et heure de fin: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="input-group date col-sm-6 input-column" id='datetimepicker2'>
+                            {{ form_widget(form.dateEnd, {'attr': {'class': 'form-control'}}) }}
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.infos, "Infos: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.infos, {'attr': {'class': 'form-control classy-editor1'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.place, "Lieu: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.place, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 label-column">
+                            {{ form_label(form.file, "Photo du theme: ", {'label_attr': {'class': 'control-label'}}) }}
+                        </div>
+                        <div class="col-sm-6 input-column">
+                            {{ form_widget(form.file, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="jumbotron" style="padding-top:20px;padding-bottom:20px;">
+                                <div class="form-group" style="margin-right:0px;margin-left:0px;text-align:center;">
+                                        {{ form_row(form.subEvents)}}
+                                    <a href="#" id="add_subevent" class="btn btn-default">Ajouter un évènement</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="btn-group" role="group">
+                            {{ form_widget(form.save, {'attr': {'class': 'btn btn-success btn-sm submit-button'}}) }}
+                            <button class="btn btn-info btn-sm" type="reset" disabled="disabled">Reset </button>
+                        </div>
+                    </div>
+                    {{ form_rest(form) }}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            var dateOne = $('#datetimepicker1').children('input').val();
+            var dateTwo = $('#datetimepicker2').children('input').val();
+            $('#datetimepicker1').datetimepicker({
+                date: dateOne
+            });
+            $('#datetimepicker2').datetimepicker({
+                date: dateTwo,
+                useCurrent: false //Important! See issue #1075
+            });
+            $("#datetimepicker1").on("dp.change", function (e) {
+                $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
+            });
+            $("#datetimepicker2").on("dp.change", function (e) {
+                $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+                $(".classy-editor1").ClassyEdit();
+
+            // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
+            var $container = $('div#osel_eventbundle_event_subEvents');
+
+            // On définit un compteur unique pour nommer les champs qu'on va ajouter dynamiquement
+            var index = $container.find(':input').length;
+
+            // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
+            $('#add_subevent').click(function(e) {
+                addSubEvent($container);
+
+                e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+                return false;
+            });
+
+            // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un (cas d'une nouvelle annonce par exemple).
+            if (index == 0) {
+                addSubEvent($container);
+            } else {
+                // S'il existe déjà des catégories, on ajoute un lien de suppression pour chacune d'entre elles
+                $container.children('div').each(function() {
+                    addDeleteLink($(this));
+                });
+            }
+
+            // La fonction qui ajoute un formulaire CategoryType
+            function addSubEvent($container) {
+                // Dans le contenu de l'attribut « data-prototype », on remplace :
+                // - le texte "__name__label__" qu'il contient par le label du champ
+                // - le texte "__name__" qu'il contient par le numéro du champ
+                var template = $container.attr('data-prototype')
+                    .replace(/__name__label__/g, 'Evènement n°' + (index+1))
+                    .replace(/__name__/g,        index)
+                ;
+
+                // On crée un objet jquery qui contient ce template
+                var $prototype = $(template);
+
+                // On ajoute au prototype un lien pour pouvoir supprimer la catégorie
+                addDeleteLink($prototype);
+                $("input[type='startEvent']").datetimepicker();
+                $("input[id$='stopEvent']").datetimepicker();
+
+                // On ajoute le prototype modifié à la fin de la balise <div>
+                $container.append($prototype);
+
+                // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
+                index++;
+            }
+
+            // La fonction qui ajoute un lien de suppression d'une catégorie
+            function addDeleteLink($prototype) {
+                // Création du lien
+                var $deleteLink = $('<a href="#" class="btn btn-danger">Supprimer</a>');
+
+                // Ajout du lien
+                $prototype.append($deleteLink);
+
+                // Ajout du listener sur le clic du lien pour effectivement supprimer la catégorie
+                $deleteLink.click(function(e) {
+                    $prototype.remove();
+
+
+                    e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+                    return false;
+                });
+            }
+        });
+    </script>
+
+{% endblock %}
