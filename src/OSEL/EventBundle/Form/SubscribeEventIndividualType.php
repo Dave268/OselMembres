@@ -44,7 +44,8 @@ class SubscribeEventIndividualType extends AbstractType
             ->add('transport',          ChoiceType::class, array( 'choices' => array('Voiture'=>'Voiture',
                 'Transport en commun'=>'Tranport en Commun',
                 'Cherche covoiturage'=> 'Cherche covoiturage')))
-            ->add('city',      TextType::class)
+            ->add('city',      TextType::class, array(
+                'required' => false))
             ->add('dateDeparture',      DateTimeType::class, array(
                 'widget' => 'single_text',
                 'required' => false))

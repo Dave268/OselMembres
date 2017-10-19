@@ -49,8 +49,9 @@
                             </div>
                             <div class="col-md-4 col-sm-3">
                                 <div class="btn-group" role="group" style="min-width:180px;">
-                                    <button class="btn btn-info btn-xs" type="button" onclick="window.open('{{ path('osel_event_add_individual_inscription', {'id': event.id}) }}')">Ajouter une inscription</button>
-                                </div>
+                                    <button class="btn btn-info btn-xs" type="button" onclick="window.location.href='{{ path('osel_event_add_individual_inscription', {'id': event.id}) }}'">Ajouter une inscription</button>
+                                    <button class="btn btn-warning btn-xs" type="button" onclick="window.location.href='{{ path('osel_event_list_inscription_simple', {'id': id, 'page': page , 'criteria': criteria, 'desc': desc, presence: '0'}) }}'">Vue Simple</button>
+								</div>
                             </div>
 
                         </div>
@@ -61,7 +62,7 @@
                                 <table class="table table-striped table-condensed">
                                     <thead style="font-size:12px;">
                                     <tr>
-                                        <th><a href="{% if criteria == 'lastname' and desc == 0 %}{{ path('osel_event_list_inscription', {'id': id, 'page': page , 'criteria': 'city', 'desc': '1'}) }}{% else %}{{ path('osel_event_list_inscription', {'id': id, 'page': page , 'criteria': 'city', 'desc': '0'}) }}{% endif %}">Nom</a></th>
+                                        <th><a href="{% if criteria == 'lastname' and desc == 0 %}{{ path('osel_event_list_inscription', {'id': id, 'page': page , 'criteria': 'lastname', 'desc': '1'}) }}{% else %}{{ path('osel_event_list_inscription', {'id': id, 'page': page , 'criteria': 'lastname', 'desc': '0'}) }}{% endif %}">Nom</a></th>
                                         <th>Prénom</th>
                                         <th><a href="{% if criteria == 'city' and desc == 0 %}{{ path('osel_event_list_inscription', {'id': id, 'page': page , 'criteria': 'city', 'desc': '1'}) }}{% else %}{{ path('osel_event_list_inscription', {'id': id, 'page': page , 'criteria': 'city', 'desc': '0'}) }}{% endif %}">Part de</a></th>
                                         <th><a href="{% if criteria == 'transport' and desc == 0 %}{{ path('osel_event_list_inscription', {'id': id, 'page': page , 'criteria': 'transport', 'desc': '1'}) }}{% else %}{{ path('osel_event_list_inscription', {'id': id, 'page': page , 'criteria': 'transport', 'desc': '0'}) }}{% endif %}">Moyen de transport</a></th>
@@ -77,7 +78,8 @@
                                             <th class="hidden-xs">action </th>{% endif %}
                                     </tr>
                                     <tr>
-                                        <th colspan="5">nombre de participants: {{ nbSubscribe }}</th>
+                                        <th colspan="3">participants: {{ nbParticipants }}</th>
+										<th colspan="2">inscrits: {{ nbSubscribe }}</th>
                                         {% for a in listSub %}
                                             <th>{{ a.nbSubscriptions }}</th>
                                             {% endfor %}
@@ -94,6 +96,7 @@
                                                     <td>{{ user.user.lastname }}</td>
                                                     <td>{{ user.user.name }}</td>
                                                     {% if not user.presence %}
+													<td colspan="3"></td>
                                                     {% else %}
                                                     <td>{{ user.city }}</td>
                                         <td style="{% if user.transport == 'Cherche covoiturage' %}color: red;{% elseif user.transport == 'Voiture' %}color: green;{% endif %}"><strong>{{ user.transport }}</strong></td>
@@ -115,6 +118,7 @@
                                                 {% endfor %}
                                                     {% if not user.presence %}
                                                     <td colspan="{{ listSub|length }}">Ce membre ne sera pas présent</td>
+													<td colspan="2"></td>
                                                     {% else %}
                                                     <td><span {% if is_granted('ROLE_SECRETAIRE') %}class="textToModify"{% endif %} data-id="{{ user.id }}">{{ user.prix }}</span></td>
 

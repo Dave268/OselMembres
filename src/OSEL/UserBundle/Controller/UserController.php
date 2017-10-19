@@ -46,7 +46,7 @@ class UserController extends Controller
 
     public function viewAction($id)
     {
-        if ($this->get('security.authorization_checker')->isGranted('ROLE_USER') && $this->container->get('security.token_storage')->getToken()->getUser()->getId() == $id) {
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_USER') && $this->container->get('security.token_storage')->getToken()->getUser()->getId() == $id || $this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
             if ($id < 1) {
                 throw new NotFoundHttpException('Page inexistante.');
             }

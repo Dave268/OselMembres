@@ -33,7 +33,8 @@ class InscriptionsController extends Controller
 
             $listInscriptions = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getSubscriptions($id, $page, $nbPerPage, $criteria, $desc, $presence);
             $price = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getPrice($id);
-            $nbSubscribe = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getNbSubscriptions($id);
+            $nbSubscribe = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getNbParticipants($id);
+			$nbParticipants = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getNbSubscriptions($id);
             $event = $this->getDoctrine()->getManager()->getRepository(Event::class)->findOneBy(array('id' => $id));
 
             $nbSubscribeEvents = array();
@@ -46,7 +47,6 @@ class InscriptionsController extends Controller
 
 
             $subEvents = $event->getSubEvents();
-
 
             $nbPages = ceil(count($listInscriptions) / $nbPerPage);
             if ($page > $nbPages) {
@@ -63,6 +63,7 @@ class InscriptionsController extends Controller
                 'criteria'          => $criteria,
                 'desc'              => $desc,
                 'nbPages'           => $nbPages,
+				'nbParticipants'	=> $nbParticipants,
                 'nbSubscribe'       => $nbSubscribe,
                 'nbSubscribeEvents' => $nbSubscribeEvents,
                 'presence'          => $presence,
@@ -75,6 +76,49 @@ class InscriptionsController extends Controller
             $request->getSession()->getFlashBag()->add('ERROR', 'Vous n\'avez pas acces à cette page');
             return $this->redirect($this->generateUrl('osel_core_home'));
         }
+    }
+	
+	public function indexSimpleAction($id, $page, $criteria, $desc, $presence, $nbPerPage, Request $request)
+    {
+
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_WEEKEND')) {
+			$request->getSession()->getFlashBag()->add('ERROR', 'Vous n\'avez pas acces à cette page');
+            return $this->redirect($this->generateUrl('osel_core_home'));
+		}
+		
+		if ($page < 1) {
+			$request->getSession()->getFlashBag()->add('ERROR', 'Cette page n\'existe pas');
+		}
+
+
+		$listInscriptions = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getSubscriptions($id, $page, $nbPerPage, $criteria, $desc, $presence);
+		$price = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getPrice($id);
+		$nbSubscribe = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getNbParticipants($id);
+		$nbParticipants = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getNbSubscriptions($id);
+		$event = $this->getDoctrine()->getManager()->getRepository(Event::class)->findOneBy(array('id' => $id));
+
+
+		$nbPages = ceil(count($listInscriptions) / $nbPerPage);
+		if ($page > $nbPages) {
+			$request->getSession()->getFlashBag()->add('ERROR', 'Cette page n\'existe pas');
+		}
+
+
+		return $this->render('OSELEventBundle:inscriptions:index-simple.html.twig', array(
+			'listInscriptions'  => $listInscriptions,
+			'event'             => $event,
+			'id'                => $id,
+			'page'              => $page,
+			'criteria'          => $criteria,
+			'desc'              => $desc,
+			'nbPages'           => $nbPages,
+			'nbParticipants'	=> $nbParticipants,
+			'nbSubscribe'       => $nbSubscribe,
+			'presence'          => $presence,
+			'prixTotal'         => $price[0],
+			'payeTotal'         => $price[1],
+			'selectedPage'      => 'weekend'));
+      
     }
 
     public function viewAction($id)
@@ -120,11 +164,11 @@ class InscriptionsController extends Controller
                     $em = $this->getDoctrine()->getManager();
                     $em->persist($subscription);
                     $em->flush();
-                    $request->getSession()->getFlashBag()->add('notice', 'Un nouveau lieu a bien été rajouté à la base de données');
+                    $request->getSession()->getFlashBag()->add('success', 'Bravo!!! Vous êtes inscrit au weekend');
                     return $this->redirect($this->generateUrl('osel_event_view'));
 
                 } catch (Doctrine\DBAL\Exception\UniqueConstraintViolationException $e) {
-                    $request->getSession()->getFlashBag()->add('Error', 'Ce lieu existe déjà dans la base de données!');
+                    $request->getSession()->getFlashBag()->add('Error', 'Vous êtes déjà inscrit');
                 }
             }
             return $this->render('OSELEventBundle:inscriptions:form.html.twig', array(
@@ -155,11 +199,11 @@ class InscriptionsController extends Controller
                     $em = $this->getDoctrine()->getManager();
                     $em->persist($subscription);
                     $em->flush();
-                    $request->getSession()->getFlashBag()->add('notice', 'Un nouveau lieu a bien été rajouté à la base de données');
-                    return $this->redirect($this->generateUrl('osel_event_view'));
+                    $request->getSession()->getFlashBag()->add('success', 'Bravo!!! Un nouvel inscrit au weekend');
+                    return $this->redirect($this->generateUrl('osel_event_list_inscription', array('id' => $id)));
 
                 } catch (Doctrine\DBAL\Exception\UniqueConstraintViolationException $e) {
-                    $request->getSession()->getFlashBag()->add('Error', 'Ce lieu existe déjà dans la base de données!');
+                    $request->getSession()->getFlashBag()->add('Error', 'Ce membre est déjà déjà inscrit');
                 }
             }
             return $this->render('OSELEventBundle:inscriptions:form.html.twig', array(
@@ -184,11 +228,12 @@ class InscriptionsController extends Controller
                     $em = $this->getDoctrine()->getManager();
                     $em->persist($subscription);
                     $em->flush();
-                    $request->getSession()->getFlashBag()->add('notice', 'Un nouveau lieu a bien été rajouté à la base de données');
-                    if(!$this->get('security.authorization_checker')->isGranted('ROLE_WEEKEND'))
+                    $request->getSession()->getFlashBag()->add('success', 'L\'inscription  bien été modifié');
+                    if(!$this->get('security.authorization_checker')->isGranted('ROLE_WEEKEND') || $idEvent == 0)
                     {
                         return $this->redirect($this->generateUrl('osel_event_view'));
                     }
+
                     return $this->redirect($this->generateUrl('osel_event_list_inscription', array('id' => $idEvent)));
 
                 } catch (Doctrine\DBAL\Exception\UniqueConstraintViolationException $e) {
@@ -217,7 +262,7 @@ class InscriptionsController extends Controller
             $em->remove($subscription);
             $em->flush();
 
-            $request->getSession()->getFlashBag()->add('notice', 'L\'inscription de ' . $subscription->getUser()->getLastname() .' ' .$subscription->getUser()->getLastname() . ' weekend a été suprrimé');
+            $request->getSession()->getFlashBag()->add('success', 'L\'inscription de ' . $subscription->getUser()->getLastname() .' ' .$subscription->getUser()->getLastname() . ' weekend a été suprrimé');
 
             return $this->redirect($this->generateUrl('osel_event_list'));
         }
@@ -259,7 +304,7 @@ class InscriptionsController extends Controller
                     return $response;
                 }
 
-                $request->getSession()->getFlashBag()->add('notice', 'Un l\'inscription à bien été modifié');
+                $request->getSession()->getFlashBag()->add('success', 'Un l\'inscription à bien été modifié');
 
                 return $this->redirect($this->generateUrl('osel_event_list_inscription', array('id' => $event->getId())));
             }

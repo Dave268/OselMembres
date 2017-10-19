@@ -28,6 +28,7 @@
 		</head>
 		
 		<body>
+		
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="navbar-header {% if selectedPage == 'home' %}active{% endif %}">
@@ -144,6 +145,16 @@
 					</div>
                 {% endfor %}
 			</div>
+			{% for message in app.session.flashbag.get('success') %}
+					<div id="successModal" class="successmodal">
+						  <div class="modal-content">
+							<span class="closeModal">&times;</span>
+							<h2>{{ message }}</2>
+						  </div>
+						</div>
+                {% endfor %}
+			
+			
 		</body>
 		</html>
 

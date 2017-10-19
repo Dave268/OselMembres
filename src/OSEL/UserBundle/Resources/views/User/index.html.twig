@@ -90,7 +90,8 @@
 												<tr>
     												{% if is_granted('ROLE_SECRETAIRE') %}
 														<th><a href="{% if criteria == 'actif' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'actif', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'actif', 'desc': '0'}) }}{% endif %}">Actif</a></th>
-													{% endif %}
+														<th><a href="{% if criteria == 'username' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'username', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'username', 'desc': '0'}) }}{% endif %}">Username</a></th>
+													{% endif%}
 													<th><a href="{% if criteria == 'lastname' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'lastname', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'lastname', 'desc': '0'}) }}{% endif %}">Nom</a></th>
 													<th><a href="{% if criteria == 'name' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'name', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'name', 'desc': '0'}) }}{% endif %}">Prénom</a></th>
 													<th><a href="{% if criteria == 'email' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'email', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'email', 'desc': '0'}) }}{% endif %}">Adresse Mail</a></th>
@@ -109,6 +110,7 @@
 														<tr>
                                                     		{% if is_granted('ROLE_SECRETAIRE') %}
 																<td id="user_actif_{{ user.id }}"><a class="user_activate" href="{{ path('user_modify_complete', {'id': user.id}) }}" obj="{{ user.id }}">{% if user.actif %} <i class="state-icon glyphicon glyphicon-check"></i>{% else %}<i class="state-icon glyphicon glyphicon-unchecked"></i>{% endif %}</a></td>
+																<td>{{ user.username }}</td>
                                                             {% endif %}
 															<td>{{ user.lastname }}</td>
 															<td>{{ user.name }}</td>
@@ -126,7 +128,8 @@
 																
 																<td class="hidden-xs">
 																	<div class="btn-group" role="group" style="min-width:136px;">
-																		<button class="btn btn-success btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('modify', {'id': user.id}) }}'">Modifier </button>
+																		<button class="btn btn-success btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('modify', {'id': user.id}) }}'">Modifier</button>
+																		<button class="btn btn-warning btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('osel_user_view', {'id': user.id}) }}'">Voir</button>
 																		<button class="btn btn-info btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" data-href="{{ path('send_inscription_mail', {'id': user.id}) }}" data-toggle="modal" data-target="#confirm-send">Reset</button>
 																		<button class="btn btn-danger btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;padding-top:0px;padding-bottom:0px;font-size:10px;"  data-href = "{{ path('delete', {'id': user.id}) }}" data-toggle="modal" data-target="#confirm-delete" {% if not is_granted('ROLE_SECRETAIRE') %}Disabled{% endif %}>Supprimer </button>
 																	</div>

@@ -57,6 +57,10 @@ osel_event_delete_inscription:
 osel_event_list_inscription:
     path:     /liste-des-inscriptions-weekends/{id}/{page}/{criteria}/{desc}/{presence}/{nbPerPage}
     defaults: { _controller: OSELEventBundle:Inscriptions:index, page: 1, criteria: lastname, desc: 0, presence: 1, nbPerPage: 50 }
+    
+osel_event_list_inscription_simple:
+    path:     /liste-des-inscriptions-weekends-simple/{id}/{page}/{criteria}/{desc}/{presence}/{nbPerPage}
+    defaults: { _controller: OSELEventBundle:Inscriptions:indexSimple, page: 1, criteria: lastname, desc: 0, presence: 1, nbPerPage: 50 }
 
 osel_event_view_inscription:
     path:     /inscription/{id}

@@ -9,9 +9,7 @@ class CoreController extends Controller
 {
     // La page d'accueil
     public function indexAction(Request $request)
-    {
-        $request->getSession()->getFlashBag()->add('Error', 'Ce username ou mail est incorrect');
-
+    {	
         return $this->get('templating')->renderResponse('OSELCoreBundle:Core:index.html.twig', array(
 		'selectedPage' => 'home'));
     }

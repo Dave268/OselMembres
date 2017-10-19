@@ -74,6 +74,19 @@ class SubscribeEventRepository extends \Doctrine\ORM\EntityRepository
         return count($qb->getQuery()->getResult());
 
     }
+	
+	public function getNbParticipants($id)
+    {
+        $qb = $this->createQueryBuilder('a')
+            ->leftJoin('a.event', 'c')
+            ->addSelect('c');
+        $qb->where($qb->expr()->in('c.id', $id));
+
+
+
+        return count($qb->getQuery()->getResult());
+
+    }
 
     public function getNbSubscriptionsEvent($id)
     {

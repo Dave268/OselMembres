@@ -65,10 +65,13 @@ class SecurityController extends Controller
 
             if ($form->handleRequest($request)->isValid()) 
             {
-				$role = new Roles();
-				$role = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Roles')->findOneBy(array('role' => 'USER_ROLE'));
-                $user->addUserRole($role);
-				$role->setUser($user);
+                if($user->getRoles() == null)
+                {
+                    $role = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Roles')->findOneBy(array('role' => 'USER_ROLE'));
+                    $user->addUserRole($role);
+                    $role->setUser($user);
+                }
+
                 $pwd= $this->get('security.encoder_factory')->getEncoder($user)->encodePassword(md5(uniqid(null, true)), $user->getSalt());
 				
                 $user->defineRest($pwd);
@@ -90,21 +93,10 @@ class SecurityController extends Controller
 
                 if($user->getActif())
                 {
-                    if ($mail->sendRegisterMail($user->getName(), $user->getId(), $temp->getSha(), $userName, $user->getName().$user->getLastname(), $user->getEmail()))
-                    {
-                        $request->getSession()->getFlashBag()->add('notice', 'Un mail a été envoyé au nouveau membre');
-                    }
-                    else
-                    {
-                        $request->getSession()->getFlashBag()->add('Error', 'Le mail n\'a pas pu être envoyé au nouveau membre: contactez le webmaster');
-
-                    }
+                    $mail->sendRegisterMail($user->getName(), $user->getId(), $temp->getSha(), $userName, $user->getEmail(), $user->getUsername());
                 }
 
-
-
-
-                $request->getSession()->getFlashBag()->add('notice', 'Un nouveau membre à bien été rajouté');
+                $request->getSession()->getFlashBag()->add('success', 'Un nouveau membre à bien été inscrit');
 
                 return $this->redirect($this->generateUrl('register'));
             }
@@ -120,22 +112,12 @@ class SecurityController extends Controller
     {
         $user = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->findOneBy(array('id' => $id));
 
-        if ($this->get('security.authorization_checker')->isGranted('ROLE_WEBMASTER'))
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_SECRETAIRE') || $id != $this->get('security.token_storage')->getToken()->getUser()->getId())
         {
-            $form = $this->get('form.factory')->create(AdminUserType::class, $user);
-			
-			if ($form->handleRequest($request)->isValid()) {
-			    $em = $this->getDoctrine()->getManager();
-			    $em->persist($user);
-			    $em->flush();
-
-			    $request->getSession()->getFlashBag()->add('notice', 'Un nouveau membre à bien été modifié');
-
-			    return $this->redirect($this->generateUrl('osel_user_index'));
-			}
+            $request->getSession()->getFlashBag()->add('ERROR', 'Vous n\'avez pas droit d\'exécuter cette action');
+            return $this->redirect($this->generateUrl('osel_core_home'));
         }
-		elseif ($this->get('security.authorization_checker')->isGranted('ROLE_SECRETAIRE') || $id == $this->get('security.token_storage')->getToken()->getUser()->getId())
-        {
+
             $form = $this->get('form.factory')->create(UserType::class, $user);
 			
 			if ($form->handleRequest($request)->isValid()) {
@@ -143,13 +125,19 @@ class SecurityController extends Controller
 			    $em->persist($user);
 			    $em->flush();
 
-			    $request->getSession()->getFlashBag()->add('notice', 'Un nouveau membre à bien été modifié');
+			    $request->getSession()->getFlashBag()->add('success', 'Les modifications ont bien été enregistré');
 
-			    return $this->redirect($this->generateUrl('osel_user_index'));
+				if($this->get('security.authorization_checker')->isGranted('ROLE_SECRETAIRE'))
+				{
+					return $this->redirect($this->generateUrl('osel_user_index'));
+				}
+				else
+				{
+					return $this->redirect($this->generateUrl('osel_user_view', array('id' => $id)));
+				}
 			}
-        }
 
-        return $this->render('OSELUserBundle:User:modify.html.twig', array(
+        return $this->render('OSELUserBundle:User:add.html.twig', array(
           'form' => $form->createView(),
 		  'selectedPage'	=> 'membres'
         ));
@@ -200,11 +188,9 @@ class SecurityController extends Controller
                         $userName = "Administrateur de site de l'Osel";
                     }
 
-                    if ($mail->sendRegisterMail($user->getName(), $user->getId(), $temp->getSha(), $userName, $user->getEmail(), $user->getUsername())) {
+                    $mail->sendRegisterMail($user->getName(), $user->getId(), $temp->getSha(), $userName, $user->getEmail(), $user->getUsername());
                         $request->getSession()->getFlashBag()->add('notice', 'Un nouveau mail d\'inscription a été envoyé');
-                    } else {
-                        $request->getSession()->getFlashBag()->add('Error', 'Le mail n\'a pas pu être envoyé: contactez le webmaster');
-                    }
+                    
                 }
 
                 if($request->isXmlHttpRequest())
@@ -220,7 +206,14 @@ class SecurityController extends Controller
                     return $response;
                 }
 
-                $request->getSession()->getFlashBag()->add('notice', 'Un nouveau membre à bien été modifié');
+				if($user->getActif())
+				{
+					$request->getSession()->getFlashBag()->add('success', 'Le membre a bien été activé');
+				}
+				else
+				{
+					$request->getSession()->getFlashBag()->add('success', 'Le membre a bien été désactivé');
+				}
 
                 return $this->redirect($this->generateUrl('osel_user_index'));
             }
@@ -356,7 +349,6 @@ class SecurityController extends Controller
 
         $formData = array();
         $form = $this->get('form.factory')->createBuilder(FormType::class, $formData)
-            ->add('username',       TextType::class)
             ->add('mail',           EmailType::class)
             ->add('Envoyer',        SubmitType::class)
             ->getForm();
@@ -365,63 +357,47 @@ class SecurityController extends Controller
             $form->handleRequest($request);
             $formData = $form->getData();
 
-            $user = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->findOneBy(array('username' => $formData['username']));
+            $user = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->findOneBy(array('email' => $formData['mail']));
 
-		if ($user == null){
+			if ($user == null){
+				$request->getSession()->getFlashBag()->add('ERROR', 'Aucun membre n\'est inscrit avec cette adresse e-mail');
+				return $this->redirect($this->generateUrl('send_reset_mail'));
+			   }
 
-            $request->getSession()->getFlashBag()->add('ERROR', 'ce username n\'existe pas');
+			if (!$user->getActif()) {
+				return $this->redirect($this->generateUrl('send_reset_mail'));
+			}
 
-            return $this->render('OSELUserBundle:Security:sendResetMail.html.twig', array(
-                'form'	=> $form->createView()
-            ));
-            }
+				$temp = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Temp')->findOneBy(array('user' => $user, 'role' => 'resetpwd'));
 
-            if ( $user->getEmail() !=  $formData['mail']){
-                $request->getSession()->getFlashBag()->add('ERROR', 'Cette adrresse mail ne correspond pas au username');
-
-                return $this->render('OSELUserBundle:Security:sendResetMail.html.twig', array(
-                    'form'	=> $form->createView()
-                ));
-            }
-
-				if ($user->getActif()) {
-
-					$temp = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Temp')->findOneBy(array('user' => $user, 'role' => 'resetpwd'));
-
-					if($temp == null)
-					{
-						$temp = new Temp();
-					}
-					else
-					{
-						$temp->setDateAdd(new \DateTime('now'));
-						$temp->setSha(md5(uniqid(null, true)));
-					}
-
-					$temp->setRole("resetpwd");
-					$temp->setValidity("14400");
-					$temp->setActive(true);
-					$user->addTemp($temp);
-					$temp->setUser($user);
-
-					$em = $this->getDoctrine()->getManager();
-					$em->persist($user);
-					$em->flush();
-
-					$mail = $this->container->get('OSEL_User.resetMail');
-
-					if ($mail->sendRegisterMail($user->getName(), $user->getId(), $temp->getSha(), 'Administrateur du site de l\'Osel', $user->getEmail())) {
-						$request->getSession()->getFlashBag()->add('notice', 'Un mail a été envoyé avec un lien pour reseter votre mot de passe');
-					} else {
-						$request->getSession()->getFlashBag()->add('Error', 'Le mail n\'a pas pu être envoyé: contactez le webmaster');
-					}
-
-					return $this->redirect($this->generateUrl('osel_core_home'));
+				if($temp == null)
+				{
+					$temp = new Temp();
 				}
 				else
 				{
-					throw $this->createNotFoundException("Ce membre n'est pas un membre actif!!!");
+					$temp->setDateAdd(new \DateTime('now'));
+					$temp->setSha(md5(uniqid(null, true)));
 				}
+
+				$temp->setRole("resetpwd");
+				$temp->setValidity("14400");
+				$temp->setActive(true);
+				$user->addTemp($temp);
+				$temp->setUser($user);
+
+				$em = $this->getDoctrine()->getManager();
+				$em->persist($user);
+				$em->flush();
+
+				$mail = $this->container->get('OSEL_User.resetMail');
+
+				$mail->sendRegisterMail($user->getName(), $user->getId(), $temp->getSha(), 'Administrateur du site de l\'Osel', $user->getEmail());
+					$request->getSession()->getFlashBag()->add('notice', 'Un mail vous a été envoyé avec un lien pour reseter votre mot de passe');
+				
+
+				return $this->redirect($this->generateUrl('osel_core_home'));
+			
 			}
 
 

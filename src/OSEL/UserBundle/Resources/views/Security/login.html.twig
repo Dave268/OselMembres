@@ -28,7 +28,7 @@
 {% if error %}
     <div class="alert alert-danger">{{ error.message }}</div>
   {% endif %}
-    <div class="login-dark" style="background-image:url('{{ asset('bundles/Security/img/DSC_0231.jpg') }}')';">
+    <div class="login-dark" style="background-image:url('{{ asset('bundles/Security/img/Pierre Jacques - P1080114.JPG') }}')';">
         <form method="post" style="background-color:rgba(227,233,241,0.7);" action="{{ path('login_check') }}">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
@@ -42,7 +42,7 @@
             <div class="form-group">
 
                 <button class="btn btn-primary btn-block" type="submit">Log In</button>
-            </div><a href="{{ path('send_reset_mail') }}" class="forgot">Forgot your email or password?</a></form>
+            </div><a href="{{ path('send_reset_mail') }}" class="forgot">J'ai oublié mon mot de passe!</a></form>
     </div>
 	
 	<div style="position: absolute; top: 0; width: 100%; z-index: 999;" id="messages">
