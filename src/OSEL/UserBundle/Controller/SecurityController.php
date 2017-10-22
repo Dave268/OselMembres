@@ -75,7 +75,7 @@ class SecurityController extends Controller
                 $pwd= $this->get('security.encoder_factory')->getEncoder($user)->encodePassword(md5(uniqid(null, true)), $user->getSalt());
 				
                 $user->defineRest($pwd);
-                if($user->getActif())
+                if($user->getEnabled())
                 {
                     $temp = new Temp();
                     $temp->setRole("setpwd");
@@ -91,7 +91,7 @@ class SecurityController extends Controller
 
                 $mail = $this->container->get('OSEL_User.registerMail');
 
-                if($user->getActif())
+                if($user->getEnabled())
                 {
                     $mail->sendRegisterMail($user->getName(), $user->getId(), $temp->getSha(), $userName, $user->getEmail(), $user->getUsername());
                 }
@@ -163,7 +163,7 @@ class SecurityController extends Controller
                 $em->persist($user);
                 $em->flush();
 
-                if($user->getActif())
+                if($user->getEnabled())
                 {
                     $temp = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Temp')->findOneBy(array('user' => $user, 'role' => 'setpwd'));
 
@@ -203,7 +203,7 @@ class SecurityController extends Controller
                 {
                     $json = json_encode(array(
                         'id'    => $user->getId(),
-                        'actif' => $user->getActif()
+                        'enabled' => $user->getEnabled()
                     ));
 
                     $response = new Response($json);
@@ -212,7 +212,7 @@ class SecurityController extends Controller
                     return $response;
                 }
 
-				if($user->getActif())
+				if($user->getEnabled())
 				{
 					$request->getSession()->getFlashBag()->add('success', 'Le membre a bien été activé');
 				}
@@ -370,8 +370,9 @@ class SecurityController extends Controller
 				return $this->redirect($this->generateUrl('send_reset_mail'));
 			   }
 
-			if (!$user->getActif()) {
-				return $this->redirect($this->generateUrl('send_reset_mail'));
+			if (!$user->getEnabled()) {
+                $request->getSession()->getFlashBag()->add('ERROR', 'Ce membre n\'est plus un membre actif');
+                return $this->redirect($this->generateUrl('send_reset_mail'));
 			}
 
 				$temp = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Temp')->findOneBy(array('user' => $user, 'role' => 'resetpwd'));

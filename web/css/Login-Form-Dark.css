@@ -1,8 +1,17 @@
 .login-dark {
   height:1000px;
-  background:#475d62 url(../bundles/Security/img/DSC_0231.jpg);
+  background-color:white;
   background-size:cover;
   position:relative;
+}
+
+@media (min-width: 992px) {
+  .login-dark {
+  height:1000px;
+  background:#475d62 url(../bundles/Security/img/P1080114.JPG);
+  background-size:cover;
+  position:relative;
+}
 }
 
 .login-dark form {

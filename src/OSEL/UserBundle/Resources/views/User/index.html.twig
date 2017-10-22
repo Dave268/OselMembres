@@ -72,12 +72,22 @@
 								</div>
 
 
-									<div class="col-md-3 col-sm-3">
-										<select class="input-sm selectMembres" style="width:180px;min-width:180px;height:22px;padding-top:0px;padding-bottom:0px;">
+								<div class="col-md-3 col-sm-3">
+									<select class="input-sm selectMembres" style="width:180px;min-width:180px;height:22px;padding-top:0px;padding-bottom:0px;">
 -												<option value="{{ path('osel_user_index') }}" {% if not active %}selected=""{% endif %}>Tous le membres</option>
-												<option value="{{ path('osel_user_index', {'page': page , 'criteria': criteria, 'desc': desc, active: '1', }) }}" {% if active %}selected=""{% endif %}>Membres Actifs</option>
-										</select>
-									</div>
+											<option value="{{ path('osel_user_index', {'page': page , 'criteria': criteria, 'desc': desc, active: '1', }) }}" {% if active %}selected=""{% endif %}>Membres Actifs</option>
+									</select>
+								</div>
+
+								<div class="col-md-3 col-sm-3">
+									<select class="input-sm selectMembres" style="width:180px;min-width:180px;height:22px;padding-top:0px;padding-bottom:0px;">
+										<option value="{{ path('osel_user_index') }}" {% if nbPerPage == 20 %}selected=""{% endif %}>Afficher 20</option>
+										<option value="{{ path('osel_user_index', {'page': page , 'criteria': criteria, 'desc': desc, 'active': active, 'nbPerPage': 30}) }}" {% if nbPerPage == 30 %}selected=""{% endif %}>Afficher 30</option>
+										<option value="{{ path('osel_user_index', {'page': page , 'criteria': criteria, 'desc': desc, 'active': active, 'nbPerPage': 50}) }}" {% if nbPerPage == 50 %}selected=""{% endif %}>Afficher 50</option>
+										<option value="{{ path('osel_user_index', {'page': page , 'criteria': criteria, 'desc': desc, 'active': active, 'nbPerPage': 100}) }}" {% if nbPerPage == 100 %}selected=""{% endif %}>Afficher 100</option>
+									</select>
+								</div>
+
 
 							</div>
 								</br>
@@ -89,7 +99,7 @@
 											<thead style="font-size:12px;">
 												<tr>
     												{% if is_granted('ROLE_SECRETAIRE') %}
-														<th><a href="{% if criteria == 'actif' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'actif', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'actif', 'desc': '0'}) }}{% endif %}">Actif</a></th>
+														<th><a href="{% if criteria == 'enabled' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'enabled', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'enabled', 'desc': '0'}) }}{% endif %}">Actif</a></th>
 														<th><a href="{% if criteria == 'username' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'username', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'username', 'desc': '0'}) }}{% endif %}">Username</a></th>
 													{% endif%}
 													<th><a href="{% if criteria == 'lastname' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'lastname', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'lastname', 'desc': '0'}) }}{% endif %}">Nom</a></th>
@@ -109,7 +119,7 @@
 													<a href="{{ path('osel_user_view', {'id': user.id}) }}">
 														<tr>
                                                     		{% if is_granted('ROLE_SECRETAIRE') %}
-																<td id="user_actif_{{ user.id }}"><a class="user_activate" href="{{ path('user_modify_complete', {'id': user.id}) }}" obj="{{ user.id }}">{% if user.actif %} <i class="state-icon glyphicon glyphicon-check"></i>{% else %}<i class="state-icon glyphicon glyphicon-unchecked"></i>{% endif %}</a></td>
+																<td id="user_actif_{{ user.id }}"><a class="user_activate" href="{{ path('user_modify_complete', {'id': user.id}) }}" obj="{{ user.id }}">{% if user.enabled %} <i class="state-icon glyphicon glyphicon-check"></i>{% else %}<i class="state-icon glyphicon glyphicon-unchecked"></i>{% endif %}</a></td>
 																<td>{{ user.username }}</td>
                                                             {% endif %}
 															<td>{{ user.lastname }}</td>

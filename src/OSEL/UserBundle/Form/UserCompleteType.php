@@ -18,7 +18,7 @@ class UserCompleteType extends AbstractType
     {
 
         $builder
-            ->add('actif',              CheckboxType::class, array('required' => false))
+            ->add('enabled',              CheckboxType::class, array('required' => false))
             ->add('save',               SubmitType::class)
         ;
     }

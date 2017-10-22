@@ -76,7 +76,7 @@ class UserType extends AbstractType
 
         if($this->authorization->isGranted('ROLE_SECRETAIRE'))
         {
-            $builder->add('actif',              CheckboxType::class, array('required' => false));
+            $builder->add('enabled',              CheckboxType::class, array('required' => false));
         }
     }
 

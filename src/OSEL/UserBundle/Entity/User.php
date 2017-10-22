@@ -100,13 +100,6 @@ class User implements AdvancedUserInterface, \Serializable
     private $statuts;
 
     /**
-     * @var boolean
-     *
-     * @ORM\Column(name="actif", type="boolean", nullable=true)
-     */
-    private $actif = true;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="profession", type="string", length=255, nullable=true)
@@ -542,28 +535,6 @@ class User implements AdvancedUserInterface, \Serializable
         return $this->statut;
     }
 
-    /**
-     * Set actif
-     *
-     * @param string $actif
-     * @return User
-     */
-    public function setActif($actif)
-    {
-        $this->actif = $actif;
-
-        return $this;
-    }
-
-    /**
-     * Get actif
-     *
-     * @return string 
-     */
-    public function getActif()
-    {
-        return $this->actif;
-    }
 
     /**
      * Set profession
@@ -1216,7 +1187,7 @@ class User implements AdvancedUserInterface, \Serializable
 
     public function getHeaders()
     {
-        return array('id', 'Username', 'email', 'enabled', 'salt', 'password', 'Name', 'Lastname', 'actif', 'Profession', 'Street', 'Number', 'Postal', 'City', 'Country', 'Phone', 'mobilephone', 'Birthday', 'date_add', 'date_update', 'newsletter');
+        return array('id', 'Username', 'email', 'enabled', 'salt', 'password', 'Name', 'Lastname', 'Profession', 'Street', 'Number', 'Postal', 'City', 'Country', 'Phone', 'mobilephone', 'Birthday', 'date_add', 'date_update', 'newsletter');
     }
 
     public function toArray($id, $email, $instrument, $adress, $phone, $birthday, $emergency)

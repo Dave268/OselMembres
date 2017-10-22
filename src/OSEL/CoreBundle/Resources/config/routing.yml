@@ -9,8 +9,8 @@ osel_core_agenda:
     defaults: { _controller: OSELInfoBundle:Info:agenda }
 
 osel_user_index:
-    path:     /Users/{page}/{criteria}/{desc}/{active}/{nbPerPage}
-    defaults: { _controller: OSELUserBundle:User:index, page: 1, criteria: lastname, desc: 0, active: 0, nbPerPage: 20}
+    path:     /Users/{page}/{criteria}/{desc}/{enabled}/{nbPerPage}
+    defaults: { _controller: OSELUserBundle:User:index, page: 1, criteria: lastname, desc: 0, enabled: 0, nbPerPage: 20}
 
 osel_user_view:
     path:     /User/{id}

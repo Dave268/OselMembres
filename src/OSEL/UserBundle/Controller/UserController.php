@@ -7,7 +7,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class UserController extends Controller
 {
-    public function indexAction($page, $criteria, $desc, $active, $nbPerPage)
+    public function indexAction($page, $criteria, $desc, $enabled, $nbPerPage)
     {
         if ($page < 1) {
             throw $this->createNotFoundException("La page " . $page . " n'existe pas.");
@@ -15,16 +15,12 @@ class UserController extends Controller
 
         if ($this->get('security.authorization_checker')->isGranted('ROLE_SECRETAIRE'))
         {
-            $listUsers = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->getUsers($page, $nbPerPage, $active, $criteria, $desc);
+            $listUsers = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->getUsers($page, $nbPerPage, $enabled, $criteria, $desc);
 
         }
         elseif ($this->get('security.authorization_checker')->isGranted('ROLE_USER'))
         {
             $listUsers = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->getUsers($page, $nbPerPage, true, $criteria, $desc);
-        }
-        else
-        {
-
         }
 
         $nbPages = ceil(count($listUsers) / $nbPerPage);
@@ -39,8 +35,9 @@ class UserController extends Controller
             'page'          => $page,
             'criteria'      => $criteria,
             'desc'          => $desc,
-            'active'        => $active,
+            'active'        => $enabled,
             'nbPages'       => $nbPages,
+			'nbPerPage'     => $nbPerPage,
 			'selectedPage'	=> 'membres'));
     }
 

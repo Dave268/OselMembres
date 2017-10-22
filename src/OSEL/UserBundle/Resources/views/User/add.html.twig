@@ -92,13 +92,13 @@
 								</div>
 							</div>
 						{% endif %}
-                    {% if form.actif is defined %}
+                    {% if form.enabled is defined %}
                         <div class="form-group">
                             <div class="col-sm-4 label-column">
-                                {{ form_label(form.actif, "Membre actif?: ", {'label_attr': {'class': 'control-label'}}) }}
+                                {{ form_label(form.enabled, "Membre actif?: ", {'label_attr': {'class': 'control-label'}}) }}
                             </div>
                             <div class="col-sm-6 input-column">
-                                {{ form_widget(form.actif) }}
+                                {{ form_widget(form.enabled) }}
                             </div>
                         </div>
                     {% endif %}

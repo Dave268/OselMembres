@@ -13,17 +13,17 @@ class LoadRoles implements FixtureInterface
   {
     // Les noms d'utilisateurs à créer
     $listRoles = array(
-      array('USER_ROLE', 'Musicien'),
-      array('USER_PRESIDENT', 'Président'),
-      array('USER_SECRETAIRE', 'Secrétaire'),
-      array('USER_TRESORIER', 'Trésorier'),
-      array('USER_CA', 'Membre CA'),
-      array('USER_PARTITION', 'Archivist'),
-      array('USER_WEEKEND', 'Responsable Weekend'),
-      array('USER_ANIMATION', 'Responsable Annimation'),
-      array('USER_PUB', 'Responsable Pub'),
-      array('USER_SPONSOR', 'Responsable Sponsor'),
-      array('USER_WEBMASTER', 'Webmaster'));
+      array('ROLE_USER', 'Musicien'),
+      array('ROLE_PRESIDENT', 'Président'),
+      array('ROLE_SECRETAIRE', 'Secrétaire'),
+      array('ROLE_TRESORIER', 'Trésorier'),
+      array('ROLE_CA', 'Membre CA'),
+      array('ROLE_PARTITION', 'Archivist'),
+      array('ROLE_WEEKEND', 'Responsable Weekend'),
+      array('ROLE_ANIMATION', 'Responsable Annimation'),
+      array('ROLE_PUB', 'Responsable Pub'),
+      array('ROLE_SPONSOR', 'Responsable Sponsor'),
+      array('ROLE_WEBMASTER', 'Webmaster'));
 
     foreach ($listRoles as $role) {
       // On crée l'utilisateur

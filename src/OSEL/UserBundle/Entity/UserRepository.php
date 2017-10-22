@@ -14,25 +14,25 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
  */
 class UserRepository extends EntityRepository
 {
-	public function getUsers($page, $nbPerPage, $active, $criteria, $desc)
+	public function getUsers($page, $nbPerPage, $enabled, $criteria, $desc)
     {
 		$qb = $this->createQueryBuilder('a')
                     ->leftJoin('a.instruments', 'c')
                     ->addSelect('c');
 
-		if($active)
+		if($enabled)
 		{
 			if($desc)
 			{
-				$qb->where('a.actif = :actif')
-					->setParameter('actif', true)
+				$qb->where('a.enabled = :enabled')
+					->setParameter('enabled', true)
 				->orderBy('a.'.$criteria, 'DESC')
 			;
 			}
 			else
 			{
-				$qb->where('a.actif = :actif')
-					->setParameter('actif', true)
+				$qb->where('a.enabled = :enabled')
+					->setParameter('enabled', true)
 				->orderBy('a.'.$criteria)
 			;
 			}
