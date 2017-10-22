@@ -92,6 +92,7 @@
 								</div>
 							</div>
 						{% endif %}
+                    {% if form.actif is defined %}
                         <div class="form-group">
                             <div class="col-sm-4 label-column">
                                 {{ form_label(form.actif, "Membre actif?: ", {'label_attr': {'class': 'control-label'}}) }}
@@ -100,6 +101,7 @@
                                 {{ form_widget(form.actif) }}
                             </div>
                         </div>
+                    {% endif %}
                         <div class="form-group">
                             <div class="col-sm-4 label-column">
                                 {{ form_label(form.newsletter, "Recevoir la newsletter?: ", {'label_attr': {'class': 'control-label'}}) }}

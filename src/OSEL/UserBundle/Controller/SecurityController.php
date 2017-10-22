@@ -67,7 +67,7 @@ class SecurityController extends Controller
             {
                 if($user->getRoles() == null)
                 {
-                    $role = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Roles')->findOneBy(array('role' => 'USER_ROLE'));
+                    $role = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Roles')->findOneBy(array('role' => 'ROLE_USER'));
                     $user->addUserRole($role);
                     $role->setUser($user);
                 }
@@ -111,8 +111,14 @@ class SecurityController extends Controller
     public function modifyAction($id, Request $request)
     {
         $user = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->findOneBy(array('id' => $id));
+        if($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
+            $idUser = 0;
+        }
+        else{
+            $idUser = $this->get('security.token_storage')->getToken()->getUser()->getId();
+        }
 
-        if (!$this->get('security.authorization_checker')->isGranted('ROLE_SECRETAIRE') || $id != $this->get('security.token_storage')->getToken()->getUser()->getId())
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_SECRETAIRE') && $id != $idUser)
         {
             $request->getSession()->getFlashBag()->add('ERROR', 'Vous n\'avez pas droit d\'exécuter cette action');
             return $this->redirect($this->generateUrl('osel_core_home'));

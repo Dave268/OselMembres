@@ -48,7 +48,6 @@ class UserType extends AbstractType
                 'choice_label'  => 'instrument',
                 'multiple'  => true,
 				'required' => false))
-            ->add('actif',              CheckboxType::class, array('required' => false))
             ->add('profession',         TextType::class, array('required' => false))
             ->add('street',             TextType::class, array('required' => false))
             ->add('number',             TextType::class, array('required' => false))
@@ -74,6 +73,11 @@ class UserType extends AbstractType
                     'multiple'  => true,
                     'required' => false));
             }
+
+        if($this->authorization->isGranted('ROLE_SECRETAIRE'))
+        {
+            $builder->add('actif',              CheckboxType::class, array('required' => false));
+        }
     }
 
     public function configureOptions(OptionsResolver $resolver)
