@@ -1,0 +1,57 @@
+#membres
+{
+	position: absolute;
+	top: 75px;
+}
+#membres legend
+{
+	font-size: 2em;
+	display: block;
+	float: center;
+	color: white;
+}
+#membres table
+{
+	border-collapse: collapse;
+	border: 2px solid #b29363;
+}
+#membres td, th
+{
+	border: 2px solid #b29363;
+	padding: 3px;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+	width: 200px;
+}
+#membres th
+{
+	border-bottom: 4px solid #b29363;
+}
+#membres thead
+{
+	font-size: 16px;
+	color: #ffdd7c;
+} 
+#membres thead a
+{
+	font-size: 1em;
+	color: #ffdd7c;
+	text-decoration: none;
+} 
+#membres tbody
+{
+	color: #fff5c9;
+}
+#membres tbody a
+{
+	color: #fff5c9;
+}
+.adresse
+{
+	min-width: 200px;
+}
+#membres td
+{
+	font-size: 0.9em;
+} 

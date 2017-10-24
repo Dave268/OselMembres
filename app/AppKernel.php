@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new OSEL\NewsBundle\OSELNewsBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new OSELWeekendBundle\OSELWeekendBundle(),
+            new SunCat\MobileDetectBundle\MobileDetectBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

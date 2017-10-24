@@ -67,7 +67,7 @@ class MusicsheetController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 if($composer->setComposer($composer->getLastName() . ' ' . $composer->getName()))
                 {
-                    $directory = $this->get('kernel')->getRootDir() . '/../web/bundles/musicsheets/index/' . $composer->getComposer();
+                    $directory = $this->get('kernel')->getRootDir() . '/../web/bundles/oselmusicsheet/index/' . $composer->getComposer();
                     if(!is_dir($directory))
                     {
                         if(mkdir($directory))
@@ -324,7 +324,7 @@ class MusicsheetController extends Controller
                     $html .= "<li class=\"list-group-item composerButton\" href=\"" . $route . "\"><span>" . $composer->getComposer() . "</span><i class=\"glyphicon glyphicon-triangle-right\" style=\"float:right;\"></i></li>";
                 }
 
-                $html .= "<script src=\"/bundles/musicsheets/js/musicsheets_arb.js\"></script>";
+                $html .= "<script src=\"/bundles/oselmusicsheet/js/musicsheets_arb.js\"></script>";
 
                 $response = new Response($html);
                 $response->headers->set('Content-Type', 'application/html');
@@ -352,7 +352,7 @@ class MusicsheetController extends Controller
                     $html .= "<li class=\"list-group-item composerButton\" href=\"" . $route . "\"><span>" . $composer->getComposer() . "</span><i class=\"glyphicon glyphicon-triangle-right\" style=\"float:right;\"></i></li>";
                 }
 
-                $html .= "<script src=\"/bundles/musicsheets/js/musicsheets_arb_user.js\"></script>";
+                $html .= "<script src=\"/bundles/oselmusicsheet/js/musicsheets_arb_user.js\"></script>";
 
                 $response = new Response($html);
                 $response->headers->set('Content-Type', 'application/html');
@@ -391,7 +391,7 @@ class MusicsheetController extends Controller
                         $html .= "></span>" . " " . $partition->getTitle() . "<i class=\"glyphicon glyphicon-triangle-right\" style=\"float:right;\"></i></li>";
                     }
 
-                    $html .= "<script src=\"/bundles/musicsheets/js/musicsheets_arb.js\"></script>";
+                    $html .= "<script src=\"/bundles/oselmusicsheet/js/musicsheets_arb.js\"></script>";
 
                     $response = new Response($html);
                     $response->headers->set('Content-Type', 'application/html');
@@ -423,7 +423,7 @@ class MusicsheetController extends Controller
                         $html .= "<li class=\"list-group-item musicsheetButton\" href=\"" . $route . "\" data=\"" . $partition->getId() . "\" data-composer=\"" . $partition->getComposer()->getId() . "\">" . $partition->getTitle() . "<i class=\"glyphicon glyphicon-triangle-right\" style=\"float:right;\"></i></li>";
                     }
 
-                    $html .= "<script src=\"/bundles/musicsheets/js/musicsheets_arb_user.js\"></script>";
+                    $html .= "<script src=\"/bundles/oselmusicsheet/js/musicsheets_arb_user.js\"></script>";
 
                     $response = new Response($html);
                     $response->headers->set('Content-Type', 'application/html');
@@ -449,13 +449,19 @@ class MusicsheetController extends Controller
                     $parts = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Parts')->getPartsByMusicsheet($id);
                     $html = "";
                     foreach ($parts as $part) {
-                        $route = $this->generateUrl('osel_musicsheet_download_part', array('id' => $part->getId()));
+                        $mobileDetector = $this->get('mobile_detect.mobile_detector');
 
+                        if($mobileDetector->isMobile() || $mobileDetector->isTablet()){
+                            $route = $this->container->get('assets.packages')->getUrl($part->getUrl());
+                        }
+                        else{
+                            $route = $this->generateUrl('osel_musicsheet_download_part', array('id' => $part->getId()));
+                        }
 
                         $html .= "<li class=\"list-group-item partButton\" href=\"" . $route . "\" data=\"" . $part->getMusicsheet()->getId() . "\"><span>" . $part->getTitle() . "</span></li>";
                     }
 
-                    $html .= "<script src=\"/bundles/musicsheets/js/musicsheets_arb.js\"></script>";
+                    $html .= "<script src=\"/bundles/oselmusicsheet/js/musicsheets_arb.js\"></script>";
 
                     $response = new Response($html);
                     $response->headers->set('Content-Type', 'application/html');
@@ -481,13 +487,20 @@ class MusicsheetController extends Controller
                     $parts = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Parts')->getPartsByMusicsheet($id);
                     $html = "";
                     foreach ($parts as $part) {
-                        $route = $this->generateUrl('osel_musicsheet_download_part', array('id' => $part->getId()));
+                        $mobileDetector = $this->get('mobile_detect.mobile_detector');
+
+                        if($mobileDetector->isMobile() || $mobileDetector->isTablet()){
+                            $route = $this->container->get('assets.packages')->getUrl($part->getUrl());
+                        }
+                        else{
+                            $route = $this->generateUrl('osel_musicsheet_download_part', array('id' => $part->getId()));
+                        }
 
 
                         $html .= "<li class=\"list-group-item partButton\" href=\"" . $route . "\" data=\"" . $part->getMusicsheet()->getId() . "\"><span>" . $part->getTitle() . "</span></li>";
                     }
 
-                    $html .= "<script src=\"/bundles/musicsheets/js/musicsheets_arb_user.js\"></script>";
+                    $html .= "<script src=\"/bundles/oselmusicsheet/js/musicsheets_arb_user.js\"></script>";
 
                     $response = new Response($html);
                     $response->headers->set('Content-Type', 'application/html');

@@ -1,0 +1,151 @@
+body
+{
+	background-color: palegreen;
+	/* text-shadow: 2px 2px 5px black; */
+}
+
+
+#acceuil
+{
+	width: 50%;
+	position: absolute;
+	left: 25%;
+	top: 70px;
+}
+#acceuil legend
+{
+	font-size: 2em;
+	display: block;
+	float: center;
+	color: white;
+}
+#acceuil label
+{
+	font-size: 1em;
+	display: inline-block;
+	float: center;
+	color: white;
+}
+#acceuil ul
+{
+	text-align: center;
+	list-style-type: none;
+	font-size: 2em;
+}
+#acceuil li:hover
+{
+	margin: 10px;
+}
+#acceuil a
+{
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+	border-radius: 30px;
+}
+#acceuil a:hover
+{
+	background-color: white;
+	color: #690011;	
+	margin: 30px;
+}
+#acceuil table
+{
+	width: 50%;
+	position: relative;
+	left: 25%;
+	color: white;
+}
+#acceuil #envoyer
+{
+	width: 80%;
+	position: relative;
+	left: 0%;
+	margin-top: 10px;
+}
+#agenda iframe
+{
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	height: 80%;
+	top: 75px;
+	min-width: 800px;
+	min-height: 600px;
+}
+#retour
+{
+	width: 150%;
+	height: 60px;
+	border-color: white;
+	background-color: white;
+}
+#retour a
+{
+	position: relative;
+	left: 80px;
+	top: 21.3%;
+	text-decoration: none;
+	font-size: 2em;
+	color: #690011;
+	border-radius: 30px;
+	padding: 10px;
+}
+#retour a:hover
+{
+	color: white;
+	background-color: #690011;
+}
+#deconnection
+{
+	width: 50%;
+	position: absolute;
+	left: 25%;
+	bottom: 5%;
+}
+#deconnection ul
+{
+	text-align: center;
+	list-style-type: none;
+	font-size: 2em;
+}
+#deconnection li:hover
+{
+	margin: 10px;
+}
+#deconnection a
+{
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+	border-radius: 30px;
+}
+#deconnection a:hover
+{
+	background-color: white;
+	color: #690011;	
+	margin: 30px;
+}
+#register table
+{
+	font-size: 1em;
+	display: block;
+	width: 1000px;
+}
+#listeMembres
+{
+	display: block;
+	color: white;
+	text-align: center;
+}
+#listeMembres thead th
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#listeMembres thead a
+{
+	color: white;
+	text-decoration: none;
+	font-size: 1.2em;
+}

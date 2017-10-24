@@ -39,3 +39,7 @@ osel_musicsheet_download:
 osel_musicsheet_download_part:
     path:     /Musicsheet/download/part/{id}
     defaults: { _controller: OSELMusicsheetBundle:Musicsheet:downloadPart, id: 0 }
+
+osel_musicsheet_test_change_url:
+    path:     /Musicsheet/test/changeUrl
+    defaults: { _controller: OSELMusicsheetBundle:Test:changeURL}

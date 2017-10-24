@@ -1,0 +1,145 @@
+#documents
+{
+	position: absolute;
+	top: 75px;
+	width: 40%;
+	left: 7%;
+	color: white;
+	min-width: 400px;
+}
+#documents legend
+{
+	font-size: 2em;
+	display: block;
+	float: center;
+	color: white;
+}
+
+#documents ul
+{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	top: 50%;
+}
+#documents ul li
+{
+	font-size: 1.5em;
+	margin: 10px;
+}
+#documents li img
+{
+	width: 48px;
+	height: 48px;
+	vertical-align: middle;
+}
+
+#documents a
+{
+	text-decoration: none;
+	color: white;
+}
+#documents a:hover
+{
+	color: #afc2fe;
+}
+#parent a
+{
+	font-size: 2em;
+}
+#parent
+{
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid white;
+}
+#parent img
+{
+	vertical-align: middle;
+	width: 48px;
+	height: 48px;
+}
+#partitions
+{
+	position: absolute;
+	top: 75px;
+	width: 40%;
+	left: 10%;
+	color: white;
+	min-width: 400px;
+}
+#partitions legend
+{
+	font-size: 2em;
+	display: block;
+	float: center;
+	color: white;
+}
+#partitions ul
+{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	top: 50%;
+}
+#partitions ul li
+{
+	font-size: 1.5em;
+	margin: 10px;
+}
+#partitions li img
+{
+	width: 48px;
+	height: 48px;
+	vertical-align: middle;
+}
+#partitions a
+{
+	text-decoration: none;
+	color: white;
+}
+#partitions a:hover
+{
+	color: #afc2fe;
+}
+#ajoutpartitions
+{
+	position: absolute;
+	top: 75px;
+	width: 40%;
+	left: 60%;
+	color: white;
+	min-width: 400px;
+}
+#ajoutpartitions legend
+{
+	font-size: 2em;
+	display: block;
+	float: center;
+	color: white;
+}
+
+#ajoutpartitions ul
+{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	top: 50%;
+}
+#ajoutdocument
+{
+	position: absolute;
+	top: 75px;
+	width: 40%;
+	right: 7%;
+	color: white;
+	min-width: 400px;
+}
+#ajoutdocument legend
+{
+	font-size: 2em;
+	display: block;
+	float: center;
+	color: white;
+	margin-bottom: 10px;
+}

@@ -7,13 +7,12 @@
 {% endblock %}
 
 {% block head %}
-	<link rel="stylesheet" href="/bundles/musicsheets/css/style.css">
-    <script src="/bundles/musicsheets/js/modal.js"></script>
-    <script src="/bundles/musicsheets/js/musicsheets_arb.js"></script>
+	<link rel="stylesheet" href="{{ asset('bundles/oselmusicsheet/css/style.css') }}/">
+    <script src="{{ asset('bundles/oselmusicsheet/js/modal.js') }}"></script>
+    <script src="{{ asset('bundles/oselmusicsheet/js/musicsheets_arb.js') }}"></script>
 {% endblock %}
 
 {% block body %}
-
     <div id="formType" class="modal">
         <span class="close" id="closeComposer" onclick="document.getElementById('formType').style.display='none'">&times;</span>
         <div class="row">

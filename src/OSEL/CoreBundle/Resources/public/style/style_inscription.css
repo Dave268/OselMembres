@@ -1,0 +1,28 @@
+#inscription
+{
+	position: absolute;
+	top: 75px;
+	width: 30%;
+	left: 35%;
+	color: white;
+}
+#inscription legend
+{
+	font-size: 2em;
+	display: block;
+	float: center;
+	color: white;
+}
+#inscription td
+{
+	padding: 5px;
+	padding-right: 35px;
+}
+#retour
+{
+	width: 100%;
+}
+#inscription_erreur li
+{
+	color: red;
+}

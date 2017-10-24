@@ -412,7 +412,7 @@ class Musicsheet
             }
 
 
-            $file->setUrl('bundles/musicsheets/index/' . $this->composer->getComposer() . '/' . $this->getTitle() . '/' . $name . '.' . $uploadedFile->guessExtension());
+            $file->setUrl('library/' . $this->composer->getComposer() . '/' . $this->getTitle() . '/' . $name . '.' . $uploadedFile->guessExtension());
             $file->setTitle($name . '.' . $uploadedFile->guessExtension());
             $uploadedFile->move($this->getUploadRootDir(), $name . '.' . $uploadedFile->guessExtension());
 
@@ -426,7 +426,7 @@ class Musicsheet
 
     protected function getUploadRootDir()
     {
-        $directory = __DIR__.'/../../../../web/bundles/musicsheets/index/' . $this->composer->getComposer() . '/' . $this->getTitle();
+        $directory = __DIR__.'/../../../../web/library/' . $this->composer->getComposer() . '/' . $this->getTitle();
         if(!is_dir($directory))
         {
             if(mkdir($directory))
