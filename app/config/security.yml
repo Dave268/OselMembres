@@ -32,9 +32,7 @@ security:
         in_memory:
             memory:
                 users:
-                    admin: { password: Zg10gemgm;31 , roles: [ 'ROLE_ADMIN' ] }
-                    user: { password: Zg10gemgm;31 , roles: [ 'ROLE_USER' ] }
-                    secretaire: { password: Zg10gemgm;31 , roles: [ 'ROLE_SECRETAIRE' ] }
+                    admin: { password: "%user_password%", roles: [ 'ROLE_ADMIN' ] }
 
     firewalls:
         dev:
