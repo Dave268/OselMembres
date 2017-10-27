@@ -1,4 +1,0 @@
-services:
-#    osel_weekend.example:
-#        class: OSELWeekendBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]

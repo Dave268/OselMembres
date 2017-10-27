@@ -24,7 +24,6 @@ class AppKernel extends Kernel
             new OSEL\MediaBundle\OSELMediaBundle(),
             new OSEL\NewsBundle\OSELNewsBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
-            new OSELWeekendBundle\OSELWeekendBundle(),
             new SunCat\MobileDetectBundle\MobileDetectBundle(),
         ];
 

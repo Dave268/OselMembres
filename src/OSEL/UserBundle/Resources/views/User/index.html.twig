@@ -62,8 +62,9 @@
 						<div class="panel-heading">
 							<h3 class="panel-title">Liste des membres</h3></div>
 						<div class="panel-body">
-                            {% if is_granted('ROLE_SECRETAIRE') %}
+                            
 							<div class="row">
+							{% if is_granted('ROLE_SECRETAIRE') %}
 								<div class="col-md-3 col-sm-3">
 									<div class="btn-group" role="group" style="min-width:180px;">
 										<button class="btn btn-info btn-xs" type="button" style="width:90px;" onclick="window.open('{{ path('osel_user_csv_options') }}')">Export CSV</button>
@@ -74,24 +75,25 @@
 
 								<div class="col-md-3 col-sm-3">
 									<select class="input-sm selectMembres" style="width:180px;min-width:180px;height:22px;padding-top:0px;padding-bottom:0px;">
--												<option value="{{ path('osel_user_index') }}" {% if not active %}selected=""{% endif %}>Tous le membres</option>
-											<option value="{{ path('osel_user_index', {'page': page , 'criteria': criteria, 'desc': desc, active: '1', }) }}" {% if active %}selected=""{% endif %}>Membres Actifs</option>
+-												<option value="{{ path('osel_user_index', {'page': page , 'criteria': criteria, 'desc': desc, 'enabled': '0', 'nbPerPage': nbPerPage}) }}" {% if not enabled %}selected=""{% endif %}>Tous le membres</option>
+											<option value="{{ path('osel_user_index', {'page': page , 'criteria': criteria, 'desc': desc, 'enabled': '1', 'nbPerPage': nbPerPage}) }}" {% if enabled %}selected=""{% endif %}>Membres Actifs</option>
 									</select>
 								</div>
+								{% endif %}
 
 								<div class="col-md-3 col-sm-3">
 									<select class="input-sm selectMembres" style="width:180px;min-width:180px;height:22px;padding-top:0px;padding-bottom:0px;">
 										<option value="{{ path('osel_user_index') }}" {% if nbPerPage == 20 %}selected=""{% endif %}>Afficher 20</option>
-										<option value="{{ path('osel_user_index', {'page': page , 'criteria': criteria, 'desc': desc, 'active': active, 'nbPerPage': 30}) }}" {% if nbPerPage == 30 %}selected=""{% endif %}>Afficher 30</option>
-										<option value="{{ path('osel_user_index', {'page': page , 'criteria': criteria, 'desc': desc, 'active': active, 'nbPerPage': 50}) }}" {% if nbPerPage == 50 %}selected=""{% endif %}>Afficher 50</option>
-										<option value="{{ path('osel_user_index', {'page': page , 'criteria': criteria, 'desc': desc, 'active': active, 'nbPerPage': 100}) }}" {% if nbPerPage == 100 %}selected=""{% endif %}>Afficher 100</option>
+										<option value="{{ path('osel_user_index', {'page': '1' , 'criteria': criteria, 'desc': desc, 'enabled': enabled, 'nbPerPage': 30}) }}" {% if nbPerPage == 30 %}selected=""{% endif %}>Afficher 30</option>
+										<option value="{{ path('osel_user_index', {'page': '1' , 'criteria': criteria, 'desc': desc, 'enabled': enabled, 'nbPerPage': 50}) }}" {% if nbPerPage == 50 %}selected=""{% endif %}>Afficher 50</option>
+										<option value="{{ path('osel_user_index', {'page': '1' , 'criteria': criteria, 'desc': desc, 'enabled': enabled, 'nbPerPage': 100}) }}" {% if nbPerPage == 100 %}selected=""{% endif %}>Afficher 100</option>
 									</select>
 								</div>
 
 
 							</div>
 								</br>
-                            {% endif %}
+                            
 							<div class="row">
 								<div class="col-md-12">
 									<div class="table-responsive">
@@ -99,16 +101,16 @@
 											<thead style="font-size:12px;">
 												<tr>
     												{% if is_granted('ROLE_SECRETAIRE') %}
-														<th><a href="{% if criteria == 'enabled' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'enabled', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'enabled', 'desc': '0'}) }}{% endif %}">Actif</a></th>
-														<th><a href="{% if criteria == 'username' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'username', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'username', 'desc': '0'}) }}{% endif %}">Username</a></th>
+														<th><a href="{% if criteria == 'enabled' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'enabled', 'desc': '1', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'enabled', 'desc': '0', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% endif %}">Actif</a></th>
+														<th><a href="{% if criteria == 'username' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'username', 'desc': '1', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'username', 'desc': '0', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% endif %}">Username</a></th>
 													{% endif%}
-													<th><a href="{% if criteria == 'lastname' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'lastname', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'lastname', 'desc': '0'}) }}{% endif %}">Nom</a></th>
-													<th><a href="{% if criteria == 'name' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'name', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'name', 'desc': '0'}) }}{% endif %}">Prénom</a></th>
-													<th><a href="{% if criteria == 'email' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'email', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'email', 'desc': '0'}) }}{% endif %}">Adresse Mail</a></th>
-													<th class="hidden-xs"><a href="{% if criteria == 'instruments' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'instruments', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'instruments', 'desc': '0'}) }}{% endif %}">instrument</a></th>
+													<th><a href="{% if criteria == 'lastname' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'lastname', 'desc': '1', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'lastname', 'desc': '0', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% endif %}">Nom</a></th>
+													<th><a href="{% if criteria == 'name' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'name', 'desc': '1', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'name', 'desc': '0', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% endif %}">Prénom</a></th>
+													<th><a href="{% if criteria == 'email' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'email', 'desc': '1', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'email', 'desc': '0', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% endif %}">Adresse Mail</a></th>
+													<th class="hidden-xs"><a href="{% if criteria == 'instruments' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'instruments', 'desc': '1', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'instruments', 'desc': '0', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% endif %}">instrument</a></th>
 													<th>GSM/téléphone</th>
-													<th class="hidden-xs"><a href="{% if criteria == 'birthday' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'birthday', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'birthday', 'desc': '0'}) }}{% endif %}">Date de Naissance</a></th>
-													{% if is_granted('ROLE_SECRETAIRE') %}<th><a href="{% if criteria == 'city' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'city', 'desc': '1'}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'city', 'desc': '0'}) }}{% endif %}">Adresse </th>
+													<th class="hidden-xs"><a href="{% if criteria == 'birthday' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'birthday', 'desc': '1', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'birthday', 'desc': '0', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% endif %}">Date de Naissance</a></th>
+													{% if is_granted('ROLE_SECRETAIRE') %}<th><a href="{% if criteria == 'city' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'city', 'desc': '1', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'city', 'desc': '0', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% endif %}">Adresse </th>
 													<th class="hidden-xs">action </th>{% endif %}
 												</tr>
 											</thead>
@@ -125,7 +127,7 @@
 															<td>{{ user.lastname }}</td>
 															<td>{{ user.name }}</td>
 															<td>{{ user.email }}</td>
-															<td class="hidden-xs">{% for instrument in user.instruments %}{{ instrument.instrument }}{% endfor %}</td>
+															<td class="hidden-xs">{% for instrument in user.instruments %}{{ instrument.instrument }}, {% endfor %}</td>
 															<td>{{ user.mobilephone }}</td>
 															<td class="hidden-xs">{{ user.birthday|date('d/m/Y') }}</td>
 															

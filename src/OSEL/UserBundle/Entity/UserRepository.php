@@ -20,47 +20,26 @@ class UserRepository extends EntityRepository
                     ->leftJoin('a.instruments', 'c')
                     ->addSelect('c');
 
-		if($enabled)
-		{
-			if($desc)
-			{
-				$qb->where('a.enabled = :enabled')
-					->setParameter('enabled', true)
-				->orderBy('a.'.$criteria, 'DESC')
-			;
-			}
-			else
-			{
-				$qb->where('a.enabled = :enabled')
-					->setParameter('enabled', true)
-				->orderBy('a.'.$criteria)
-			;
-			}
+		if($enabled){
+			$qb->where('a.enabled = :enabled')
+				->setParameter('enabled', true);
+		}
+		if($desc){
+			$order = 'DESC';
+		}
+		else{
+			$order = 'ASC';
+		}
 			
-		}
-		else
+		if($criteria == 'instruments')
 		{
-			if($desc)
-			{
-			    if($criteria == 'instruments')
-                {
-                    $qb->orderBy('c.instrument', 'DESC');
-                }
-                else{
-                    $qb->orderBy('a.'.$criteria, 'DESC');
-                }
-			}
-			else
-			{
-                if($criteria == 'instruments')
-                {
-                    $qb->orderBy('c.instrument');
-                }
-                else{
-                    $qb->orderBy('a.'.$criteria);
-                }
-			}
+			$qb->orderBy('c.instrument', $order);
 		}
+		else{
+			$qb->orderBy('a.'.$criteria, $order);
+		}
+	
+		
 
         $qb->setFirstResult(($page-1) * $nbPerPage)
             ->setMaxResults($nbPerPage)

@@ -13,19 +13,15 @@ class UserController extends Controller
             throw $this->createNotFoundException("La page " . $page . " n'existe pas.");
         }
 
-        if ($this->get('security.authorization_checker')->isGranted('ROLE_SECRETAIRE'))
-        {
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_SECRETAIRE')){
             $listUsers = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->getUsers($page, $nbPerPage, $enabled, $criteria, $desc);
-
         }
-        elseif ($this->get('security.authorization_checker')->isGranted('ROLE_USER'))
-        {
-            $listUsers = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->getUsers($page, $nbPerPage, true, $criteria, $desc);
+        elseif ($this->get('security.authorization_checker')->isGranted('ROLE_USER')){
+            $listUsers = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->getUsers($page, $nbPerPage, 1, $criteria, $desc);
         }
 
         $nbPages = ceil(count($listUsers) / $nbPerPage);
-        if ($page > $nbPages)
-        {
+        if ($page > $nbPages){
             throw $this->createNotFoundException("La page ".$page." n'existe pas.");
         }
 
@@ -35,7 +31,7 @@ class UserController extends Controller
             'page'          => $page,
             'criteria'      => $criteria,
             'desc'          => $desc,
-            'active'        => $enabled,
+            'enabled'       => $enabled,
             'nbPages'       => $nbPages,
 			'nbPerPage'     => $nbPerPage,
 			'selectedPage'	=> 'membres'));
