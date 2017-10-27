@@ -2,313 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b44466-ec2e-4594-a066-e5ecf12552b1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/public/img/Spinner.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/info.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Basson_1&amp;2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Basson_3&amp;4.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Batterie_&amp;_Cymballes.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Batterie_Basque.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Clarinettes.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Contrebasse.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Cornets.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Cors_1&amp;2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Cors_3&amp;4.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Flutes.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Harpe_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Harpe_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Hautbois_1&amp;2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Piccolo.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Timbales.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Triangle.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Trombone_3_&amp;_Tuba.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Trombonne_1&amp;2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/España/Beethoven_Ludwig_Van_España_Trompettes.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/qsd/Beethoven_Ludwig_Van_qsd_Contrebasse.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/qsd/Beethoven_Ludwig_Van_qsd_Flute.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Beethoven Ludwig Van/qsd/Beethoven_Ludwig_Van_qsd_Violon_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Basson_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Basson_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Caisse_Claire.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Clarinette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Clarinette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Cor_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Cor_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Cor_3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Cor_4.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Flute_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Harpe.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Hautbois_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Hautbois_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Saxophone_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Timbales.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Violon_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Violon_1_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Violon_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Violoncelle.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Basson_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Basson_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Clarinette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Clarinette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Cor_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Cor_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Cor_3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Cor_4.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Flute_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Harpe.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Hautbois_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Hautbois_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Percussions.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Saxophone_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Timbales.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Basson_1&amp;2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Basson_3&amp;4.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Batterie_&amp;_Cymballes.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Batterie_Basque.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Clarinettes.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Contrebasse.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Cornets.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Cors_1&amp;2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Cors_3&amp;4.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Flutes.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Harpe_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Harpe_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Hautbois_1&amp;2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Piccolo.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Timbales.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Triangle.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Trombone_3_&amp;_Tuba.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Trombonne_1&amp;2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Trompettes.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Violon_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Violon_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Violoncelle.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Basson_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Basson_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Celesta.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Clarinette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Clarinette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Clarinette_Piccolo.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Contrebasse.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Cor_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Cor_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Cor_3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Cor_4.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Cor_4_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Flute_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Flute_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Grosse_Caisse.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Harpe.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Hautbois_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Hautbois_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Piccolo.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Tambour_Militaire.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Timbales.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trombone_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trombone_1_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trombone_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trombone_2_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trombonne_3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trompette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trompette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trompette_3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Tuba.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Violon_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Violon_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Violoncelle.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Xylophone.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Basson_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Basson_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Celesta.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Clarinette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Clarinette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Contrebasse.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Cor_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Cor_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Cor_3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Cor_3_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Cor_Anglé.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Flute_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Flute_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Harpe.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Hautbois_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Hautbois_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Percussions.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Piano.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Picolo.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Timbales.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Trombone_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Trombone_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Trombonne_3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Trompette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Trompette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Trompette_3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Tuba.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Violon_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Violon_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Violoncelle.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Basson.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Clarinette.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Contrebasse.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Cors.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Flute.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Harpe.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Hautbois.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Percussions.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Trombones.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Trompette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Violon_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Violon_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Violoncelle.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Bassons.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Clarinette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Clarinette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Cor_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Cor_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Flutes.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Grosse_Caisse.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Hautbois.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Percussions.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Picolo.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Timbales.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Trombone_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Trombone_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Trombonne_3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Trompette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Trompette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Violon_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Violon_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Violoncelle.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Alto_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Alto_copy_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Basson_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Bassons.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Clarinette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Clarinette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Contrebasse.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Contrebasse_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Contrebasse_copy_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Cor_1_F.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Cor_2_F.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Cor_3_F.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Cor_4_F.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Cor_Anglé.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Cornets.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Flute_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Flute_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Grosse_Caisse.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Harpe_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Hautbois_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Hautbois_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Percussions.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Piano.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Piccolo.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Saxophone_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Tambour_Militaire.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Timbales.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Trombone_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Trombones.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Trompette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Tuba.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Violon_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Violon_1_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Violon_1_copy_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Violon_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Violon_2_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Violon_2_copy_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Violoncelle.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Violoncelle_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Violoncelle_copy_copy.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Basson_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Clarinette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Clarinette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Contrebasse.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Cor_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Cor_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Flute_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Flute_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Hautbois_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Hautbois_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Trompette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Trompette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Violon_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Violon_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Violoncelle.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Basson_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Basson_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Clarinette_1b.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Clarinette_2b.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Contrebasse.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Cor_1_F.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Cor_2_F.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Cor_3_F.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Cor_4_F.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Flute_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Flute_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Hautbois_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Hautbois_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Timbales.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Trombone_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Trombone_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Trombonne_3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Trompette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Trompette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Violon_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Violon_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Violoncelle.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Alto.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Basson_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Basson_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cimbasso.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Clarinette_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Clarinette_1b.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Clarinette_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Clarinette_2b.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Contrebasse.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_1_E.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_1_F.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_2_E.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_2_F.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_3_E.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_3_F.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_4_E.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_4_F.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cornet_1a.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cornet_1b.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cornet_2a.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cornet_2b.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Flutes.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Hautbois_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Hautbois_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Percussions.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Timbales.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Violon_1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Violon_2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/public/index/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Violoncelle.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSELWeekendBundle/Controller/DefaultController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSELWeekendBundle/OSELWeekendBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSELWeekendBundle/Resources/config/routing.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSELWeekendBundle/Resources/config/services.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSELWeekendBundle/Resources/views/Default/index.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Controller/DefaultController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Controller/DocumentController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Controller/DocumentsController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/DependencyInjection/Configuration.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/DependencyInjection/OSELDocumentExtension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/CategoryDocument.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/Document.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/YearDocument.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Event/DocumentEvents.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Event/GestionDocEvent.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/DocumentType.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Listener/YearListener.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/OSELDocumentBundle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Repository/CategoryDocumentRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Repository/DocumentRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Repository/YearDocumentRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/config/routing.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/config/services.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/Document/gestion.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Tests/Controller/DefaultControllerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/OSELWeekendBundle/Controller/DefaultControllerTest.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/public/js/core.js" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/public/js/core.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/UserRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/UserRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/public/js/payement.js" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/public/js/payement.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/login.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/login.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/Login-Form-Dark.css" afterPath="$PROJECT_DIR$/web/css/Login-Form-Dark.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -320,11 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="14" column="69" lean-forward="false" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+            <state relative-caret-position="432">
+              <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
               <folding>
                 <element signature="e#7#47#0#PHP" expanded="true" />
               </folding>
@@ -332,28 +51,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="info.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/info.php">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="212">
+              <caret line="34" column="152" lean-forward="false" selection-start-line="34" selection-start-column="152" selection-end-line="34" selection-end-column="152" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="core.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/public/js/core.js">
+        <entry file="file://$PROJECT_DIR$/web/bundles/oselcore/js/core.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -362,19 +71,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/layout.html.twig">
+      <file leaf-file-name="payement.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/bundles/oselevent/js/payement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1660">
-              <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="504">
+              <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -384,11 +91,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig">
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+            <state relative-caret-position="18">
+              <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login-Form-Dark.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/Login-Form-Dark.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/login.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="30" column="83" lean-forward="false" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -396,26 +123,6 @@
       </file>
       <file leaf-file-name="export.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/export.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing_dev.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/services.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -448,14 +155,15 @@
       <find>musicsheet</find>
       <find>getUr</find>
       <find>DOM</find>
-      <find>Doc</find>
       <find>docum</find>
       <find>DOMDocument</find>
+      <find>OSELWeekendBundle</find>
+      <find>Doc</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
-      <dir>$PROJECT_DIR$/app</dir>
       <dir>$PROJECT_DIR$/var</dir>
+      <dir>$PROJECT_DIR$/app</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -464,8 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/SubEvents.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/TestController.php" />
         <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Form/AdminUserType.php" />
         <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/temp.php" />
         <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/config/services.yml" />
@@ -507,14 +213,16 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Controller/MusicsheetController.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/login.html.twig" />
-        <option value="$PROJECT_DIR$/web/css/Login-Form-Dark.css" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/web/info.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/public/js/core.js" />
-        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/styles.css" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/login.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/Login-Form-Dark.css" />
+        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/web/bundles/oselevent/js/payement.js" />
       </list>
     </option>
   </component>
@@ -562,12 +270,6 @@
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -575,49 +277,6 @@
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
@@ -651,7 +310,7 @@
               <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="User" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Security" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
@@ -663,6 +322,21 @@
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="oselevent" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="oselevent" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
@@ -677,13 +351,25 @@
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="oseluser" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -743,12 +429,12 @@
       <workItem from="1508697009329" duration="67000" />
       <workItem from="1508856953744" duration="5187000" />
       <workItem from="1509104008201" duration="1946000" />
-      <workItem from="1509106586394" duration="1186000" />
+      <workItem from="1509106586394" duration="3021000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114562000" />
+    <option name="totallyTimeSpent" value="116397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1853" height="1055" extended-state="6" />
@@ -758,6 +444,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -769,7 +456,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -805,41 +491,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-373">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/noevent.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1093">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/views/Info/redirections_gestion.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1036,20 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="66" lean-forward="false" selection-start-line="0" selection-start-column="66" selection-end-line="14" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/Login-Form-Dark.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/AppCache.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1082,14 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1103,16 +732,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="14" column="69" lean-forward="false" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
-          <folding>
-            <element signature="e#7#47#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1164,13 +783,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/layout.html.twig">
+    <entry file="file://$PROJECT_DIR$/tests/OSELWeekendBundle/Controller/DefaultControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1660">
-          <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+        <state relative-caret-position="36">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/cache/prod/appProdProjectContainer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26352">
+          <caret line="2748" column="59" lean-forward="false" selection-start-line="2748" selection-start-column="0" selection-end-line="2749" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#7#78#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="30" column="83" lean-forward="false" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1179,6 +822,56 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/Login-Form-Dark.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="34" column="152" lean-forward="false" selection-start-line="34" selection-start-column="152" selection-end-line="34" selection-end-column="152" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/oselcore/js/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/oselevent/js/payement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding>
+            <element signature="e#7#47#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

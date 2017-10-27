@@ -6,6 +6,7 @@ function elementClicked() {
     var editableText = $("<input />");
     editableText.val(divHtml);
     editableText.attr('data-id', $(this).attr('data-id'));
+    editableText.attr('data-val', divHtml);
     editableText.width('30px');
     $(this).replaceWith(editableText);
     editableText.focus();
@@ -30,45 +31,53 @@ function editableTextBlurred() {
     });
     console.log($href);
 
-    $('<div></div>').load($href + ' form', function () {
-        //set form
-        var $form = $(this).children('form');
+    if($(this).val() != $(this).attr('data-val'))
+    {
+        $('<div></div>').load($href + ' form', function () {
+            //set form
+            var $form = $(this).children('form');
 
-        //set checkbox
-        var $cb = $form.find("input[type=\"text\"]");
+            //set checkbox
+            var $cb = $form.find("input[type=\"text\"]");
 
-        //toggle
-        $cb.val(html);
-
-
-        // form action
-        var $url = $href;
+            //toggle
+            $cb.val(html);
 
 
-        //set data
-        var $data = $form.serialize();
+            // form action
+            var $url = $href;
 
-        $.ajax({
-            url: $url,
-            data: $data,
-            method: 'post',
-            dataType: 'json',
-            cache: false,
-            success: function (obj) {
-                viewableText.attr('data-id', obj.id);
-                $('#prixTotal').html(obj.paye);
-                console.log('réussi');
-            },
-            complete: function () {
-                console.log("complete!");
-            },
-            error: function (err) {
-                console.log('error');
-                console.log(err);
-            }
+
+            //set data
+            var $data = $form.serialize();
+
+            $.ajax({
+                url: $url,
+                data: $data,
+                method: 'post',
+                dataType: 'json',
+                cache: false,
+                success: function (obj) {
+                    viewableText.attr('data-id', obj.id);
+                    $('#prixTotal').html(obj.paye);
+                    console.log('réussi');
+                },
+                complete: function () {
+                    console.log("complete!");
+                },
+                error: function (err) {
+                    console.log('error');
+                    console.log(err);
+                }
+            });
+
         });
+    }
+    else
+    {
+        viewableText.attr('data-id', $(this).attr('data-id'));
+    }
 
-    });
 
     $(this).replaceWith(viewableText);
     // setup the click event for this new div
