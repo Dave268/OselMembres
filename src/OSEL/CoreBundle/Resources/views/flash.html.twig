@@ -1,0 +1,27 @@
+<!-- on affiche les notices-->
+<div style="position: absolute; top: 0; width: 100%; z-index: 999;" id="messages">
+    {% for message in app.session.flashbag.get('notice') %}
+        <div class="alert alert-success alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Notice: </strong>{{ message }}
+        </div>
+    {% endfor %}
+
+
+
+    <!-- on affiche les erreurs-->
+    {% for message in app.session.flashbag.get('ERROR') %}
+        <div class="alert alert-danger alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Notice: </strong>{{ message }}
+        </div>
+    {% endfor %}
+</div>
+{% for message in app.session.flashbag.get('success') %}
+    <div id="successModal" class="successmodal">
+        <div class="modal-content">
+            <span class="closeModal">&times;</span>
+            <h2>{{ message }}</2>
+        </div>
+    </div>
+{% endfor %}
