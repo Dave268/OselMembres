@@ -110,7 +110,7 @@ class EventsController extends Controller
                     $request->getSession()->getFlashBag()->add('notice', 'Un nouveau Weekend a bien été ajouté à la base de données');
                     return $this->redirect($this->generateUrl('osel_event_list'));
 
-                } catch (Doctrine\DBAL\Exception\UniqueConstraintViolationException $e) {
+                } catch (UniqueConstraintViolationException $e) {
                     $request->getSession()->getFlashBag()->add('Error', 'Ce weekend existe déjà dans la base de données!');
                 }
             }

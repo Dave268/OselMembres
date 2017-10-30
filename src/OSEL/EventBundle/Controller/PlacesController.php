@@ -75,7 +75,7 @@ class PlacesController extends Controller
                     $request->getSession()->getFlashBag()->add('notice', 'Un nouveau lieu a bien été rajouté à la base de données');
                     return $this->redirect($this->generateUrl('osel_event_list_places'));
 
-                } catch (Doctrine\DBAL\Exception\UniqueConstraintViolationException $e) {
+                } catch (UniqueConstraintViolationException $e) {
                     $request->getSession()->getFlashBag()->add('Error', 'Ce lieu existe déjà dans la base de données!');
                 }
             }

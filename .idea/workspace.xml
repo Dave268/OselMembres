@@ -2,69 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b44466-ec2e-4594-a066-e5ecf12552b1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/secret.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Controller/EventsController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Controller/InscriptionsController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Controller/PlacesController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Controller/TestController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/DependencyInjection/Configuration.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/DependencyInjection/OSELEventExtension.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Entity/Event.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Entity/Place.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Entity/RidingGroup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Entity/RidingGroupMembre.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Entity/SubEvents.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Entity/SubscribeEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Form/EventType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Form/PaymentCompleteType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Form/PlaceType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Form/SubEventsType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Form/SubscribeEventIndividualType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Form/SubscribeEventType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/Controller/InfoController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/DependencyInjection/Configuration.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/DependencyInjection/OSELInfoExtension.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/Entity/RedirectionMail.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/Entity/RedirectionMauk.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/Form/RedirectionMailType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/OSELInfoBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/Repository/RedirectionMailRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/Resources/config/routing.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/Resources/config/services.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/Resources/views/Info/agenda.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/Resources/views/Info/redirections.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/Resources/views/Info/redirections_gestion.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/InfoBundle/Tests/Controller/DefaultControllerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/OSELEventBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Repository/EventRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Repository/PlaceRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Repository/RidingGroupMembreRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Repository/RidingGroupRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Repository/SubEventsRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Repository/SubscribeEventRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/config/routing.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/config/services.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/views/events/form.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/views/events/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/views/events/noevent.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/views/events/view.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/views/inscriptions/form.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/views/inscriptions/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/views/inscriptions/payement.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/views/inscriptions/prix.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/views/inscriptions/view.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/views/places/form.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/views/places/listplaces.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Resources/views/places/view.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/EventBundle/Tests/Controller/DefaultControllerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/info.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/ExportFilesController.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/ExportFilesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/SecurityController.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/SecurityController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -95,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1098">
-              <caret line="59" column="24" lean-forward="false" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+            <state relative-caret-position="288">
+              <caret line="112" column="59" lean-forward="false" selection-start-line="112" selection-start-column="59" selection-end-line="112" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -118,8 +58,18 @@
       <file leaf-file-name="InscriptionsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2565">
-              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="206" column="59" lean-forward="false" selection-start-line="206" selection-start-column="59" selection-end-line="206" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlacesController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="77" column="59" lean-forward="false" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -226,18 +176,18 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Controller/MusicsheetController.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php" />
         <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/EventRepository.php" />
         <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/TestController.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php" />
         <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/SecurityController.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php" />
         <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/ExportFilesController.php" />
         <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php" />
       </list>
     </option>
   </component>
@@ -310,29 +260,6 @@
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="InfoBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -393,18 +320,17 @@
       <workItem from="1509104008201" duration="1946000" />
       <workItem from="1509106586394" duration="5283000" />
       <workItem from="1509282283693" duration="16000" />
-      <workItem from="1509375555260" duration="7703000" />
+      <workItem from="1509375555260" duration="8196000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126381000" />
+    <option name="totallyTimeSpent" value="126874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24069077" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24069077" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -694,14 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="115" column="59" lean-forward="false" selection-start-line="115" selection-start-column="59" selection-end-line="115" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Repository/EventRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -803,14 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2565">
-          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Controller/ExportFilesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -829,8 +739,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1098">
-          <caret line="59" column="24" lean-forward="false" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+        <state relative-caret-position="288">
+          <caret line="112" column="59" lean-forward="false" selection-start-line="112" selection-start-column="59" selection-end-line="112" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="206" column="59" lean-forward="false" selection-start-line="206" selection-start-column="59" selection-end-line="206" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="77" column="59" lean-forward="false" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
           <folding />
         </state>
       </provider>
