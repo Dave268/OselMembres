@@ -16,7 +16,7 @@ osel_info:
 
 osel_musicsheet:
     resource: "@OSELMusicsheetBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /partitions
 
 osel_core:
     resource: "@OSELCoreBundle/Resources/config/routing.yml"
