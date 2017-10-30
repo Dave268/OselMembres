@@ -57,7 +57,7 @@ class EventsController extends Controller
         if($id == 0)
         {
             $event = $this->getDoctrine()->getManager()->getRepository('OSELEventBundle:Event')->findOneBy(array('active' => 1));
-            if($event == null)
+            if($event === null)
             {
                 return $this->render('OSELEventBundle:events:noevent.html.twig', array(
                     'selectedPage' => 'weekend'

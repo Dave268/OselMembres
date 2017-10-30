@@ -313,7 +313,7 @@ class User implements AdvancedUserInterface, \Serializable
     {
         $this->dateAdd = new \DateTime();
         $this->salt = md5(uniqid(null, true));
-        if($this->username == null)
+        if($this->username === null)
         {
             $this->username = strtolower($this->name . $this->lastname);
         }

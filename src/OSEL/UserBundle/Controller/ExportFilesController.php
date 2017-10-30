@@ -162,7 +162,7 @@ class ExportFilesController extends Controller
             while (false !== ($row = $results->next())) {
                 $user = $row[0];
 
-                if($user->getBirthday() != null)
+                if($user->getBirthday() !== null)
                 {
                     $birth = $user->getBirthday()->format('Y-m-d');
                 }

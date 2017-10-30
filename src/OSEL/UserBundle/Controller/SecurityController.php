@@ -63,7 +63,7 @@ class SecurityController extends Controller
 
             if ($form->handleRequest($request)->isValid()) 
             {
-                if($user->getRoles() == null)
+                if($user->getRoles() === null)
                 {
                     $role = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Roles')->findOneBy(array('role' => 'ROLE_USER'));
                     $user->addUserRole($role);
@@ -165,7 +165,7 @@ class SecurityController extends Controller
                 {
                     $temp = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Temp')->findOneBy(array('user' => $user, 'role' => 'setpwd'));
 
-                    if($temp == null)
+                    if($temp === null)
                     {
                         $temp = new Temp();
                     }
@@ -282,7 +282,7 @@ class SecurityController extends Controller
             $temp = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Temp')->findOneBy(array('sha' => $sha, 'role' => 'resetpwd'));
         }
 
-        if($temp == null || $user == null)
+        if($temp === null || $user === null)
         {
             throw $this->createNotFoundException("Cet URL n'est pas valide");
         }
@@ -361,7 +361,7 @@ class SecurityController extends Controller
 
             $user = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->findOneBy(array('email' => $formData['mail']));
 
-			if ($user == null){
+			if ($user === null){
 				$request->getSession()->getFlashBag()->add('ERROR', 'Aucun membre n\'est inscrit avec cette adresse e-mail');
 				return $this->redirect($this->generateUrl('send_reset_mail'));
 			   }
@@ -373,7 +373,7 @@ class SecurityController extends Controller
 
 				$temp = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Temp')->findOneBy(array('user' => $user, 'role' => 'resetpwd'));
 
-				if($temp == null)
+				if($temp === null)
 				{
 					$temp = new Temp();
 				}
@@ -414,14 +414,14 @@ class SecurityController extends Controller
 
             $user = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->findOneBy(array('id' => $id));
 
-		    if ($user == null){
+		    if ($user === null){
                 $request->getSession()->getFlashBag()->add('ERROR', 'ce membre n\'existe pas');
                 return $this->redirect($this->generateUrl('osel_user_index'));
             }
 
                 $temp = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Temp')->findOneBy(array('user' => $user, 'role' => 'setpwd'));
 
-                if($temp == null)
+                if($temp === null)
                 {
                     $temp = new Temp();
                 }

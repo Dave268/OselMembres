@@ -99,7 +99,6 @@ class InscriptionsController extends Controller
 		$nbParticipants = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getNbSubscriptions($id);
 		$event = $this->getDoctrine()->getManager()->getRepository(Event::class)->findOneBy(array('id' => $id));
 
-
 		$nbPages = ceil(count($listInscriptions) / $nbPerPage);
 		if ($page > $nbPages) {
 			$request->getSession()->getFlashBag()->add('ERROR', 'Cette page n\'existe pas');
@@ -145,7 +144,7 @@ class InscriptionsController extends Controller
 
 
             $subscription = new SubscribeEvent();
-            if($event == null)
+            if($event === null)
             {
                 return $this->render('OSELEventBundle:events:noevent.html.twig', array(
                     'selectedPage' => 'weekend'
@@ -153,7 +152,7 @@ class InscriptionsController extends Controller
             }
             $temp = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->findByUser($user->getId(), $event->getId());
 
-            if($temp != null)
+            if($temp !== null)
             {
                 return $this->redirect($this->generateUrl('osel_event_modify_inscription', array('id' => $temp->getId())));
             }
@@ -187,7 +186,7 @@ class InscriptionsController extends Controller
 
             $subscription = new SubscribeEvent();
             $event = $this->getDoctrine()->getManager()->getRepository(Event::class)->findOneBy(array('id' => $id));
-            if($event == null)
+            if($event === null)
             {
                 return $this->render('OSELEventBundle:events:noevent.html.twig', array(
                     'selectedPage' => 'weekend'

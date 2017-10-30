@@ -1,4 +1,0 @@
-services:
-#    osel_info.example:
-#        class: OSEL\InfoBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
