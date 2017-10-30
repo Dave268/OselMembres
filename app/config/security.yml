@@ -33,7 +33,7 @@ security:
             memory:
                 users:
                     admin:
-                        password: $2y$12$Z5ozpUc0n03yu/QuoeU08.7BMRrPxWW1HdeT44SO.CEh/l18SNj1y
+                        password: "%user_password%"
                         roles: 'ROLE_ADMIN'
 
     firewalls:
