@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20b44466-ec2e-4594-a066-e5ecf12552b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php" />
-    </list>
+    <list default="true" id="20b44466-ec2e-4594-a066-e5ecf12552b1" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -320,12 +316,12 @@
       <workItem from="1509104008201" duration="1946000" />
       <workItem from="1509106586394" duration="5283000" />
       <workItem from="1509282283693" duration="16000" />
-      <workItem from="1509375555260" duration="8196000" />
+      <workItem from="1509375555260" duration="8387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126874000" />
+    <option name="totallyTimeSpent" value="127065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1853" height="1055" extended-state="6" />
