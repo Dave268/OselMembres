@@ -218,10 +218,16 @@ class User implements AdvancedUserInterface, \Serializable
     private $logins;
 
     /**
-     * @ORM\OneToMany(targetEntity="OSEL\NewsBundle\Entity\News", mappedBy="news")
+     * @ORM\OneToMany(targetEntity="OSEL\NewsBundle\Entity\News", mappedBy="user")
      * @ORM\JoinColumn(nullable=false)
      */
     private $news;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\NewsBundle\Entity\ImageNews", mappedBy="user")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $imageNews;
 
 
     /**
