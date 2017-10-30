@@ -2,9 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b44466-ec2e-4594-a066-e5ecf12552b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/SecurityController.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/SecurityController.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Controller/DefaultController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Controller/DocumentController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Controller/DocumentsController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/DependencyInjection/Configuration.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/DependencyInjection/OSELDocumentExtension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Entity/CategoryDocument.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Entity/Document.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Entity/YearDocument.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Event/DocumentEvents.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Event/GestionDocEvent.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Form/DocumentType.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Listener/YearListener.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/OSELDocumentBundle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Repository/CategoryDocumentRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Repository/DocumentRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Repository/YearDocumentRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Resources/config/routing.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Resources/config/services.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Resources/views/Document/gestion.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DocumentBundle/Tests/Controller/DefaultControllerTest.php" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -275,6 +292,24 @@
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EventBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -335,18 +370,17 @@
       <workItem from="1509104008201" duration="1946000" />
       <workItem from="1509106586394" duration="5283000" />
       <workItem from="1509282283693" duration="16000" />
-      <workItem from="1509375555260" duration="5945000" />
+      <workItem from="1509375555260" duration="6025000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124623000" />
+    <option name="totallyTimeSpent" value="124703000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24069077" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24069077" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
