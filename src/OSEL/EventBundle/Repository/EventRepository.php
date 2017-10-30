@@ -2,6 +2,8 @@
 
 namespace OSEL\EventBundle\Repository;
 
+use Doctrine\ORM\Tools\Pagination\Paginator;
+
 /**
  * EventRepository
  *

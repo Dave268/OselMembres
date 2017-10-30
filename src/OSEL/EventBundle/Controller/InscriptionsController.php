@@ -8,6 +8,7 @@
 
 namespace OSEL\EventBundle\Controller;
 
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use OSEL\EventBundle\Entity\Event;
 use OSEL\EventBundle\Entity\SubscribeEvent;
 use OSEL\EventBundle\Form\PaymentCompleteType;
@@ -238,7 +239,7 @@ class InscriptionsController extends Controller
 
                     return $this->redirect($this->generateUrl('osel_event_list_inscription', array('id' => $idEvent)));
 
-                } catch (Doctrine\DBAL\Exception\UniqueConstraintViolationException $e) {
+                } catch (UniqueConstraintViolationException $e) {
                     $request->getSession()->getFlashBag()->add('Error', 'Ce lieu existe déjà dans la base de données!');
                 }
             }

@@ -2,6 +2,7 @@
 
 namespace OSEL\EventBundle\Controller;
 
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use OSEL\EventBundle\Entity\Place;
 use OSEL\EventBundle\Form\PlaceType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -112,7 +113,7 @@ class PlacesController extends Controller
                     $request->getSession()->getFlashBag()->add('notice', 'Le Lieu a bien été modifié');
                     return $this->redirect($this->generateUrl('osel_event_list_places'));
 
-                } catch (Doctrine\DBAL\Exception\UniqueConstraintViolationException $e) {
+                } catch (UniqueConstraintViolationException $e) {
                     $request->getSession()->getFlashBag()->add('Error', 'Ce lieu existe déjà dans la base de données!');
                 }
             }

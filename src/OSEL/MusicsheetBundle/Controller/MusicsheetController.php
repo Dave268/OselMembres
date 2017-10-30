@@ -147,7 +147,7 @@ class MusicsheetController extends Controller
     {
         if ($this->get('security.authorization_checker')->isGranted('ROLE_USER'))
         {
-            if (!$this->get('security.authorization_checker')->isGranted('ROLE_ADMIN') OR !$this->get('security.authorization_checker')->isGranted('ROLE_USER'))
+            if (!$this->get('security.authorization_checker')->isGranted('ROLE_ADMIN') || !$this->get('security.authorization_checker')->isGranted('ROLE_USER'))
             {
                 $instruments = array();
                 $userInstruments = $this->container->get('security.token_storage')->getToken()->getUser()->getInstrumentMusicsheets();
