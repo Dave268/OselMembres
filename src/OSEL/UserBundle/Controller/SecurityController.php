@@ -282,7 +282,7 @@ class SecurityController extends Controller
             $temp = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Temp')->findOneBy(array('sha' => $sha, 'role' => 'resetpwd'));
         }
 
-        if($temp == null OR $user == null)
+        if($temp == null || $user == null)
         {
             throw $this->createNotFoundException("Cet URL n'est pas valide");
         }
