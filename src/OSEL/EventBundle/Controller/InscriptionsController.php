@@ -169,7 +169,7 @@ class InscriptionsController extends Controller
                     $request->getSession()->getFlashBag()->add('success', 'Bravo!!! Vous êtes inscrit au weekend');
                     return $this->redirect($this->generateUrl('osel_event_view'));
 
-                } catch (Doctrine\DBAL\Exception\UniqueConstraintViolationException $e) {
+                } catch (UniqueConstraintViolationException $e) {
                     $request->getSession()->getFlashBag()->add('Error', 'Vous êtes déjà inscrit');
                 }
             }
