@@ -8,7 +8,7 @@ $(document).ready(function() {
         var $href = $(this).children(":selected").attr('value');
 
         window.location.href = $href;
-    })
+    });
 
     $(".user_activate").click(function (e) {
 
@@ -24,16 +24,17 @@ $(document).ready(function() {
             var $cb = $form.find('input[type="checkbox"]');
 			
 			var $precheck = $('#user_actif_' + $id + ' i');
+
 			if($cb.prop("checked"))
 			{
-				$precheck.attr('class', "state-icon glyphicon  glyphicon-unchecked");
-				console.log("On  décheck");
+				//$precheck.attr('class', "state-icon glyphicon  glyphicon-unchecked");
+				//console.log("On  décheck");
 				var control = true;
 			}
 			else
 			{
-				$precheck.attr('class', "state-icon glyphicon  glyphicon-check");
-				console.log("On  check");
+				//$precheck.attr('class', "state-icon glyphicon  glyphicon-check");
+				//console.log("On  check");
 				var control = false;
 			}
 				
@@ -60,10 +61,10 @@ $(document).ready(function() {
 
                     console.log('réussi');
 
-                    if (obj.actif && obj.actif != control) {
+                    if (obj.enabled && obj.enabled != control) {
                         check.attr('class', "state-icon glyphicon  glyphicon-check");
                     }
-					else if(!obj.actif && obj.actif != control)
+					else if(!obj.enabled && obj.enabled != control)
                     {
                         check.attr('class', "state-icon glyphicon  glyphicon-unchecked");
                     }

@@ -8,8 +8,6 @@ use OSEL\UserBundle\Entity\Temp;
 use OSEL\UserBundle\Entity\Roles;
 use OSEL\UserBundle\Form\UserType;
 use OSEL\UserBundle\Form\UserCompleteType;
-use OSEL\UserBundle\Form\ShortUserType;
-use OSEL\UserBundle\Form\AdminUserType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -298,11 +296,9 @@ class SecurityController extends Controller
                     if ($current->getTimestamp() < $tempValid) {
                         $formData = array();
                         $form = $this->get('form.factory')->createBuilder(FormType::class, $formData)
-                            ->add('pwd1', PasswordType::class)
-                            ->add('pwd2', PasswordType::class)
-                            ->add('Envoyer', SubmitType::class, array(
-                                "disabled" => "true"
-                            ))
+                            ->add('pwd1',       PasswordType::class)
+                            ->add('pwd2',       PasswordType::class)
+                            ->add('Envoyer',    SubmitType::class)
                             ->getForm();
 
                         if ($request->isMethod('POST')) {

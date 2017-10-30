@@ -1,14 +1,16 @@
 $(document).ready(function()
-{	
+{
+	$('#form_Envoyer').attr('disabled', 'disabled');
+
 	$('#form_pwd1').keyup(function()
 	{
 		$('#result').html(checkStrength($('#form_pwd1').val()))
-	})
+	});
 
 	$('#form_pwd2').keyup(function()
 	{
 		$('#result').html(checkIfEqual($('#form_pwd1').val(), $('#form_pwd2').val()));
-	})
+	});
 	
 	function checkIfEqual(passwordOne, passwordTwo)
 	{
