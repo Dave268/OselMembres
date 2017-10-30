@@ -28,10 +28,6 @@ osel_user_export_contact:
     path:     /UserExportContact
     defaults: { _controller: OSELUserBundle:ExportFiles:exportContact}
 
-osel_info_index:
-    path:     /infos_pratique
-    defaults: { _controller: OSELInfoBundle:Info:index }
-
 osel_info_redirections:
     path:     /infos/redirections
     defaults: { _controller: OSELInfoBundle:Info:redirections }

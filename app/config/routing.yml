@@ -38,11 +38,6 @@ logout:
 register:
     path:   /register
     defaults:  { _controller: OSELUserBundle:Security:register }
-
-osel_user_register_short:
-    path:   /register_short
-    defaults:  { _controller: OSELUserBundle:Security:registershort }
-
     
 delete:
     path:   /delete/{id}

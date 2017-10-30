@@ -32,10 +32,6 @@ osel_musicsheet_get_parts_user:
     path:     /getPartsUser/{id}
     defaults: { _controller: OSELMusicsheetBundle:Musicsheet:getPartsUser, id: 0 }
 
-osel_musicsheet_download:
-    path:     /download/{id}
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:download, id: 0 }
-
 osel_musicsheet_download_part:
     path:     /download/part/{id}
     defaults: { _controller: OSELMusicsheetBundle:Musicsheet:downloadPart, id: 0 }
