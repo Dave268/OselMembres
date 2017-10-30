@@ -35,12 +35,11 @@ class TestController extends Controller
                 $nb = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getNbSubscriptionsEvent($subEvent->getId());
                     $subEvent->setNbSubscriptions($nb);
                     $em->persist($subEvent);
-                    $em->flush();
-
             }
-        $request->getSession()->getFlashBag()->add('notice', 'nbSubscriptions test effectué');
 
+            $em->flush();
 
+            $request->getSession()->getFlashBag()->add('notice', 'nbSubscriptions test effectué');
 
         return $this->redirect($this->generateUrl('osel_core_home'));
 

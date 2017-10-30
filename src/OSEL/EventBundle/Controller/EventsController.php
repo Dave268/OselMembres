@@ -91,17 +91,19 @@ class EventsController extends Controller
                     $em = $this->getDoctrine()->getManager();
 
                     $events = $this->getDoctrine()->getManager()->getRepository('OSELEventBundle:Event')->findAll();
-                    foreach ($events as $t)
-                    {
+
+                    foreach ($events as $t){
                         $t->setActive(0);
                         $em->persist($t);
-                        $em->flush();
                     }
-                    foreach ($event->getSubEvents() as $sub)
-                    {
+
+                    $em->flush();
+
+                    foreach ($event->getSubEvents() as $sub) {
                         $sub->setEvent($event);
                         $em->persist($sub);
                     }
+
                     $em->persist($event);
                     $em->flush();
 
