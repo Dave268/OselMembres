@@ -1,6 +1,7 @@
 {
     "name": "davidgoubau/osel-membres",
     "license": "proprietary",
+    "description": "Source code for membres.osel.be website",
     "type": "project",
     "autoload": {
         "psr-4": {
