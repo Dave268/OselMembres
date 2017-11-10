@@ -1,0 +1,115 @@
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="confirm-delete">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:rgba(249,2,2,0);">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" style="text-align:center;"> <strong>SUPPRIMER??</strong></h4></div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><i class="fa fa-warning" style="font-size:50px;color:rgba(255,6,6,0.61);"></i></div>
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            <p>Etes-vous certain de vouloir supprimer cette entrée?</p>
+                            <p>Cette action est <strong>irréversible!!!</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel </button>
+                    <button class="btn btn-danger" type="button">Supprimer </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="confirm-send">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:rgba(249,2,2,0);">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" style="text-align:center;"> <strong>Envoyer???</strong></h4></div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><i class="glyphicon glyphicon-send" style="font-size:50px;color:rgba(6,61,255,0.61);"></i></div>
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            <p>Etes-vous certain de vouloir envoyer un nouveau mail?</p>
+                            <p><em>Cette action peut prendre plusieurs minutes!</em></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel </button>
+                    <button class="btn btn-success" type="button">Envoyer </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if app.session.flashbag.has('success')%}
+        <div class="modal fade" role="dialog" tabindex="-1" id="modalDone" data-dismiss="modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color:rgba(249,2,2,0);">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" style="text-align:center;"> <strong>Action Réalisé</strong></h4></div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><i class="glyphicon glyphicon-ok" style="font-size:50px;color:#01c638;"></i></div>
+                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                <p>Les actions suivantes ont bien été réalisé</p>
+                                <ul>
+                                    {% for message in app.session.flashbag.get('success') %}
+                                        <li>{{ message }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-info" type="button" style="width:97px;" data-dismiss="modal">Ok </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% if app.session.flashbag.has('ERROR') %}
+        <div class="modal fade" role="dialog" tabindex="-1" id="modalError">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color:rgba(249,2,2,0);">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" style="text-align:center;"> <strong>ERREUR!!!!</strong></h4></div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><i class="glyphicon glyphicon-remove" style="font-size:50px;color:#fe0101;"></i></div>
+                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                <p>Les erreurs suivantes ce sont produites:</p>
+                                <ul>
+                                {% for message in app.session.flashbag.get('ERROR') %}
+                                        <li>{{ message }}</li>
+                                {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-warning" type="button" style="width:97px;" data-dismiss="modal">Ok </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalLoad" style="display:table-cell;vertical-align:middle;pointer-events:none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:rgba(249,2,2,0);">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="display:none;"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" style="text-align:center;">Un instant....</h4></div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-default" type="button">Button</button><img src="../img/Spinner.gif" class="img-responsive center-block" style="width:100px;"></div>
+                    </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>

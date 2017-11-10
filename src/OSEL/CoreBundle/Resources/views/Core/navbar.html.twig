@@ -1,0 +1,123 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header {% if app.request.get('_route') == 'osel_core_home' %}active{% endif %}">
+            <a class="navbar-brand navbar-link" href="{{ path('osel_core_home') }}" style="background-image:url(&quot;{{ asset('bundles/oselcore/img/LOGO_-_TOUR_ITALIANO_2017_50x50.jpg') }}&quot;);width:50px;"></a>
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav">
+
+                {% if is_granted('ROLE_USER') %}
+                    <li class="dropdown {% if app.request.get('_route') == 'osel_core_home'
+                    or app.request.get('_route') == 'osel_info_redirections'
+                    or app.request.get('_route') == 'osel_info_redirections_gestion'
+                    or app.request.get('_route') == 'osel_info_redirections_modify'%}
+                        active
+                    {% endif %}"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Infos pratiques <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation"><a href="{{ path('osel_core_agenda') }}">Agenda </a></li>
+                            <li role="presentation"><a href="{{ path('osel_info_redirections') }}">Liste de mails</a></li>
+                            {% if is_granted('ROLE_WEEKEND') %}
+                                <li role="presentation"><a href="{{ path('osel_info_redirections_gestion') }}">Gestion des infos pratique</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                {% endif %}
+
+                {% if is_granted('ROLE_SECRETAIRE') %}
+                    <li class="dropdown {% if app.request.get('_route') == 'osel_user_index'
+                    or app.request.get('_route') == 'osel_user_view'
+                    or app.request.get('_route') == 'register'
+                    or app.request.get('_route') == 'modify'%}
+                        active
+                    {% endif %}"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Membres <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation"><a href="{{ path('osel_user_index') }}">Liste Membres</a></li>
+                            <li role="presentation"><a href="{{ path('register') }}">Ajouter un membre</a></li>
+                        </ul>
+                    </li>
+                {% elseif is_granted('ROLE_USER') %}
+                    <li {% if app.request.get('_route') == 'osel_user_index' %}
+                        class="active"
+                    {% endif %} role="presentation"><a href="{{ path('osel_user_index') }}">Membres</a></li>
+                {% endif %}
+
+                {% if is_granted('ROLE_PARTITION') %}
+                    <li class="dropdown {% if app.request.get('_route') == 'osel_score_index'
+                    or app.request.get('_route') == 'osel_score_gestion' %}
+                        active
+                    {% endif %}"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Partitions <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation"><a href="{{ path('osel_score_index') }}">Liste partitions</a></li>
+                            <li role="presentation"><a href="{{ path('osel_score_gestion') }}">Gestion partitions</a></li>
+                        </ul>
+                    </li>
+                {% elseif is_granted('ROLE_USER') %}
+                    <li {% if app.request.get('_route') == 'osel_score_index' %}
+                        active
+                    {% endif %} role="presentation"><a href="{{ path('osel_musicsheet_index') }}">Partitions </a></li>
+                {% endif %}
+
+                {% if is_granted('ROLE_CA') %}
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Documents <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation"><a href="{{ path('construction') }}">Liste documents</a></li>
+                            <li role="presentation"><a href="{{ path('construction') }}">Gestion des documents</a></li>
+                        </ul>
+                    </li>
+                {% endif %}
+
+                {% if is_granted('ROLE_USER') %}
+                    <li class="dropdown {% if app.request.get('_route') == 'osel_event_add_place'
+                    or app.request.get('_route') == 'osel_event_modify_place'
+                    or app.request.get('_route') == 'osel_event_list_places'
+                    or app.request.get('_route') == 'osel_event_view_place'
+                    or app.request.get('_route') == 'osel_event_add'
+                    or app.request.get('_route') == 'osel_event_modify'
+                    or app.request.get('_route') == 'osel_event_list'
+                    or app.request.get('_route') == 'osel_event_view'
+                    or app.request.get('_route') == 'osel_event_add_inscription'
+                    or app.request.get('_route') == 'osel_event_add_individual_inscription'
+                    or app.request.get('_route') == 'osel_event_modify_inscription'
+                    or app.request.get('_route') == 'osel_event_list_inscription'
+                    or app.request.get('_route') == 'osel_event_list_inscription_simple'
+                    or app.request.get('_route') == 'osel_event_view_inscription'
+                    or app.request.get('_route') == 'osel_event_list_inscription' %}
+                        active
+                    {% endif %}"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Weekend<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation"><a href="{{ path('osel_event_view') }}">Infos Weekend</a></li>
+                            <li role="presentation"><a href="{{ path('osel_event_add_inscription') }}">Inscription au weekend</a></li>
+                            {% if is_granted('ROLE_WEEKEND') %}
+                                <li role="presentation"><a href="{{ path('osel_event_add') }}">Créer un weekend</a></li>
+                                <li role="presentation"><a href="{{ path('osel_event_list') }}">Liste des weekends</a></li>
+                                <li role="presentation"><a href="{{ path('osel_event_list_places') }}">Endroits de weekends</a></li>
+                                <li role="presentation"><a href="{{ path('osel_event_add_place') }}">Ajouter endroit de weekend</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                {% endif %}
+
+                {% if is_granted('ROLE_ANIMATION') %}
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="{{ path('construction') }}">Multimédias<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation"><a href="{{ path('construction') }}">Liste des médias</a></li>
+                            <li role="presentation"><a href="{{ path('construction') }}">Ajouter des médias</a></li>
+                        </ul>
+                    </li>
+                {% elseif is_granted('ROLE_USER') %}
+                    <li role="presentation"><a href="{{ path('construction') }}">Multimédias </a></li>
+                {% endif %}
+
+                {% if is_granted('ROLE_USER') and is_granted('ROLE_ADMIN') == false %}
+                    <li {% if app.request.get('_route') == 'osel_user_view'%}
+                            class="active"
+                            {% endif %}role="presentation"><a href="{{ path('osel_user_view', {'id': app.user.id}) }}">Infos Personnelles</a></li>
+                {% endif %}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" style="float:right;background-color:#c2bcbc;"><a href="{{ path('logout') }}">Deconnexion </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

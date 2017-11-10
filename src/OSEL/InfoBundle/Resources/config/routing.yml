@@ -1,1 +1,3 @@
-
+osel_core_agenda:
+    path:     /agenda
+    defaults: { _controller: OSELInfoBundle:Info:agenda }

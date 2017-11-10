@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Groupes
  *
- * @ORM\Table()
+ * @ORM\Table(name="osel_user_groupes")
  * @ORM\Entity(repositoryClass="OSEL\UserBundle\Entity\GroupesRepository")
  */
 class Groupes

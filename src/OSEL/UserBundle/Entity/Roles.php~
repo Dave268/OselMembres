@@ -3,15 +3,15 @@
 namespace OSEL\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Security\Core\Role\RoleInterface;
+use Symfony\Component\Security\Core\Role\Role;
 
 /**
  * Roles
  *
- * @ORM\Table()
+ * @ORM\Table(name="osel_user_roles")
  * @ORM\Entity(repositoryClass="OSEL\UserBundle\Entity\RolesRepository")
  */
-class Roles implements RoleInterface
+class Roles extends Role
 {
     /**
      * @var integer
@@ -30,23 +30,17 @@ class Roles implements RoleInterface
     private $role;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="rank", type="integer")
+     * @ORM\Column(name="name", type="string", length=255)
      */
-    private $rank;
+    private $name;
 
     /**
      * @ORM\ManyToMany(targetEntity="OSEL\UserBundle\Entity\User", mappedBy="userRoles")
      * @ORM\JoinColumn(nullable=true)
      */
     private $users;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="OSEL\DocumentBundle\Entity\Document", mappedBy="role")
-     * @ORM\JoinColumn(nullable=true)
-     */
-    private $documents;
 
     /**
      * Get id
@@ -148,11 +142,11 @@ class Roles implements RoleInterface
     /**
      * Add document
      *
-     * @param \OSEL\DocumentBundle\Entity\Document $document
+     * @param \OSEL\DocBundle\Entity\Document $document
      *
      * @return Roles
      */
-    public function addDocument(\OSEL\DocumentBundle\Entity\Document $document)
+    public function addDocument(\OSEL\DocBundle\Entity\Document $document)
     {
         $this->documents[] = $document;
 
@@ -162,9 +156,9 @@ class Roles implements RoleInterface
     /**
      * Remove document
      *
-     * @param \OSEL\DocumentBundle\Entity\Document $document
+     * @param \OSEL\DocBundle\Entity\Document $document
      */
-    public function removeDocument(\OSEL\DocumentBundle\Entity\Document $document)
+    public function removeDocument(\OSEL\DocBundle\Entity\Document $document)
     {
         $this->documents->removeElement($document);
     }
@@ -178,4 +172,5 @@ class Roles implements RoleInterface
     {
         return $this->documents;
     }
+
 }

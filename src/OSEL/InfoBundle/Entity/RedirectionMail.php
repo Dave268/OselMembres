@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * RedirectionMail
  *
- * @ORM\Table(name="osel_redirection_mail")
+ * @ORM\Table(name="osel_info_redirection_mail")
  * @ORM\Entity(repositoryClass="OSEL\InfoBundle\Repository\RedirectionMailRepository")
  * @ORM\HasLifecycleCallbacks()
  */

@@ -1,6 +1,6 @@
 <?php
 
-namespace OSEL\MusicsheetBundle\Entity;
+namespace OSEL\ScoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -9,8 +9,9 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Parts
  *
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="OSEL\MusicsheetBundle\Entity\PartsRepository")
+ * @ORM\Table(name="osel_score_parts")
+ * @ORM\Entity(repositoryClass="OSEL\ScoreBundle\Repository\PartsRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Parts
 {
@@ -50,14 +51,10 @@ class Parts
     private $dateUpdate;
 
     /**
-     * @ORM\ManyToOne(targetEntity="OSEL\MusicsheetBundle\Entity\Musicsheet", inversedBy="parts")
+     * @ORM\ManyToOne(targetEntity="OSEL\ScoreBundle\Entity\Score", inversedBy="parts")
      */
-    private $musicsheet;
+    private $score;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="OSEL\MusicsheetBundle\Entity\Instrument", inversedBy="parts")
-     */
-    private $instrument;
 
 
     public function __construct()
@@ -72,6 +69,23 @@ class Parts
     {
         $this->setDateUpdate(new \DateTime());
     }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function increase()
+    {
+        $this->getScore()->increaseParts();
+    }
+
+    /**
+     * @ORM\PreRemove
+     */
+    public function decrease()
+    {
+        $this->getScore()->decreaseParts();
+    }
+
 
 
     /**
@@ -177,54 +191,6 @@ class Parts
     }
 
     /**
-     * Set musicsheet
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheet
-     * @return Parts
-     */
-    public function setMusicsheet(\OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheet = null)
-    {
-        $this->musicsheet = $musicsheet;
-
-        return $this;
-    }
-
-    /**
-     * Get musicsheet
-     *
-     * @return \OSEL\MusicsheetBundle\Entity\Musicsheet
-     */
-    public function getMusicsheet()
-    {
-        return $this->musicsheet;
-    }
-
-
-    /**
-     * Set instrument
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Instrument $instrument
-     *
-     * @return Parts
-     */
-    public function setInstrument(\OSEL\MusicsheetBundle\Entity\Instrument $instrument = null)
-    {
-        $this->instrument = $instrument;
-
-        return $this;
-    }
-
-    /**
-     * Get instrument
-     *
-     * @return \OSEL\MusicsheetBundle\Entity\Instrument
-     */
-    public function getInstrument()
-    {
-        return $this->instrument;
-    }
-
-    /**
      * Set url
      *
      * @param string $url
@@ -248,4 +214,28 @@ class Parts
         return $this->url;
     }
 
+
+    /**
+     * Set score
+     *
+     * @param \OSEL\ScoreBundle\Entity\Score $score
+     *
+     * @return Parts
+     */
+    public function setScore(\OSEL\ScoreBundle\Entity\Score $score = null)
+    {
+        $this->score = $score;
+
+        return $this;
+    }
+
+    /**
+     * Get score
+     *
+     * @return \OSEL\ScoreBundle\Entity\Score
+     */
+    public function getScore()
+    {
+        return $this->score;
+    }
 }

@@ -132,7 +132,7 @@ class MusicsheetController extends Controller
             }
 
 
-            return $this->get('templating')->renderResponse('OSELMusicsheetBundle:Musicsheet:gestion.html.twig', array(
+            return $this->get('templating')->renderResponse('OSELMusicsheetBundle:Score:gestion.html.twig', array(
 				'composers'			=> $composers,
                 'musicsheetForm'    => $musicsheetForm->createView(),
                 'composerForm'      => $composerForm->createView(),
@@ -167,7 +167,7 @@ class MusicsheetController extends Controller
 
             $composers = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Composer')->findActive();
         }
-        return $this->get('templating')->renderResponse('OSELMusicsheetBundle:Musicsheet:index.html.twig', array(
+        return $this->get('templating')->renderResponse('OSELMusicsheetBundle:Score:index.html.twig', array(
             'composers'			=> $composers,
             'parts'             => $parts,
             'selectedPage'		=> 'partition'
@@ -180,9 +180,9 @@ class MusicsheetController extends Controller
     	{
     		throw new NotFoundHttpException('Page inexistante.');
     	}
-    	$user = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Musicsheet')->findOneBy(array('id' => $id));
+    	$user = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Score')->findOneBy(array('id' => $id));
 
-    	return $this->get('templating')->renderResponse('OSELMusicsheetBundle:Musicsheet:view.html.twig', array(
+    	return $this->get('templating')->renderResponse('OSELMusicsheetBundle:Score:view.html.twig', array(
         	'user' => $user));
     }
 
@@ -194,7 +194,7 @@ class MusicsheetController extends Controller
         }
         $user = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Part')->findOneBy(array('id' => $id));
 
-        return $this->get('templating')->renderResponse('OSELMusicsheetBundle:Musicsheet:viewPart.html.twig', array(
+        return $this->get('templating')->renderResponse('OSELMusicsheetBundle:Score:viewPart.html.twig', array(
             'user' => $user));
     }
 
@@ -208,7 +208,7 @@ class MusicsheetController extends Controller
             }
             else
             {
-                $musicsheet = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Musicsheet')->find($id);
+                $musicsheet = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Score')->find($id);
 
                 $form = $this->get('form.factory')->create(MusicsheetType::class, $musicsheet, array('action' => $this->generateUrl('osel_musicsheet_modify', array('id' => $id))));
 
@@ -240,7 +240,7 @@ class MusicsheetController extends Controller
                 'selectedPage' => 'home'));
         }
 
-        $page = $this->get('templating')->renderResponse('OSELMusicsheetBundle:Musicsheet:modify.html.twig', array(
+        $page = $this->get('templating')->renderResponse('OSELMusicsheetBundle:Score:modify.html.twig', array(
             'musicsheet'    => $musicsheet,
             'musicsheetForm'=> $form->createView(),
             'countParts'    => $musicsheet->getParts()->count(),
@@ -267,7 +267,7 @@ class MusicsheetController extends Controller
             }
             else
             {
-                $musicsheet = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Musicsheet')->find($id);
+                $musicsheet = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Score')->find($id);
 
                 $form = $this->get('form.factory')->create(MusicsheetCompleteType::class, $musicsheet);
 
@@ -304,7 +304,7 @@ class MusicsheetController extends Controller
                 'selectedPage' => 'home'));
         }
 
-        return $this->get('templating')->renderResponse('OSELMusicsheetBundle:Musicsheet:complete.html.twig', array(
+        return $this->get('templating')->renderResponse('OSELMusicsheetBundle:Score:complete.html.twig', array(
             'musicsheet'    => $musicsheet,
             'form'          => $form->createView(),
             'selectedPage'  => 'partition'));
@@ -372,7 +372,7 @@ class MusicsheetController extends Controller
         {
             if ($request->isXMLHttpRequest()) {
                 if ($id > 0) {
-                    $partitions = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Musicsheet')->getMusicsheetsByComposer($id);
+                    $partitions = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Score')->getMusicsheetsByComposer($id);
                     $html = "";
                     foreach ($partitions as $partition) {
 
@@ -414,7 +414,7 @@ class MusicsheetController extends Controller
         {
             if ($request->isXMLHttpRequest()) {
                 if ($id > 0) {
-                    $partitions = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Musicsheet')->getMusicsheetsByComposerActive($id);
+                    $partitions = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Score')->getMusicsheetsByComposerActive($id);
                     $html = "";
                     foreach ($partitions as $partition) {
 

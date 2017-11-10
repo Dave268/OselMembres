@@ -1,35 +1,15 @@
 {# src/Osel/UserBundle/Resources/views/Security/pwdReset.html.twig #}
-    <!-- on affiche les erreurs-->
-    {% for message in app.session.flashbag.get('ERROR') %}
-        <div class="alert alert-danger alert-dismissable">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Notice: </strong>{{ message }}
-        </div>
-    {% endfor %}
+{% extends "OSELCoreBundle:Core:base.html.twig" %}
 
+{% block head %}{% endblock %}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form_partition</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/spacelab/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="{{  asset('css/styles.min.css') }}">
-    <link rel="stylesheet" href="{{  asset('bundles/oseluser/css/password.css') }}">
-    <script src="{{ asset('bundles/oseluser/js/passwordscheck.js') }}"></script>
-
-</head>
-
-<body>
-<div class="container">
-    <div class="row row-login">
-        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-            <h2 class="text-center">{{ title }}</h2>
-            <div class="well">
-                {{ form_start(form) }}
+{% block body %}
+    <div class="container">
+        <div class="row row-login">
+            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+                <h2 class="text-center">{{ title }}</h2>
+                <div class="well">
+                    {{ form_start(form) }}
                     <div class="form-group">
                         {{ form_label(form.pwd1, "Nouveau mot de passe:", {'label_attr': {'class': 'control-label'}}) }}
                         {{ form_widget(form.pwd1, {'attr': {'class': 'form-control'}}) }}
@@ -41,36 +21,15 @@
                         {{ form_widget(form.pwd2, {'attr': {'class': 'form-control'}}) }}
                         {{ form_errors(form.pwd2) }}
                     </div>
-                {{ form_widget(form.Envoyer, {'attr': {'class': 'btn btn-success btn-block'}}) }}
+                    {{ form_widget(form.Envoyer, {'attr': {'class': 'btn btn-success btn-block'}}) }}
 
-                {{ form_rest(form) }}
-                {{ form_end(form) }}
+                    {{ form_rest(form) }}
+                    {{ form_end(form) }}
+                </div>
             </div>
         </div>
     </div>
-</div>
+{% endblock %}
 
-<div style="position: absolute; top: 0; width: 100%; z-index: 999;" id="messages">
-    {% for message in app.session.flashbag.get('notice') %}
-        <div class="alert alert-success alert-dismissable">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Notice: </strong>{{ message }}
-        </div>
-    {% endfor %}
+{% block script %}{% endblock %}
 
-
-
-    <!-- on affiche les erreurs-->
-    {% for message in app.session.flashbag.get('ERROR') %}
-        <div class="alert alert-danger alert-dismissable">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Notice: </strong>{{ message }}
-        </div>
-    {% endfor %}
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</body>
-
-</html>

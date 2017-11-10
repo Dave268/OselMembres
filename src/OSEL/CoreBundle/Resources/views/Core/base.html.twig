@@ -1,0 +1,27 @@
+{# src/Osel/CoreBundle/Resources/views/layout.html.twig #}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% include "OSELCoreBundle:Core:head.html.twig" %}
+
+    {% block head %}{% endblock %}
+
+</head>
+
+<body>
+
+
+{% block nav %}{% endblock %}
+{% block body %}{% endblock %}
+
+
+
+
+
+{% include "OSELCoreBundle:Core:flash.html.twig" %}
+{% include "OSELCoreBundle:Core:js.html.twig" %}
+{% block script %}{% endblock %}
+
+</body>
+</html>
+

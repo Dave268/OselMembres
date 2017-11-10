@@ -1,0 +1,93 @@
+{# src/Osel/MusicsheetBundle/Resources/views/Musicsheet/gestion.html.twig #}
+
+{% extends "OSELCoreBundle::layout.html.twig" %}
+
+{% block title %}
+    Ajouter des partitions
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ asset('bundles/oselmusicsheet/css/style.css') }}/">
+    <script src="{{ asset('bundles/oselmusicsheet/js/modal.js') }}"></script>
+    <script src="{{ asset('bundles/oselmusicsheet/js/musicsheets_arb.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default" style="padding:0;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Bibliothèque <i class="glyphicon glyphicon-plus" data-bs-hover-animate="tada" style="float:right;color:rgba(51,51,51,0.55);"></i></h3></div>
+                <div class="panel-body" style="padding:20px;/*display:none;*/padding-top:10px;">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group"><span class="input-group-addon"> <i class="glyphicon glyphicon-search"></i></span>
+                                <input class="form-control" type="search" name="search">
+                            </div>
+                        </div>
+                        <ol class="breadcrumb" style="padding-bottom:0px;">
+                            <li><a><span>Home </span></a></li>
+                            <li><a><span>Compositeur </span></a></li>
+                        </ol>
+                    </form>
+                    <nav class="text-center" style="margin-top:-26px;margin-bottom:-15px;">
+                        <ul class="pagination pagination-sm" style="text-align:center;margin-left:auto;margin-right:auto;">
+                            <li><a>a</a></li>
+                            <li><a>b</a></li>
+                            <li><a>c</a></li>
+                            <li><a>d</a></li>
+                            <li><a>f</a></li>
+                            <li><a>g</a></li>
+                            <li><a>h</a></li>
+                            <li><a>i</a></li>
+                            <li><a>j</a></li>
+                            <li><a>k</a></li>
+                            <li><a>l</a></li>
+                            <li><a>m</a></li>
+                            <li><a>n</a></li>
+                            <li><a>o</a></li>
+                            <li><a>p</a></li>
+                            <li><a>q</a></li>
+                            <li><a>r</a></li>
+                            <li><a>s</a></li>
+                            <li><a>t</a></li>
+                            <li><a>u</a></li>
+                            <li><a>v</a></li>
+                            <li><a>w</a></li>
+                            <li><a>x</a></li>
+                            <li><a>y</a></li>
+                            <li><a>z</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="thread-list">
+                        <li class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
+                        <li
+                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
+                        <li
+                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
+                        <li
+                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
+                        <li
+                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
+                        <li
+                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
+                        <li
+                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
+                        <li
+                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block script %}
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bs-animation.js"></script>
+    <script src="../assets/js/documents.js"></script>
+    <script src="../assets/js/Profile-Edit.js"></script>
+    <script src="{{ asset('bundles/oselmusicsheet/js/score.js') }}"></script>
+{% endblock %}

@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Event
  *
- * @ORM\Table(name="event")
+ * @ORM\Table(name="osel_event_event")
  * @ORM\Entity(repositoryClass="OSEL\EventBundle\Repository\EventRepository")
  * @ORM\HasLifecycleCallbacks()
  */
@@ -517,7 +517,7 @@ class Event
     protected function getUploadRootDir()
     {
         // On retourne le chemin relatif vers l'image pour notre code PHP
-        return __DIR__.'/../../../../web/'.$this->getUploadDir();
+        return __DIR__ . '/../../../../web/'.$this->getUploadDir();
     }
 
     /**

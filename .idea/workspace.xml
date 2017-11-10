@@ -2,7 +2,217 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b44466-ec2e-4594-a066-e5ecf12552b1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/base.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/head.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/js.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/navbar.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Controller/ScoreController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/gestion.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/index.html.twig" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/Entity/RedirectionMauk.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Entity/ComposerRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Entity/Instrument.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Entity/MusicsheetRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Entity/PartsRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Entity/SheetType.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Statuts.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/StatutsRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/Jumbotron-Advanced-Responsive-Tint1.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/Profile-Edit1.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/styles.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/delete.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/documents.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/public/img/Spinner.gif" afterPath="$PROJECT_DIR$/web/img/Spinner.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/flash.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/flash.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/layout.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Entity/Composer.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Composer.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Entity/Musicsheet.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Score.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Entity/Parts.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Parts.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/logins.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/OselMembres.iml" afterPath="$PROJECT_DIR$/.idea/OselMembres.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/.htaccess" afterPath="$PROJECT_DIR$/app/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppCache.php" afterPath="$PROJECT_DIR$/app/AppCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Emails/registration.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Emails/registration.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Emails/resetMail.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Emails/resetMail.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/autoload.php" afterPath="$PROJECT_DIR$/app/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config_dev.yml" afterPath="$PROJECT_DIR$/app/config/config_dev.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config_prod.yml" afterPath="$PROJECT_DIR$/app/config/config_prod.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config_test.yml" afterPath="$PROJECT_DIR$/app/config/config_test.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/parameters.yml.dist" afterPath="$PROJECT_DIR$/app/config/parameters.yml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing_dev.yml" afterPath="$PROJECT_DIR$/app/config/routing_dev.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpunit.xml.dist" afterPath="$PROJECT_DIR$/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/.htaccess" afterPath="$PROJECT_DIR$/src/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/Controller/CoreController.php" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Controller/CoreController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/DependencyInjection/OSELCoreExtension.php" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/DependencyInjection/OSELCoreExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/OSELCoreBundle.php" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/OSELCoreBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/index.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/construction/construction.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/construction/construction.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/TestController.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/TestController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/DependencyInjection/OSELEventExtension.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/DependencyInjection/OSELEventExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/Event.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/Event.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/Place.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/Place.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/RidingGroup.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/RidingGroup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/RidingGroupMembre.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/RidingGroupMembre.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/SubEvents.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/SubEvents.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/SubscribeEvent.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/SubscribeEvent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Form/EventType.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Form/EventType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Form/PaymentCompleteType.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Form/PaymentCompleteType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Form/PlaceType.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Form/PlaceType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Form/SubEventsType.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Form/SubEventsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Form/SubscribeEventIndividualType.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Form/SubscribeEventIndividualType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Form/SubscribeEventType.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Form/SubscribeEventType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Controller/InfoController.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Controller/InfoController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/DependencyInjection/OSELInfoExtension.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/DependencyInjection/OSELInfoExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Entity/RedirectionMail.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Entity/RedirectionMail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Entity/RedirectionMauk.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Entity/RedirectionMauk.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Form/RedirectionMailType.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Form/RedirectionMailType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/OSELInfoBundle.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/OSELInfoBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Repository/RedirectionMailRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Repository/RedirectionMailRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Resources/views/Info/agenda.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Resources/views/Info/agenda.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Resources/views/Info/redirections.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Resources/views/Info/redirections.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Resources/views/Info/redirections_gestion.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/InfoBundle/Resources/views/Info/redirections_gestion.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/OSELEventBundle.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/OSELEventBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/EventRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/EventRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/PlaceRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/PlaceRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/RidingGroupMembreRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/RidingGroupMembreRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/RidingGroupRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/RidingGroupRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/SubEventsRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/SubEventsRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/SubscribeEventRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/SubscribeEventRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/form.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/form.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/noevent.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/noevent.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/view.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/form.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/form.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index-simple.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index-simple.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/payement.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/payement.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/prix.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/prix.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/view.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/form.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/form.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/listplaces.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/listplaces.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/view.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/Controller/InfoController.php" afterPath="$PROJECT_DIR$/src/OSEL/InfoBundle/Controller/InfoController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/OSEL/InfoBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/DependencyInjection/OSELInfoExtension.php" afterPath="$PROJECT_DIR$/src/OSEL/InfoBundle/DependencyInjection/OSELInfoExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/Entity/RedirectionMail.php" afterPath="$PROJECT_DIR$/src/OSEL/InfoBundle/Entity/RedirectionMail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/Form/RedirectionMailType.php" afterPath="$PROJECT_DIR$/src/OSEL/InfoBundle/Form/RedirectionMailType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/OSELInfoBundle.php" afterPath="$PROJECT_DIR$/src/OSEL/InfoBundle/OSELInfoBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/Repository/RedirectionMailRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/InfoBundle/Repository/RedirectionMailRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/views/Info/agenda.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/views/Info/agenda.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/views/Info/redirections.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/views/Info/redirections.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/views/Info/redirections_gestion.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/views/Info/redirections_gestion.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MediaBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/OSEL/MediaBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MediaBundle/DependencyInjection/OSELMediaExtension.php" afterPath="$PROJECT_DIR$/src/OSEL/MediaBundle/DependencyInjection/OSELMediaExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MediaBundle/Entity/Album.php" afterPath="$PROJECT_DIR$/src/OSEL/MediaBundle/Entity/Album.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MediaBundle/Entity/Media.php" afterPath="$PROJECT_DIR$/src/OSEL/MediaBundle/Entity/Media.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MediaBundle/Entity/TypeMedia.php" afterPath="$PROJECT_DIR$/src/OSEL/MediaBundle/Entity/TypeMedia.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MediaBundle/Entity/YearMedia.php" afterPath="$PROJECT_DIR$/src/OSEL/MediaBundle/Entity/YearMedia.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MediaBundle/OSELMediaBundle.php" afterPath="$PROJECT_DIR$/src/OSEL/MediaBundle/OSELMediaBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MediaBundle/Repository/AlbumRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/MediaBundle/Repository/AlbumRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MediaBundle/Repository/MediaRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/MediaBundle/Repository/MediaRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MediaBundle/Repository/TypeMediaRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/MediaBundle/Repository/TypeMediaRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MediaBundle/Repository/YearMediaRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/MediaBundle/Repository/YearMediaRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MediaBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OSEL/MediaBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MediaBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/OSEL/MediaBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Controller/MusicsheetController.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Controller/MusicsheetController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Controller/TestController.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Controller/TestController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/DependencyInjection/OSELMusicsheetExtension.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/DependencyInjection/OSELMusicsheetExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/ComposerType (1).php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/ComposerType (1).php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/ComposerType.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/ComposerType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/InstrumentType.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/InstrumentType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/MusicsheetCompleteType.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/MusicsheetCompleteType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/MusicsheetType.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/MusicsheetType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/PartsType.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/PartsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/SheetTypeType.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Form/SheetTypeType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/OSELMusicsheetBundle.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/OSELMusicsheetBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Repository/ComposerRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Repository/ComposerRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Repository/InstrumentRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Repository/InstrumentRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Repository/MusicsheetRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Repository/MusicsheetRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Repository/PartsRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Repository/PartsRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Repository/SheetTypeRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Repository/SheetTypeRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/complete.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/complete.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/gestion.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/gestion.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/index.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/modify.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/modify.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/userview.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/userview.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/NewsBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/OSEL/NewsBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/NewsBundle/DependencyInjection/OSELNewsExtension.php" afterPath="$PROJECT_DIR$/src/OSEL/NewsBundle/DependencyInjection/OSELNewsExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/ImageNews.php" afterPath="$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/ImageNews.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/News.php" afterPath="$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/NewsBundle/OSELNewsBundle.php" afterPath="$PROJECT_DIR$/src/OSEL/NewsBundle/OSELNewsBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/NewsBundle/Repository/ImageNewsRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/NewsBundle/Repository/ImageNewsRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/NewsBundle/Repository/NewsRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/NewsBundle/Repository/NewsRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/NewsBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OSEL/NewsBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/NewsBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/OSEL/NewsBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/ExportFilesController.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/ExportFilesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/SecurityController.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/SecurityController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/DependencyInjection/OSELUserExtension.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/DependencyInjection/OSELUserExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Groupes.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Groupes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/GroupesRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/GroupesRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Instruments.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Instruments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/InstrumentsRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/InstrumentsRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Roles.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Roles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/RolesRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/RolesRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Temp.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Temp.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/UserRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/UserRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Form/RolesType.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Form/RolesType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Form/UserCompleteType.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Form/UserCompleteType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Form/UserType.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Form/UserType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Listener/AuthenticationListener.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Listener/AuthenticationListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Mails/RegisterMail.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Mails/RegisterMail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Mails/ResetMail.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Mails/ResetMail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/OSELUserBundle.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/OSELUserBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Repository/TempRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Repository/TempRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/login.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/login.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/pwdReset.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/pwdReset.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/sendResetMail.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/sendResetMail.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/add.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/add.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/export.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/export.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/modifyComplete.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/modifyComplete.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/modifyPass.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/modifyPass.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/view.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/.htaccess" afterPath="$PROJECT_DIR$/web/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app.php" afterPath="$PROJECT_DIR$/web/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/Jumbotron-Advanced-Responsive-Tint.css" afterPath="$PROJECT_DIR$/web/css/Jumbotron-Advanced-Responsive-Tint.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/Login-Form-Dark.css" afterPath="$PROJECT_DIR$/web/css/Login-Form-Dark.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/Pretty-Registration-Form.css" afterPath="$PROJECT_DIR$/web/css/Pretty-Registration-Form.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/Profile-Edit.css" afterPath="$PROJECT_DIR$/web/css/Profile-Edit.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/Projects-Horizontal.css" afterPath="$PROJECT_DIR$/web/css/Projects-Horizontal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/styles.css" afterPath="$PROJECT_DIR$/web/css/styles.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,109 +222,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="112" column="59" lean-forward="false" selection-start-line="112" selection-start-column="59" selection-end-line="112" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InscriptionsController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="171" column="59" lean-forward="false" selection-start-line="171" selection-start-column="59" selection-end-line="171" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlacesController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="77" column="59" lean-forward="false" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="32" column="82" lean-forward="false" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MusicsheetController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Controller/MusicsheetController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="145" column="33" lean-forward="false" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
-              <folding>
-                <element signature="e#929#5884#0#PHP" expanded="false" />
-                <element signature="e#5890#7166#0#PHP" expanded="false" />
-                <element signature="e#7172#7575#0#PHP" expanded="false" />
-                <element signature="e#7581#8010#0#PHP" expanded="false" />
-                <element signature="e#8016#10254#0#PHP" expanded="false" />
-                <element signature="e#10260#12323#0#PHP" expanded="false" />
-                <element signature="e#12329#13607#0#PHP" expanded="false" />
-                <element signature="e#13613#14908#0#PHP" expanded="false" />
-                <element signature="e#14914#16874#0#PHP" expanded="false" />
-                <element signature="e#16880#18417#0#PHP" expanded="false" />
-                <element signature="e#18423#20152#0#PHP" expanded="false" />
-                <element signature="e#20158#21897#0#PHP" expanded="false" />
-                <element signature="e#21903#22765#0#PHP" expanded="false" />
-                <marker date="1509381096838" expanded="true" signature="16244:16256" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InfoController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/InfoBundle/Controller/InfoController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#288#473#0#PHP" expanded="false" />
-                <element signature="e#479#1165#0#PHP" expanded="false" />
-                <element signature="e#1171#2792#0#PHP" expanded="false" />
-                <element signature="e#2798#4376#0#PHP" expanded="false" />
-                <element signature="e#4382#5399#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExportFilesController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Controller/ExportFilesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="164" column="43" lean-forward="false" selection-start-line="164" selection-start-column="43" selection-end-line="164" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="315" column="30" lean-forward="false" selection-start-line="315" selection-start-column="30" selection-end-line="315" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -143,6 +251,14 @@
       <find>OSELWeekendBundle</find>
       <find>Doc</find>
       <find>news</find>
+      <find>updateDate</find>
+      <find>type</find>
+      <find>musics</find>
+      <find>music</find>
+      <find>musi</find>
+      <find>score</find>
+      <find>stat</find>
+      <find>login</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -156,57 +272,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/DataFixtures/ORM/LoadRoles.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Form/UserCompleteType.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Form/UserType.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/UserRepository.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/add.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/view.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Listener/AuthenticationListener.php" />
         <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index-simple.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/listplaces.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/Event.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/Place.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/RidingGroup.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/RidingGroupMembre.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/SubEvents.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Entity/SubscribeEvent.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/InfoBundle/Entity/RedirectionMail.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/MediaBundle/Entity/Album.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/MediaBundle/Entity/Media.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/MediaBundle/Entity/TypeMedia.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/MediaBundle/Entity/YearMedia.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/ImageNews.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/News.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Score.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Roles.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/export.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/modifyPass.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/view.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/form.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/view.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/views/Info/redirections.html.twig" />
         <option value="$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/views/Info/redirections_gestion.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/gestion.html.twig" />
         <option value="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/modify.html.twig" />
         <option value="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/userview.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/sendResetMail.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Entity/Musicsheet.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Controller/TestController.php" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/web/info.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/public/js/core.js" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig" />
-        <option value="$PROJECT_DIR$/web/css/styles.css" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/login.html.twig" />
-        <option value="$PROJECT_DIR$/web/css/Login-Form-Dark.css" />
-        <option value="$PROJECT_DIR$/web/bundles/oselevent/js/payement.js" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/flash.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/public/js/actif.js" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/pwdReset.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/public/js/passwordscheck.js" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/secret.php" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Controller/MusicsheetController.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/EventRepository.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/TestController.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/SecurityController.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Controller/ExportFilesController.php" />
         <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Login.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/head.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/js.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/construction/construction.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/pwdReset.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/sendResetMail.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/navbar.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/noevent.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/Jumbotron-Advanced-Responsive-Tint.css" />
+        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/base.html.twig" />
+        <option value="$PROJECT_DIR$/web/js/modal.js" />
+        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/flash.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Controller/CoreController.php" />
       </list>
     </option>
   </component>
@@ -217,7 +333,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="64" />
     <option name="y" value="-11" />
     <option name="width" value="1857" />
@@ -239,6 +355,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,6 +371,12 @@
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -261,6 +384,21 @@
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
@@ -282,22 +420,22 @@
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="MusicsheetBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="InfoBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="MusicsheetBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="InfoBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="MusicsheetBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="InfoBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -305,16 +443,61 @@
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="MusicsheetBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="InfoBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -322,8 +505,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/img" />
+      <recent name="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score" />
+      <recent name="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core" />
       <recent name="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places" />
       <recent name="$PROJECT_DIR$/src/OSEL" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/OSEL/ScoreBundle" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -369,22 +558,35 @@
       <workItem from="1509104008201" duration="1946000" />
       <workItem from="1509106586394" duration="5283000" />
       <workItem from="1509282283693" duration="16000" />
-      <workItem from="1509375555260" duration="8684000" />
+      <workItem from="1509375555260" duration="9204000" />
+      <workItem from="1509458606033" duration="2664000" />
+      <workItem from="1509976599026" duration="8235000" />
+      <workItem from="1510060487327" duration="10043000" />
+      <workItem from="1510327185456" duration="1752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127362000" />
+    <option name="totallyTimeSpent" value="150576000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24069077" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24681793" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.49584946" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5041505" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4980631" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -395,7 +597,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -408,10 +609,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24097034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24069077" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -433,32 +634,157 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="17" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/config_test.yml">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/ImageNews.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="162">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Composer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Parts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Groupes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Temp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Score.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="85" column="7" lean-forward="false" selection-start-line="85" selection-start-column="7" selection-end-line="85" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Instruments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="54">
+          <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/export.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/modifyComplete.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/modifyPass.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/views/Info/agenda.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/views/Info/redirections.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/views/Info/redirections_gestion.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/complete.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Roles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="35" column="7" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -469,372 +795,236 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/export.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/head.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="84" lean-forward="false" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="204" column="65" lean-forward="false" selection-start-line="204" selection-start-column="65" selection-end-line="204" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/modify.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/OSELWeekendBundle/Controller/DefaultControllerTest.php" />
-    <entry file="file://$PROJECT_DIR$/var/cache/prod/appProdProjectContainer.php" />
-    <entry file="file://$PROJECT_DIR$/web/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/views/Musicsheet/userview.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="36">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/Login-Form-Dark.css">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/construction/construction.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/oselcore/js/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/config/routing.yml" />
-    <entry file="file://$PROJECT_DIR$/web/bundles/oselevent/js/payement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-          <folding>
-            <element signature="e#7#47#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/flash.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="30" column="83" lean-forward="false" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/public/js/passwordscheck.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/public/js/actif.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="856">
-          <caret line="58" column="41" lean-forward="false" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/public/css/password.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="46" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/pwdReset.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="558">
+          <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/sendResetMail.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="35" column="51" lean-forward="false" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
-          <folding />
+        <state relative-caret-position="162">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/secret.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-756">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters_ovh.yml">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+          <caret line="135" column="75" lean-forward="false" selection-start-line="135" selection-start-column="75" selection-end-line="135" selection-end-column="75" />
+          <folding>
+            <element signature="e#775#3447#0#PHP" expanded="false" />
+            <element signature="e#3451#5327#0#PHP" expanded="false" />
+            <element signature="e#5333#5453#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/navbar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/web/css/Jumbotron-Advanced-Responsive-Tint.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="50" column="34" lean-forward="false" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/noevent.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="52" lean-forward="false" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Repository/EventRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/ImageNews.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="59" column="87" lean-forward="false" selection-start-line="59" selection-start-column="78" selection-end-line="59" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="41" column="98" lean-forward="false" selection-start-line="41" selection-start-column="98" selection-end-line="41" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1026">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        <state relative-caret-position="144">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Controller/SecurityController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="423" column="27" lean-forward="false" selection-start-line="423" selection-start-column="27" selection-end-line="423" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Controller/ExportFilesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="164" column="43" lean-forward="false" selection-start-line="164" selection-start-column="43" selection-end-line="164" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="315" column="30" lean-forward="false" selection-start-line="315" selection-start-column="30" selection-end-line="315" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="112" column="59" lean-forward="false" selection-start-line="112" selection-start-column="59" selection-end-line="112" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/PlacesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="77" column="59" lean-forward="false" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/InfoBundle/Controller/InfoController.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="81" column="41" lean-forward="false" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="84" column="55" lean-forward="false" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="142" column="10" lean-forward="false" selection-start-line="142" selection-start-column="10" selection-end-line="142" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/js.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="57" lean-forward="false" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/flash.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="34" column="50" lean-forward="false" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
           <folding>
-            <element signature="e#288#473#0#PHP" expanded="false" />
-            <element signature="e#479#1165#0#PHP" expanded="false" />
-            <element signature="e#1171#2792#0#PHP" expanded="false" />
-            <element signature="e#2798#4376#0#PHP" expanded="false" />
-            <element signature="e#4382#5399#0#PHP" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="28" column="70" lean-forward="false" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+        <state relative-caret-position="612">
+          <caret line="34" column="57" lean-forward="false" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="39" column="64" lean-forward="false" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+        <state relative-caret-position="396">
+          <caret line="22" column="15" lean-forward="true" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Controller/MusicsheetController.php">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="145" column="33" lean-forward="false" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
+        <state relative-caret-position="72">
+          <caret line="4" column="54" lean-forward="false" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Controller/CoreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="67" lean-forward="false" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="73" />
           <folding>
-            <element signature="e#929#5884#0#PHP" expanded="false" />
-            <element signature="e#5890#7166#0#PHP" expanded="false" />
-            <element signature="e#7172#7575#0#PHP" expanded="false" />
-            <element signature="e#7581#8010#0#PHP" expanded="false" />
-            <element signature="e#8016#10254#0#PHP" expanded="false" />
-            <element signature="e#10260#12323#0#PHP" expanded="false" />
-            <element signature="e#12329#13607#0#PHP" expanded="false" />
-            <element signature="e#13613#14908#0#PHP" expanded="false" />
-            <element signature="e#14914#16874#0#PHP" expanded="false" />
-            <element signature="e#16880#18417#0#PHP" expanded="false" />
-            <element signature="e#18423#20152#0#PHP" expanded="false" />
-            <element signature="e#20158#21897#0#PHP" expanded="false" />
-            <element signature="e#21903#22765#0#PHP" expanded="false" />
-            <marker date="1509381096838" expanded="true" signature="16244:16256" ph="..." />
+            <element signature="e#2378#4438#0#PHP" expanded="false" />
+            <element signature="e#4444#6288#0#PHP" expanded="false" />
+            <element signature="e#6294#7242#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/MusicsheetBundle/Resources/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/InfoBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="32" column="82" lean-forward="false" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="171" column="59" lean-forward="false" selection-start-line="171" selection-start-column="59" selection-end-line="171" selection-end-column="59" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="16" />
           <folding />
         </state>
       </provider>

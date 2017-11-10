@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * User
  *
- * @ORM\Table()
+ * @ORM\Table(name="osel_user_user")
  * @ORM\Entity(repositoryClass="OSEL\UserBundle\Entity\UserRepository")
  * @ORM\HasLifecycleCallbacks()
  */
@@ -85,19 +85,9 @@ class User implements AdvancedUserInterface, \Serializable
     private $instruments;
 
     /**
-     * @ORM\ManyToMany(targetEntity="OSEL\MusicsheetBundle\Entity\Instrument", inversedBy="users", cascade={"persist"})
-     */
-    private $instrumentMusicsheets;
-
-    /**
      * @ORM\ManyToMany(targetEntity="OSEL\UserBundle\Entity\Groupes", cascade={"persist"})
      */
     private $groupes;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="OSEL\UserBundle\Entity\Statuts", cascade={"persist"})
-     */
-    private $statuts;
 
     /**
      * @var string
@@ -212,7 +202,7 @@ class User implements AdvancedUserInterface, \Serializable
     private $newsletter = true;
 
     /**
-     * @ORM\OneToMany(targetEntity="OSEL\UserBundle\Entity\logins", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="OSEL\UserBundle\Entity\Login", mappedBy="user")
      * @ORM\JoinColumn(nullable=false)
      */
     private $logins;
@@ -231,16 +221,16 @@ class User implements AdvancedUserInterface, \Serializable
 
 
     /**
-     * @ORM\OneToMany(targetEntity="OSEL\MusicsheetBundle\Entity\Musicsheet", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\Score", mappedBy="user")
      * @ORM\JoinColumn(nullable=true)
      */
-    private $musicsheets;
+    private $scores;
 
     /**
-     * @ORM\OneToMany(targetEntity="OSEL\MusicsheetBundle\Entity\Musicsheet", mappedBy="lastUser")
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\Score", mappedBy="lastUser")
      * @ORM\JoinColumn(nullable=true)
      */
-    private $musicsheets_modified;
+    private $scores_modified;
 
     /**
      * @ORM\OneToMany(targetEntity="OSEL\UserBundle\Entity\Temp", cascade={"persist"}, mappedBy="user")
@@ -523,29 +513,6 @@ class User implements AdvancedUserInterface, \Serializable
     public function getInstrument()
     {
         return $this->instrument;
-    }
-
-    /**
-     * Set statut
-     *
-     * @param string $statut
-     * @return User
-     */
-    public function setStatut($statut)
-    {
-        $this->statut = $statut;
-
-        return $this;
-    }
-
-    /**
-     * Get statut
-     *
-     * @return string 
-     */
-    public function getStatut()
-    {
-        return $this->statut;
     }
 
 
@@ -964,12 +931,12 @@ class User implements AdvancedUserInterface, \Serializable
     }
 
     /**
-     * Add logins
+     * Add login
      *
-     * @param \OSEL\UserBundle\Entity\logins $logins
+     * @param \OSEL\UserBundle\Entity\login $logins
      * @return User
      */
-    public function addLogin(\OSEL\UserBundle\Entity\logins $logins)
+    public function addLogin(\OSEL\UserBundle\Entity\login $logins)
     {
         $this->logins[] = $logins;
 
@@ -979,17 +946,17 @@ class User implements AdvancedUserInterface, \Serializable
     }
 
     /**
-     * Remove logins
+     * Remove login
      *
-     * @param \OSEL\UserBundle\Entity\logins $logins
+     * @param \OSEL\UserBundle\Entity\login $logins
      */
-    public function removeLogin(\OSEL\UserBundle\Entity\logins $logins)
+    public function removeLogin(\OSEL\UserBundle\Entity\login $logins)
     {
         $this->logins->removeElement($logins);
     }
 
     /**
-     * Get logins
+     * Get login
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
@@ -1064,39 +1031,6 @@ class User implements AdvancedUserInterface, \Serializable
     public function getInstruments()
     {
         return $this->instruments;
-    }
-
-    /**
-     * Add statuts
-     *
-     * @param \OSEL\UserBundle\Entity\Statuts $statuts
-     * @return User
-     */
-    public function addStatut(\OSEL\UserBundle\Entity\Statuts $statuts)
-    {
-        $this->statuts[] = $statuts;
-
-        return $this;
-    }
-
-    /**
-     * Remove statuts
-     *
-     * @param \OSEL\UserBundle\Entity\Statuts $statuts
-     */
-    public function removeStatut(\OSEL\UserBundle\Entity\Statuts $statuts)
-    {
-        $this->statuts->removeElement($statuts);
-    }
-
-    /**
-     * Get statuts
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getStatuts()
-    {
-        return $this->statuts;
     }
 
     public function defineRest($pwd)
@@ -1255,83 +1189,6 @@ class User implements AdvancedUserInterface, \Serializable
 
 
         return $tableau;
-    }
-
-    /**
-     * Add musicsheet
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheet
-     * @return User
-     */
-    public function addMusicsheet(\OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheet)
-    {
-        $this->musicsheet[] = $musicsheet;
-
-        return $this;
-    }
-
-    /**
-     * Remove musicsheet
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheet
-     */
-    public function removeMusicsheet(\OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheet)
-    {
-        $this->musicsheet->removeElement($musicsheet);
-    }
-
-    /**
-     * Get musicsheet
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getMusicsheet()
-    {
-        return $this->musicsheet;
-    }
-
-    /**
-     * Get musicsheets
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getMusicsheets()
-    {
-        return $this->musicsheets;
-    }
-
-    /**
-     * Add musicsheetsModified
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheetsModified
-     *
-     * @return User
-     */
-    public function addMusicsheetsModified(\OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheetsModified)
-    {
-        $this->musicsheets_modified[] = $musicsheetsModified;
-
-        return $this;
-    }
-
-    /**
-     * Remove musicsheetsModified
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheetsModified
-     */
-    public function removeMusicsheetsModified(\OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheetsModified)
-    {
-        $this->musicsheets_modified->removeElement($musicsheetsModified);
-    }
-
-    /**
-     * Get musicsheetsModified
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getMusicsheetsModified()
-    {
-        return $this->musicsheets_modified;
     }
 
     /**
@@ -1709,36 +1566,138 @@ class User implements AdvancedUserInterface, \Serializable
     }
 
     /**
-     * Add instrumentMusicsheet
+     * Add news
      *
-     * @param \OSEL\MusicsheetBundle\Entity\Instrument $instrumentMusicsheet
+     * @param \OSEL\NewsBundle\Entity\News $news
      *
      * @return User
      */
-    public function addInstrumentMusicsheet(\OSEL\MusicsheetBundle\Entity\Instrument $instrumentMusicsheet)
+    public function addNews(\OSEL\NewsBundle\Entity\News $news)
     {
-        $this->instrumentMusicsheets[] = $instrumentMusicsheet;
+        $this->news[] = $news;
 
         return $this;
     }
 
     /**
-     * Remove instrumentMusicsheet
+     * Remove news
      *
-     * @param \OSEL\MusicsheetBundle\Entity\Instrument $instrumentMusicsheet
+     * @param \OSEL\NewsBundle\Entity\News $news
      */
-    public function removeInstrumentMusicsheet(\OSEL\MusicsheetBundle\Entity\Instrument $instrumentMusicsheet)
+    public function removeNews(\OSEL\NewsBundle\Entity\News $news)
     {
-        $this->instrumentMusicsheets->removeElement($instrumentMusicsheet);
+        $this->news->removeElement($news);
     }
 
     /**
-     * Get instrumentMusicsheets
+     * Get news
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getInstrumentMusicsheets()
+    public function getNews()
     {
-        return $this->instrumentMusicsheets;
+        return $this->news;
+    }
+
+    /**
+     * Add imageNews
+     *
+     * @param \OSEL\NewsBundle\Entity\ImageNews $imageNews
+     *
+     * @return User
+     */
+    public function addImageNews(\OSEL\NewsBundle\Entity\ImageNews $imageNews)
+    {
+        $this->imageNews[] = $imageNews;
+
+        return $this;
+    }
+
+    /**
+     * Remove imageNews
+     *
+     * @param \OSEL\NewsBundle\Entity\ImageNews $imageNews
+     */
+    public function removeImageNews(\OSEL\NewsBundle\Entity\ImageNews $imageNews)
+    {
+        $this->imageNews->removeElement($imageNews);
+    }
+
+    /**
+     * Get imageNews
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getImageNews()
+    {
+        return $this->imageNews;
+    }
+
+    /**
+     * Add score
+     *
+     * @param \OSEL\ScoreheetBundle\Entity\Score $score
+     *
+     * @return User
+     */
+    public function addScore(\OSEL\ScoreheetBundle\Entity\Score $score)
+    {
+        $this->scores[] = $score;
+
+        return $this;
+    }
+
+    /**
+     * Remove score
+     *
+     * @param \OSEL\ScoreheetBundle\Entity\Score $score
+     */
+    public function removeScore(\OSEL\ScoreheetBundle\Entity\Score $score)
+    {
+        $this->scores->removeElement($score);
+    }
+
+    /**
+     * Get scores
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getScores()
+    {
+        return $this->scores;
+    }
+
+    /**
+     * Add scoresModified
+     *
+     * @param \OSEL\ScoreBundle\Entity\Score $scoresModified
+     *
+     * @return User
+     */
+    public function addScoresModified(\OSEL\ScoreBundle\Entity\Score $scoresModified)
+    {
+        $this->scores_modified[] = $scoresModified;
+
+        return $this;
+    }
+
+    /**
+     * Remove scoresModified
+     *
+     * @param \OSEL\ScoreBundle\Entity\Score $scoresModified
+     */
+    public function removeScoresModified(\OSEL\ScoreBundle\Entity\Score $scoresModified)
+    {
+        $this->scores_modified->removeElement($scoresModified);
+    }
+
+    /**
+     * Get scoresModified
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getScoresModified()
+    {
+        return $this->scores_modified;
     }
 }

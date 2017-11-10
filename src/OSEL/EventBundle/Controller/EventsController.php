@@ -20,8 +20,11 @@ class EventsController extends Controller
     public function indexAction($page, $criteria, $desc, $active, $nbPerPage, Request $request)
     {
 
-        if ($this->get('security.authorization_checker')->isGranted('ROLE_WEEKEND')) {
-            if ($page < 1) {
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_WEEKEND')) {
+            $request->getSession()->getFlashBag()->add('ERROR', 'Vous n\'avez pas acces à cette page');
+            return $this->redirect($this->generateUrl('osel_core_home'));
+        }
+            if ($page < 0) {
                 $request->getSession()->getFlashBag()->add('ERROR', 'Cette page n\'existe pas');
             }
 
@@ -42,14 +45,7 @@ class EventsController extends Controller
                 'criteria' => $criteria,
                 'desc' => $desc,
                 'active' => $active,
-                'nbPages' => $nbPages,
-                'selectedPage' => 'weekend'));
-        }
-        else
-        {
-            $request->getSession()->getFlashBag()->add('ERROR', 'Vous n\'avez pas acces à cette page');
-            return $this->redirect($this->generateUrl('osel_core_home'));
-        }
+                'nbPages' => $nbPages));
     }
 
     public function viewAction($id)
@@ -59,18 +55,14 @@ class EventsController extends Controller
             $event = $this->getDoctrine()->getManager()->getRepository('OSELEventBundle:Event')->findOneBy(array('active' => 1));
             if($event === null)
             {
-                return $this->render('OSELEventBundle:events:noevent.html.twig', array(
-                    'selectedPage' => 'weekend'
-                ));
+                return $this->render('OSELEventBundle:events:noevent.html.twig');
             }
         }
         else{
             $event = $this->getDoctrine()->getManager()->getRepository('OSELEventBundle:Event')->findOneBy(array('id' => $id));
         }
         return $this->render('OSELEventBundle:events:view.html.twig', array(
-            'weekend'   => $event,
-            'selectedPage' => 'weekend'
-        ));
+            'weekend'   => $event));
     }
 
     public function addAction(Request $request)

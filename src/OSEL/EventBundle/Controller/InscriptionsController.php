@@ -131,6 +131,10 @@ class InscriptionsController extends Controller
     public function addAction(Request $request)
     {
         $event = $this->getDoctrine()->getManager()->getRepository(Event::class)->findOneBy(array('active' => true));
+        if($event === null)
+        {
+            return $this->render('OSELEventBundle:events:noevent.html.twig');
+        }
 
         if ($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN'))
             {

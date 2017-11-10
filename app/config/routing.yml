@@ -1,10 +1,14 @@
+score:
+    resource: "@ScoreBundle/Resources/config/routing.yml"
+    prefix:   /partitions
+
 osel_news:
     resource: "@OSELNewsBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /news
 
 osel_media:
     resource: "@OSELMediaBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /media
 
 osel_event:
     resource: "@OSELEventBundle/Resources/config/routing.yml"
@@ -12,15 +16,15 @@ osel_event:
 
 osel_info:
     resource: "@OSELInfoBundle/Resources/config/routing.yml"
-    prefix:   /
-
-osel_musicsheet:
-    resource: "@OSELMusicsheetBundle/Resources/config/routing.yml"
-    prefix:   /partitions
+    prefix:   /info
 
 osel_core:
     resource: "@OSELCoreBundle/Resources/config/routing.yml"
     prefix:   /
+
+osel_user:
+    resource: "@OSELUserBundle/Resources/config/routing.yml"
+    prefix:   /membres
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

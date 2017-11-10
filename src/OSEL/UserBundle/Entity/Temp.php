@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Temp
  *
- * @ORM\Table(name="temp")
+ * @ORM\Table(name="osel_user_temp")
  * @ORM\Entity(repositoryClass="OSEL\UserBundle\Repository\TempRepository")
  * @ORM\HasLifecycleCallbacks()
  */

@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * SubscribeEvent
  *
- * @ORM\Table(name="subscribe_event")
+ * @ORM\Table(name="osel_event_subscribeevent")
  * @ORM\Entity(repositoryClass="OSEL\EventBundle\Repository\SubscribeEventRepository")
  * @ORM\HasLifecycleCallbacks()
  */
@@ -146,7 +146,8 @@ class SubscribeEvent
         foreach ($this->getSubEvents() as $sub)
         {
             $sub->decreaseSubscriptions();
-        }    }
+        }
+    }
 
 
 

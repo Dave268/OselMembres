@@ -2,39 +2,39 @@
 
 osel_musicsheet_get_composers:
     path:     /getComposers/{id}
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:getComposers, id: 0 }
+    defaults: { _controller: OSELMusicsheetBundle:Score:getComposers, id: 0 }
     options:
         expose: true
 
 osel_musicsheet_get_composers_user:
     path:     /getComposersUser/{id}
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:getComposersUser, id: 0 }
+    defaults: { _controller: OSELMusicsheetBundle:Score:getComposersUser, id: 0 }
     options:
         expose: true
 
 osel_musicsheet_get_musicsheets:
     path:     /getMusicsheets/{id}
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:getMusicsheets, id: 0 }
+    defaults: { _controller: OSELMusicsheetBundle:Score:getMusicsheets, id: 0 }
     options:
         expose: true
 
 osel_musicsheet_get_musicsheets_user:
     path:     /getMusicsheetsUser/{id}
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:getMusicsheetsUser, id: 0 }
+    defaults: { _controller: OSELMusicsheetBundle:Score:getMusicsheetsUser, id: 0 }
     options:
         expose: true
 
 osel_musicsheet_get_parts:
     path:     /getParts/{id}
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:getParts, id: 0 }
+    defaults: { _controller: OSELMusicsheetBundle:Score:getParts, id: 0 }
 
 osel_musicsheet_get_parts_user:
     path:     /getPartsUser/{id}
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:getPartsUser, id: 0 }
+    defaults: { _controller: OSELMusicsheetBundle:Score:getPartsUser, id: 0 }
 
 osel_musicsheet_download_part:
     path:     /download/part/{id}
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:downloadPart, id: 0 }
+    defaults: { _controller: OSELMusicsheetBundle:Score:downloadPart, id: 0 }
 
 osel_musicsheet_test_change_url:
     path:     /test/changeUrl
@@ -42,28 +42,28 @@ osel_musicsheet_test_change_url:
 
 osel_musicsheet_index:
     path:     /
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:index}
+    defaults: { _controller: OSELMusicsheetBundle:Score:index}
 
 osel_musicsheet_gestion:
     path:     /Gestion/{idComposer}/{idMusicsheet}/{idPart}
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:gestion, idComposer: 0, idMusicsheet: 0, idPart: 0 }
+    defaults: { _controller: OSELMusicsheetBundle:Score:gestion, idComposer: 0, idMusicsheet: 0, idPart: 0 }
 
 osel_musicsheet_view:
     path:     /{id}
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:view, id: 0 }
+    defaults: { _controller: OSELMusicsheetBundle:Score:view, id: 0 }
 
 osel_musicsheet_view_part:
     path:     /part/{id}
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:viewPart, id: 0 }
+    defaults: { _controller: OSELMusicsheetBundle:Score:viewPart, id: 0 }
 
 osel_musicsheet_modify:
     path:     /modify/{id}
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:modify, id: 0 }
+    defaults: { _controller: OSELMusicsheetBundle:Score:modify, id: 0 }
     options:
         expose: true
 
 osel_musicsheet_modify_complete:
     path:     /modifycomplete/{id}
-    defaults: { _controller: OSELMusicsheetBundle:Musicsheet:modifyComplete, id: 0 }
+    defaults: { _controller: OSELMusicsheetBundle:Score:modifyComplete, id: 0 }
     options:
         expose: true

@@ -1,70 +1,47 @@
 {# src/Osel/UserBundle/Resources/views/Security/login.html.twig #}
-<!DOCTYPE html>
-<html>
+{% extends "OSELCoreBundle:Core:base.html.twig" %}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form_partition</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/spacelab/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
-    <link rel="stylesheet" href="{{ asset('css/Jumbotron-Advanced-Responsive-Tint.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/Jumbotron-Advanced-Responsive-Tint1.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/Login-Form-Dark.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/Pretty-Registration-Form.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/Projects-Horizontal.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-			<script src="{{ asset('bundles/oselcore/js/core.js') }}"></script>
-</head>
+{% block head %}{% endblock %}
 
-<body>
+{% block body %}
+    {% if error %}
+        <div class="alert alert-danger">{{ error.message }}</div>
+      {% endif %}
+        <div class="login-dark" style="background-image:url('{{ asset('bundles/oseluser/img/P1080114.JPG') }}')';">
+            <form method="post" style="background-color:rgba(227,233,241,0.7);" action="{{ path('login_check') }}">
+                <h2 class="sr-only">Login Form</h2>
+                <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+                <div class="form-group">
+                    <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" id="password" name="_password" placeholder="Password">
+                </div>
 
-{% if error %}
-    <div class="alert alert-danger">{{ error.message }}</div>
-  {% endif %}
-    <div class="login-dark" style="background-image:url('{{ asset('bundles/oseluser/img/P1080114.JPG') }}')';">
-        <form method="post" style="background-color:rgba(227,233,241,0.7);" action="{{ path('login_check') }}">
-            <h2 class="sr-only">Login Form</h2>
-            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-            <div class="form-group">
-                <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Username">
+                <div class="form-group">
+
+                    <button class="btn btn-primary btn-block" type="submit">Log In</button>
+                </div><a href="{{ path('send_reset_mail') }}" class="forgot">J'ai oublié mon mot de passe!</a></form>
+        </div>
+
+        <div style="position: absolute; top: 0; width: 100%; z-index: 999;" id="messages">
+        {% for message in app.session.flashbag.get('notice') %}
+            <div class="alert alert-success alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Notice: </strong>{{ message }}
             </div>
-            <div class="form-group">
-                <input class="form-control" type="password" id="password" name="_password" placeholder="Password">
+        {% endfor %}
+
+
+
+        <!-- on affiche les erreurs-->
+        {% for message in app.session.flashbag.get('ERROR') %}
+            <div class="alert alert-danger alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Notice: </strong>{{ message }}
             </div>
-
-            <div class="form-group">
-
-                <button class="btn btn-primary btn-block" type="submit">Log In</button>
-            </div><a href="{{ path('send_reset_mail') }}" class="forgot">J'ai oublié mon mot de passe!</a></form>
+        {% endfor %}
     </div>
-	
-	<div style="position: absolute; top: 0; width: 100%; z-index: 999;" id="messages">
-    {% for message in app.session.flashbag.get('notice') %}
-        <div class="alert alert-success alert-dismissable">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Notice: </strong>{{ message }}
-        </div>
-    {% endfor %}
+{% endblock %}
 
-
-
-    <!-- on affiche les erreurs-->
-    {% for message in app.session.flashbag.get('ERROR') %}
-        <div class="alert alert-danger alert-dismissable">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Notice: </strong>{{ message }}
-        </div>
-    {% endfor %}
-</div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+{% block script %}{% endblock %}

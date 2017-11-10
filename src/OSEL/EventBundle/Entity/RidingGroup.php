@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * RidingGroup
  *
- * @ORM\Table(name="riding_group")
+ * @ORM\Table(name="osel_event_riding_group")
  * @ORM\Entity(repositoryClass="OSEL\EventBundle\Repository\RidingGroupRepository")
  * @ORM\HasLifecycleCallbacks()
  */

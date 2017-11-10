@@ -5,12 +5,12 @@ namespace OSEL\UserBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * logins
+ * login
  *
- * @ORM\Table()
+ * @ORM\Table(name="osel_user_logins")
  * @ORM\Entity
  */
-class logins
+class Login
 {
     /**
      * @var integer
@@ -29,7 +29,7 @@ class logins
     private $login;
 
     /**
-     * @ORM\ManyToOne(targetEntity="OSEL\UserBundle\Entity\User", inversedBy="logins")
+     * @ORM\ManyToOne(targetEntity="OSEL\UserBundle\Entity\User", inversedBy="login")
      * @ORM\JoinColumn(nullable=true)
      */
     private $user;
@@ -60,7 +60,7 @@ class logins
      * Set login
      *
      * @param \DateTime $login
-     * @return logins
+     * @return login
      */
     public function setLogin($login)
     {
@@ -83,7 +83,7 @@ class logins
      * Set user
      *
      * @param \OSEL\UserBundle\entity\User $user
-     * @return logins
+     * @return login
      */
     public function setUser(\OSEL\UserBundle\entity\User $user)
     {
@@ -106,7 +106,7 @@ class logins
      * Set name
      *
      * @param string $name
-     * @return logins
+     * @return login
      */
     public function setName($name)
     {

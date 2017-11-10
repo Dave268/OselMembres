@@ -8,7 +8,7 @@ use Symfony\Component\Security\Core\Role\Role;
 /**
  * Roles
  *
- * @ORM\Table()
+ * @ORM\Table(name="osel_user_roles")
  * @ORM\Entity(repositoryClass="OSEL\UserBundle\Entity\RolesRepository")
  */
 class Roles extends Role
@@ -30,11 +30,11 @@ class Roles extends Role
     private $role;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="rank", type="integer", unique=true)
+     * @ORM\Column(name="name", type="string", length=255)
      */
-    private $rank;
+    private $name;
 
     /**
      * @ORM\ManyToMany(targetEntity="OSEL\UserBundle\Entity\User", mappedBy="userRoles")
@@ -173,27 +173,28 @@ class Roles extends Role
         return $this->documents;
     }
 
+
     /**
-     * Set rank
+     * Set name
      *
-     * @param integer $rank
+     * @param string $name
      *
      * @return Roles
      */
-    public function setRank($rank)
+    public function setName($name)
     {
-        $this->rank = $rank;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get rank
+     * Get name
      *
-     * @return integer
+     * @return string
      */
-    public function getRank()
+    public function getName()
     {
-        return $this->rank;
+        return $this->name;
     }
 }

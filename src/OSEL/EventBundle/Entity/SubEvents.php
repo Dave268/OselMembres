@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * SubEvents
  *
- * @ORM\Table(name="sub_events")
+ * @ORM\Table(name="osel_event_subevents")
  * @ORM\Entity(repositoryClass="OSEL\EventBundle\Repository\SubEventsRepository")
  * @ORM\HasLifecycleCallbacks()
  */

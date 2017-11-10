@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Instruments
  *
- * @ORM\Table()
+ * @ORM\Table(name="osel_user_instruments")
  * @ORM\Entity(repositoryClass="OSEL\UserBundle\Entity\InstrumentsRepository")
  */
 class Instruments

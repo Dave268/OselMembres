@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Temp
  *
- * @ORM\Table(name="temp")
+ * @ORM\Table(name="osel_user_temp")
  * @ORM\Entity(repositoryClass="OSEL\UserBundle\Repository\TempRepository")
  * @ORM\HasLifecycleCallbacks()
  */
@@ -34,7 +34,7 @@ class Temp
      *
      * @ORM\Column(name="role", type="text")
      */
-    private $role;
+    private $role = "setpwd";
 
     /**
      * @var \DateTime
@@ -48,14 +48,14 @@ class Temp
      *
      * @ORM\Column(name="validity", type="integer")
      */
-    private $validity;
+    private $validity = 172800;
 
     /**
      * @var bool
      *
      * @ORM\Column(name="active", type="boolean")
      */
-    private $active;
+    private $active = true;
 
     /**
      * @ORM\ManyToOne(targetEntity="OSEL\UserBundle\Entity\User", inversedBy="temps")

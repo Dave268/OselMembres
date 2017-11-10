@@ -132,7 +132,7 @@
                                                     <td id="inscription_{{ user.id }}">{% if is_granted('ROLE_TRESORIER') %}<a class="inscription_activate" href="{{ path('osel_event_inscription_complete', {'id': user.id, 'idEvent': event.id}) }}" obj="{{ user.id }}">{% endif %}{% if user.paye %} <i class="state-icon glyphicon glyphicon-check"></i>{% else %}<i class="state-icon glyphicon glyphicon-unchecked"></i>{% endif %}{% if is_granted('ROLE_TRESORIER') %}</a>{% endif %}</td>
                                                     {% endif %}
                                                     {% if is_granted('ROLE_WEEKEND') %}
-                                                        <td class="hidden-xs">
+                                                        <td>
                                                             <div class="btn-group" role="group" style="min-width:136px;">
                                                                 <button class="btn btn-success btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('osel_event_modify_inscription', {'id': user.id, 'idEvent': event.id}) }}'">Modifier </button>
                                                                 <button class="btn btn-danger btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;padding-top:0px;padding-bottom:0px;font-size:10px;"  data-href = "{{ path('osel_event_delete_inscription', {'id': user.id}) }}" data-toggle="modal" data-target="#confirm-delete" {% if not is_granted('ROLE_WEEKEND') %}Disabled{% endif %}>Supprimer </button>

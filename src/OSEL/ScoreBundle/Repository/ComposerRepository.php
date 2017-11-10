@@ -1,6 +1,6 @@
 <?php
 
-namespace OSEL\MusicsheetBundle\Entity;
+namespace OSEL\ScoreBundle\Entity;
 
 /**
  * ComposerRepository

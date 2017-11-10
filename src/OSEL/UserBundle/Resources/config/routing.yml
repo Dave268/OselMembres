@@ -1,0 +1,35 @@
+osel_user_index:
+    path:     /Users/{page}/{criteria}/{desc}/{enabled}/{nbPerPage}
+    defaults: { _controller: OSELUserBundle:User:index, page: 1, criteria: lastname, desc: 0, enabled: 0, nbPerPage: 20}
+
+osel_user_view:
+    path:     /User/{id}
+    defaults: { _controller: OSELUserBundle:User:view, id: 0 }
+
+osel_user_csv_options:
+    path:     /UserExport-options
+    defaults: { _controller: OSELUserBundle:ExportFiles:index}
+
+osel_user_export:
+    path:     /UserExport/{id}/{email}/{instrument}/{adress}/{phone}/{birthday}/{emergency}
+    defaults: { _controller: OSELUserBundle:ExportFiles:export}
+
+osel_user_export_contact:
+    path:     /UserExportContact
+    defaults: { _controller: OSELUserBundle:ExportFiles:exportContact}
+
+osel_info_redirections:
+    path:     /infos/redirections
+    defaults: { _controller: OSELInfoBundle:Info:redirections }
+
+osel_info_redirections_gestion:
+    path:     /infos/redirections/gestion
+    defaults: { _controller: OSELInfoBundle:Info:gestion }
+
+osel_info_redirections_modify:
+    path:     /infos/redirections/modify/{id}
+    defaults: { _controller: OSELInfoBundle:Info:modify }
+
+osel_info_redirections_delete:
+    path:     /infos/redirections/delete/{id}
+    defaults: { _controller: OSELInfoBundle:Info:delete }

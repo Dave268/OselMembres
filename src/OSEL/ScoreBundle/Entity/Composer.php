@@ -1,14 +1,17 @@
 <?php
 
-namespace OSEL\MusicsheetBundle\Entity;
+namespace OSEL\ScoreBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Composer
  *
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="OSEL\MusicsheetBundle\Entity\ComposerRepository")
+ * @ORM\Table(name="osel_score_composer")
+ * @ORM\Entity(repositoryClass="OSEL\ScoreBundle\Repository\ComposerRepository")
+ * @ORM\HasLifecycleCallbacks()
+ *
  */
 class Composer
 {
@@ -72,10 +75,15 @@ class Composer
     private $dateDeath;
 
     /**
-     * @ORM\OneToMany(targetEntity="OSEL\MusicsheetBundle\Entity\Musicsheet", mappedBy="composer")
+     * @ORM\Column(name="nb_scores", type="integer")
+     */
+    private $nbScores = 0;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\Score", mappedBy="composer")
      * @ORM\JoinColumn(nullable=true)
      */
-    private $musicsheets;
+    private $scores;
 
 
     /**
@@ -83,10 +91,19 @@ class Composer
      */
     public function __construct()
     {
-        $this->musicsheets = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->scores= new ArrayCollection();
         $this->setComposer($this->getName() . $this->getLastName());
         $this->dateAdd = new \DateTime();
     }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function updateDate()
+    {
+        $this->setDateUpdate(new \DateTime());
+    }
+
 
 
     /**
@@ -215,47 +232,6 @@ class Composer
     }
 
     /**
-     * @ORM\PreUpdate
-     */
-    public function updateDate()
-    {
-        $this->setDateUpdate(new \DateTime());
-    }
-
-    /**
-     * Add musicsheets
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheets
-     * @return Composer
-     */
-    public function addMusicsheet(\OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheets)
-    {
-        $this->musicsheets[] = $musicsheets;
-
-        return $this;
-    }
-
-    /**
-     * Remove musicsheets
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheets
-     */
-    public function removeMusicsheet(\OSEL\MusicsheetBundle\Entity\Musicsheet $musicsheets)
-    {
-        $this->musicsheets->removeElement($musicsheets);
-    }
-
-    /**
-     * Get musicsheets
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getMusicsheets()
-    {
-        return $this->musicsheets;
-    }
-
-    /**
      * Set name
      *
      * @param string $name
@@ -327,5 +303,73 @@ class Composer
     public function getLastName()
     {
         return $this->lastName;
+    }
+
+    public function increaseScore()
+    {
+        $this->nbScores++;
+    }
+
+    public function decreaseScore()
+    {
+        $this->nbScores--;
+    }
+
+    /**
+     * Set nbScores
+     *
+     * @param integer $nbScores
+     *
+     * @return Composer
+     */
+    public function setNbScores($nbScores)
+    {
+        $this->nbScores = $nbScores;
+
+        return $this;
+    }
+
+    /**
+     * Get nbScores
+     *
+     * @return integer
+     */
+    public function getNbScores()
+    {
+        return $this->nbScores;
+    }
+
+    /**
+     * Add score
+     *
+     * @param \OSEL\ScoreBundle\Entity\Score $score
+     *
+     * @return Composer
+     */
+    public function addScore(\OSEL\ScoreBundle\Entity\Score $score)
+    {
+        $this->scores[] = $score;
+
+        return $this;
+    }
+
+    /**
+     * Remove score
+     *
+     * @param \OSEL\ScoreBundle\Entity\Score $score
+     */
+    public function removeScore(\OSEL\ScoreBundle\Entity\Score $score)
+    {
+        $this->scores->removeElement($score);
+    }
+
+    /**
+     * Get scores
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getScores()
+    {
+        return $this->scores;
     }
 }

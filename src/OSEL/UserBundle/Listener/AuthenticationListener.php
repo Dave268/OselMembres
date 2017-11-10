@@ -10,7 +10,7 @@ use Symfony\Component\Security\Core\Authorization\AuthorizationChecker;
 use Symfony\Component\Security\Core\Event\AuthenticationFailureEvent;
 use Symfony\Component\Security\Http\Event\InteractiveLoginEvent;
 use OSEL\UserBundle\Entity\User;
-use OSEL\UserBundle\Entity\logins;
+use OSEL\UserBundle\Entity\Login;
 
 class AuthenticationListener
 {
@@ -59,7 +59,7 @@ class AuthenticationListener
 
             if($user instanceof User)
             {
-                $login = new logins();
+                $login = new Login();
 
 
                 $login->setName($user->getName() . ' ' . $user->getLastname());
@@ -70,7 +70,7 @@ class AuthenticationListener
             }
             else
             {
-                $login = new logins();
+                $login = new Login();
                 $login->setName($user->getUsername());
                 $this->em->persist($login);
                 $this->em->flush();
