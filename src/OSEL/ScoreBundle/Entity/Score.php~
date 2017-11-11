@@ -81,7 +81,7 @@ class Score
     private $actif = true;
 
     /**
-     * @ORM\OneToMany(targetEntity="OSEL\MusicsheetBundle\Entity\Parts", cascade={"persist"}, mappedBy="score")
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\Parts", cascade={"persist"}, mappedBy="score")
      * @ORM\JoinColumn(nullable=true)
      */
     private $parts;
@@ -318,54 +318,6 @@ class Score
     {
         return $this->actif;
     }
-
-    /**
-     * Add parts
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Parts $parts
-     * @return Score
-     */
-    public function addPart(\OSEL\MusicsheetBundle\Entity\Parts $parts)
-    {
-        $this->parts[] = $parts;
-
-        return $this;
-    }
-
-    /**
-     * Remove parts
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Parts $parts
-     */
-    public function removePart(\OSEL\MusicsheetBundle\Entity\Parts $parts)
-    {
-        $this->parts->removeElement($parts);
-    }
-
-    /**
-     * Get parts
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getParts()
-    {
-        return $this->parts;
-    }
-
-    /**
-     * Set parts
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Parts $parts
-     *
-     * @return Score
-     */
-    public function setParts(\OSEL\MusicsheetBundle\Entity\Parts $parts = null)
-    {
-        $this->parts = $parts;
-
-        return $this;
-    }
-
 
     public function upload(){
 

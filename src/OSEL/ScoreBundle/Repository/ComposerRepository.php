@@ -1,6 +1,6 @@
 <?php
 
-namespace OSEL\ScoreBundle\Entity;
+namespace OSEL\ScoreBundle\Repository;
 
 /**
  * ComposerRepository
@@ -14,7 +14,7 @@ class ComposerRepository extends \Doctrine\ORM\EntityRepository
     {
         $qb = $this
             ->createQueryBuilder('a')
-            ->leftJoin('a.musicsheets', 'c')
+            ->leftJoin('a.scores', 'c')
             ->addSelect('c')
             ->where('c.actif = :actif')
             ->setParameter('actif', true)

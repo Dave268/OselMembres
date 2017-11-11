@@ -1,4 +1,5 @@
 services:
-#    score.example:
-#        class: OSEL\ScoreBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    score.uploader:
+        class: OSEL\ScoreBundle\Service\FileUploader
+        arguments:
+            $rootDir: '%kernel.project_dir%/web/'

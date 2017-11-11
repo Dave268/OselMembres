@@ -319,54 +319,6 @@ class Score
         return $this->actif;
     }
 
-    /**
-     * Add parts
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Parts $parts
-     * @return Score
-     */
-    public function addPart(\OSEL\MusicsheetBundle\Entity\Parts $parts)
-    {
-        $this->parts[] = $parts;
-
-        return $this;
-    }
-
-    /**
-     * Remove parts
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Parts $parts
-     */
-    public function removePart(\OSEL\MusicsheetBundle\Entity\Parts $parts)
-    {
-        $this->parts->removeElement($parts);
-    }
-
-    /**
-     * Get parts
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getParts()
-    {
-        return $this->parts;
-    }
-
-    /**
-     * Set parts
-     *
-     * @param \OSEL\MusicsheetBundle\Entity\Parts $parts
-     *
-     * @return Score
-     */
-    public function setParts(\OSEL\MusicsheetBundle\Entity\Parts $parts = null)
-    {
-        $this->parts = $parts;
-
-        return $this;
-    }
-
-
     public function upload(){
 
         $parts = array();
@@ -503,5 +455,39 @@ class Score
     public function getNbParts()
     {
         return $this->nbParts;
+    }
+
+    /**
+     * Add part
+     *
+     * @param \OSEL\ScoreBundle\Entity\Parts $part
+     *
+     * @return Score
+     */
+    public function addPart(\OSEL\ScoreBundle\Entity\Parts $part)
+    {
+        $this->parts[] = $part;
+
+        return $this;
+    }
+
+    /**
+     * Remove part
+     *
+     * @param \OSEL\ScoreBundle\Entity\Parts $part
+     */
+    public function removePart(\OSEL\ScoreBundle\Entity\Parts $part)
+    {
+        $this->parts->removeElement($part);
+    }
+
+    /**
+     * Get parts
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getParts()
+    {
+        return $this->parts;
     }
 }

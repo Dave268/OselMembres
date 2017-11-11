@@ -1,6 +1,6 @@
 {# src/Osel/MusicsheetBundle/Resources/views/Musicsheet/gestion.html.twig #}
 
-{% extends "OSELCoreBundle::layout.html.twig" %}
+{% extends "OSELCoreBundle:Core:layout.html.twig" %}
 
 {% block title %}
     Ajouter des partitions
@@ -13,6 +13,58 @@
 {% endblock %}
 
 {% block body %}
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default" style="padding:0;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Ajouter une partition <i class="glyphicon glyphicon-plus" data-bs-hover-animate="tada" style="float:right;color:rgba(51,51,51,0.55);"></i></h3></div>
+                <div class="panel-body" style="padding:20px;display:none;padding-top:10px;">
+                    <form class="bootstrap-form-with-validation">
+                        {{ form_start(form) }}
+                        <div class="form-group">
+                                {{ form_label(form.title, "Titre du morceau:", {'label-attr': {'class': 'control-label'}}) }}
+                                {{ form_widget(form.title, { 'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_label(form.year, "Année du morceau:", {'label-attr': {'class': 'control-label'}}) }}
+                            {{ form_widget(form.year, { 'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="password-input">Date </label>
+                            <input class="form-control" type="text">
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label class="control-label">
+                                    {{ form_widget(form.actif) }}
+                                    Actif
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {{ form_label(form.composer, "Compositeur du morceau:", {'label-attr': {'class': 'control-label'}}) }}
+                            {{ form_widget(form.composer, { 'attr': {'class': 'form-control input-sm'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_widget(form.uploadedFiles, { 'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="form-group">
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-default" type="button">Button 1</button>
+                                <button class="btn btn-default" type="button">Button 2</button>
+                                <button class="btn btn-default" type="button">Button 2</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {{ form_widget(form.save, {'attr': {'class': 'btn btn-success btn-sm submit-button'}}) }}
+                            <!--<button class="btn btn-success btn-sm" type="submit">Envoyer </button>-->
+                            <button class="btn btn-info btn-sm" type="reset">Reset </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -84,10 +136,5 @@
 
 {% endblock %}
 {% block script %}
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../assets/js/bs-animation.js"></script>
-    <script src="../assets/js/documents.js"></script>
-    <script src="../assets/js/Profile-Edit.js"></script>
-    <script src="{{ asset('bundles/oselmusicsheet/js/score.js') }}"></script>
+    <script src="{{ asset('bundles/score/js/fileUpload.js') }}"></script>
 {% endblock %}

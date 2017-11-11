@@ -1,7 +1,7 @@
 osel_score_index:
     path:     /
-    defaults: { _controller: OSELScoreBundle:Score:index}
+    defaults: { _controller: ScoreBundle:Score:index}
 
 osel_score_gestion:
-    path:     /gestion/{idComposer}/{idMusicsheet}/{idPart}
-    defaults: { _controller: OSELScoreBundle:Score:gestion, idComposer: 0, idMusicsheet: 0, idPart: 0 }
+    path:     /gestion/{idComposer}/{idScore}/{idPart}
+    defaults: { _controller: ScoreBundle:Score:gestion, idComposer: 0, idScore: 0, idPart: 0 }
