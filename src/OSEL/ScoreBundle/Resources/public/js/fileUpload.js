@@ -1,5 +1,5 @@
 
-        $.fn.upload = function(remote, successFn, progressFn, formFn, numFilesFn, iconFn) {
+        $.fn.upload = function(remote, successFn, progressFn, formFn, numFilesFn, iconFn, deleteFN) {
 
             var def = new $.Deferred();
             if (numFilesFn) {
@@ -31,7 +31,13 @@
                     processData: false,
                     success: function (obj) {
                         $(progressFn).hide();
-                        $(iconFn).removeClass("hidden");
+                        $(iconFn).removeClass("hidden")
+                        var url = Routing.generate('osel_score_delete_part', {
+                            'id': obj.id
+                        });
+
+                        var columnthree = "<div class=\"col-md-2\"><button class=\"btn btn-danger btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline\" type=\"button\" style=\"height:30px;padding-top:0px;padding-bottom:0px;font-size:10px;\"  data-href = \"" + url + "\">Supprimer </button></div>";
+                        $(deleteFN).append(columnthree);
                     },
                     complete: function(res) {
                         var json;

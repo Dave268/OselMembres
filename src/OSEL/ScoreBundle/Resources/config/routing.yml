@@ -9,3 +9,9 @@ osel_score_gestion:
 osel_score_upload_ajax:
     path:     /uploadAjax
     defaults: { _controller: ScoreBundle:Score:uploadAjax}
+
+osel_score_delete_part:
+    path:     /supprimer-partition/{id}
+    defaults: { _controller: ScoreBundle:Score:deletePart, id: 0}
+    options:
+            expose: true

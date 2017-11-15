@@ -82,12 +82,12 @@ class ScoreController extends Controller
 
     public function uploadAjaxAction(Request $request)
     {
-        /*if(!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')){
+        if(!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')){
             return $this->redirectToRoute('osel_core_home');
         }
         if(!$request->isXmlHttpRequest()) {
             return $this->redirectToRoute('osel_score_gestion');
-        }*/
+        }
 
         $files = $request->files->get('upload');
         $fileUpload = $this->container->get('score.uploader');
@@ -112,6 +112,30 @@ class ScoreController extends Controller
         $response->headers->set('Content-Type', 'application/json');
 
         return $response;
+    }
+
+    public function deletePartAction($id, Request $request)
+    {
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_WEBMASTER'))
+        {
+            $part = $this->getDoctrine()->getManager()->getRepository('OSELScoreBundle:Part')->findOneBy(array('id' => $id));
+            $em = $this->getDoctrine()->getManager();
+            $path = $this->container->getParameter('kernel.project_dir') . "/web/" . $part->getUrl();
+
+            unlink($path);
+
+            $em->remove($part);
+            $em->flush();
+
+            $request->getSession()->getFlashBag()->add('notice', 'Le weekend a été supprimé');
+
+            return $this->redirect($this->generateUrl('osel_event_list'));
+        }
+        else
+        {
+            $request->getSession()->getFlashBag()->add('ERROR', 'Vous n\'avez pas acces à cette page');
+            return $this->redirect($this->generateUrl('osel_core_home'));
+        }
     }
 
 }

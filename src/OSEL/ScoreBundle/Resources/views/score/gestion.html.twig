@@ -149,9 +149,23 @@
                     if(extension == 'pdf' && filesize < 5000000)
                     {
                         var formData = new FormData();
-                        var html = "<div class=\"row\"><div class=\"col-md-2 col-sm-2\"><i class=\"fa fa-file-pdf-o\" style=\"font-size:35px;color:rgb(193,0,0);\"></i></div><div class=\"col-md-10\"><span>" + filename + " - " + filesize + "</span><span> <i id=\"icon" + i + "\" class=\"fa fa-check hidden\" style=\"font-size:20px;color:green;\"></i></span> <div style=\"padding-top:10px;\"><progress id=\"progress" + i + "\" value=\"0\" min=\"0\" max=\"100\" style=\"width:100%;\"></progress></div></div></div>";
 
-                        var listItem = jQuery("<a class=\"list-group-item\" id='file" + i + "'></a>").html(html);
+                        var listItem = jQuery("<a class=\"list-group-item\"'></a>");
+                        var row = jQuery("<div class=\"row\" id=\"file" + i + "\"></div>");
+                        var columnone = jQuery("<div class=\"col-md-2 col-sm-2\"></div>").html("<i class=\"fa fa-file-pdf-o\" style=\"font-size:35px;color:rgb(193,0,0);\"></i>");
+                        var columntwo = jQuery("<div class=\"col-md-8\"></div>");
+                        var spanone = jQuery("<span>" + filename + " - " + filesize + "</span>");
+                        var iconcheck = jQuery("<span> <i id=\"icon" + i + "\" class=\"fa fa-check hidden\" style=\"font-size:20px;color:green;\"></i></span>");
+                        var progressbar = jQuery("<div style=\"padding-top:10px;\"></div>").html("<progress id=\"progress" + i + "\" value=\"0\" min=\"0\" max=\"100\" style=\"width:100%;\"></progress>");
+
+                        spanone.appendTo(columntwo);
+                        iconcheck.appendTo(columntwo);
+                        progressbar.appendTo(columntwo);
+
+                        columnone.appendTo(row);
+                        columntwo.appendTo(row);
+
+                        row.appendTo(listItem);
 
                         listItem.appendTo(fileList);
 
@@ -159,7 +173,7 @@
                         formData.append(this.name, this.files[i]);
                         $(this).upload("{{ path('osel_score_upload_ajax') }}", function (success) {
                             console.log("done " + i);
-                        }, $("#progress" + i), formData, numFiles, $("#icon" + i));
+                        }, $("#progress" + i), formData, numFiles, $("#icon" + i), $("#file" + i));
                     }
                     else
                     {
