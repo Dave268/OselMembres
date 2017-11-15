@@ -54,6 +54,7 @@ $(document).ready(function() {
                 url: $url,
                 data: $data,
                 method: 'post',
+                xhr: function() { $('#modalLoad').modal("show");},
                 dataType: 'json',
                 cache: false,
                 success: function (obj) {
@@ -72,6 +73,7 @@ $(document).ready(function() {
                 },
                 complete: function () {
                     console.log("complete!");
+                    $('#modalLoad').modal("hide");
                 },
                 error: function (err) {
                     console.log('error');

@@ -9,10 +9,13 @@
 namespace OSEL\ScoreBundle\Controller;
 
 
+use OSEL\ScoreBundle\Entity\Parts;
 use OSEL\ScoreBundle\Entity\Score;
 use OSEL\ScoreBundle\Form\ScoreType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 
 class ScoreController extends Controller
@@ -30,11 +33,26 @@ class ScoreController extends Controller
         $scoreForm = $this->get('form.factory')->create(ScoreType::class, $score);
 
         if($request->isMethod('POST') && $scoreForm->handleRequest($request)->isValid()) {
-
+            $parts = $this->getDoctrine()->getManager()->getRepository(Parts::class)->findBy(array('status' => "temp"));
             $em = $this->getDoctrine()->getManager();
 
             if (!$this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
                 $score->setUser($this->container->get('security.token_storage')->getToken()->getUser());
+            }
+            $root = $this->container->getParameter('kernel.project_dir') . "/web/";
+            if(!is_dir($root . "library/" . $score->getComposer()->getComposer() . "/" . $score->getTitle()))
+            {
+                mkdir($root . "library/" . $score->getComposer()->getComposer() . "/" . $score->getTitle());
+            }
+            foreach ($parts as $part)
+            {
+                $part->setScore($score);
+                $part->setStatus("published");
+                $url = "library/" . $score->getComposer()->getComposer() . "/" . $score->getTitle() . "/" . $part->getName();
+                rename($root . $part->getUrl(), $root . $url);
+                $part->setUrl($url);
+                $part->increase();
+                $em->persist($part);
             }
 
             $em->persist($score);
@@ -50,7 +68,6 @@ class ScoreController extends Controller
         ));
     }
 
-
     public function indexAction()
     {
         if ($this->get('security.authorization_checker')->isGranted('ROLE_USER'))
@@ -59,9 +76,42 @@ class ScoreController extends Controller
         }
         return $this->get('templating')->renderResponse('OSELScoreBundle:score:index.html.twig', array(
             'composers'			=> $composers,
-            'parts'             => $parts,
             'selectedPage'		=> 'partition'
         ));
+    }
+
+    public function uploadAjaxAction(Request $request)
+    {
+        /*if(!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')){
+            return $this->redirectToRoute('osel_core_home');
+        }
+        if(!$request->isXmlHttpRequest()) {
+            return $this->redirectToRoute('osel_score_gestion');
+        }*/
+
+        $files = $request->files->get('upload');
+        $fileUpload = $this->container->get('score.uploader');
+        $em = $this->getDoctrine()->getManager();
+
+        foreach ($files as $file)
+        {
+            $part = new Parts();
+            $uniq = md5(uniqid()).'.'. $file->guessExtension();
+            $part->setName($uniq);
+            $part->setOriginalName($file->getClientOriginalName());
+            $part->setUrl("library/temp/" . $uniq);
+            $fileUpload->upload($file, "library/temp", $uniq);
+            $em->persist($part);
+            $json = json_encode(array(
+                'id'    => $part->getId(),
+            ));
+        }
+        $em->flush();
+
+        $response = new Response($json);
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
     }
 
 }

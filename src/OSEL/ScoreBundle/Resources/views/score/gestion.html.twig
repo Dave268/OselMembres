@@ -7,9 +7,6 @@
 {% endblock %}
 
 {% block head %}
-    <link rel="stylesheet" href="{{ asset('bundles/oselmusicsheet/css/style.css') }}/">
-    <script src="{{ asset('bundles/oselmusicsheet/js/modal.js') }}"></script>
-    <script src="{{ asset('bundles/oselmusicsheet/js/musicsheets_arb.js') }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -19,8 +16,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Ajouter une partition <i class="glyphicon glyphicon-plus" data-bs-hover-animate="tada" style="float:right;color:rgba(51,51,51,0.55);"></i></h3></div>
                 <div class="panel-body" style="padding:20px;display:none;padding-top:10px;">
-                    <form class="bootstrap-form-with-validation">
-                        {{ form_start(form) }}
+                        {{ form_start(form, {'attr': {'class': 'bootstrap-form-with-validation'}}) }}
                         <div class="form-group">
                                 {{ form_label(form.title, "Titre du morceau:", {'label-attr': {'class': 'control-label'}}) }}
                                 {{ form_widget(form.title, { 'attr': {'class': 'form-control'}}) }}
@@ -28,10 +24,6 @@
                         <div class="form-group">
                             {{ form_label(form.year, "Année du morceau:", {'label-attr': {'class': 'control-label'}}) }}
                             {{ form_widget(form.year, { 'attr': {'class': 'form-control'}}) }}
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="password-input">Date </label>
-                            <input class="form-control" type="text">
                         </div>
                         <div class="form-group">
                             <div class="checkbox">
@@ -46,11 +38,13 @@
                             {{ form_widget(form.composer, { 'attr': {'class': 'form-control input-sm'}}) }}
                         </div>
                         <div class="form-group">
-                            {{ form_widget(form.uploadedFiles, { 'attr': {'class': 'form-control'}}) }}
+                            <input type="file" name="upload[]" id="uploadFile" multiple="" class="hidden"/>
+                        </div>
+                        <div class="list-group" id="showFiles">
                         </div>
                         <div class="form-group">
                             <div class="btn-group" role="group">
-                                <button class="btn btn-default" type="button">Button 1</button>
+                                <button class="btn btn-success" type="button" id="formFileLaunch"><i class="glyphicon glyphicon-plus"></i> Ajouter fichiers</button>
                                 <button class="btn btn-default" type="button">Button 2</button>
                                 <button class="btn btn-default" type="button">Button 2</button>
                             </div>
@@ -60,7 +54,8 @@
                             <!--<button class="btn btn-success btn-sm" type="submit">Envoyer </button>-->
                             <button class="btn btn-info btn-sm" type="reset">Reset </button>
                         </div>
-                    </form>
+                        {{ form_rest(form) }}
+                        {{ form_end(form) }}
                 </div>
             </div>
         </div>
@@ -137,4 +132,51 @@
 {% endblock %}
 {% block script %}
     <script src="{{ asset('bundles/score/js/fileUpload.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $("#uploadFile").on("change", function () {
+
+
+                var numFiles = false;
+                if($(this).get(0).files.length > 0){
+                    numFiles = true;
+                }
+                for (var i = 0; i < this.files.length; ++i) {
+                    var fileList = jQuery('#showFiles');
+                    var filename = this.files[i].name;
+                    var filesize = this.files[i].size;
+                    var extension = filename.replace(/^.*\./, '').toLowerCase();
+                    if(extension == 'pdf' && filesize < 5000000)
+                    {
+                        var formData = new FormData();
+                        var html = "<div class=\"row\"><div class=\"col-md-2 col-sm-2\"><i class=\"fa fa-file-pdf-o\" style=\"font-size:35px;color:rgb(193,0,0);\"></i></div><div class=\"col-md-10\"><span>" + filename + " - " + filesize + "</span><span> <i id=\"icon" + i + "\" class=\"fa fa-check hidden\" style=\"font-size:20px;color:green;\"></i></span> <div style=\"padding-top:10px;\"><progress id=\"progress" + i + "\" value=\"0\" min=\"0\" max=\"100\" style=\"width:100%;\"></progress></div></div></div>";
+
+                        var listItem = jQuery("<a class=\"list-group-item\" id='file" + i + "'></a>").html(html);
+
+                        listItem.appendTo(fileList);
+
+
+                        formData.append(this.name, this.files[i]);
+                        $(this).upload("{{ path('osel_score_upload_ajax') }}", function (success) {
+                            console.log("done " + i);
+                        }, $("#progress" + i), formData, numFiles, $("#icon" + i));
+                    }
+                    else
+                    {
+                        var html = "<div class=\"row\"><div class=\"col-md-2 col-sm-2\"><i class=\"fa fa-remove\" style=\"font-size:35px;color:rgb(255,0,0);\"></i></div><div class=\"col-md-10\"><span>" + filename + " - " + filesize + "</span><span><i id=\"icon" + i + "\" class=\"fa fa-check hidden\" style=\"font-size:60px;color:rgb(193,0,0);\"></i></span> <div style=\"padding-top:10px;\"><span><strong>Ceci n\'est pas un fichier pdf ou le fichier est plus grand que 50Mb!!!</strong></span></div></div></div>";
+
+                        var listItem = jQuery("<a class=\"list-group-item\" id='file" + i + "'></a>").html(html);
+
+                        listItem.appendTo(fileList);
+                    }
+
+                }
+            });
+
+
+            $("#formFileLaunch").click(function () {
+                $("#uploadFile").click();
+            });
+        });
+    </script>
 {% endblock %}

@@ -1,9 +1,9 @@
 $(document).ready( function() {	
-	$(document).on({
+	/*$(document).on({
 		ajaxStart: function() { $('#modalLoad').modal("show");   },
 		ajaxStop:  function() { $('#modalLoad').modal("hide")}    
 	}); 
-	
+	*/
 	
     if($('#modalError')){
 		$('#modalError').modal("show");	

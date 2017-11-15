@@ -27,9 +27,23 @@ class Parts
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="string", length=255, nullable=true)
+     * @ORM\Column(name="name", type="string", length=255, nullable=true)
      */
-    private $title;
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="originalName", type="string", length=255, nullable=true)
+     */
+    private $originalName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="status", type="string", length=255)
+     */
+    private $status="temp";
 
     /**
      * @ORM\Column(name="url", type="string", length=255, nullable=true)
@@ -51,10 +65,9 @@ class Parts
     private $dateUpdate;
 
     /**
-     * @ORM\ManyToOne(targetEntity="OSEL\ScoreBundle\Entity\Score", inversedBy="parts")
+     * @ORM\ManyToOne(targetEntity="OSEL\ScoreBundle\Entity\Score", inversedBy="parts"  )
      */
     private $score;
-
 
 
     public function __construct()
@@ -70,9 +83,7 @@ class Parts
         $this->setDateUpdate(new \DateTime());
     }
 
-    /**
-     * @ORM\PrePersist
-     */
+
     public function increase()
     {
         $this->getScore()->increaseParts();
@@ -83,7 +94,10 @@ class Parts
      */
     public function decrease()
     {
-        $this->getScore()->decreaseParts();
+        if($this->getScore() != null)
+        {
+            $this->getScore()->decreaseParts();
+        }
     }
 
 
@@ -97,30 +111,7 @@ class Parts
     {
         return $this->id;
     }
-
-    /**
-     * Set title
-     *
-     * @param string $title
-     * @return Parts
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-
-        return $this;
-    }
-
-    /**
-     * Get title
-     *
-     * @return string
-     */
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
+    
     /**
      * Set dateAdd
      *
@@ -237,5 +228,29 @@ class Parts
     public function getScore()
     {
         return $this->score;
+    }
+
+    /**
+     * Set status
+     *
+     * @param string $status
+     *
+     * @return Parts
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
     }
 }

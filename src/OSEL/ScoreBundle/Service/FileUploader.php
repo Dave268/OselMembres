@@ -7,25 +7,23 @@
  */
 namespace OSEL\ScoreBundle\Service;
 
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
 class FileUploader
 {
     private $uploadRootDir;
 
     public function __construct($rootDir)
     {
-        $this->targetDir = $rootDir;
+        $this->uploadRootDir = $rootDir;
     }
 
-    public function upload(UploadedFile $file, $uploadDir, $nameRand)
+    public function upload(UploadedFile $file, $uploadDir, $fileName)
     {
-        if($nameRand){
-            $fileName = md5(uniqid()).'.'. $file->guessExtension();
-        }
-        else{
-            $fileName = $file->getClientOriginalName() . $file->guessExtension();
-        }
 
-        $file->move($this->getUploadRootDir() . $uploadDir, $fileName);
+        $dir = $this->getUploadRootDir() . "/" . $uploadDir;
+
+        $file->move($dir, $fileName);
 
         return $fileName;
     }

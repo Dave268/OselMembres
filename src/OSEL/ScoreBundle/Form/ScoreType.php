@@ -31,11 +31,6 @@ class ScoreType extends AbstractType
                         ->orderBy('s.composer', 'ASC');
                 },
                 'multiple'  => false))
-            ->add('uploadedFiles', FileType::class, array(
-                'multiple' => true,
-                'data_class'=> null,
-                'required' => false
-            ))
             ->add('save',       SubmitType::class);
         ;
     }
