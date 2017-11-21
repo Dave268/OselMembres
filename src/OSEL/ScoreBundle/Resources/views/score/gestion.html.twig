@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% block head %}
+    <link rel="stylesheet" href="{{ asset('bundles/score/css/style.css') }}">
 {% endblock %}
 
 {% block body %}
@@ -14,59 +15,13 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default" style="padding:0;">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Ajouter une partition <i class="glyphicon glyphicon-plus" data-bs-hover-animate="tada" style="float:right;color:rgba(51,51,51,0.55);"></i></h3></div>
-                <div class="panel-body" style="padding:20px;display:none;padding-top:10px;">
-                        {{ form_start(form, {'attr': {'class': 'bootstrap-form-with-validation'}}) }}
-                        <div class="form-group">
-                                {{ form_label(form.title, "Titre du morceau:", {'label-attr': {'class': 'control-label'}}) }}
-                                {{ form_widget(form.title, { 'attr': {'class': 'form-control'}}) }}
-                        </div>
-                        <div class="form-group">
-                            {{ form_label(form.year, "Année du morceau:", {'label-attr': {'class': 'control-label'}}) }}
-                            {{ form_widget(form.year, { 'attr': {'class': 'form-control'}}) }}
-                        </div>
-                        <div class="form-group">
-                            <div class="checkbox">
-                                <label class="control-label">
-                                    {{ form_widget(form.actif) }}
-                                    Actif
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            {{ form_label(form.composer, "Compositeur du morceau:", {'label-attr': {'class': 'control-label'}}) }}
-                            {{ form_widget(form.composer, { 'attr': {'class': 'form-control input-sm'}}) }}
-                        </div>
-                        <div class="form-group">
-                            <input type="file" name="upload[]" id="uploadFile" multiple="" class="hidden"/>
-                        </div>
-                        <div class="list-group" id="showFiles">
-                        </div>
-                        <div class="form-group">
-                            <div class="btn-group" role="group">
-                                <button class="btn btn-success" type="button" id="formFileLaunch"><i class="glyphicon glyphicon-plus"></i> Ajouter fichiers</button>
-                                <button class="btn btn-default" type="button">Button 2</button>
-                                <button class="btn btn-default" type="button">Button 2</button>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            {{ form_widget(form.save, {'attr': {'class': 'btn btn-success btn-sm submit-button'}}) }}
-                            <!--<button class="btn btn-success btn-sm" type="submit">Envoyer </button>-->
-                            <button class="btn btn-info btn-sm" type="reset">Reset </button>
-                        </div>
-                        {{ form_rest(form) }}
-                        {{ form_end(form) }}
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default" style="padding:0;">
-                <div class="panel-heading">
                     <h3 class="panel-title">Bibliothèque <i class="glyphicon glyphicon-plus" data-bs-hover-animate="tada" style="float:right;color:rgba(51,51,51,0.55);"></i></h3></div>
                 <div class="panel-body" style="padding:20px;/*display:none;*/padding-top:10px;">
+                    <div class="form-group">
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-success" type="button" onclick="window.location.href='{{ path('osel_score_create_score') }}'"><i class="glyphicon glyphicon-plus"></i> Ajouter des partitions</button>
+                        </div>
+                    </div>
                     <form>
                         <div class="form-group">
                             <div class="input-group"><span class="input-group-addon"> <i class="glyphicon glyphicon-search"></i></span>
@@ -74,55 +29,67 @@
                             </div>
                         </div>
                         <ol class="breadcrumb" style="padding-bottom:0px;">
-                            <li><a><span>Home </span></a></li>
-                            <li><a><span>Compositeur </span></a></li>
+                            {% if composer is not null %}
+                                <li><a href="{{ path('osel_score_gestion', {'letter' : letter }) }}"><span>Compositeurs</span></a></li>
+                                {% if score is not null %}
+                                    <li><a href="{{ path('osel_score_gestion', {'letter' : letter, 'idComposer': composer.id}) }}"><span>{{ composer.lastname }}</span></a></li>
+                                {% endif %}
+                            {% endif %}
+
                         </ol>
                     </form>
-                    <nav class="text-center" style="margin-top:-26px;margin-bottom:-15px;">
-                        <ul class="pagination pagination-sm" style="text-align:center;margin-left:auto;margin-right:auto;">
-                            <li><a>a</a></li>
-                            <li><a>b</a></li>
-                            <li><a>c</a></li>
-                            <li><a>d</a></li>
-                            <li><a>f</a></li>
-                            <li><a>g</a></li>
-                            <li><a>h</a></li>
-                            <li><a>i</a></li>
-                            <li><a>j</a></li>
-                            <li><a>k</a></li>
-                            <li><a>l</a></li>
-                            <li><a>m</a></li>
-                            <li><a>n</a></li>
-                            <li><a>o</a></li>
-                            <li><a>p</a></li>
-                            <li><a>q</a></li>
-                            <li><a>r</a></li>
-                            <li><a>s</a></li>
-                            <li><a>t</a></li>
-                            <li><a>u</a></li>
-                            <li><a>v</a></li>
-                            <li><a>w</a></li>
-                            <li><a>x</a></li>
-                            <li><a>y</a></li>
-                            <li><a>z</a></li>
-                        </ul>
-                    </nav>
+                    {% if parts is null and score is null %}
+                        <nav class="text-center" style="margin-top:-26px;margin-bottom:-15px;">
+                            <ul class="pagination pagination-sm" style="text-align:center;margin-left:auto;margin-right:auto;">
+                                <li {% if letter == 'a' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'a'}) }}">a</a></li>
+                                <li {% if letter == 'b' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'b'}) }}">b</a></li>
+                                <li {% if letter == 'c' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'c'}) }}">c</a></li>
+                                <li {% if letter == 'd' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'd'}) }}">d</a></li>
+                                <li {% if letter == 'e' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'e'}) }}">e</a></li>
+                                <li {% if letter == 'f' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'f'}) }}">f</a></li>
+                                <li {% if letter == 'g' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'g'}) }}">g</a></li>
+                                <li {% if letter == 'h' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'h'}) }}">h</a></li>
+                                <li {% if letter == 'i' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'i'}) }}">i</a></li>
+                                <li {% if letter == 'j' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'j'}) }}">j</a></li>
+                                <li {% if letter == 'k' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'k'}) }}">k</a></li>
+                                <li {% if letter == 'l' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'l'}) }}">l</a></li>
+                                <li {% if letter == 'm' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'm'}) }}">m</a></li>
+                                <li {% if letter == 'n' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'n'}) }}">n</a></li>
+                                <li {% if letter == 'o' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'o'}) }}">o</a></li>
+                                <li {% if letter == 'p' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'p'}) }}">p</a></li>
+                                <li {% if letter == 'q' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'q'}) }}">q</a></li>
+                                <li {% if letter == 'r' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'r'}) }}">r</a></li>
+                                <li {% if letter == 's' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 's'}) }}">s</a></li>
+                                <li {% if letter == 't' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 't'}) }}">t</a></li>
+                                <li {% if letter == 'u' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'u'}) }}">u</a></li>
+                                <li {% if letter == 'v' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'v'}) }}">v</a></li>
+                                <li {% if letter == 'w' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'w'}) }}">w</a></li>
+                                <li {% if letter == 'x' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'x'}) }}">x</a></li>
+                                <li {% if letter == 'y' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'y'}) }}">y</a></li>
+                                <li {% if letter == 'z' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'z'}) }}">z</a></li>
+                            </ul>
+                        </nav>
+                    {% endif %}
                     <ul class="thread-list">
-                        <li class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
-                        <li
-                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
-                        <li
-                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
-                        <li
-                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
-                        <li
-                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
-                        <li
-                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
-                        <li
-                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
-                        <li
-                                class="thread"><span class="time">Apr 21</span><span class="title"><a href="#" style="color:#666666;">Maecenas finibus est nec pretium molestie. </a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon glyphicon-check"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-flag"></i></a></span></li>
+                        {% if parts is not null %}
+                            {% for p in parts%}
+                                <li class="thread"><span class="time"><i class="fa fa-file-pdf-o" style="font-size:20px;color:rgb(193,0,0);"></i></span><span class="title"><a href="{{ path('osel_score_download_part', {'id' : p.id}) }}" style="color:#666666;">{{ p.originalName }}</a></span><span class="icon"> <a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-eye-open"></i></a><a href="javascript:void(0)" class="subscribe"><i class="glyphicon {% if p.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-pencil"></i></a></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-trash"></i></a></span></li>
+                            {% else %}
+                                <li>pas de partitionspour ce morceau!!!</li>
+                            {% endfor %}
+                        {% elseif scores is not null %}
+                            {% for s in scores%}
+                                <li class="thread"><span class="time">{{ s.nbParts }} pcs</span><span class="title"><a href="{{ path('osel_score_gestion', {'letter' : letter, 'idComposer': s.composer.id, 'idScore': s.id}) }}" style="color:#666666;">{{ s.title }}</a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon {% if s.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-pencil"></i></a></span></li>
+                            {% else %}
+                                <li>pas de morceaux pour ce compositeur!!</li>
+                            {% endfor %}
+                        {% else %}
+                            {% for c in composers%}
+                            <li class="thread"><span class="time">{{ c.nbScores }} pcs</span><span class="title"><a href="{{ path('osel_score_gestion', {'letter' : letter, 'idComposer': c.id}) }}" style="color:#666666;">{{ c.composer }}</a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon {% if c.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-pencil"></i></a></span></li>
+                            {% else %}
+                                <li>pas de compositeurs à ce non!!!</li>
+                            {% endfor %}
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -131,66 +98,4 @@
 
 {% endblock %}
 {% block script %}
-    <script src="{{ asset('bundles/score/js/fileUpload.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            $("#uploadFile").on("change", function () {
-
-
-                var numFiles = false;
-                if($(this).get(0).files.length > 0){
-                    numFiles = true;
-                }
-                for (var i = 0; i < this.files.length; ++i) {
-                    var fileList = jQuery('#showFiles');
-                    var filename = this.files[i].name;
-                    var filesize = this.files[i].size;
-                    var extension = filename.replace(/^.*\./, '').toLowerCase();
-                    if(extension == 'pdf' && filesize < 5000000)
-                    {
-                        var formData = new FormData();
-
-                        var listItem = jQuery("<a class=\"list-group-item\"'></a>");
-                        var row = jQuery("<div class=\"row\" id=\"file" + i + "\"></div>");
-                        var columnone = jQuery("<div class=\"col-md-2 col-sm-2\"></div>").html("<i class=\"fa fa-file-pdf-o\" style=\"font-size:35px;color:rgb(193,0,0);\"></i>");
-                        var columntwo = jQuery("<div class=\"col-md-8\"></div>");
-                        var spanone = jQuery("<span>" + filename + " - " + filesize + "</span>");
-                        var iconcheck = jQuery("<span> <i id=\"icon" + i + "\" class=\"fa fa-check hidden\" style=\"font-size:20px;color:green;\"></i></span>");
-                        var progressbar = jQuery("<div style=\"padding-top:10px;\"></div>").html("<progress id=\"progress" + i + "\" value=\"0\" min=\"0\" max=\"100\" style=\"width:100%;\"></progress>");
-
-                        spanone.appendTo(columntwo);
-                        iconcheck.appendTo(columntwo);
-                        progressbar.appendTo(columntwo);
-
-                        columnone.appendTo(row);
-                        columntwo.appendTo(row);
-
-                        row.appendTo(listItem);
-
-                        listItem.appendTo(fileList);
-
-
-                        formData.append(this.name, this.files[i]);
-                        $(this).upload("{{ path('osel_score_upload_ajax') }}", function (success) {
-                            console.log("done " + i);
-                        }, $("#progress" + i), formData, numFiles, $("#icon" + i), $("#file" + i));
-                    }
-                    else
-                    {
-                        var html = "<div class=\"row\"><div class=\"col-md-2 col-sm-2\"><i class=\"fa fa-remove\" style=\"font-size:35px;color:rgb(255,0,0);\"></i></div><div class=\"col-md-10\"><span>" + filename + " - " + filesize + "</span><span><i id=\"icon" + i + "\" class=\"fa fa-check hidden\" style=\"font-size:60px;color:rgb(193,0,0);\"></i></span> <div style=\"padding-top:10px;\"><span><strong>Ceci n\'est pas un fichier pdf ou le fichier est plus grand que 50Mb!!!</strong></span></div></div></div>";
-
-                        var listItem = jQuery("<a class=\"list-group-item\" id='file" + i + "'></a>").html(html);
-
-                        listItem.appendTo(fileList);
-                    }
-
-                }
-            });
-
-
-            $("#formFileLaunch").click(function () {
-                $("#uploadFile").click();
-            });
-        });
-    </script>
 {% endblock %}

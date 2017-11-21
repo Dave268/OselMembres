@@ -30,11 +30,11 @@ class PartsRepository extends \Doctrine\ORM\EntityRepository
             ;
     }
 
-    public function getPartsByMusicsheet($id)
+    public function getPartsByScore($id)
     {
         $qb = $this
             ->createQueryBuilder('a')
-            ->leftJoin('a.musicsheet', 'c')
+            ->leftJoin('a.score', 'c')
             ->addSelect('c')
         ;
 

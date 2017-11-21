@@ -3,15 +3,35 @@ osel_score_index:
     defaults: { _controller: ScoreBundle:Score:index}
 
 osel_score_gestion:
-    path:     /gestion/{idComposer}/{idScore}/{idPart}
-    defaults: { _controller: ScoreBundle:Score:gestion, idComposer: 0, idScore: 0, idPart: 0 }
+    path:     /gestion/{letter}/{idComposer}/{idScore}
+    defaults: { _controller: ScoreBundle:Score:gestion, letter: a, idComposer: 0, idScore: 0 }
 
 osel_score_upload_ajax:
-    path:     /uploadAjax
-    defaults: { _controller: ScoreBundle:Score:uploadAjax}
+    path:     /uploadAjax/{id}
+    defaults: { _controller: ScoreBundle:Score:uploadAjax, id: 0}
+    options:
+            expose: true
 
 osel_score_delete_part:
     path:     /supprimer-partition/{id}
     defaults: { _controller: ScoreBundle:Score:deletePart, id: 0}
     options:
             expose: true
+
+osel_score_create_score:
+    path:     /creer-partition
+    defaults: { _controller: ScoreBundle:Score:createScore}
+
+osel_score_upload_parts:
+    path:     /upload-partitions/{id}
+    defaults: { _controller: ScoreBundle:Score:uploadParts, id: 0}
+
+osel_score_modify_ajax_score:
+    path:     /creer-partition/{id}
+    defaults: { _controller: ScoreBundle:Score:modifyAjaxScore, id: 0}
+    options:
+            expose: true
+
+osel_score_download_part:
+    path:     /télécharger-partition/{id}
+    defaults: { _controller: ScoreBundle:Score:downloadPart, id: 0}

@@ -1,0 +1,159 @@
+{# src/Osel/MusicsheetBundle/Resources/views/Musicsheet/gestion.html.twig #}
+
+{% extends "OSELCoreBundle:Core:layout.html.twig" %}
+
+{% block title %}
+    Ajouter des partitions
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ asset('bundles/score/css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default" style="padding:0;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Ajouter une partition <i class="glyphicon glyphicon-plus" data-bs-hover-animate="tada" style="float:right;color:rgba(51,51,51,0.55);"></i></h3></div>
+                <div class="panel-body" style="padding:20px;padding-top:10px;">
+                    {{ form_start(form, {'attr': {'class': 'bootstrap-form-with-validation', "id":"formScore"}}) }}
+                    <div class="form-group">
+                        {{ form_label(form.title, "Titre du morceau:", {'label-attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.title, { 'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form.year, "Année du morceau:", {'label-attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.year, { 'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label class="control-label">
+                                {{ form_widget(form.actif) }}
+                                Actif
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form.composer, "Compositeur du morceau:", {'label-attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.composer, { 'attr': {'class': 'form-control input-sm'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_widget(form.save, {'attr': {'class': 'btn btn-success submit-button'}, 'label': 'prochaine étape'}) }}
+                        <!--<button class="btn btn-success btn-sm" type="submit">Envoyer </button>-->
+                        <button class="btn btn-info" type="reset"> Reset </button>
+                    </div>
+                    {{ form_rest(form) }}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    <script>
+        $(document).ready(function() {
+
+            var check1 = false;
+            var check2 = false;
+            var check3 = false;
+
+            $("input[id='osel_scorebundle_score_title']").keyup(function count() {
+                var input1 = this.value;
+                var regex1 = new RegExp(/^[a-z ]{4,}$/i);
+                if(regex1.test(input1)){
+                    $('#osel_scorebundle_score_title').css({
+                        'border-color': 'green',
+                        'box-shadow':'0px 0px 6px green'
+                    });
+                    check1 = true;
+                }
+                else
+                {
+                    $('#osel_scorebundle_score_title').css({
+                        'border-color': 'red',
+                        'box-shadow':'0px 0px 6px red'
+                    });
+                    check1 = false;
+                }
+            });
+
+            $("input[id='osel_scorebundle_score_year']").keyup(function count() {
+                var input2 = this.value;
+                var regex2 = new RegExp(/^[0-9]{4}$/);
+                if(regex2.test(input2)){
+                    $('#osel_scorebundle_score_year').css({
+                        'border-color': 'green',
+                        'box-shadow':'0px 0px 6px green'
+                    });
+                    check2 = true;
+                }
+                else
+                {
+                    $('#osel_scorebundle_score_year').css({
+                        'border-color': 'red',
+                        'box-shadow':'0px 0px 6px red'
+                    });
+                    check2 = false;
+                }
+            });
+
+            $('#osel_scorebundle_score_composer').change(function() {
+                if($(this).val()!==""){
+                    $('#osel_scorebundle_score_composer').css({
+                        'border-color': 'green',
+                        'box-shadow':'0px 0px 6px green'
+                    });
+                    check3 = true;
+                }
+                else
+                {
+                    $('#osel_scorebundle_score_composer').css({
+                        'border-color': 'red',
+                        'box-shadow':'0px 0px 6px red'
+                    });
+                    check3 = false;
+                }
+            });
+
+            $("#formFileLaunch").click(function () {
+                if(!check2){
+                    alert("La date doit être au format de 4 chiffres");
+                }
+                else if(!check1){
+                    alert("Le titre doit comporter au moins 4 caractères");
+                }
+                else if(!check3){
+                    alert("Vous devez choisir un compositeur");
+                }
+                else if ($("#osel_scorebundle_score_title").val().length === 0 || $("#osel_scorebundle_score_year").val().length === 0)
+                {
+                    alert("Vous devez d'abord remplir les données du morceaux avant de pouvoir uloader les partitions");
+                }
+                else {
+                    $("#uploadFile").click();
+                }
+            });
+
+            $("#osel_scorebundle_score_save").click(function (e) {
+                if(!check2){
+                    e.preventDefault();
+                    alert("La date doit être au format de 4 chiffres");
+                }
+                else if(!check1){
+                    e.preventDefault();
+                    alert("Le titre doit comporter au moins 4 caractères");
+                }
+                else if(!check3){
+                    e.preventDefault();
+                    alert("Vous devez choisir un compositeur");
+                }
+                else if ($("#osel_scorebundle_score_title").val().length === 0 || $("#osel_scorebundle_score_year").val().length === 0)
+                {
+                    e.preventDefault();
+                    alert("Vous devez d'abord remplir les données du morceaux avant de pouvoir uploader les partitions");
+                }
+            });
+        });
+    </script>
+{% endblock %}

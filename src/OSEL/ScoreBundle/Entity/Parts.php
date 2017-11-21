@@ -39,16 +39,9 @@ class Parts
     private $originalName;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="status", type="string", length=255)
+     * @ORM\Column(name="path", type="string", length=255)
      */
-    private $status="temp";
-
-    /**
-     * @ORM\Column(name="url", type="string", length=255, nullable=true)
-     */
-    private $url;
+    private $path;
 
     /**
      * @var \DateTime
@@ -69,6 +62,13 @@ class Parts
      */
     private $score;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="actif", type="boolean")
+     */
+    private $actif = true;
+
 
     public function __construct()
     {
@@ -84,6 +84,9 @@ class Parts
     }
 
 
+    /**
+     * @ORM\PrePersist
+     */
     public function increase()
     {
         $this->getScore()->increaseParts();
@@ -182,31 +185,6 @@ class Parts
     }
 
     /**
-     * Set url
-     *
-     * @param string $url
-     *
-     * @return Parts
-     */
-    public function setUrl($url)
-    {
-        $this->url = $url;
-
-        return $this;
-    }
-
-    /**
-     * Get url
-     *
-     * @return string
-     */
-    public function getUrl()
-    {
-        return $this->url;
-    }
-
-
-    /**
      * Set score
      *
      * @param \OSEL\ScoreBundle\Entity\Score $score
@@ -228,30 +206,6 @@ class Parts
     public function getScore()
     {
         return $this->score;
-    }
-
-    /**
-     * Set status
-     *
-     * @param string $status
-     *
-     * @return Parts
-     */
-    public function setStatus($status)
-    {
-        $this->status = $status;
-
-        return $this;
-    }
-
-    /**
-     * Get status
-     *
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->status;
     }
 
     /**
@@ -300,5 +254,53 @@ class Parts
     public function getOriginalName()
     {
         return $this->originalName;
+    }
+
+    /**
+     * Set path
+     *
+     * @param string $path
+     *
+     * @return Parts
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+
+    /**
+     * Set actif
+     *
+     * @param boolean $actif
+     *
+     * @return Parts
+     */
+    public function setActif($actif)
+    {
+        $this->actif = $actif;
+
+        return $this;
+    }
+
+    /**
+     * Get actif
+     *
+     * @return boolean
+     */
+    public function getActif()
+    {
+        return $this->actif;
     }
 }

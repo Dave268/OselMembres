@@ -30,7 +30,8 @@ class ScoreType extends AbstractType
                     return $er->createQueryBuilder('s')
                         ->orderBy('s.composer', 'ASC');
                 },
-                'multiple'  => false))
+                'multiple'  => false,
+                'required' => false))
             ->add('save',       SubmitType::class);
         ;
     }

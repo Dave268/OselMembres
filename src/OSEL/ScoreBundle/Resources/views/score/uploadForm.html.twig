@@ -1,0 +1,112 @@
+{# src/Osel/MusicsheetBundle/Resources/views/Musicsheet/gestion.html.twig #}
+
+{% extends "OSELCoreBundle:Core:layout.html.twig" %}
+
+{% block title %}
+    Ajouter des partitions
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ asset('bundles/score/css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default" style="padding:0;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Ajouter une partition <i class="glyphicon glyphicon-plus" data-bs-hover-animate="tada" style="float:right;color:rgba(51,51,51,0.55);"></i></h3></div>
+                <div class="panel-body" style="padding:20px;padding-top:10px;">
+                    <div class="form-group">
+                        <input type="file" name="upload[]" id="uploadFile" multiple="" class="hidden"/>
+                    </div>
+                    <div class="form-group">
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-warning" type="button" id="formFileLaunch"><i class="fa fa-plus"></i> Ajouter fichiers</button>
+                            <button class="btn btn-success" type="submit" id="confirmUpload"><i class="fa fa-arrow-circle-o-up"></i> Envoyer</button>
+                        </div>
+                    </div>
+                    <div class="list-group" id="showFiles">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{{ asset('bundles/score/js/fileUpload.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $("#formFileLaunch").click(function () {
+                    $("#uploadFile").click();
+            });
+            $("#confirmUpload").click(function(){
+                window.location.replace('{{ path('osel_score_gestion') }}');
+            });
+
+            $("#uploadFile").on("change", function () {
+
+                var fileList = jQuery('#showFiles');
+                fileList.show();
+
+                var numFiles = false;
+
+                if($(this).get(0).files.length > 0){
+
+                    numFiles = true;
+
+                    for (var i = 0; i < $(this).get(0).files.length; ++i) {
+                        var filename = $(this).get(0).files[i].name;
+                        var filesize = $(this).get(0).files[i].size;
+
+                        var extension = filename.replace(/^.*\./, '').toLowerCase();
+                        var listItem = null;
+
+                        if(extension === 'pdf' && filesize < 5000000)
+                        {
+                            var formData = new FormData();
+
+                            listItem = jQuery("<a class=\"list-group-item\" id=\"item" + i + "\"></a>");
+                            var row = jQuery("<div class=\"row\" id=\"file" + i + "\"></div>");
+                            var columnone = jQuery("<div class=\"col-md-2 col-sm-2\"></div>").html("<i class=\"fa fa-file-pdf-o\" style=\"font-size:35px;color:rgb(193,0,0);\"></i>");
+                            var columntwo = jQuery("<div class=\"col-md-8\"></div>");
+                            var spanone = jQuery("<span>" + filename + " - " + filesize + "</span>");
+                            var iconcheck = jQuery("<span> <i id=\"icon" + i + "\" class=\"fa fa-check hidden\" style=\"font-size:20px;color:green;\"></i></span>");
+                            var progressbar = jQuery("<div style=\"padding-top:10px;\"></div>").html("<progress id=\"progress" + i + "\" value=\"0\" min=\"0\" max=\"100\" style=\"width:100%;\"></progress>");
+
+                            spanone.appendTo(columntwo);
+                            iconcheck.appendTo(columntwo);
+                            progressbar.appendTo(columntwo);
+
+                            columnone.appendTo(row);
+                            columntwo.appendTo(row);
+
+                            row.appendTo(listItem);
+
+                            listItem.appendTo(fileList);
+
+
+                            formData.append($(this).get(0).name, $(this).get(0).files[i]);
+                            var uploadPath = Routing.generate('osel_score_upload_ajax', {
+                                'id': {{ score }}
+                            });
+                            $(this).upload(uploadPath, function (success) {
+                                console.log("done " + i);
+                            }, $("#progress" + i), formData, numFiles, $("#icon" + i), $("#file" + i));
+                        }
+                        else
+                        {
+                            var html = "<div class=\"row\"><div class=\"col-md-2 col-sm-2\"><i class=\"fa fa-remove\" style=\"font-size:35px;color:rgb(255,0,0);\"></i></div><div class=\"col-md-10\"><span>" + filename + " - " + filesize + "</span><span><i id=\"icon" + i + "\" class=\"fa fa-check hidden\" style=\"font-size:60px;color:rgb(193,0,0);\"></i></span> <div style=\"padding-top:10px;\"><span><strong>Soit ce fichier n'est pas un pdf soit le fichier est plus grand que 50Mb!!!</strong></span></div></div></div>";
+
+                            listItem = jQuery("<a class=\"list-group-item\" id='item" + i + "'></a>").html(html);
+
+                            listItem.appendTo(fileList);
+                        }
+                    }
+                }
+            });
+
+        });
+    </script>
+{% endblock %}

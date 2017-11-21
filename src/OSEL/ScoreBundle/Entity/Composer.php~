@@ -85,6 +85,13 @@ class Composer
      */
     private $scores;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="actif", type="boolean", nullable=true)
+     */
+    private $actif = false;
+
 
     /**
      * Constructor

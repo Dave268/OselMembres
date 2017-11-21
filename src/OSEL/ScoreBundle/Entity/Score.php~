@@ -43,6 +43,11 @@ class Score
     private $year;
 
     /**
+     * @ORM\Column(name="path", type="string", length=255)
+     */
+    private $path;
+
+    /**
      * @ORM\Column(name="nb_parts", type="integer")
      */
     private $nbParts = 0;
@@ -455,5 +460,63 @@ class Score
     public function getNbParts()
     {
         return $this->nbParts;
+    }
+
+    /**
+     * Add part
+     *
+     * @param \OSEL\ScoreBundle\Entity\Parts $part
+     *
+     * @return Score
+     */
+    public function addPart(\OSEL\ScoreBundle\Entity\Parts $part)
+    {
+        $this->parts[] = $part;
+
+        return $this;
+    }
+
+    /**
+     * Remove part
+     *
+     * @param \OSEL\ScoreBundle\Entity\Parts $part
+     */
+    public function removePart(\OSEL\ScoreBundle\Entity\Parts $part)
+    {
+        $this->parts->removeElement($part);
+    }
+
+    /**
+     * Get parts
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getParts()
+    {
+        return $this->parts;
+    }
+
+    /**
+     * Set path
+     *
+     * @param string $path
+     *
+     * @return Score
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->path;
     }
 }

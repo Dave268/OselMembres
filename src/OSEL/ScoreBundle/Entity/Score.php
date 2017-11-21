@@ -43,6 +43,11 @@ class Score
     private $year;
 
     /**
+     * @ORM\Column(name="path", type="string", length=255)
+     */
+    private $path;
+
+    /**
      * @ORM\Column(name="nb_parts", type="integer")
      */
     private $nbParts = 0;
@@ -76,7 +81,7 @@ class Score
     /**
      * @var boolean
      *
-     * @ORM\Column(name="actif", type="boolean", nullable=true)
+     * @ORM\Column(name="actif", type="boolean")
      */
     private $actif = true;
 
@@ -114,6 +119,7 @@ class Score
     public function increase()
     {
         $this->getComposer()->increaseScore();
+        $this->getComposer()->setactif(true);
     }
 
     /**
@@ -122,6 +128,10 @@ class Score
     public function decrease()
     {
         $this->getComposer()->decreaseScore();
+        if($this->getComposer()->getNbScores >= 0)
+        {
+            $this->getComposer()->setactif(false);
+        }
     }
 
 
@@ -253,10 +263,10 @@ class Score
     /**
      * Add composer
      *
-     * @param \OSEL\MusicsheetBundle\Entity\Composer $composer
+     * @param \OSEL\ScoreBundle\Entity\Composer $composer
      * @return Score
      */
-    public function addComposer(\OSEL\MusicsheetBundle\Entity\Composer $composer)
+    public function addComposer(\OSEL\ScoreBundle\Entity\Composer $composer)
     {
         $this->composer[] = $composer;
 
@@ -266,9 +276,9 @@ class Score
     /**
      * Remove composer
      *
-     * @param \OSEL\MusicsheetBundle\Entity\Composer $composer
+     * @param \OSEL\ScoreBundle\Entity\Composer $composer
      */
-    public function removeComposer(\OSEL\MusicsheetBundle\Entity\Composer $composer)
+    public function removeComposer(\OSEL\ScoreBundle\Entity\Composer $composer)
     {
         $this->composer->removeElement($composer);
     }
@@ -489,5 +499,29 @@ class Score
     public function getParts()
     {
         return $this->parts;
+    }
+
+    /**
+     * Set path
+     *
+     * @param string $path
+     *
+     * @return Score
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->path;
     }
 }

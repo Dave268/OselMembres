@@ -85,6 +85,13 @@ class Composer
      */
     private $scores;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="actif", type="boolean", nullable=true)
+     */
+    private $actif = false;
+
 
     /**
      * Constructor
@@ -371,5 +378,29 @@ class Composer
     public function getScores()
     {
         return $this->scores;
+    }
+
+    /**
+     * Set actif
+     *
+     * @param boolean $actif
+     *
+     * @return Composer
+     */
+    public function setActif($actif)
+    {
+        $this->actif = $actif;
+
+        return $this;
+    }
+
+    /**
+     * Get actif
+     *
+     * @return boolean
+     */
+    public function getActif()
+    {
+        return $this->actif;
     }
 }
