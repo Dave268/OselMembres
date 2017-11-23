@@ -4,19 +4,21 @@
             <div class="modal-content">
                 <div class="modal-header" style="background-color:rgba(249,2,2,0);">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                    <h4 class="modal-title" style="text-align:center;"> <strong>SUPPRIMER??</strong></h4></div>
+                    <h4 class="modal-title" style="text-align:center;"> <strong>SUPPRIMER??</strong></h4>
+                </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><i class="fa fa-warning" style="font-size:50px;color:rgba(255,6,6,0.61);"></i></div>
                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                             <p>Etes-vous certain de vouloir supprimer cette entrée?</p>
                             <p>Cette action est <strong>irréversible!!!</strong></p>
+                            <p class="debug-url"></p>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel </button>
-                    <button class="btn btn-danger" type="button">Supprimer </button>
+                    <a class="btn btn-danger btn-ok">Supprimer </a>
                 </div>
             </div>
         </div>
@@ -106,7 +108,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="btn btn-default" type="button">Button</button><img src="{{ asset('img/Spinner.gif') }}" class="img-responsive center-block" style="width:100px;"></div>
+                            <img src="{{ asset('img/Spinner.gif') }}" class="img-responsive center-block" style="width:100px;"></div>
                     </div>
                 </div>
                 <div class="modal-footer"></div>

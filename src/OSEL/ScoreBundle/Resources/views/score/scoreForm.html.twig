@@ -58,7 +58,8 @@
             var check2 = false;
             var check3 = false;
 
-            $("input[id='osel_scorebundle_score_title']").keyup(function count() {
+
+            $("input[id='osel_scorebundle_score_title']").keyup(function countTitle() {
                 var input1 = this.value;
                 var regex1 = new RegExp(/^[a-z ]{4,}$/i);
                 if(regex1.test(input1)){
@@ -78,7 +79,7 @@
                 }
             });
 
-            $("input[id='osel_scorebundle_score_year']").keyup(function count() {
+            $("input[id='osel_scorebundle_score_year']").keyup(function countYear() {
                 var input2 = this.value;
                 var regex2 = new RegExp(/^[0-9]{4}$/);
                 if(regex2.test(input2)){
@@ -98,7 +99,7 @@
                 }
             });
 
-            $('#osel_scorebundle_score_composer').change(function() {
+            $('#osel_scorebundle_score_composer').change(function checkComposer() {
                 if($(this).val()!==""){
                     $('#osel_scorebundle_score_composer').css({
                         'border-color': 'green',
@@ -116,26 +117,11 @@
                 }
             });
 
-            $("#formFileLaunch").click(function () {
-                if(!check2){
-                    alert("La date doit être au format de 4 chiffres");
-                }
-                else if(!check1){
-                    alert("Le titre doit comporter au moins 4 caractères");
-                }
-                else if(!check3){
-                    alert("Vous devez choisir un compositeur");
-                }
-                else if ($("#osel_scorebundle_score_title").val().length === 0 || $("#osel_scorebundle_score_year").val().length === 0)
-                {
-                    alert("Vous devez d'abord remplir les données du morceaux avant de pouvoir uloader les partitions");
-                }
-                else {
-                    $("#uploadFile").click();
-                }
-            });
-
             $("#osel_scorebundle_score_save").click(function (e) {
+                $("input[id='osel_scorebundle_score_title']").countTitle();
+                $("input[id='osel_scorebundle_score_year']").countYear();
+                $('#osel_scorebundle_score_composer').checkComposer();
+
                 if(!check2){
                     e.preventDefault();
                     alert("La date doit être au format de 4 chiffres");

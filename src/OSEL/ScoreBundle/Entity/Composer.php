@@ -92,6 +92,18 @@ class Composer
      */
     private $actif = false;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="OSEL\UserBundle\Entity\User", inversedBy="composers")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $user;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="OSEL\UserBundle\Entity\User", inversedBy="composers_modified")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $lastUser;
+
 
     /**
      * Constructor
@@ -315,11 +327,20 @@ class Composer
     public function increaseScore()
     {
         $this->nbScores++;
+
+        if($this->nbScores > 0)
+        {
+            $this->setActif(true);
+        }
     }
 
     public function decreaseScore()
     {
         $this->nbScores--;
+        if($this->nbScores <= 0)
+        {
+            $this->setActif(false);
+        }
     }
 
     /**
@@ -402,5 +423,53 @@ class Composer
     public function getActif()
     {
         return $this->actif;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \OSEL\UserBundle\Entity\User $user
+     *
+     * @return Composer
+     */
+    public function setUser(\OSEL\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \OSEL\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set lastUser
+     *
+     * @param \OSEL\UserBundle\Entity\User $lastUser
+     *
+     * @return Composer
+     */
+    public function setLastUser(\OSEL\UserBundle\Entity\User $lastUser = null)
+    {
+        $this->lastUser = $lastUser;
+
+        return $this;
+    }
+
+    /**
+     * Get lastUser
+     *
+     * @return \OSEL\UserBundle\Entity\User
+     */
+    public function getLastUser()
+    {
+        return $this->lastUser;
     }
 }

@@ -8,16 +8,17 @@ function itemAdd(id, item) {
     var columnthree = jQuery("<div class=\"col-md-2\"></div>");
     var deleteButton = $("<button></button>");
     deleteButton.html("Supprimer");
-    deleteButton.attr("class", "btn btn-danger btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline deletePart");
+    deleteButton.attr("class", "btn btn-danger visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline");
     deleteButton.attr("data-href", url);
-    deleteButton.attr("data-target", idFile);
+    deleteButton.attr("data-toggle", "modal");
+    deleteButton.attr("type", "button");
+    deleteButton.attr("data-target", "#confirm-delete");
     deleteButton.attr("id", "deletebutton" + id);
-    deleteButton.css({"height":"30px","padding-top":"0px","padding-bottom":"0px","font-size":"10px"});
     columnthree.append(deleteButton);
     $(item).append(columnthree);
 
 
-    $("#deletebutton" + id).on("click", function(e){
+    /*$("#deletebutton" + id).on("click", function(e){
 
         e.preventDefault();
         var $href = $(this).attr('data-href');
@@ -43,8 +44,54 @@ function itemAdd(id, item) {
             }
         });
     });
+    */
 }
 
+function modifyName() {
+    var container = $(this);
+    var data = $(this).val();
+    var $href = container.attr("data-href");
+
+    if(data !== container.attr("data-init")){
+        $('<div></div>').load($href + ' form', function () {
+            //set form
+            var $form = $(this).children('form');
+
+            //set checkbox
+            var $cb = $form.find("input[type=\"text\"]");
+
+            //toggle
+            $cb.val(data);
+
+
+            // form action
+            var $url = $href;
+
+
+            //set data
+            var $data = $form.serialize();
+
+            $.ajax({
+                url: $url,
+                data: $data,
+                method: 'post',
+                xhr: function () {
+                    $('#modalLoad').modal("show");
+                },
+                dataType: 'json',
+                cache: false,
+                success: function (obj) {
+                },
+                complete: function () {
+
+                },
+                error: function (err) {
+
+                }
+            });
+        });
+    }
+}
 
 
 $.fn.upload = function(remote, successFn, progressFn, formFn, numFilesFn, iconFn, deleteFN) {

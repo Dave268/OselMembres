@@ -1,10 +1,14 @@
 osel_score_index:
-    path:     /
-    defaults: { _controller: ScoreBundle:Score:index}
+    path:     /library/{idComposer}/{idScore}
+    defaults: { _controller: ScoreBundle:Score:index, idComposer: 0, idScore: 0 }
+    options:
+            expose: true
 
 osel_score_gestion:
     path:     /gestion/{letter}/{idComposer}/{idScore}
     defaults: { _controller: ScoreBundle:Score:gestion, letter: a, idComposer: 0, idScore: 0 }
+    options:
+            expose: true
 
 osel_score_upload_ajax:
     path:     /uploadAjax/{id}
@@ -19,8 +23,14 @@ osel_score_delete_part:
             expose: true
 
 osel_score_create_score:
-    path:     /creer-partition
-    defaults: { _controller: ScoreBundle:Score:createScore}
+    path:     /creer-partition/{id}
+    defaults: { _controller: ScoreBundle:Score:createScore, id: 0}
+
+osel_score_add_composer:
+    path:     /ajouter-un-compositeur/{id}
+    defaults: { _controller: ScoreBundle:Score:addComposer, id: 0}
+    options:
+            expose: true
 
 osel_score_upload_parts:
     path:     /upload-partitions/{id}
@@ -35,3 +45,25 @@ osel_score_modify_ajax_score:
 osel_score_download_part:
     path:     /télécharger-partition/{id}
     defaults: { _controller: ScoreBundle:Score:downloadPart, id: 0}
+
+osel_score_view_part:
+    path:     /apercu-partition/{id}
+    defaults: { _controller: ScoreBundle:Score:viewPart, id: 0}
+
+osel_score_modify_part:
+    path:     /modifier-partition/{id}
+    defaults: { _controller: ScoreBundle:Score:modifyPart, id: 0}
+
+osel_score_activate_part:
+    path:   /Activation-partition/{id}
+    defaults:  { _controller: ScoreBundle:Score:activatePart, id: 0}
+
+osel_score_activate_score:
+    path:   /Activation-morceau/{id}
+    defaults:  { _controller: ScoreBundle:Score:activateScore, id: 0}
+
+osel_score_search:
+    path:   /search/{text}
+    defaults:  { _controller: ScoreBundle:Score:search}
+    options:
+            expose: true

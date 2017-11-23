@@ -1,6 +1,6 @@
 #showFiles
 {
     display: none;
-    height: 400px;
+    max-height: 900px;
     overflow: auto;
 }

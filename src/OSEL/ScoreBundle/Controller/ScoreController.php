@@ -9,10 +9,17 @@
 namespace OSEL\ScoreBundle\Controller;
 
 
+use OSEL\ScoreBundle\Entity\Composer;
 use OSEL\ScoreBundle\Entity\Parts;
 use OSEL\ScoreBundle\Entity\Score;
+use OSEL\ScoreBundle\Form\ActivatePartType;
+use OSEL\ScoreBundle\Form\ActivateScoreType;
+use OSEL\ScoreBundle\Form\ComposerType;
+use OSEL\ScoreBundle\Form\PartsType;
 use OSEL\ScoreBundle\Form\ScoreType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -20,6 +27,17 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ScoreController extends Controller
 {
+    private function is_dir_empty($dir) {
+        if (!is_readable($dir)) return NULL;
+        $handle = opendir($dir);
+        while (false !== ($entry = readdir($handle))) {
+            if ($entry != "." && $entry != "..") {
+                return FALSE;
+            }
+        }
+        return TRUE;
+    }
+
     public function gestionAction($letter, $idComposer, $idScore, Request $request)
     {
         if (!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')) {
@@ -46,9 +64,6 @@ class ScoreController extends Controller
             }
         }
 
-
-
-
         return $this->get('templating')->renderResponse('ScoreBundle:score:gestion.html.twig', array(
             "composers" => $composers,
             "composer"  => $composer,
@@ -59,13 +74,18 @@ class ScoreController extends Controller
         ));
     }
 
-    public function createScoreAction(Request $request)
+    public function createScoreAction($id, Request $request)
     {
         if(!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')){
             return $this->redirectToRoute('osel_core_home');
         }
 
-        $score = new Score();
+        if($id <= 0){
+            $score = new Score();
+        }
+        else{
+            $score = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Score')->find($id);
+        }
 
         $scoreForm = $this->createForm(ScoreType::class, $score);;
 
@@ -82,6 +102,22 @@ class ScoreController extends Controller
             if(!is_dir($root . $score->getPath()))
             {
                 mkdir($root . $score->getPath());
+            }
+            if($score->getId() !== null){
+                $parts=$this->getDoctrine()->getManager()->getRepository('ScoreBundle:Parts')->getPartsByScore($score->getId());
+                foreach ($parts as $part){
+                    if($part->getPath() !== $score->getPath()){
+                        $oldPath = $root . $part->getPath();
+                        rename( $oldPath ."/" . $part->getName(), $root . $score->getPath() ."/" . $part->getName());
+                        $request->getSession()->getFlashBag()->add('success', 'Le fichier suivant a été déplacé: ' . $part->getOriginalName());
+                        if ($this->is_dir_empty($oldPath)) {
+                            rmdir($oldPath);
+                            $request->getSession()->getFlashBag()->add('success', 'L\'ancien dossier a été supprimé: ' . $part->getPath());
+                        }
+                        $part->setPath($score->getPath());
+                        $em->persist($part);
+                    }
+                }
             }
 
             $em->persist($score);
@@ -100,27 +136,117 @@ class ScoreController extends Controller
 
     }
 
-    public function uploadPartsAction($id, Request $request)
+    public function addComposerAction($id, Request $request)
     {
         if(!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')){
             return $this->redirectToRoute('osel_core_home');
         }
 
-        return $this->get('templating')->renderResponse('ScoreBundle:score:uploadForm.html.twig', array(
-            'score'    => $id
+        if($id <= 0){
+            $composer = new Composer();
+        }
+        else{
+            $composer = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Composer')->find($id);
+        }
+
+        $composerForm = $this->createForm(ComposerType::class, $composer);;
+
+        if($request->isMethod('POST') && $composerForm->handleRequest($request)->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+
+            if (!$this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
+                $composer->setUser($this->container->get('security.token_storage')->getToken()->getUser());
+            }
+
+            $root = $this->container->getParameter('kernel.project_dir') . "/web/library/" . $composer->getLastName() . " " . $composer->getName();
+
+            if(!is_dir($root) && $composer->getId() === null)
+            {
+                mkdir($root);
+            }
+            elseif (!is_dir($root) && $composer->getId() !== null)
+            {
+                $oldroot    = $this->container->getParameter('kernel.project_dir') . "/web/library/" . $composer->getComposer();
+                rename($oldroot, $root);
+                $scores = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Score')->getScoresByComposer($composer->getId());
+
+                foreach ($scores as $score){
+                    $parts=$this->getDoctrine()->getManager()->getRepository('ScoreBundle:Parts')->getPartsByScore($score->getId());
+                    $score->setPath($root. "/" . $score->getTitle());
+                    $em->persist($score);
+                    foreach ($parts as $part){
+                        $part->setPath($score->getPath());
+                        $em->persist($part);
+                    }
+                }
+
+            }
+
+            $composer->setComposer($composer->getLastName() . " " . $composer->getName());
+
+            $em->persist($composer);
+            $em->flush();
+
+            $request->getSession()->getFlashBag()->add('success', 'La compositeur a bien été ajouté');
+
+            return $this->redirectToRoute('osel_score_gestion', array(
+                'letter' => substr($composer->getComposer(), 0, 1)
+        ));
+
+        }
+
+        return $this->get('templating')->renderResponse('ScoreBundle:score:composerForm.html.twig', array(
+            'form'    => $composerForm->createView()
         ));
 
     }
 
-    public function indexAction()
+    public function uploadPartsAction($id, Request $request)
     {
-        if ($this->get('security.authorization_checker')->isGranted('ROLE_USER'))
-        {
-            $composers = $this->getDoctrine()->getManager()->getRepository('OSELMusicsheetBundle:Composer')->findActive();
+        if(!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')){
+            return $this->redirectToRoute('osel_core_home');
         }
-        return $this->get('templating')->renderResponse('OSELScoreBundle:score:index.html.twig', array(
-            'composers'			=> $composers,
-            'selectedPage'		=> 'partition'
+        $parts=$this->getDoctrine()->getManager()->getRepository('ScoreBundle:Parts')->getPartsByScore($id);
+
+        return $this->get('templating')->renderResponse('ScoreBundle:score:uploadForm.html.twig', array(
+            'score'     => $id,
+            'parts'     => $parts
+        ));
+
+    }
+
+    public function indexAction($idComposer, $idScore, Request $request)
+    {
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
+            $request->getSession()->getFlashBag()->add('ERROR', 'Vous n\'avez pas acces à cette partie');
+            return $this->redirectToRoute('osel_core_home');
+        }
+
+        $composers = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Composer')->findActiveComposers();
+
+        $scores = null;
+        $score = null;
+        $composer = null;
+        $parts = null;
+
+        if ($idComposer > 0)
+        {
+            $composer = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Composer')->find($idComposer);
+            if($idScore > 0) {
+                $parts = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Parts')->getActivePartsByScore($idScore);
+                $score = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Score')->find($idScore);
+            }
+            elseif ($idScore === 0){
+                $scores = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Score')->getScoresByComposerActive($idComposer);
+            }
+        }
+
+        return $this->get('templating')->renderResponse('ScoreBundle:score:index.html.twig', array(
+            "composers" => $composers,
+            "composer"  => $composer,
+            "scores"    => $scores,
+            "score"     => $score,
+            "parts"     => $parts,
         ));
     }
 
@@ -161,17 +287,43 @@ class ScoreController extends Controller
         return $response;
     }
 
+    public function searchAction($text, Request $request)
+    {
+        if(!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')){
+            return $this->redirectToRoute('osel_core_home');
+        }
+        if(!$request->isXmlHttpRequest()) {
+            return $this->redirectToRoute('osel_score_gestion');
+        }
+
+        $composers = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Composer')->findSearch($text);
+        $em = $this->getDoctrine()->getManager();
+        $object = array();
+
+        foreach ($composers as $composer)
+        {
+            array_push($object, array("id"=>$composer->getId(), 'composer' =>$composer->getComposer(), 'scores' => $composer->getNbScores(), 'actif' => $composer->getActif()));
+        }
+
+        $json = json_encode($object);
+
+        $response = new Response($json);
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
+    }
+
     public function deletePartAction($id, Request $request)
     {
             $part = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Parts')->find($id);
             $em = $this->getDoctrine()->getManager();
-            $path = $this->container->getParameter('kernel.project_dir') . "/web/" . $part->getUrl();
+            $path = $this->container->getParameter('kernel.project_dir') . "/web/" . $part->getPath() . "/" . $part->getName();
 
             unlink($path);
             $em->remove($part);
             $em->flush();
 
-            $request->getSession()->getFlashBag()->add('success', 'La partition a été supprimé');
+            $request->getSession()->getFlashBag()->add('success', 'La partition suivante a été supprimé' . $part->getOriginalName());
 
             if($request->isXmlHttpRequest()) {
                 $json = json_encode(array(
@@ -184,7 +336,9 @@ class ScoreController extends Controller
                 return $response;
             }
 
-            return $this->redirect($this->generateUrl('osel_event_list'));
+            $referer = $request->headers->get('referer');;
+
+        return new RedirectResponse($referer);
 
     }
 
@@ -212,6 +366,170 @@ class ScoreController extends Controller
 
             return $response;
         }
+    }
+
+    public function viewPartAction($id, Request $request)
+    {
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_USER'))
+        {
+            if($id < 1)
+            {
+                throw new NotFoundHttpException('Partition inexistante.');
+            }
+
+            $part = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Parts')->findOneBy(array('id' => $id));
+
+            $path = $this->get('kernel')->getProjectDir() . "/web/" . $part->getPath() . "/" . $part->getName();
+            $content = file_get_contents($path);
+
+            $response = new BinaryFileResponse($path);
+
+
+            return $response;
+        }
+    }
+
+    public function activatePartAction($id, Request $request)
+    {
+        $redirect = new RedirectResponse($request->headers->get('referer'));
+
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')) {
+            return $redirect;
+        }
+
+        $part = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Parts')->find($id);
+
+        $form = $this->get('form.factory')->create(ActivatePartType::class, $part);
+
+            if ($form->handleRequest($request)->isValid()) {
+
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($part);
+                $em->flush();
+
+                if($request->isXmlHttpRequest())
+                {
+                    $json = json_encode(array(
+                        'id'    => $part->getId(),
+                        'actif' => $part->getActif(),
+                    ));
+
+                    $response = new Response($json);
+                    $response->headers->set('Content-Type', 'application/json');
+
+                    return $response;
+                }
+
+                    $request->getSession()->getFlashBag()->add('success', 'La partition a bient été modifié');
+
+                return $redirect;
+            }
+
+        return $this->render('ScoreBundle:score:activate.html.twig', array(
+            'form' => $form->createView()
+        ));
+    }
+
+    public function activateScoreAction($id, Request $request)
+    {
+        $redirect = new RedirectResponse($request->headers->get('referer'));
+
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')) {
+            return $redirect;
+        }
+
+        $score = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Score')->find($id);
+
+        $form = $this->get('form.factory')->create(ActivateScoreType::class, $score);
+
+        if ($form->handleRequest($request)->isValid()) {
+            $parts = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Parts')->getPartsByScore($score->getId());
+            $em = $this->getDoctrine()->getManager();
+
+            if($score->getActif())
+            {
+                foreach ($parts as $part){
+                    $part->setActif(true);
+                    $em->persist($part);
+                }
+            }
+            else
+            {
+                foreach ($parts as $part){
+                    $part->setActif(false);
+                    $em->persist($part);
+                }
+            }
+
+            $em->persist($score);
+            $em->flush();
+
+            if($request->isXmlHttpRequest())
+            {
+                $json = json_encode(array(
+                    'id'    => $score->getId(),
+                    'actif' => $score->getActif(),
+                ));
+
+                $response = new Response($json);
+                $response->headers->set('Content-Type', 'application/json');
+
+                return $response;
+            }
+
+            $request->getSession()->getFlashBag()->add('success', 'Le morceau et toutes ces partitions ont bien été modifié');
+
+            return $redirect;
+        }
+
+        return $this->render('ScoreBundle:score:activate.html.twig', array(
+            'form' => $form->createView()
+        ));
+    }
+
+    public function modifyPartAction($id, Request $request)
+    {
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')) {
+            $request->getSession()->getFlashBag()->add('ERROR', 'Vous n\'avez pas acces à cette page');
+            return $this->redirect($this->generateUrl('osel_core_home'));
+        }
+
+        $part =$this->getDoctrine()->getManager()->getRepository('ScoreBundle:Parts')->find($id);
+        $form = $this->get('form.factory')->create(PartsType::class, $part);
+
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($part);
+            $em->flush();
+
+            if($request->isXmlHttpRequest()) {
+                $price = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getPrice($id);
+
+                $json = json_encode(array(
+                    'id' => $part->getId(),
+                    'name'  => $part->getOriginalName()
+                ));
+
+                $response = new Response($json);
+                $response->headers->set('Content-Type', 'application/json');
+
+                return $response;
+            }
+            $request->getSession()->getFlashBag()->add('success', 'Le partition a bien été modifié');
+
+            return $this->redirect($this->generateUrl('osel_score_gestion', array(
+                "letter"        => 'a',
+                'idComposer'    => $part->getScore()->getComposer()->getId(),
+                'idScore'       => $part->getScore()->getId()
+            )));
+
+        }
+
+
+        return $this->render('ScoreBundle:score:partForm.html.twig', array(
+            'form'         => $form->createView(),
+        ));
     }
 
     /*

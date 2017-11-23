@@ -26,7 +26,24 @@
                             <button class="btn btn-success" type="submit" id="confirmUpload"><i class="fa fa-arrow-circle-o-up"></i> Envoyer</button>
                         </div>
                     </div>
-                    <div class="list-group" id="showFiles">
+                    <div class="list-group" id="showFiles" {% if parts is not null %}style="display:block;"{% endif %}>
+                        {% if parts is not null %}
+                            {% for part in parts %}
+                                <a class="list-group-item" id="item{{ part.id }}">
+                                    <div class="row" id="file{{ part.id }}">
+                                        <div class="col-md-2 col-sm-2">
+                                            <i class="fa fa-file-pdf-o" style="font-size:35px;color:rgb(193,0,0);"></i>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <span>{{ part.originalName }}</span>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button class="btn btn-danger visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button"  data-href = "{{ path('osel_score_delete_part', {'id': part.id}) }}" data-toggle="modal" data-target="#confirm-delete">Supprimer</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            {% endfor %}
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -37,7 +54,12 @@
 {% block script %}
     <script src="{{ asset('bundles/score/js/fileUpload.js') }}"></script>
     <script>
+        function uniqId() {
+            return Math.round(new Date().getTime() + (Math.random() * 100));
+        }
+
         $(document).ready(function() {
+
             $("#formFileLaunch").click(function () {
                     $("#uploadFile").click();
             });
@@ -66,14 +88,14 @@
                         if(extension === 'pdf' && filesize < 5000000)
                         {
                             var formData = new FormData();
-
-                            listItem = jQuery("<a class=\"list-group-item\" id=\"item" + i + "\"></a>");
-                            var row = jQuery("<div class=\"row\" id=\"file" + i + "\"></div>");
+                            var unique = uniqId();
+                            listItem = jQuery("<a class=\"list-group-item\" id=\"item" + unique + "\"></a>");
+                            var row = jQuery("<div class=\"row\" id=\"file" + unique + "\"></div>");
                             var columnone = jQuery("<div class=\"col-md-2 col-sm-2\"></div>").html("<i class=\"fa fa-file-pdf-o\" style=\"font-size:35px;color:rgb(193,0,0);\"></i>");
                             var columntwo = jQuery("<div class=\"col-md-8\"></div>");
                             var spanone = jQuery("<span>" + filename + " - " + filesize + "</span>");
-                            var iconcheck = jQuery("<span> <i id=\"icon" + i + "\" class=\"fa fa-check hidden\" style=\"font-size:20px;color:green;\"></i></span>");
-                            var progressbar = jQuery("<div style=\"padding-top:10px;\"></div>").html("<progress id=\"progress" + i + "\" value=\"0\" min=\"0\" max=\"100\" style=\"width:100%;\"></progress>");
+                            var iconcheck = jQuery("<span> <i id=\"icon" + unique + "\" class=\"fa fa-check hidden\" style=\"font-size:20px;color:green;\"></i></span>");
+                            var progressbar = jQuery("<div style=\"padding-top:10px;\"></div>").html("<progress id=\"progress" + unique + "\" value=\"0\" min=\"0\" max=\"100\" style=\"width:100%;\"></progress>");
 
                             spanone.appendTo(columntwo);
                             iconcheck.appendTo(columntwo);
@@ -84,7 +106,8 @@
 
                             row.appendTo(listItem);
 
-                            listItem.appendTo(fileList);
+                            listItem.prependTo(fileList);
+
 
 
                             formData.append($(this).get(0).name, $(this).get(0).files[i]);
@@ -92,8 +115,8 @@
                                 'id': {{ score }}
                             });
                             $(this).upload(uploadPath, function (success) {
-                                console.log("done " + i);
-                            }, $("#progress" + i), formData, numFiles, $("#icon" + i), $("#file" + i));
+                                console.log("done " + unique);
+                            }, $("#progress" + unique), formData, numFiles, $("#icon" + unique), $("#file" + unique));
                         }
                         else
                         {

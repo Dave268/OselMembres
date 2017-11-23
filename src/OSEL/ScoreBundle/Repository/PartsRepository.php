@@ -45,4 +45,22 @@ class PartsRepository extends \Doctrine\ORM\EntityRepository
             ->getResult()
             ;
     }
+
+    public function getActivePartsByScore($id)
+    {
+        $qb = $this
+            ->createQueryBuilder('a')
+            ->leftJoin('a.score', 'c')
+            ->addSelect('c')
+            ->where('a.actif = :actif')
+            ->setParameter('actif', true)
+        ;
+
+        $qb->andWhere($qb->expr()->in('c.id', $id));
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }

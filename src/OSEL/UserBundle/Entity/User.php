@@ -298,6 +298,18 @@ class User implements AdvancedUserInterface, \Serializable
      */
     private $redirectionMails;
 
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\Composer", mappedBy="user")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $composers;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\Composer", mappedBy="lastUser")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $composers_modified;
+
 
     public function __construct()
     {
@@ -1699,5 +1711,73 @@ class User implements AdvancedUserInterface, \Serializable
     public function getScoresModified()
     {
         return $this->scores_modified;
+    }
+
+    /**
+     * Add composer
+     *
+     * @param \OSEL\ScoreBundle\Entity\Composer $composer
+     *
+     * @return User
+     */
+    public function addComposer(\OSEL\ScoreBundle\Entity\Composer $composer)
+    {
+        $this->composers[] = $composer;
+
+        return $this;
+    }
+
+    /**
+     * Remove composer
+     *
+     * @param \OSEL\ScoreBundle\Entity\Composer $composer
+     */
+    public function removeComposer(\OSEL\ScoreBundle\Entity\Composer $composer)
+    {
+        $this->composers->removeElement($composer);
+    }
+
+    /**
+     * Get composers
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComposers()
+    {
+        return $this->composers;
+    }
+
+    /**
+     * Add composersModified
+     *
+     * @param \OSEL\ScoreBundle\Entity\Composer $composersModified
+     *
+     * @return User
+     */
+    public function addComposersModified(\OSEL\ScoreBundle\Entity\Composer $composersModified)
+    {
+        $this->composers_modified[] = $composersModified;
+
+        return $this;
+    }
+
+    /**
+     * Remove composersModified
+     *
+     * @param \OSEL\ScoreBundle\Entity\Composer $composersModified
+     */
+    public function removeComposersModified(\OSEL\ScoreBundle\Entity\Composer $composersModified)
+    {
+        $this->composers_modified->removeElement($composersModified);
+    }
+
+    /**
+     * Get composersModified
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComposersModified()
+    {
+        return $this->composers_modified;
     }
 }

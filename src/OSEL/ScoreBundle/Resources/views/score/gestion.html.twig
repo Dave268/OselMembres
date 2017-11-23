@@ -11,6 +11,7 @@
 {% endblock %}
 
 {% block body %}
+
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default" style="padding:0;">
@@ -20,12 +21,13 @@
                     <div class="form-group">
                         <div class="btn-group" role="group">
                             <button class="btn btn-success" type="button" onclick="window.location.href='{{ path('osel_score_create_score') }}'"><i class="glyphicon glyphicon-plus"></i> Ajouter des partitions</button>
+                            <button class="btn btn-success" type="button" onclick="window.location.href='{{ path('osel_score_add_composer') }}'"><i class="glyphicon glyphicon-plus"></i> Ajouter un Compositeur</button>
                         </div>
                     </div>
                     <form>
                         <div class="form-group">
                             <div class="input-group"><span class="input-group-addon"> <i class="glyphicon glyphicon-search"></i></span>
-                                <input class="form-control" type="search" name="search">
+                                <input class="form-control" type="search" name="search" id="searchComposer">
                             </div>
                         </div>
                         <ol class="breadcrumb" style="padding-bottom:0px;">
@@ -38,7 +40,7 @@
 
                         </ol>
                     </form>
-                    {% if parts is null and score is null %}
+                    {% if scores is null and parts is null %}
                         <nav class="text-center" style="margin-top:-26px;margin-bottom:-15px;">
                             <ul class="pagination pagination-sm" style="text-align:center;margin-left:auto;margin-right:auto;">
                                 <li {% if letter == 'a' %} class="active"{% endif %}><a href="{{ path('osel_score_gestion', {'letter' : 'a'}) }}">a</a></li>
@@ -70,22 +72,22 @@
                             </ul>
                         </nav>
                     {% endif %}
-                    <ul class="thread-list">
+                    <ul class="thread-list" id="composerList">
                         {% if parts is not null %}
                             {% for p in parts%}
-                                <li class="thread"><span class="time"><i class="fa fa-file-pdf-o" style="font-size:20px;color:rgb(193,0,0);"></i></span><span class="title"><a href="{{ path('osel_score_download_part', {'id' : p.id}) }}" style="color:#666666;">{{ p.originalName }}</a></span><span class="icon"> <a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-eye-open"></i></a><a href="javascript:void(0)" class="subscribe"><i class="glyphicon {% if p.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-pencil"></i></a></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-trash"></i></a></span></li>
+                                <li class="thread"><span class="time"><i class="fa fa-file-pdf-o" style="font-size:20px;color:rgb(193,0,0);"></i></span><span class="title"><a href="{{ path('osel_score_download_part', {'id' : p.id}) }}" style="color:#666666;">{{ p.originalName }}</a></span><span class="icon"> <a target="_blank" href="{{ path('osel_score_view_part', {'id' : p.id}) }}" class="flag"><i class="glyphicon glyphicon-eye-open"></i></a> <a href="{{ path('osel_score_activate_part', {'id' : p.id}) }}" class="subscribe activate"><i id="part{{ p.id }}" class="glyphicon {% if p.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a> <a href="{{ path('osel_score_modify_part', {'id' : p.id}) }}" class="flag"><i class="glyphicon glyphicon-pencil"></i></a> </a><a data-href="{{ path('osel_score_delete_part', {'id': p.id}) }}" data-toggle="modal" data-target="#confirm-delete" class="flag"><i class="glyphicon glyphicon-trash"></i></a></span></li>
                             {% else %}
                                 <li>pas de partitionspour ce morceau!!!</li>
                             {% endfor %}
                         {% elseif scores is not null %}
                             {% for s in scores%}
-                                <li class="thread"><span class="time">{{ s.nbParts }} pcs</span><span class="title"><a href="{{ path('osel_score_gestion', {'letter' : letter, 'idComposer': s.composer.id, 'idScore': s.id}) }}" style="color:#666666;">{{ s.title }}</a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon {% if s.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-pencil"></i></a></span></li>
+                                <li class="thread"><span class="time">{{ s.nbParts }} pcs</span><span class="title"><a href="{{ path('osel_score_gestion', {'letter' : letter, 'idComposer': s.composer.id, 'idScore': s.id}) }}" style="color:#666666;">{{ s.title }}</a></span><span class="icon"> <a href="{{ path('osel_score_activate_score', {'id' : s.id}) }}" class="subscribe activate"><i class="glyphicon {% if s.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a><a href="{{ path('osel_score_create_score', {'id' : s.id}) }}" class="flag"><i class="glyphicon glyphicon-pencil"></i></a></span></li>
                             {% else %}
                                 <li>pas de morceaux pour ce compositeur!!</li>
                             {% endfor %}
                         {% else %}
                             {% for c in composers%}
-                            <li class="thread"><span class="time">{{ c.nbScores }} pcs</span><span class="title"><a href="{{ path('osel_score_gestion', {'letter' : letter, 'idComposer': c.id}) }}" style="color:#666666;">{{ c.composer }}</a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon {% if c.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a><a href="javascript:void(0)" class="flag"><i class="glyphicon glyphicon-pencil"></i></a></span></li>
+                            <li class="thread"><span class="time">{{ c.nbScores }} pcs</span><span class="title"><a href="{{ path('osel_score_gestion', {'letter' : letter, 'idComposer': c.id}) }}" style="color:#666666;">{{ c.composer }}</a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon {% if c.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a><a href="{{ path('osel_score_add_composer', {'id' : c.id}) }}" class="flag"><i class="glyphicon glyphicon-pencil"></i></a></span></li>
                             {% else %}
                                 <li>pas de compositeurs à ce non!!!</li>
                             {% endfor %}
@@ -98,4 +100,6 @@
 
 {% endblock %}
 {% block script %}
+    <script src="{{ asset('bundles/score/js/activate.js') }}"></script>
+    <script src="{{ asset('bundles/score/js/search.js') }}"></script>
 {% endblock %}

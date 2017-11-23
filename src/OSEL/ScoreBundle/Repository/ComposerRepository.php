@@ -10,7 +10,7 @@ namespace OSEL\ScoreBundle\Repository;
  */
 class ComposerRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function findActiveComposers($letter)
+    public function findActiveComposers()
     {
         $qb = $this
             ->createQueryBuilder('a')
@@ -18,8 +18,6 @@ class ComposerRepository extends \Doctrine\ORM\EntityRepository
             ->addSelect('c')
             ->where('c.actif = :actif')
             ->setParameter('actif', true)
-            ->andWhere('a.composer LIKE :composer')
-            ->setParameter('composer', $letter . "%")
             ->orderBy('a.composer')
         ;
 
@@ -51,6 +49,25 @@ class ComposerRepository extends \Doctrine\ORM\EntityRepository
         $qb = $this
             ->createQueryBuilder('a')
             ->orderBy('a.composer')
+        ;
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    public function findSearch($text)
+    {
+        $qb = $this
+            ->createQueryBuilder('a')
+            ->where('a.composer LIKE :composer')
+            ->setParameter('composer', $text . "%")
+            ->orWhere('a.name LIKE :name')
+            ->setParameter('name', $text . "%")
+            ->orderBy('a.composer')
+            ->setFirstResult( 0 )
+            ->setMaxResults( 10 );
         ;
 
         return $qb

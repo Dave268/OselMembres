@@ -1,0 +1,58 @@
+{# src/Osel/MusicsheetBundle/Resources/views/Musicsheet/gestion.html.twig #}
+
+{% extends "OSELCoreBundle:Core:layout.html.twig" %}
+
+{% block title %}
+    Ajouter des partitions
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ asset('bundles/score/css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default" style="padding:0;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Bibliothèque <i class="glyphicon glyphicon-plus" data-bs-hover-animate="tada" style="float:right;color:rgba(51,51,51,0.55);"></i></h3></div>
+                <div class="panel-body" style="padding:20px;/*display:none;*/padding-top:10px;">
+                        <ol class="breadcrumb" style="padding-bottom:0px;">
+                            {% if composer is not null %}
+                                <li><a href="{{ path('osel_score_index') }}"><span>Compositeurs</span></a></li>
+                                {% if score is not null %}
+                                    <li><a href="{{ path('osel_score_index', {'idComposer': composer.id}) }}"><span>{{ composer.lastname }}</span></a></li>
+                                {% endif %}
+                            {% endif %}
+
+                        </ol>
+                    <ul class="thread-list" id="composerList">
+                        {% if parts is not null %}
+                            {% for p in parts%}
+                                <li class="thread"><span class="time"><i class="fa fa-file-pdf-o" style="font-size:20px;color:rgb(193,0,0);"></i></span><span class="title"><a href="{{ path('osel_score_download_part', {'id' : p.id}) }}" style="color:#666666;">{{ p.originalName }}</a></span><span class="icon"> <a target="_blank" href="{{ path('osel_score_view_part', {'id' : p.id}) }}" class="flag"><i class="glyphicon glyphicon-eye-open"></i></a></span></li>
+                            {% else %}
+                                <li>pas de partitionspour ce morceau!!!</li>
+                            {% endfor %}
+                        {% elseif scores is not null %}
+                            {% for s in scores%}
+                                <li class="thread"><span class="time">{{ s.nbParts }} pcs</span><span class="title"><a href="{{ path('osel_score_index', {'idComposer': s.composer.id, 'idScore': s.id}) }}" style="color:#666666;">{{ s.title }}</a></span><span class="icon"> <a class="subscribe activate"><i class="glyphicon {% if s.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a></span></li>
+                            {% else %}
+                                <li>pas de morceaux pour ce compositeur!!</li>
+                            {% endfor %}
+                        {% else %}
+                            {% for c in composers%}
+                                <li class="thread"><span class="time">{{ c.nbScores }} pcs</span><span class="title"><a href="{{ path('osel_score_index', {'idComposer': c.id}) }}" style="color:#666666;">{{ c.composer }}</a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon {% if c.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a></span></li>
+                            {% else %}
+                                <li>pas de compositeurs à ce non!!!</li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block script %}
+{% endblock %}

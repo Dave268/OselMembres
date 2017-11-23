@@ -1,0 +1,86 @@
+{# src/Osel/ScoreBundle/Resources/views/score/composerForm.html.twig #}
+
+{% extends "OSELCoreBundle:Core:layout.html.twig" %}
+
+{% block title %}
+    Ajouter un Compositeur
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ asset('bundles/score/css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default" style="padding:0;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Ajouter un compositeur <i class="glyphicon glyphicon-plus" data-bs-hover-animate="tada" style="float:right;color:rgba(51,51,51,0.55);"></i></h3></div>
+                <div class="panel-body" style="padding:20px;padding-top:10px;">
+                    {{ form_start(form, {'attr': {'class': 'bootstrap-form-with-validation', "id":"formScore"}}) }}
+                    <div class="form-group">
+                        {{ form_label(form.name, "Prénom:", {'label-attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.name, { 'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form.lastName, "Nom de Famille:", {'label-attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.lastName, { 'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="form-group">
+                            {{ form_label(form.dateBirth, "Date de naissance:", {'label-attr': {'class': 'control-label'}}) }}
+                            <div class="row" style="margin-right:0px;margin-left:0px;">
+                                <div class="input-group date" id='datepicker1'>
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-calendar"></i>
+                                    </span>
+                                    {{ form_widget(form.dateBirth, { 'attr': {'class': 'form-control'}}) }}
+                                </div>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                            {{ form_label(form.dateDeath, "Date de Décès:", {'label-attr': {'class': 'control-label'}}) }}
+                            <div class="row" style="margin-right:0px;margin-left:0px;">
+                                <div class="input-group date" id='datepicker2'>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                    {{ form_widget(form.dateDeath, { 'attr': {'class': 'form-control'}}) }}
+                                </div>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form_widget(form.save, {'attr': {'class': 'btn btn-success submit-button'}, 'label': 'Ajouter'}) }}
+                        <!--<button class="btn btn-success btn-sm" type="submit">Envoyer </button>-->
+                        <button class="btn btn-info" type="reset"> Reset </button>
+                    </div>
+                    {{ form_rest(form) }}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+
+            $('#datepicker1').datepicker({
+                startView: 'centuries',
+                defaultViewDate: '01-01-1200',
+                yearRange: '1200:',
+                clearBtn: true,
+                autoclose: true,
+                format: 'dd-mm-yyyy'
+            });
+            $('#datepicker2').datepicker({
+                startView: 'centuries',
+                defaultViewDate: '01-01-1200',
+                yearRange: '1200:',
+                clearBtn: true,
+                autoclose: true,
+                format: 'dd-mm-yyyy'
+            });
+
+        });
+    </script>
+{% endblock %}
