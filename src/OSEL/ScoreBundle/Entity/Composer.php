@@ -61,16 +61,16 @@ class Composer
     private $dateUpdate;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="date_birth", type="date", nullable=true)
+     * @ORM\Column(name="date_birth", type="string", length=255, nullable=true)
      */
     private $dateBirth;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="date_death", type="date", nullable=true)
+     * @ORM\Column(name="date_death", type="string", length=255, nullable=true)
      */
     private $dateDeath;
 
@@ -202,52 +202,6 @@ class Composer
     public function getDateUpdate()
     {
         return $this->dateUpdate;
-    }
-
-    /**
-     * Set dateBirth
-     *
-     * @param \DateTime $dateBirth
-     * @return Composer
-     */
-    public function setDateBirth($dateBirth)
-    {
-        $this->dateBirth = $dateBirth;
-
-        return $this;
-    }
-
-    /**
-     * Get dateBirth
-     *
-     * @return \DateTime
-     */
-    public function getDateBirth()
-    {
-        return $this->dateBirth;
-    }
-
-    /**
-     * Set dateDeath
-     *
-     * @param \DateTime $dateDeath
-     * @return Composer
-     */
-    public function setDateDeath($dateDeath)
-    {
-        $this->dateDeath = $dateDeath;
-
-        return $this;
-    }
-
-    /**
-     * Get dateDeath
-     *
-     * @return \DateTime
-     */
-    public function getDateDeath()
-    {
-        return $this->dateDeath;
     }
 
     /**
@@ -471,5 +425,53 @@ class Composer
     public function getLastUser()
     {
         return $this->lastUser;
+    }
+
+    /**
+     * Set dateBirth
+     *
+     * @param string $dateBirth
+     *
+     * @return Composer
+     */
+    public function setDateBirth($dateBirth)
+    {
+        $this->dateBirth = $dateBirth;
+
+        return $this;
+    }
+
+    /**
+     * Get dateBirth
+     *
+     * @return string
+     */
+    public function getDateBirth()
+    {
+        return $this->dateBirth;
+    }
+
+    /**
+     * Set dateDeath
+     *
+     * @param string $dateDeath
+     *
+     * @return Composer
+     */
+    public function setDateDeath($dateDeath)
+    {
+        $this->dateDeath = $dateDeath;
+
+        return $this;
+    }
+
+    /**
+     * Get dateDeath
+     *
+     * @return string
+     */
+    public function getDateDeath()
+    {
+        return $this->dateDeath;
     }
 }

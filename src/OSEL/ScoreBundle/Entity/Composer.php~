@@ -61,16 +61,16 @@ class Composer
     private $dateUpdate;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="date_birth", type="date", nullable=true)
+     * @ORM\Column(name="date_birth", type="string", length=255, nullable=true)
      */
     private $dateBirth;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="date_death", type="date", nullable=true)
+     * @ORM\Column(name="date_death", type="string", length=255, nullable=true)
      */
     private $dateDeath;
 
@@ -202,52 +202,6 @@ class Composer
     public function getDateUpdate()
     {
         return $this->dateUpdate;
-    }
-
-    /**
-     * Set dateBirth
-     *
-     * @param \DateTime $dateBirth
-     * @return Composer
-     */
-    public function setDateBirth($dateBirth)
-    {
-        $this->dateBirth = $dateBirth;
-
-        return $this;
-    }
-
-    /**
-     * Get dateBirth
-     *
-     * @return \DateTime
-     */
-    public function getDateBirth()
-    {
-        return $this->dateBirth;
-    }
-
-    /**
-     * Set dateDeath
-     *
-     * @param \DateTime $dateDeath
-     * @return Composer
-     */
-    public function setDateDeath($dateDeath)
-    {
-        $this->dateDeath = $dateDeath;
-
-        return $this;
-    }
-
-    /**
-     * Get dateDeath
-     *
-     * @return \DateTime
-     */
-    public function getDateDeath()
-    {
-        return $this->dateDeath;
     }
 
     /**
@@ -423,5 +377,53 @@ class Composer
     public function getActif()
     {
         return $this->actif;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \OSEL\UserBundle\Entity\User $user
+     *
+     * @return Composer
+     */
+    public function setUser(\OSEL\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \OSEL\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set lastUser
+     *
+     * @param \OSEL\UserBundle\Entity\User $lastUser
+     *
+     * @return Composer
+     */
+    public function setLastUser(\OSEL\UserBundle\Entity\User $lastUser = null)
+    {
+        $this->lastUser = $lastUser;
+
+        return $this;
+    }
+
+    /**
+     * Get lastUser
+     *
+     * @return \OSEL\UserBundle\Entity\User
+     */
+    public function getLastUser()
+    {
+        return $this->lastUser;
     }
 }

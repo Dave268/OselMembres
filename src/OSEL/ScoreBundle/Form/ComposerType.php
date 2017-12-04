@@ -20,14 +20,10 @@ class ComposerType extends AbstractType
         $builder
             ->add('name',       TextType::class)
             ->add('lastName',   TextType::class)
-            ->add('dateBirth',  DateTimeType::class, array(
-                'required' => false,
-                'widget' => 'single_text',
-                'html5' => false,))
-            ->add('dateDeath',  DateTimeType::class, array(
-                'required' => false,
-                'widget' => 'single_text',
-                'html5' => false,))
+            ->add('dateBirth',  TextType::class, array(
+                'required' => false))
+            ->add('dateDeath',  TextType::class, array(
+                'required' => false))
             ->add('save',       SubmitType::class);
     }
     

@@ -87,9 +87,22 @@
                             {% endfor %}
                         {% else %}
                             {% for c in composers%}
-                            <li class="thread"><span class="time">{{ c.nbScores }} pcs</span><span class="title"><a href="{{ path('osel_score_gestion', {'letter' : letter, 'idComposer': c.id}) }}" style="color:#666666;">{{ c.composer }}</a></span><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon {% if c.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a><a href="{{ path('osel_score_add_composer', {'id' : c.id}) }}" class="flag"><i class="glyphicon glyphicon-pencil"></i></a></span></li>
+                            <li class="thread"><span class="time">{{ c.nbScores }} pcs</span><span class="title"><a href="{{ path('osel_score_gestion', {'letter' : letter, 'idComposer': c.id}) }}" style="color:#666666;">{{ c.composer }}</a></span><span class="icon"> <a href="{{ path('osel_score_view_composer', {'id' : c.id}) }}" class="flag"><i class="glyphicon glyphicon-eye-open"></i></a><span class="icon"> <a href="javascript:void(0)" class="subscribe"><i class="glyphicon {% if c.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a><a href="{{ path('osel_score_add_composer', {'id' : c.id}) }}" class="flag"><i class="glyphicon glyphicon-pencil"></i></a></span></li>
                             {% else %}
-                                <li>pas de compositeurs à ce non!!!</li>
+                                <script>
+                                    window.onload = function(){
+                                        if("{{ letter }}" === "z")
+                                        {
+                                            var item = $("<li>pas de compositeurs à ce non!!!</li>");
+                                            item.appendTo($("#composerList"));
+                                        }
+                                        else
+                                        {
+
+                                            nextletter("{{ letter }}");
+                                        }
+                                    };
+                                </script>
                             {% endfor %}
                         {% endif %}
                     </ul>
@@ -102,4 +115,15 @@
 {% block script %}
     <script src="{{ asset('bundles/score/js/activate.js') }}"></script>
     <script src="{{ asset('bundles/score/js/search.js') }}"></script>
+    <script>
+        function nextletter(letter) {
+            console.log("check route");
+            var my_string = letter;
+            var nextstring = my_string.substring(0,my_string.length-1)+String.fromCharCode(my_string.charCodeAt(my_string.length-1)+1);
+
+            window.location.replace(Routing.generate('osel_score_gestion', {
+                'letter': nextstring
+            }));
+        }
+    </script>
 {% endblock %}

@@ -53,6 +53,8 @@ osel_score_view_part:
 osel_score_modify_part:
     path:     /modifier-partition/{id}
     defaults: { _controller: ScoreBundle:Score:modifyPart, id: 0}
+    options:
+            expose: true
 
 osel_score_activate_part:
     path:   /Activation-partition/{id}
@@ -67,3 +69,7 @@ osel_score_search:
     defaults:  { _controller: ScoreBundle:Score:search}
     options:
             expose: true
+
+osel_score_view_composer:
+    path:     /apercu-compositeur/{id}
+    defaults: { _controller: ScoreBundle:Score:viewComposer, id: 0}

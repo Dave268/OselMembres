@@ -61,7 +61,7 @@
 
             $("input[id='osel_scorebundle_score_title']").keyup(function countTitle() {
                 var input1 = this.value;
-                var regex1 = new RegExp(/^[a-z ]{4,}$/i);
+                var regex1 = new RegExp(/^[a-záàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ0-9\._\- ]{4,}$/i);
                 if(regex1.test(input1)){
                     $('#osel_scorebundle_score_title').css({
                         'border-color': 'green',

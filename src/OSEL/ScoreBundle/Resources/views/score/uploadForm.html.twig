@@ -35,7 +35,7 @@
                                             <i class="fa fa-file-pdf-o" style="font-size:35px;color:rgb(193,0,0);"></i>
                                         </div>
                                         <div class="col-md-8">
-                                            <span>{{ part.originalName }}</span>
+                                            <span><input type="text" data-val="{{ part.originalName }}" value="{{ part.originalName }}" data-id="{{ part.id }}" id="changeName{{ part.id }}" style="width: 100%;"/></span>
                                         </div>
                                         <div class="col-md-2">
                                             <button class="btn btn-danger visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button"  data-href = "{{ path('osel_score_delete_part', {'id': part.id}) }}" data-toggle="modal" data-target="#confirm-delete">Supprimer</button>
@@ -54,8 +54,8 @@
 {% block script %}
     <script src="{{ asset('bundles/score/js/fileUpload.js') }}"></script>
     <script>
-        function uniqId() {
-            return Math.round(new Date().getTime() + (Math.random() * 100));
+        function uniqId(number) {
+            return Math.round((new Date().getTime() + (Math.random() * 100)) * number);
         }
 
         $(document).ready(function() {
@@ -63,8 +63,59 @@
             $("#formFileLaunch").click(function () {
                     $("#uploadFile").click();
             });
+
+            $("input[type=\"text\"]").keyup(function modifyName() {
+                if($(this).val() !== '' && $(this).val() !== $(this).attr("data-val")) {
+                    var idtext = $(this).attr("data-id");
+                    $(this).attr("data-val", $(this).val());
+                    var container = $(this);
+                    var data = $(this).val();
+                    var dataid = $(this).attr('data-id');
+                    var $href = Routing.generate('osel_score_modify_part', {
+                        'id': dataid
+                    });
+
+                    $('<div></div>').load($href + ' form', function () {
+                        //set form
+                        var $form = $(this).children('form');
+
+                        //set checkbox
+                        var $cb = $form.find("input[type=\"text\"]");
+
+                        //toggle
+                        $cb.val(data);
+
+
+                        // form action
+                        var $url = $href;
+
+
+                        //set data
+                        var $data = $form.serialize();
+
+                        $.ajax({
+                            url: $url,
+                            data: $data,
+                            method: 'post',
+                            dataType: 'json',
+                            cache: false,
+                            success: function (obj) {
+                                //console.log("done " + obj.id);
+                            },
+                            complete: function () {
+                            },
+                            error: function (err) {
+
+                            }
+                        });
+                    });
+                }
+            });
+
             $("#confirmUpload").click(function(){
-                window.location.replace('{{ path('osel_score_gestion') }}');
+                window.location.replace('{{ path('osel_score_gestion',{
+                    "letter" : letter
+                }) }}');
             });
 
             $("#uploadFile").on("change", function () {
@@ -88,15 +139,18 @@
                         if(extension === 'pdf' && filesize < 5000000)
                         {
                             var formData = new FormData();
-                            var unique = uniqId();
+                            var unique = uniqId(i);
                             listItem = jQuery("<a class=\"list-group-item\" id=\"item" + unique + "\"></a>");
                             var row = jQuery("<div class=\"row\" id=\"file" + unique + "\"></div>");
                             var columnone = jQuery("<div class=\"col-md-2 col-sm-2\"></div>").html("<i class=\"fa fa-file-pdf-o\" style=\"font-size:35px;color:rgb(193,0,0);\"></i>");
                             var columntwo = jQuery("<div class=\"col-md-8\"></div>");
-                            var spanone = jQuery("<span>" + filename + " - " + filesize + "</span>");
+                            var spanone = jQuery("<span></span>");
+                            var inputtext = jQuery("<input type=\"text\" data-val=\"" + filename + "\" value=\"" + filename + "\" style=\"width: 100%;\"/>");
                             var iconcheck = jQuery("<span> <i id=\"icon" + unique + "\" class=\"fa fa-check hidden\" style=\"font-size:20px;color:green;\"></i></span>");
-                            var progressbar = jQuery("<div style=\"padding-top:10px;\"></div>").html("<progress id=\"progress" + unique + "\" value=\"0\" min=\"0\" max=\"100\" style=\"width:100%;\"></progress>");
+                            //var progressbar = jQuery("<div style=\"padding-top:10px;\"></div>").html("<progress id=\"progress" + unique + "\" value=\"0\" min=\"0\" max=\"100\" style=\"width:100%;\"></progress>");
+                            var progressbar = jQuery("<div style=\"padding-top:10px;\" style=\"width: 100%;\"></div>").html("<div id=\"progress" + unique + "\"  class=\"progress\"> <div class=\"progress-bar progress-bar-success progress-bar-striped active\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\">0%</div> </div>");
 
+                            inputtext.appendTo(spanone);
                             spanone.appendTo(columntwo);
                             iconcheck.appendTo(columntwo);
                             progressbar.appendTo(columntwo);
@@ -106,7 +160,7 @@
 
                             row.appendTo(listItem);
 
-                            listItem.prependTo(fileList);
+                            listItem.appendTo(fileList);
 
 
 
@@ -115,7 +169,7 @@
                                 'id': {{ score }}
                             });
                             $(this).upload(uploadPath, function (success) {
-                                console.log("done " + unique);
+                                //console.log("done " + unique);
                             }, $("#progress" + unique), formData, numFiles, $("#icon" + unique), $("#file" + unique));
                         }
                         else

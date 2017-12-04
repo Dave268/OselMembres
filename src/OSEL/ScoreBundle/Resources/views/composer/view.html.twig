@@ -1,0 +1,47 @@
+{# src/Osel/UserBundle/Resources/views/User/view.html.twig #}
+
+{% extends "OSELCoreBundle:Core:layout.html.twig" %}
+
+{% block title %}
+    Compositeur: {{ composer.composer }}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ asset('css/Profile-Edit1.css') }}">
+
+
+{% endblock %}
+
+{% block body %}
+    <div class="container profile profile-view" id="profile">
+        <form>
+            <div class="row profile-row">
+                <div class="col-md-4 relative">
+                    <div class="avatar">
+                        <div class="avatar-bg center"></div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h1>{{ composer.composer }}</h1>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6"><strong>Né(e) le:</strong></div>
+                        <div class="col-md-6"><span>{{ composer.dateBirth }}</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><strong>décédé(e) le:</strong></div>
+                        <div class="col-md-6"><span>{% if composer.dateDeath is not null %}{{ composer.dateDeath }}{% else %}-{% endif %}</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 content-right">
+                            <a href="{{ path('osel_score_add_composer', {'id' : composer.id}) }}" class="btn btn-primary form-btn" >Modifier</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+{% endblock %}

@@ -5,6 +5,56 @@ function itemAdd(id, item) {
     });
 
     var idFile = $(item).attr("id");
+    var changeName = $(item).find("input[type=\"text\"]");
+    changeName.attr("id", "changeName" + id);
+    changeName.attr("data-id", id);
+    changeName.keyup(function modifyName() {
+        if($(this).val() !== '' && $(this).val() !== $(this).attr("data-val")) {
+            var idtext = $(this).attr("data-id");
+            $(this).attr("data-val", $(this).val());
+            var container = $(this);
+            var data = $(this).val();
+            var dataid = $(this).attr('data-id');
+            var $href = Routing.generate('osel_score_modify_part', {
+                'id': dataid
+            });
+
+            $('<div></div>').load($href + ' form', function () {
+                //set form
+                var $form = $(this).children('form');
+
+                //set checkbox
+                var $cb = $form.find("input[type=\"text\"]");
+
+                //toggle
+                $cb.val(data);
+
+
+                // form action
+                var $url = $href;
+
+
+                //set data
+                var $data = $form.serialize();
+
+                $.ajax({
+                    url: $url,
+                    data: $data,
+                    method: 'post',
+                    dataType: 'json',
+                    cache: false,
+                    success: function (obj) {
+                        //console.log("done " + obj.id);
+                    },
+                    complete: function () {
+                    },
+                    error: function (err) {
+
+                    }
+                });
+            });
+        }
+    });
     var columnthree = jQuery("<div class=\"col-md-2\"></div>");
     var deleteButton = $("<button></button>");
     deleteButton.html("Supprimer");
@@ -47,51 +97,7 @@ function itemAdd(id, item) {
     */
 }
 
-function modifyName() {
-    var container = $(this);
-    var data = $(this).val();
-    var $href = container.attr("data-href");
 
-    if(data !== container.attr("data-init")){
-        $('<div></div>').load($href + ' form', function () {
-            //set form
-            var $form = $(this).children('form');
-
-            //set checkbox
-            var $cb = $form.find("input[type=\"text\"]");
-
-            //toggle
-            $cb.val(data);
-
-
-            // form action
-            var $url = $href;
-
-
-            //set data
-            var $data = $form.serialize();
-
-            $.ajax({
-                url: $url,
-                data: $data,
-                method: 'post',
-                xhr: function () {
-                    $('#modalLoad').modal("show");
-                },
-                dataType: 'json',
-                cache: false,
-                success: function (obj) {
-                },
-                complete: function () {
-
-                },
-                error: function (err) {
-
-                }
-            });
-        });
-    }
-}
 
 
 $.fn.upload = function(remote, successFn, progressFn, formFn, numFilesFn, iconFn, deleteFN) {
@@ -105,7 +111,7 @@ $.fn.upload = function(remote, successFn, progressFn, formFn, numFilesFn, iconFn
                 myXhr = $.ajaxSettings.xhr();
                 if(myXhr.upload && progressFn){
                     myXhr.upload.addEventListener("progress", function(prog) {
-                        var value = ~~((prog.loaded / prog.total) * 100);
+                        var value = ~~((prog.loaded / prog.total));
 
                         // if we passed a progress function
                         if (typeof progressFn === "function") {
@@ -113,7 +119,13 @@ $.fn.upload = function(remote, successFn, progressFn, formFn, numFilesFn, iconFn
 
                             // if we passed a progress element
                         } else if (progressFn) {
-                            $(progressFn).val(value);
+                            //$(progressFn).val(value);
+                            $(progressFn).attr("aria-valuenow", value);
+                            $(progressFn).html(value + "%");
+                            $(progressFn).css({
+                                'width': value + '%'
+                            });
+                            console.log("value" + value);
                         }
                     }, false);
                 }
@@ -127,7 +139,7 @@ $.fn.upload = function(remote, successFn, progressFn, formFn, numFilesFn, iconFn
             success: function (obj) {
                 $(progressFn).hide();
                 $(iconFn).removeClass("hidden")
-                console.log(obj.id);
+                //console.log(obj.id);
                 itemAdd(obj.id, deleteFN);
 
 
