@@ -310,6 +310,30 @@ class User implements AdvancedUserInterface, \Serializable
      */
     private $composers_modified;
 
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\ImgComposer", mappedBy="user")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $composerimgs;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\ImgComposer", mappedBy="lastUser")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $composerimgs_modified;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\BioComposer", mappedBy="user")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $composerbios;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\BioComposer", mappedBy="lastUser")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $composerbios_modified;
+
 
     public function __construct()
     {
@@ -1779,5 +1803,141 @@ class User implements AdvancedUserInterface, \Serializable
     public function getComposersModified()
     {
         return $this->composers_modified;
+    }
+
+    /**
+     * Add composerimg
+     *
+     * @param \OSEL\ScoreBundle\Entity\ImgComposer $composerimg
+     *
+     * @return User
+     */
+    public function addComposerimg(\OSEL\ScoreBundle\Entity\ImgComposer $composerimg)
+    {
+        $this->composerimgs[] = $composerimg;
+
+        return $this;
+    }
+
+    /**
+     * Remove composerimg
+     *
+     * @param \OSEL\ScoreBundle\Entity\ImgComposer $composerimg
+     */
+    public function removeComposerimg(\OSEL\ScoreBundle\Entity\ImgComposer $composerimg)
+    {
+        $this->composerimgs->removeElement($composerimg);
+    }
+
+    /**
+     * Get composerimgs
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComposerimgs()
+    {
+        return $this->composerimgs;
+    }
+
+    /**
+     * Add composerimgsModified
+     *
+     * @param \OSEL\ScoreBundle\Entity\ImgComposer $composerimgsModified
+     *
+     * @return User
+     */
+    public function addComposerimgsModified(\OSEL\ScoreBundle\Entity\ImgComposer $composerimgsModified)
+    {
+        $this->composerimgs_modified[] = $composerimgsModified;
+
+        return $this;
+    }
+
+    /**
+     * Remove composerimgsModified
+     *
+     * @param \OSEL\ScoreBundle\Entity\ImgComposer $composerimgsModified
+     */
+    public function removeComposerimgsModified(\OSEL\ScoreBundle\Entity\ImgComposer $composerimgsModified)
+    {
+        $this->composerimgs_modified->removeElement($composerimgsModified);
+    }
+
+    /**
+     * Get composerimgsModified
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComposerimgsModified()
+    {
+        return $this->composerimgs_modified;
+    }
+
+    /**
+     * Add composerbio
+     *
+     * @param \OSEL\ScoreBundle\Entity\BioComposer $composerbio
+     *
+     * @return User
+     */
+    public function addComposerbio(\OSEL\ScoreBundle\Entity\BioComposer $composerbio)
+    {
+        $this->composerbios[] = $composerbio;
+
+        return $this;
+    }
+
+    /**
+     * Remove composerbio
+     *
+     * @param \OSEL\ScoreBundle\Entity\BioComposer $composerbio
+     */
+    public function removeComposerbio(\OSEL\ScoreBundle\Entity\BioComposer $composerbio)
+    {
+        $this->composerbios->removeElement($composerbio);
+    }
+
+    /**
+     * Get composerbios
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComposerbios()
+    {
+        return $this->composerbios;
+    }
+
+    /**
+     * Add composerbiosModified
+     *
+     * @param \OSEL\ScoreBundle\Entity\BioComposer $composerbiosModified
+     *
+     * @return User
+     */
+    public function addComposerbiosModified(\OSEL\ScoreBundle\Entity\BioComposer $composerbiosModified)
+    {
+        $this->composerbios_modified[] = $composerbiosModified;
+
+        return $this;
+    }
+
+    /**
+     * Remove composerbiosModified
+     *
+     * @param \OSEL\ScoreBundle\Entity\BioComposer $composerbiosModified
+     */
+    public function removeComposerbiosModified(\OSEL\ScoreBundle\Entity\BioComposer $composerbiosModified)
+    {
+        $this->composerbios_modified->removeElement($composerbiosModified);
+    }
+
+    /**
+     * Get composerbiosModified
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComposerbiosModified()
+    {
+        return $this->composerbios_modified;
     }
 }

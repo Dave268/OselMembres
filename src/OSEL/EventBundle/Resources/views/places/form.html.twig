@@ -1,9 +1,8 @@
 {# src/Osel/EventBundle/Resources/views/places/form.html.twig #}
 
-{% extends "OSELCoreBundle::layout.html.twig" %}
+{% extends "OSELCoreBundle:Core:layout.html.twig" %}
 
 {% block head %}
-    <script src="{{ asset('js/jquery.classyedit.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('css/jquery.classyedit.css') }}">
 {% endblock %}
 
@@ -116,12 +115,14 @@
         </div>
     </div>
 
-<script type="text/javascript">
-    $(document).ready(function() {
+{% endblock %}
 
-        $(".classy-editor1").ClassyEdit();
-        $(".classy-editor2").ClassyEdit();
-    });
+{% block script %}
+    <script src="{{ asset('js/jquery.classyedit.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".classy-editor1").ClassyEdit();
+            $(".classy-editor2").ClassyEdit();
+        });
     </script>
-
 {% endblock %}

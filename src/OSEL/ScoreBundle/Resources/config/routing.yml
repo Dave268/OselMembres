@@ -73,3 +73,11 @@ osel_score_search:
 osel_score_view_composer:
     path:     /apercu-compositeur/{id}
     defaults: { _controller: ScoreBundle:Score:viewComposer, id: 0}
+
+osel_score_add_composer_bio:
+    path:     /ajouter-un-texte-compositeur/{idcomposer}/{id}
+    defaults: { _controller: ScoreBundle:Score:addComposerBio, idcomposer: 0, id: 0}
+
+osel_score_add_composer_image:
+    path:     /ajouter-une-photo-compositeur/{idcomposer}
+    defaults: { _controller: ScoreBundle:Score:addComposerImg, idcomposer: 0}

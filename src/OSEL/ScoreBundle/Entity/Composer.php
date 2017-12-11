@@ -104,6 +104,18 @@ class Composer
      */
     private $lastUser;
 
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\BioComposer", mappedBy="composer")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $bios;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\ImgComposer", mappedBy="composer")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $images;
+
 
     /**
      * Constructor
@@ -473,5 +485,73 @@ class Composer
     public function getDateDeath()
     {
         return $this->dateDeath;
+    }
+
+    /**
+     * Add bio
+     *
+     * @param \OSEL\UserBundle\Entity\BioComposer $bio
+     *
+     * @return Composer
+     */
+    public function addBio(\OSEL\UserBundle\Entity\BioComposer $bio)
+    {
+        $this->bios[] = $bio;
+
+        return $this;
+    }
+
+    /**
+     * Remove bio
+     *
+     * @param \OSEL\UserBundle\Entity\BioComposer $bio
+     */
+    public function removeBio(\OSEL\UserBundle\Entity\BioComposer $bio)
+    {
+        $this->bios->removeElement($bio);
+    }
+
+    /**
+     * Get bios
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getBios()
+    {
+        return $this->bios;
+    }
+
+    /**
+     * Add image
+     *
+     * @param \OSEL\UserBundle\Entity\ImgComposer $image
+     *
+     * @return Composer
+     */
+    public function addImage(\OSEL\UserBundle\Entity\ImgComposer $image)
+    {
+        $this->images[] = $image;
+
+        return $this;
+    }
+
+    /**
+     * Remove image
+     *
+     * @param \OSEL\UserBundle\Entity\ImgComposer $image
+     */
+    public function removeImage(\OSEL\UserBundle\Entity\ImgComposer $image)
+    {
+        $this->images->removeElement($image);
+    }
+
+    /**
+     * Get images
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getImages()
+    {
+        return $this->images;
     }
 }

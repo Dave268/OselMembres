@@ -310,6 +310,30 @@ class User implements AdvancedUserInterface, \Serializable
      */
     private $composers_modified;
 
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\ImgComposer", mappedBy="user")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $composerimgs;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\ImgComposer", mappedBy="lastUser")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $composerimgs_modified;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\BioComposer", mappedBy="user")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $composerbios;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\BioComposer", mappedBy="lastUser")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $composerbios_modified;
+
 
     public function __construct()
     {

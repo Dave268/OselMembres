@@ -9,12 +9,16 @@
 namespace OSEL\ScoreBundle\Controller;
 
 
+use OSEL\ScoreBundle\Entity\BioComposer;
 use OSEL\ScoreBundle\Entity\Composer;
+use OSEL\ScoreBundle\Entity\ImgComposer;
 use OSEL\ScoreBundle\Entity\Parts;
 use OSEL\ScoreBundle\Entity\Score;
 use OSEL\ScoreBundle\Form\ActivatePartType;
 use OSEL\ScoreBundle\Form\ActivateScoreType;
+use OSEL\ScoreBundle\Form\BioComposerType;
 use OSEL\ScoreBundle\Form\ComposerType;
+use OSEL\ScoreBundle\Form\ImgComposerType;
 use OSEL\ScoreBundle\Form\PartsType;
 use OSEL\ScoreBundle\Form\ScoreType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -93,7 +97,13 @@ class ScoreController extends Controller
             $em = $this->getDoctrine()->getManager();
 
             if (!$this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
-                $score->setUser($this->container->get('security.token_storage')->getToken()->getUser());
+                if($score->getId() === null)
+                {
+                    $score->setUser($this->container->get('security.token_storage')->getToken()->getUser());
+                }
+                else{
+                    $score->setLastUser($this->container->get('security.token_storage')->getToken()->getUser());
+                }
             }
 
             $root = $this->container->getParameter('kernel.project_dir') . "/web/";
@@ -155,7 +165,7 @@ class ScoreController extends Controller
             $em = $this->getDoctrine()->getManager();
 
             if (!$this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
-                if($composer->getId() !== null)
+                if($composer->getId() === null)
                 {
                     $composer->setUser($this->container->get('security.token_storage')->getToken()->getUser());
                 }
@@ -558,6 +568,110 @@ class ScoreController extends Controller
 
             return $this->get('templating')->renderResponse('ScoreBundle:composer:view.html.twig', array(
                 'composer' => $composer));
+    }
+
+    public function addComposerBioAction($idcomposer, $id, Request $request)
+    {
+        if(!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')){
+            return $this->redirectToRoute('osel_core_home');
+        }
+
+        if($id <= 0){
+            $bio = new BioComposer();
+        }
+        else{
+            $bio = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:BioComposer')->find($id);
+        }
+
+        $bioForm = $this->createForm(BioComposerType::class, $bio);
+
+        if($request->isMethod('POST') && $bioForm->handleRequest($request)->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $composer = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Composer')->find($idcomposer);
+            $bio->setComposer($composer);
+
+            if (!$this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
+                if($bio->getId() === null)
+                {
+                    $bio->setUser($this->container->get('security.token_storage')->getToken()->getUser());
+                }
+                else{
+                    $bio->setLastUser($this->container->get('security.token_storage')->getToken()->getUser());
+                }
+            }
+
+
+            if($bio->getId() !== null)
+            {
+                $request->getSession()->getFlashBag()->add('success', 'Le texte a bien été modifié');
+            }
+            else{
+                $request->getSession()->getFlashBag()->add('success', 'Le texte a bien été ajouté');
+            }
+            $em->persist($bio);
+            $em->flush();
+
+
+
+            return $this->redirectToRoute('osel_score_view_composer', array(
+                'id' => $idcomposer
+            ));
+
+        }
+
+        return $this->get('templating')->renderResponse('ScoreBundle:score:bioForm.html.twig', array(
+            'form'    => $bioForm->createView()
+        ));
+
+    }
+
+    public function addComposerImgAction($idcomposer, Request $request)
+    {
+        if(!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')){
+            return $this->redirectToRoute('osel_core_home');
+        }
+
+        $image = new ImgComposer();
+        $imageForm = $this->createForm(ImgComposerType::class, $image);
+
+        if($request->isMethod('POST') && $imageForm->handleRequest($request)->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $composer = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Composer')->find($idcomposer);
+            $image->setComposer($composer);
+            $image->uploadImage();
+
+            if (!$this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
+                if($image->getId() === null)
+                {
+                    $image->setUser($this->container->get('security.token_storage')->getToken()->getUser());
+                }
+                else{
+                    $image->setLastUser($this->container->get('security.token_storage')->getToken()->getUser());
+                }
+            }
+
+            if($image->getId() !== null)
+            {
+                $request->getSession()->getFlashBag()->add('success', 'L\'image a bien été modifié');
+            }
+            else{
+                $request->getSession()->getFlashBag()->add('success', 'L\'image a bien été ajouté');
+            }
+            $em->persist($image);
+            $em->flush();
+
+
+
+            return $this->redirectToRoute('osel_score_view_composer', array(
+                'id' => $idcomposer
+            ));
+
+        }
+
+        return $this->get('templating')->renderResponse('ScoreBundle:score:imgform.html.twig', array(
+            'form'    => $imageForm->createView()
+        ));
+
     }
 
 }

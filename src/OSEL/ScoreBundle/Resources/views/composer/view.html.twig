@@ -32,9 +32,12 @@
                         <div class="col-md-6"><strong>décédé(e) le:</strong></div>
                         <div class="col-md-6"><span>{% if composer.dateDeath is not null %}{{ composer.dateDeath }}{% else %}-{% endif %}</span></div>
                     </div>
+                <br>
                     <div class="row">
                         <div class="col-md-12 content-right">
                             <a href="{{ path('osel_score_add_composer', {'id' : composer.id}) }}" class="btn btn-primary form-btn" >Modifier</a>
+                            <a href="{{ path('osel_score_add_composer_bio', {'idcomposer' : composer.id}) }}" class="btn btn-primary form-btn" >Ajouter un Texte</a>
+                            <a href="{{ path('osel_score_add_composer_image', {'idcomposer' : composer.id}) }}" class="btn btn-primary form-btn" >Ajouter une image</a>
                         </div>
                     </div>
                 </div>

@@ -104,6 +104,18 @@ class Composer
      */
     private $lastUser;
 
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\UserBundle\Entity\BioComposer", mappedBy="composer")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $bios;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\UserBundle\Entity\ImgComposer", mappedBy="composer")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $images;
+
 
     /**
      * Constructor
@@ -425,5 +437,53 @@ class Composer
     public function getLastUser()
     {
         return $this->lastUser;
+    }
+
+    /**
+     * Set dateBirth
+     *
+     * @param string $dateBirth
+     *
+     * @return Composer
+     */
+    public function setDateBirth($dateBirth)
+    {
+        $this->dateBirth = $dateBirth;
+
+        return $this;
+    }
+
+    /**
+     * Get dateBirth
+     *
+     * @return string
+     */
+    public function getDateBirth()
+    {
+        return $this->dateBirth;
+    }
+
+    /**
+     * Set dateDeath
+     *
+     * @param string $dateDeath
+     *
+     * @return Composer
+     */
+    public function setDateDeath($dateDeath)
+    {
+        $this->dateDeath = $dateDeath;
+
+        return $this;
+    }
+
+    /**
+     * Get dateDeath
+     *
+     * @return string
+     */
+    public function getDateDeath()
+    {
+        return $this->dateDeath;
     }
 }
