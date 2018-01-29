@@ -119,12 +119,12 @@ $.fn.upload = function(remote, successFn, progressFn, formFn, numFilesFn, iconFn
 
                             // if we passed a progress element
                         } else if (progressFn) {
-                            //$(progressFn).val(value);
-                            $(progressFn).attr("aria-valuenow", value);
-                            $(progressFn).html(value + "%");
-                            $(progressFn).css({
-                                'width': value + '%'
-                            });
+                            $(progressFn).val(value);
+                            //$(progressFn + ":first-child").attr("aria-valuenow", value);
+                            //$(progressFn).attr("value", value);
+                            //$(progressFn).css({
+                            //    'width': value + '%'
+                            //});
                             console.log("value" + value);
                         }
                     }, false);

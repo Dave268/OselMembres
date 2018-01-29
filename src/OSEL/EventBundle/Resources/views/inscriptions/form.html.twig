@@ -1,6 +1,6 @@
 {# src/Osel/EventBundle/Resources/views/events/form.html.twig #}
 
-{% extends "OSELCoreBundle::layout.html.twig" %}
+{% extends "OSELCoreBundle:Core:layout.html.twig" %}
 
 			{% block head %}
                 <link rel="stylesheet" href="{{ asset('css/Pretty-Registration-Form.css') }}">
@@ -154,6 +154,11 @@
     </div>
 </div>
 
+
+
+{% endblock %}
+
+{% block script %}
     <script type="text/javascript">
         $(function () {
             var dateOne = $('#datetimepicker1').children('input').val();
@@ -173,5 +178,5 @@
             });
         });
     </script>
-
 {% endblock %}
+

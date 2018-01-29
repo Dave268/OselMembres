@@ -19,6 +19,7 @@ class ScoreRepository extends \Doctrine\ORM\EntityRepository
         ;
 
         $qb->where($qb->expr()->in('c.id', $idComposer));
+        $qb->orderBy('a.title');
 
         return $qb
             ->getQuery()
@@ -36,6 +37,7 @@ class ScoreRepository extends \Doctrine\ORM\EntityRepository
             ->setParameter('id', $idComposer)
             ->andWhere('a.actif = :actif')
             ->setParameter('actif', true)
+            ->orderBy('a.title');
         ;
 
         return $qb

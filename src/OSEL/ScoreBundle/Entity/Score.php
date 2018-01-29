@@ -119,7 +119,6 @@ class Score
     public function increase()
     {
         $this->getComposer()->increaseScore();
-        $this->getComposer()->setactif(true);
     }
 
     /**
@@ -128,10 +127,6 @@ class Score
     public function decrease()
     {
         $this->getComposer()->decreaseScore();
-        if($this->getComposer()->getNbScores >= 0)
-        {
-            $this->getComposer()->setactif(false);
-        }
     }
 
 

@@ -136,6 +136,28 @@ class Composer
     }
 
 
+    public function increaseScore()
+    {
+        $this->nbScores++;
+
+        if($this->nbScores > 0)
+        {
+            $this->actif = true;
+        }
+    }
+
+    public function decreaseScore()
+    {
+
+        $this->nbScores--;
+
+        if($this->nbScores == 0)
+        {
+            $this->actif = false;
+        }
+    }
+
+    
 
     /**
      * Get id
@@ -151,6 +173,7 @@ class Composer
      * Set composer
      *
      * @param string $composer
+     *
      * @return Composer
      */
     public function setComposer($composer)
@@ -171,52 +194,6 @@ class Composer
     }
 
     /**
-     * Set dateAdd
-     *
-     * @param \DateTime $dateAdd
-     * @return Composer
-     */
-    public function setDateAdd($dateAdd)
-    {
-        $this->dateAdd = $dateAdd;
-
-        return $this;
-    }
-
-    /**
-     * Get dateAdd
-     *
-     * @return \DateTime
-     */
-    public function getDateAdd()
-    {
-        return $this->dateAdd;
-    }
-
-    /**
-     * Set dateUpdate
-     *
-     * @param \DateTime $dateUpdate
-     * @return Composer
-     */
-    public function setDateUpdate($dateUpdate)
-    {
-        $this->dateUpdate = $dateUpdate;
-
-        return $this;
-    }
-
-    /**
-     * Get dateUpdate
-     *
-     * @return \DateTime
-     */
-    public function getDateUpdate()
-    {
-        return $this->dateUpdate;
-    }
-
-    /**
      * Set name
      *
      * @param string $name
@@ -225,19 +202,7 @@ class Composer
      */
     public function setName($name)
     {
-        if($temp = explode(' ', $name))
-        {
-            for($i = 0; $i < count($temp) ; $i++)
-            {
-                $temp[$i] = ucfirst(strtolower($temp[$i]));
-            }
-
-            $this->name = implode(' ', $temp);
-        }
-        else
-        {
-            $this->name = ucfirst(strtolower($name));
-        }
+        $this->name = $name;
 
         return $this;
     }
@@ -261,21 +226,7 @@ class Composer
      */
     public function setLastName($lastName)
     {
-        if($temp = explode(' ', $lastName))
-        {
-            for($i = 0; $i < count($temp) ; $i++)
-            {
-                $temp[$i] = ucfirst(strtolower($temp[$i]));
-            }
-            $this->lastName = implode(' ', $temp);
-        }
-        else
-        {
-            $this->lastName = ucfirst(strtolower($lastName));
-        }
-
-
-
+        $this->lastName = $lastName;
 
         return $this;
     }
@@ -290,153 +241,52 @@ class Composer
         return $this->lastName;
     }
 
-    public function increaseScore()
-    {
-        $this->nbScores++;
-
-        if($this->nbScores > 0)
-        {
-            $this->setActif(true);
-        }
-    }
-
-    public function decreaseScore()
-    {
-        $this->nbScores--;
-        if($this->nbScores <= 0)
-        {
-            $this->setActif(false);
-        }
-    }
-
     /**
-     * Set nbScores
+     * Set dateAdd
      *
-     * @param integer $nbScores
+     * @param \DateTime $dateAdd
      *
      * @return Composer
      */
-    public function setNbScores($nbScores)
+    public function setDateAdd($dateAdd)
     {
-        $this->nbScores = $nbScores;
+        $this->dateAdd = $dateAdd;
 
         return $this;
     }
 
     /**
-     * Get nbScores
+     * Get dateAdd
      *
-     * @return integer
+     * @return \DateTime
      */
-    public function getNbScores()
+    public function getDateAdd()
     {
-        return $this->nbScores;
+        return $this->dateAdd;
     }
 
     /**
-     * Add score
+     * Set dateUpdate
      *
-     * @param \OSEL\ScoreBundle\Entity\Score $score
+     * @param \DateTime $dateUpdate
      *
      * @return Composer
      */
-    public function addScore(\OSEL\ScoreBundle\Entity\Score $score)
+    public function setDateUpdate($dateUpdate)
     {
-        $this->scores[] = $score;
+        $this->dateUpdate = $dateUpdate;
 
         return $this;
     }
 
     /**
-     * Remove score
+     * Get dateUpdate
      *
-     * @param \OSEL\ScoreBundle\Entity\Score $score
+     * @return \DateTime
      */
-    public function removeScore(\OSEL\ScoreBundle\Entity\Score $score)
+    public function getDateUpdate()
     {
-        $this->scores->removeElement($score);
-    }
-
-    /**
-     * Get scores
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getScores()
-    {
-        return $this->scores;
-    }
-
-    /**
-     * Set actif
-     *
-     * @param boolean $actif
-     *
-     * @return Composer
-     */
-    public function setActif($actif)
-    {
-        $this->actif = $actif;
-
-        return $this;
-    }
-
-    /**
-     * Get actif
-     *
-     * @return boolean
-     */
-    public function getActif()
-    {
-        return $this->actif;
-    }
-
-    /**
-     * Set user
-     *
-     * @param \OSEL\UserBundle\Entity\User $user
-     *
-     * @return Composer
-     */
-    public function setUser(\OSEL\UserBundle\Entity\User $user = null)
-    {
-        $this->user = $user;
-
-        return $this;
-    }
-
-    /**
-     * Get user
-     *
-     * @return \OSEL\UserBundle\Entity\User
-     */
-    public function getUser()
-    {
-        return $this->user;
-    }
-
-    /**
-     * Set lastUser
-     *
-     * @param \OSEL\UserBundle\Entity\User $lastUser
-     *
-     * @return Composer
-     */
-    public function setLastUser(\OSEL\UserBundle\Entity\User $lastUser = null)
-    {
-        $this->lastUser = $lastUser;
-
-        return $this;
-    }
-
-    /**
-     * Get lastUser
-     *
-     * @return \OSEL\UserBundle\Entity\User
-     */
-    public function getLastUser()
-    {
-        return $this->lastUser;
+        return $this->dateUpdate;
     }
 
     /**
@@ -488,13 +338,143 @@ class Composer
     }
 
     /**
-     * Add bio
+     * Set nbScores
      *
-     * @param \OSEL\UserBundle\Entity\BioComposer $bio
+     * @param integer $nbScores
      *
      * @return Composer
      */
-    public function addBio(\OSEL\UserBundle\Entity\BioComposer $bio)
+    public function setNbScores($nbScores)
+    {
+        $this->nbScores = $nbScores;
+
+        return $this;
+    }
+
+    /**
+     * Get nbScores
+     *
+     * @return integer
+     */
+    public function getNbScores()
+    {
+        return $this->nbScores;
+    }
+
+    /**
+     * Set actif
+     *
+     * @param boolean $actif
+     *
+     * @return Composer
+     */
+    public function setActif($actif)
+    {
+        $this->actif = $actif;
+
+        return $this;
+    }
+
+    /**
+     * Get actif
+     *
+     * @return boolean
+     */
+    public function getActif()
+    {
+        return $this->actif;
+    }
+
+    /**
+     * Add score
+     *
+     * @param \OSEL\ScoreBundle\Entity\Score $score
+     *
+     * @return Composer
+     */
+    public function addScore(\OSEL\ScoreBundle\Entity\Score $score)
+    {
+        $this->scores[] = $score;
+
+        return $this;
+    }
+
+    /**
+     * Remove score
+     *
+     * @param \OSEL\ScoreBundle\Entity\Score $score
+     */
+    public function removeScore(\OSEL\ScoreBundle\Entity\Score $score)
+    {
+        $this->scores->removeElement($score);
+    }
+
+    /**
+     * Get scores
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getScores()
+    {
+        return $this->scores;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \OSEL\UserBundle\Entity\User $user
+     *
+     * @return Composer
+     */
+    public function setUser(\OSEL\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \OSEL\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set lastUser
+     *
+     * @param \OSEL\UserBundle\Entity\User $lastUser
+     *
+     * @return Composer
+     */
+    public function setLastUser(\OSEL\UserBundle\Entity\User $lastUser = null)
+    {
+        $this->lastUser = $lastUser;
+
+        return $this;
+    }
+
+    /**
+     * Get lastUser
+     *
+     * @return \OSEL\UserBundle\Entity\User
+     */
+    public function getLastUser()
+    {
+        return $this->lastUser;
+    }
+
+    /**
+     * Add bio
+     *
+     * @param \OSEL\ScoreBundle\Entity\BioComposer $bio
+     *
+     * @return Composer
+     */
+    public function addBio(\OSEL\ScoreBundle\Entity\BioComposer $bio)
     {
         $this->bios[] = $bio;
 
@@ -504,9 +484,9 @@ class Composer
     /**
      * Remove bio
      *
-     * @param \OSEL\UserBundle\Entity\BioComposer $bio
+     * @param \OSEL\ScoreBundle\Entity\BioComposer $bio
      */
-    public function removeBio(\OSEL\UserBundle\Entity\BioComposer $bio)
+    public function removeBio(\OSEL\ScoreBundle\Entity\BioComposer $bio)
     {
         $this->bios->removeElement($bio);
     }
@@ -524,11 +504,11 @@ class Composer
     /**
      * Add image
      *
-     * @param \OSEL\UserBundle\Entity\ImgComposer $image
+     * @param \OSEL\ScoreBundle\Entity\ImgComposer $image
      *
      * @return Composer
      */
-    public function addImage(\OSEL\UserBundle\Entity\ImgComposer $image)
+    public function addImage(\OSEL\ScoreBundle\Entity\ImgComposer $image)
     {
         $this->images[] = $image;
 
@@ -538,9 +518,9 @@ class Composer
     /**
      * Remove image
      *
-     * @param \OSEL\UserBundle\Entity\ImgComposer $image
+     * @param \OSEL\ScoreBundle\Entity\ImgComposer $image
      */
-    public function removeImage(\OSEL\UserBundle\Entity\ImgComposer $image)
+    public function removeImage(\OSEL\ScoreBundle\Entity\ImgComposer $image)
     {
         $this->images->removeElement($image);
     }

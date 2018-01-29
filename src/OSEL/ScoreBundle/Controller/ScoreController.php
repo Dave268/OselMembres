@@ -368,6 +368,31 @@ class ScoreController extends Controller
 
     }
 
+    public function deleteScoreAction($id, Request $request)
+    {
+            $score = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Score')->find($id);
+            $em = $this->getDoctrine()->getManager();
+            $path = $this->container->getParameter('kernel.project_dir') . "/web/" . $score->getPath();
+
+            foreach ($score->getParts() as $part)
+            {
+                unlink($path . "/" . $part->getName());
+                $em->remove($part);
+            }
+
+            rmdir($path);
+            $em->remove($score);
+            $em->flush();
+
+            $request->getSession()->getFlashBag()->add('success', 'La partition suivante a été supprimé: ' . $score->getTitle());
+
+
+            $referer = $request->headers->get('referer');;
+
+        return new RedirectResponse($referer);
+
+    }
+
     public function downloadPartAction($id, Request $request)
     {
         if ($this->get('security.authorization_checker')->isGranted('ROLE_USER'))
@@ -511,6 +536,34 @@ class ScoreController extends Controller
         return $this->render('ScoreBundle:score:activate.html.twig', array(
             'form' => $form->createView()
         ));
+    }
+
+    public function resetScoresAction(Request $request)
+    {
+        $redirect = new RedirectResponse($request->headers->get('referer'));
+
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')) {
+            return $redirect;
+        }
+
+        $scores = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Score')->findAll();
+        $parts = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Parts')->findAll();
+        $em = $this->getDoctrine()->getManager();
+
+                foreach ($parts as $part){
+                    $part->setActif(false);
+                    $em->persist($part);
+                }
+                foreach ($scores as $score){
+                    $score->setActif(false);
+                    $em->persist($score);
+                }
+                $em->flush();
+
+            $request->getSession()->getFlashBag()->add('success', 'Tous le morceaux ont été désactivé. Les membres peuvent, pour le moment, rien télécharger');
+
+
+        return $this->redirectToRoute('osel_score_gestion');
     }
 
     public function modifyPartAction($id, Request $request)

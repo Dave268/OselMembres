@@ -1672,11 +1672,11 @@ class User implements AdvancedUserInterface, \Serializable
     /**
      * Add score
      *
-     * @param \OSEL\ScoreheetBundle\Entity\Score $score
+     * @param \OSEL\ScoreBundle\Entity\Score $score
      *
      * @return User
      */
-    public function addScore(\OSEL\ScoreheetBundle\Entity\Score $score)
+    public function addScore(\OSEL\ScoreBundle\Entity\Score $score)
     {
         $this->scores[] = $score;
 
@@ -1686,9 +1686,9 @@ class User implements AdvancedUserInterface, \Serializable
     /**
      * Remove score
      *
-     * @param \OSEL\ScoreheetBundle\Entity\Score $score
+     * @param \OSEL\ScoreBundle\Entity\Score $score
      */
-    public function removeScore(\OSEL\ScoreheetBundle\Entity\Score $score)
+    public function removeScore(\OSEL\ScoreBundle\Entity\Score $score)
     {
         $this->scores->removeElement($score);
     }

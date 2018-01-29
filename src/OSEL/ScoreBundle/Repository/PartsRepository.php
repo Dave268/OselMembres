@@ -39,6 +39,7 @@ class PartsRepository extends \Doctrine\ORM\EntityRepository
         ;
 
         $qb->where($qb->expr()->in('c.id', $id));
+        $qb->orderBy('a.originalName');
 
         return $qb
             ->getQuery()
@@ -57,6 +58,7 @@ class PartsRepository extends \Doctrine\ORM\EntityRepository
         ;
 
         $qb->andWhere($qb->expr()->in('c.id', $id));
+        $qb->orderBy('a.originalName');
 
         return $qb
             ->getQuery()

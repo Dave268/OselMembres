@@ -1,6 +1,6 @@
 {# src/Osel/EventBundle/Resources/views/inscriptions/index.html.twig #}
 
-{% extends "OSELCoreBundle::layout.html.twig" %}
+{% extends "OSELCoreBundle:Core:layout.html.twig" %}
 
 {% block title %}
     Liste des inscriptions
@@ -175,17 +175,20 @@
             </div>
         </div>
     </div>
+
+
+
+
+{% endblock %}
+{% block script %}
     <script>
-        $(document).ready(function() {
+    $(document).ready(function() {
 
-            $(".selectMembres").change(function () {
-                var $href = $(this).children(":selected").attr('value');
+        $(".selectMembres").change(function () {
+            var $href = $(this).children(":selected").attr('value');
 
-                window.location.href = $href;
-            });
+            window.location.href = $href;
         });
-    </script>
-
-
-
+    });
+</script>
 {% endblock %}

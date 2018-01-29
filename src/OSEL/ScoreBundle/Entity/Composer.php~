@@ -105,13 +105,13 @@ class Composer
     private $lastUser;
 
     /**
-     * @ORM\OneToMany(targetEntity="OSEL\UserBundle\Entity\BioComposer", mappedBy="composer")
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\BioComposer", mappedBy="composer")
      * @ORM\JoinColumn(nullable=true)
      */
     private $bios;
 
     /**
-     * @ORM\OneToMany(targetEntity="OSEL\UserBundle\Entity\ImgComposer", mappedBy="composer")
+     * @ORM\OneToMany(targetEntity="OSEL\ScoreBundle\Entity\ImgComposer", mappedBy="composer")
      * @ORM\JoinColumn(nullable=true)
      */
     private $images;
@@ -136,6 +136,28 @@ class Composer
     }
 
 
+    public function increaseScore()
+    {
+        $this->nbScores++;
+
+        if($this->nbScores > 0)
+        {
+            $this->actif = true;
+        }
+    }
+
+    public function decreaseScore()
+    {
+
+        $this->nbScores--;
+
+        if($this->nbScores == 0)
+        {
+            $this->actif = false;
+        }
+    }
+
+    
 
     /**
      * Get id
@@ -151,6 +173,7 @@ class Composer
      * Set composer
      *
      * @param string $composer
+     *
      * @return Composer
      */
     public function setComposer($composer)
@@ -171,52 +194,6 @@ class Composer
     }
 
     /**
-     * Set dateAdd
-     *
-     * @param \DateTime $dateAdd
-     * @return Composer
-     */
-    public function setDateAdd($dateAdd)
-    {
-        $this->dateAdd = $dateAdd;
-
-        return $this;
-    }
-
-    /**
-     * Get dateAdd
-     *
-     * @return \DateTime
-     */
-    public function getDateAdd()
-    {
-        return $this->dateAdd;
-    }
-
-    /**
-     * Set dateUpdate
-     *
-     * @param \DateTime $dateUpdate
-     * @return Composer
-     */
-    public function setDateUpdate($dateUpdate)
-    {
-        $this->dateUpdate = $dateUpdate;
-
-        return $this;
-    }
-
-    /**
-     * Get dateUpdate
-     *
-     * @return \DateTime
-     */
-    public function getDateUpdate()
-    {
-        return $this->dateUpdate;
-    }
-
-    /**
      * Set name
      *
      * @param string $name
@@ -225,19 +202,7 @@ class Composer
      */
     public function setName($name)
     {
-        if($temp = explode(' ', $name))
-        {
-            for($i = 0; $i < count($temp) ; $i++)
-            {
-                $temp[$i] = ucfirst(strtolower($temp[$i]));
-            }
-
-            $this->name = implode(' ', $temp);
-        }
-        else
-        {
-            $this->name = ucfirst(strtolower($name));
-        }
+        $this->name = $name;
 
         return $this;
     }
@@ -261,21 +226,7 @@ class Composer
      */
     public function setLastName($lastName)
     {
-        if($temp = explode(' ', $lastName))
-        {
-            for($i = 0; $i < count($temp) ; $i++)
-            {
-                $temp[$i] = ucfirst(strtolower($temp[$i]));
-            }
-            $this->lastName = implode(' ', $temp);
-        }
-        else
-        {
-            $this->lastName = ucfirst(strtolower($lastName));
-        }
-
-
-
+        $this->lastName = $lastName;
 
         return $this;
     }
@@ -290,23 +241,100 @@ class Composer
         return $this->lastName;
     }
 
-    public function increaseScore()
+    /**
+     * Set dateAdd
+     *
+     * @param \DateTime $dateAdd
+     *
+     * @return Composer
+     */
+    public function setDateAdd($dateAdd)
     {
-        $this->nbScores++;
+        $this->dateAdd = $dateAdd;
 
-        if($this->nbScores > 0)
-        {
-            $this->setActif(true);
-        }
+        return $this;
     }
 
-    public function decreaseScore()
+    /**
+     * Get dateAdd
+     *
+     * @return \DateTime
+     */
+    public function getDateAdd()
     {
-        $this->nbScores--;
-        if($this->nbScores <= 0)
-        {
-            $this->setActif(false);
-        }
+        return $this->dateAdd;
+    }
+
+    /**
+     * Set dateUpdate
+     *
+     * @param \DateTime $dateUpdate
+     *
+     * @return Composer
+     */
+    public function setDateUpdate($dateUpdate)
+    {
+        $this->dateUpdate = $dateUpdate;
+
+        return $this;
+    }
+
+    /**
+     * Get dateUpdate
+     *
+     * @return \DateTime
+     */
+    public function getDateUpdate()
+    {
+        return $this->dateUpdate;
+    }
+
+    /**
+     * Set dateBirth
+     *
+     * @param string $dateBirth
+     *
+     * @return Composer
+     */
+    public function setDateBirth($dateBirth)
+    {
+        $this->dateBirth = $dateBirth;
+
+        return $this;
+    }
+
+    /**
+     * Get dateBirth
+     *
+     * @return string
+     */
+    public function getDateBirth()
+    {
+        return $this->dateBirth;
+    }
+
+    /**
+     * Set dateDeath
+     *
+     * @param string $dateDeath
+     *
+     * @return Composer
+     */
+    public function setDateDeath($dateDeath)
+    {
+        $this->dateDeath = $dateDeath;
+
+        return $this;
+    }
+
+    /**
+     * Get dateDeath
+     *
+     * @return string
+     */
+    public function getDateDeath()
+    {
+        return $this->dateDeath;
     }
 
     /**
@@ -331,6 +359,30 @@ class Composer
     public function getNbScores()
     {
         return $this->nbScores;
+    }
+
+    /**
+     * Set actif
+     *
+     * @param boolean $actif
+     *
+     * @return Composer
+     */
+    public function setActif($actif)
+    {
+        $this->actif = $actif;
+
+        return $this;
+    }
+
+    /**
+     * Get actif
+     *
+     * @return boolean
+     */
+    public function getActif()
+    {
+        return $this->actif;
     }
 
     /**
@@ -365,30 +417,6 @@ class Composer
     public function getScores()
     {
         return $this->scores;
-    }
-
-    /**
-     * Set actif
-     *
-     * @param boolean $actif
-     *
-     * @return Composer
-     */
-    public function setActif($actif)
-    {
-        $this->actif = $actif;
-
-        return $this;
-    }
-
-    /**
-     * Get actif
-     *
-     * @return boolean
-     */
-    public function getActif()
-    {
-        return $this->actif;
     }
 
     /**
@@ -440,50 +468,70 @@ class Composer
     }
 
     /**
-     * Set dateBirth
+     * Add bio
      *
-     * @param string $dateBirth
+     * @param \OSEL\ScoreBundle\Entity\BioComposer $bio
      *
      * @return Composer
      */
-    public function setDateBirth($dateBirth)
+    public function addBio(\OSEL\ScoreBundle\Entity\BioComposer $bio)
     {
-        $this->dateBirth = $dateBirth;
+        $this->bios[] = $bio;
 
         return $this;
     }
 
     /**
-     * Get dateBirth
+     * Remove bio
      *
-     * @return string
+     * @param \OSEL\ScoreBundle\Entity\BioComposer $bio
      */
-    public function getDateBirth()
+    public function removeBio(\OSEL\ScoreBundle\Entity\BioComposer $bio)
     {
-        return $this->dateBirth;
+        $this->bios->removeElement($bio);
     }
 
     /**
-     * Set dateDeath
+     * Get bios
      *
-     * @param string $dateDeath
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getBios()
+    {
+        return $this->bios;
+    }
+
+    /**
+     * Add image
+     *
+     * @param \OSEL\ScoreBundle\Entity\ImgComposer $image
      *
      * @return Composer
      */
-    public function setDateDeath($dateDeath)
+    public function addImage(\OSEL\ScoreBundle\Entity\ImgComposer $image)
     {
-        $this->dateDeath = $dateDeath;
+        $this->images[] = $image;
 
         return $this;
     }
 
     /**
-     * Get dateDeath
+     * Remove image
      *
-     * @return string
+     * @param \OSEL\ScoreBundle\Entity\ImgComposer $image
      */
-    public function getDateDeath()
+    public function removeImage(\OSEL\ScoreBundle\Entity\ImgComposer $image)
     {
-        return $this->dateDeath;
+        $this->images->removeElement($image);
+    }
+
+    /**
+     * Get images
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getImages()
+    {
+        return $this->images;
     }
 }

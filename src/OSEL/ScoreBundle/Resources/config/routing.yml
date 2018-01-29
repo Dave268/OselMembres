@@ -22,6 +22,12 @@ osel_score_delete_part:
     options:
             expose: true
 
+osel_score_delete_score:
+    path:     /supprimer-toute-la-partition/{id}
+    defaults: { _controller: ScoreBundle:Score:deleteScore, id: 0}
+    options:
+            expose: true
+
 osel_score_create_score:
     path:     /creer-partition/{id}
     defaults: { _controller: ScoreBundle:Score:createScore, id: 0}
@@ -81,3 +87,7 @@ osel_score_add_composer_bio:
 osel_score_add_composer_image:
     path:     /ajouter-une-photo-compositeur/{idcomposer}
     defaults: { _controller: ScoreBundle:Score:addComposerImg, idcomposer: 0}
+
+osel_score_reset_scores:
+    path:     /reset-scores
+    defaults: { _controller: ScoreBundle:Score:resetScores}

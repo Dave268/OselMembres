@@ -22,6 +22,7 @@
                         <div class="btn-group" role="group">
                             <button class="btn btn-success" type="button" onclick="window.location.href='{{ path('osel_score_create_score') }}'"><i class="glyphicon glyphicon-plus"></i> Ajouter des partitions</button>
                             <button class="btn btn-success" type="button" onclick="window.location.href='{{ path('osel_score_add_composer') }}'"><i class="glyphicon glyphicon-plus"></i> Ajouter un Compositeur</button>
+                            <button class="btn btn-warning" type="button" onclick="window.location.href='{{ path('osel_score_reset_scores') }}'"><i class="glyphicon glyphicon-minus"></i> Désactiver toutes les partitions</button>
                         </div>
                     </div>
                     <form>
@@ -81,7 +82,7 @@
                             {% endfor %}
                         {% elseif scores is not null %}
                             {% for s in scores%}
-                                <li class="thread"><span class="time">{{ s.nbParts }} pcs</span><span class="title"><a href="{{ path('osel_score_gestion', {'letter' : letter, 'idComposer': s.composer.id, 'idScore': s.id}) }}" style="color:#666666;">{{ s.title }}</a></span><span class="icon"> <a href="{{ path('osel_score_activate_score', {'id' : s.id}) }}" class="subscribe activate"><i class="glyphicon {% if s.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a><a href="{{ path('osel_score_create_score', {'id' : s.id}) }}" class="flag"><i class="glyphicon glyphicon-pencil"></i></a></span></li>
+                                <li class="thread"><span class="time">{{ s.nbParts }} pcs</span><span class="title"><a href="{{ path('osel_score_gestion', {'letter' : letter, 'idComposer': s.composer.id, 'idScore': s.id}) }}" style="color:#666666;">{{ s.title }}</a></span><span class="icon"> <a href="{{ path('osel_score_activate_score', {'id' : s.id}) }}" class="subscribe activate"><i class="glyphicon {% if s.actif %}glyphicon-check{% else %}glyphicon-unchecked{% endif %}"></i></a><a href="{{ path('osel_score_create_score', {'id' : s.id}) }}" class="flag"><i class="glyphicon glyphicon-pencil"></i></a><a data-href="{{ path('osel_score_delete_score', {'id': s.id}) }}" data-toggle="modal" data-target="#confirm-delete" class="flag"><i class="glyphicon glyphicon-trash"></i></a></span></li>
                             {% else %}
                                 <li>pas de morceaux pour ce compositeur!!</li>
                             {% endfor %}

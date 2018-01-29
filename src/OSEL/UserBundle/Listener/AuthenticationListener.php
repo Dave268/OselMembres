@@ -61,7 +61,6 @@ class AuthenticationListener
             {
                 $login = new Login();
 
-
                 $login->setName($user->getName() . ' ' . $user->getLastname());
                 $user->addLogin($login);
                 $this->em->persist($user);

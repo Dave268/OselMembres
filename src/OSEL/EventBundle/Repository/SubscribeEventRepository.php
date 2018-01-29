@@ -105,7 +105,7 @@ class SubscribeEventRepository extends \Doctrine\ORM\EntityRepository
             ->leftJoin('a.event', 'c')
             ->addSelect('c');
         $qb->where($qb->expr()->in('c.id', $id));
-        $qb->where($qb->expr()->in('a.presence', true));
+        $qb->andWhere($qb->expr()->in('a.presence', true));
 
         $totalPrice = 0;
         $totalPaid = 0;

@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * News
  *
- * @ORM\Table(name="osel_media_news")
+ * @ORM\Table(name="osel_news_news")
  * @ORM\Entity(repositoryClass="OSEL\NewsBundle\Repository\NewsRepository")
  */
 class News
