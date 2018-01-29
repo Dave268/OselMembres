@@ -2,324 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b44466-ec2e-4594-a066-e5ecf12552b1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/maintenance/maintenance.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/maintenance/test.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Listeners/MaintenanceListener.php" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change beforePath="$PROJECT_DIR$/.idea/OselMembres.iml" afterPath="$PROJECT_DIR$/.idea/OselMembres.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Form/ActivateEventType.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/public/js/event_activate.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/head.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/head.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php" />
       <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/SubscribeEventRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/SubscribeEventRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/public/images/places/83ec195cdc4adc86f7bcea41055784f3jpeg" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/public/images/places/83ec195cdc4adc86f7bcea41055784f3jpeg" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/config/routing.yml" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/public/js/payement.js" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/public/js/payement.js" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/view.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/view.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/form.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/form.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index-simple.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index-simple.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/form.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/form.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/listplaces.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/listplaces.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/view.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/view.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/ImageNews.php" afterPath="$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/ImageNews.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/News.php" afterPath="$PROJECT_DIR$/src/OSEL/NewsBundle/Entity/News.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Controller/ScoreController.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Controller/ScoreController.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/BioComposer.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/BioComposer.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Composer.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Composer.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/ImgComposer.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/ImgComposer.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Parts.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Parts.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Score.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Score.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/ActivatePartType.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/ActivatePartType.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/ActivateScoreType.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/ActivateScoreType.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/BioComposerType.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/BioComposerType.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/ComposerType.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/ComposerType.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/ImgComposerType.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/ImgComposerType.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/PartsType.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/PartsType.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/BioComposerRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/BioComposerRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/ImgComposerRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/ImgComposerRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/PartsRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/PartsRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/ScoreRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/ScoreRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/activate.js" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/activate.js" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/fileUpload.js" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/fileUpload.js" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/search.js" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/search.js" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/composer/view.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/composer/view.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/activate.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/activate.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/bioForm.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/bioForm.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/composerForm.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/composerForm.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/gestion.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/gestion.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/imgform.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/imgform.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/partForm.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/partForm.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/scoreForm.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/scoreForm.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/uploadForm.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/uploadForm.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Listener/AuthenticationListener.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Listener/AuthenticationListener.php" />
-      <change beforePath="$PROJECT_DIR$/web/app.php" afterPath="$PROJECT_DIR$/web/app.php" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Basson_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Basson_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Caisse_Claire.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Clarinette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Clarinette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Cor_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Cor_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Cor_3.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Cor_4.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Flute_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Harpe.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Hautbois_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Hautbois_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Saxophone_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Timbales.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Violon_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Violon_1_copy.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Violon_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 1/Bizet_Georges_L'Arlésienne_Suite_1_Violoncelle.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Basson_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Basson_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Clarinette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Clarinette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Cor_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Cor_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Cor_3.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Cor_4.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Flute_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Harpe.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Hautbois_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Hautbois_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Percussions.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Saxophone_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Bizet Georges/L'Arlésienne Suite 2/Bizet_Georges_L'Arlésienne_Suite_2_Timbales.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Basson_1&amp;2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Basson_3&amp;4.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Batterie_&amp;_Cymballes.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Batterie_Basque.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Clarinettes.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Contrebasse.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Cornets.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Cors_1&amp;2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Cors_3&amp;4.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Flutes.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Harpe_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Harpe_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Hautbois_1&amp;2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Piccolo.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Timbales.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Triangle.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Trombone_3_&amp;_Tuba.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Trombonne_1&amp;2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Trompettes.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Violon_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Violon_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chabrier Emmanuel/España/Chabrier_Emmanuel_España_Violoncelle.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Basson_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Basson_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Celesta.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Clarinette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Clarinette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Clarinette_Piccolo.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Contrebasse.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Cor_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Cor_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Cor_3.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Cor_4.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Cor_4_copy.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Flute_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Flute_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Grosse_Caisse.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Harpe.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Hautbois_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Hautbois_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Piccolo.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Tambour_Militaire.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Timbales.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trombone_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trombone_1_copy.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trombone_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trombone_2_copy.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trombonne_3.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trompette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trompette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Trompette_3.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Tuba.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Violon_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Violon_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Violoncelle.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Chostakovitch Dmitri/5eme symphonie/Chostakovitch_Dmitri_5eme_symphonie_Xylophone.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Basson_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Basson_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Celesta.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Clarinette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Clarinette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Contrebasse.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Cor_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Cor_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Cor_3.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Cor_3_copy.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Cor_Anglé.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Flute_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Flute_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Harpe.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Hautbois_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Hautbois_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Percussions.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Piano.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Picolo.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Timbales.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Trombone_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Trombone_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Trombonne_3.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Trompette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Trompette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Trompette_3.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Tuba.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Violon_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Violon_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/De Falla Manuel/El sombrero de tres picos/De_Falla_Manuel_El_sombrero_de_tres_picos_Violoncelle.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Basson.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Clarinette.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Contrebasse.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Cors.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Flute.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Harpe.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Hautbois.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Percussions.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Trombones.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Trompette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Violon_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Violon_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Dukas Paul/L'Apprenti Sorcier/Dukas_Paul_L'Apprenti_Sorcier_Violoncelle.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Bassons.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Clarinette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Clarinette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Cor_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Cor_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Flutes.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Grosse_Caisse.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Hautbois.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Percussions.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Picolo.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Timbales.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Trombone_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Trombone_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Trombonne_3.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Trompette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Trompette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Violon_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Violon_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Giménez Gerónimo/La boda de Luis Alonso/Giménez_Gerónimo_La_boda_de_Luis_Alonso_Violoncelle.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Basson_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Bassons.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Clarinette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Clarinette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Contrebasse.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Cor_1_F.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Cor_2_F.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Cor_3_F.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Cor_4_F.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Cor_Anglé.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Cornets.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Flute_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Flute_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Grosse_Caisse.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Harpe_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Hautbois_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Hautbois_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Percussions.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Piano.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Piccolo.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Saxophone_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Tambour_Militaire.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Timbales.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Trombone_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Trombones.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Trompette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Tuba.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Violon_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Violon_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Prokofiev Sergueï/Roméo &amp; Juliette - Capulet vs Montaigus/Prokofiev_Sergueï_Roméo_&amp;_Juliette_-_Capulet_vs_Montaigus_Violoncelle.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Basson_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Clarinette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Clarinette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Contrebasse.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Cor_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Cor_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Flute_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Flute_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Hautbois_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Hautbois_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Trompette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Trompette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Violon_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Violon_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Rodrigo Joaquín/Concerto d'Aranjuez/Rodrigo_Joaquín_Concerto_d'Aranjuez_Violoncelle.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Contrebasse.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Violon_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Violon_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Violoncelle.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Basson_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Basson_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Clarinette_1b.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Clarinette_2b.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Contrebasse.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Cor_1_F.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Cor_2_F.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Cor_3_F.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Cor_4_F.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Flute_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Flute_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Hautbois_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Hautbois_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Timbales.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Trombone_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Trombone_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Trombonne_3.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Trompette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Trompette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Violon_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Violon_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Tchaïkovski Piotr Ilitch/Piano concerto n°1 Bbm/Tchaïkovski_Piotr_Ilitch_Piano_concerto_n°1_Bbm_Violoncelle.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Alto.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Basson_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Basson_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cimbasso.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Clarinette_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Clarinette_1b.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Clarinette_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Clarinette_2b.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Contrebasse.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_1_E.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_1_F.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_2_E.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_2_F.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_3_E.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_3_F.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_4_E.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cor_4_F.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cornet_1a.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cornet_1b.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cornet_2a.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Cornet_2b.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Flutes.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Hautbois_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Hautbois_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Percussions.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Timbales.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Violon_1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Violon_2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/library/Verdi Giuseppe/Les Vêpres siciliennes/Verdi_Giuseppe_Les_Vêpres_siciliennes_Violoncelle.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/public/js/actif.js" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/public/js/actif.js" />
+      <change beforePath="$PROJECT_DIR$/web/css/Jumbotron-Advanced-Responsive-Tint.css" afterPath="$PROJECT_DIR$/web/css/Jumbotron-Advanced-Responsive-Tint.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -344,121 +41,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/layout.html.twig">
+      <file leaf-file-name="EventsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/view.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="92" lean-forward="false" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScoreController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Controller/ScoreController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1116">
-              <caret line="370" column="60" lean-forward="false" selection-start-line="370" selection-start-column="60" selection-end-line="370" selection-end-column="60" />
+              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding>
-                <element signature="e#988#1291#0#PHP" expanded="false" />
-                <element signature="e#1297#2851#0#PHP" expanded="false" />
-                <element signature="e#2857#5768#0#PHP" expanded="false" />
-                <element signature="e#5774#8862#0#PHP" expanded="false" />
-                <element signature="e#5845#5995#0#PHP" expanded="false" />
-                <element signature="e#8868#9572#0#PHP" expanded="false" />
-                <element signature="e#11084#12550#0#PHP" expanded="false" />
-                <element signature="e#12556#13509#0#PHP" expanded="false" />
-                <element signature="e#13515#14531#0#PHP" expanded="false" />
-                <element signature="e#14537#15365#0#PHP" expanded="false" />
-                <element signature="e#15371#16277#0#PHP" expanded="false" />
-                <element signature="e#16283#16952#0#PHP" expanded="false" />
-                <element signature="e#16958#18336#0#PHP" expanded="false" />
-                <element signature="e#18342#20206#0#PHP" expanded="false" />
-                <element signature="e#20212#21286#0#PHP" expanded="false" />
-                <element signature="e#21292#22938#0#PHP" expanded="false" />
-                <element signature="e#22944#23477#0#PHP" expanded="false" />
-                <element signature="e#23483#25413#0#PHP" expanded="false" />
-                <element signature="e#25419#27231#0#PHP" expanded="false" />
+                <element signature="e#130#193#0#PHP" expanded="true" />
+                <element signature="e#512#1836#0#PHP" expanded="false" />
+                <element signature="e#1842#2464#0#PHP" expanded="false" />
+                <element signature="e#2470#4530#0#PHP" expanded="false" />
+                <element signature="e#4536#6380#0#PHP" expanded="false" />
+                <element signature="e#6386#7334#0#PHP" expanded="false" />
+                <element signature="e#7340#9109#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PartsRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/PartsRepository.php">
+      <file leaf-file-name="event_activate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/public/js/event_activate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="60" column="39" lean-forward="false" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+            <state relative-caret-position="684">
+              <caret line="53" column="102" lean-forward="false" selection-start-line="53" selection-start-column="102" selection-end-line="53" selection-end-column="102" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoreRepository.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/ScoreRepository.php">
+      <file leaf-file-name="payement.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/public/js/payement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="314">
+              <caret line="61" column="57" lean-forward="true" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/UserRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="35" column="12" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parts.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Parts.php">
+      <file leaf-file-name="InscriptionsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="630">
-              <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="37" />
-              <folding />
+              <caret line="361" column="48" lean-forward="false" selection-start-line="361" selection-start-column="48" selection-end-line="361" selection-end-column="48" />
+              <folding>
+                <element signature="e#775#3447#0#PHP" expanded="false" />
+                <element signature="e#3451#5327#0#PHP" expanded="false" />
+                <element signature="e#5333#5453#0#PHP" expanded="false" />
+                <element signature="e#5459#7918#0#PHP" expanded="false" />
+                <element signature="e#7924#9500#0#PHP" expanded="false" />
+                <element signature="e#9506#11582#0#PHP" expanded="false" />
+                <element signature="e#11588#12515#0#PHP" expanded="false" />
+                <element signature="e#12521#14291#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/navbar.html.twig">
+      <file leaf-file-name="SubscribeEventRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Repository/SubscribeEventRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2196">
-              <caret line="122" column="6" lean-forward="false" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="26" column="58" lean-forward="false" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+            <state relative-caret-position="612">
+              <caret line="115" column="54" lean-forward="false" selection-start-line="115" selection-start-column="54" selection-end-line="115" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -476,9 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DOMDocument</find>
-      <find>OSELWeekendBundle</find>
-      <find>Doc</find>
       <find>news</find>
       <find>updateDate</find>
       <find>type</find>
@@ -506,6 +147,9 @@
       <find>increa</find>
       <find>decreas</find>
       <find>getnb</find>
+      <find>jumbotron</find>
+      <find>bg-img-responsive</find>
+      <find>section</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -519,17 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/partForm.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/PartsType.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/ActivateScoreType.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/activate.js" />
-        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/head.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/js.html.twig" />
-        <option value="$PROJECT_DIR$/web/info.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/search.js" />
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/ComposerRepository.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/index.html.twig" />
         <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/css/style.css" />
         <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/ComposerType.php" />
         <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/composerForm.html.twig" />
@@ -550,7 +183,6 @@
         <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/view.html.twig" />
         <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/SubscribeEventRepository.php" />
         <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Listener/AuthenticationListener.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/maintenance/maintenance.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/maintenance/test.html.twig" />
@@ -565,11 +197,23 @@
         <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/gestion.html.twig" />
         <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Score.php" />
         <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Controller/ScoreController.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/form.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index.html.twig" />
         <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/form.html.twig" />
         <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/PartsRepository.php" />
         <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/ScoreRepository.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/form.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/head.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/Jumbotron-Advanced-Responsive-Tint.css" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/view.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Form/ActivateEventType.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/public/js/actif.js" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/public/js/event_activate.js" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Repository/SubscribeEventRepository.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/public/js/payement.js" />
       </list>
     </option>
   </component>
@@ -720,48 +364,14 @@
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EventBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Core" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ScoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ScoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EventBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -769,15 +379,7 @@
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ScoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ScoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EventBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -785,7 +387,7 @@
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ScoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EventBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -793,16 +395,26 @@
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ScoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EventBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ScoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EventBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EventBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
@@ -811,33 +423,10 @@
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ScoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EventBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="score" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="places" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
@@ -848,7 +437,14 @@
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="oselevent" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -950,12 +546,12 @@
       <workItem from="1517151087537" duration="549000" />
       <workItem from="1517154954169" duration="3662000" />
       <workItem from="1517163229230" duration="6276000" />
-      <workItem from="1517219225066" duration="22000" />
+      <workItem from="1517219225066" duration="7345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="296584000" />
+    <option name="totallyTimeSpent" value="303907000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1003,184 +599,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/noevent.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index-simple.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/payement.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/prix.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/listplaces.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="1694" column="0" lean-forward="false" selection-start-line="1694" selection-start-column="0" selection-end-line="1694" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Emails/registration.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Mails/RegisterMail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Roles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-496">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="35" column="85" lean-forward="false" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Repository/SubscribeEventRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1998">
-          <caret line="111" column="56" lean-forward="false" selection-start-line="111" selection-start-column="56" selection-end-line="111" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Listener/AuthenticationListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters_ovh.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/maintenance/maintenance.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="61" lean-forward="false" selection-start-line="1" selection-start-column="61" selection-end-line="1" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/maintenance/test.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Listeners/MaintenanceListener.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -1192,20 +610,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/uploadForm.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/fileUpload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="121" column="28" lean-forward="false" selection-start-line="121" selection-start-column="28" selection-end-line="121" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,6 +618,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
           <caret line="359" column="5" lean-forward="false" selection-start-line="359" selection-start-column="5" selection-end-line="359" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1220,6 +626,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
           <caret line="129" column="5" lean-forward="false" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,20 +648,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-222">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="183" column="4" lean-forward="false" selection-start-line="183" selection-start-column="4" selection-end-line="183" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1265,32 +659,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="180" column="14" lean-forward="true" selection-start-line="180" selection-start-column="14" selection-end-line="180" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/head.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,62 +674,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="92" lean-forward="false" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="59" column="4" lean-forward="true" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="26" column="58" lean-forward="false" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Controller/ScoreController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="370" column="60" lean-forward="false" selection-start-line="370" selection-start-column="60" selection-end-line="370" selection-end-column="60" />
-          <folding>
-            <element signature="e#988#1291#0#PHP" expanded="false" />
-            <element signature="e#1297#2851#0#PHP" expanded="false" />
-            <element signature="e#2857#5768#0#PHP" expanded="false" />
-            <element signature="e#5774#8862#0#PHP" expanded="false" />
-            <element signature="e#5845#5995#0#PHP" expanded="false" />
-            <element signature="e#8868#9572#0#PHP" expanded="false" />
-            <element signature="e#11084#12550#0#PHP" expanded="false" />
-            <element signature="e#12556#13509#0#PHP" expanded="false" />
-            <element signature="e#13515#14531#0#PHP" expanded="false" />
-            <element signature="e#14537#15365#0#PHP" expanded="false" />
-            <element signature="e#15371#16277#0#PHP" expanded="false" />
-            <element signature="e#16283#16952#0#PHP" expanded="false" />
-            <element signature="e#16958#18336#0#PHP" expanded="false" />
-            <element signature="e#18342#20206#0#PHP" expanded="false" />
-            <element signature="e#20212#21286#0#PHP" expanded="false" />
-            <element signature="e#21292#22938#0#PHP" expanded="false" />
-            <element signature="e#22944#23477#0#PHP" expanded="false" />
-            <element signature="e#23483#25413#0#PHP" expanded="false" />
-            <element signature="e#25419#27231#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1377,18 +698,368 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/ScoreRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/PartsRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
+        <state relative-caret-position="674">
           <caret line="60" column="39" lean-forward="false" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/ScoreRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/view.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="18">
+          <caret line="9" column="92" lean-forward="false" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-720">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/flash.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/lostpwd.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/Login-Form-Dark.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/Login-Center.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/jquery.classyedit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/list.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/Projects-Horizontal.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/Profile-Edit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/Pretty-Registration-Form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/Jumbotron-Advanced-Responsive-Tint.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Form/EventType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Form/ActivateEventType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="23" />
+          <folding>
+            <element signature="e#41#81#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/head.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="88" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Form/PaymentCompleteType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Entity/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-594">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Controller/ExportFilesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#549#2953#0#PHP" expanded="false" />
+            <element signature="e#2959#4685#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="68" lean-forward="false" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="96" />
+          <folding>
+            <element signature="e#374#394#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="181" column="75" lean-forward="false" selection-start-line="181" selection-start-column="75" selection-end-line="181" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/oselevent/js/event_activate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/public/js/actif.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1236">
+          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Controller/ScoreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="370" column="60" lean-forward="false" selection-start-line="370" selection-start-column="60" selection-end-line="370" selection-end-column="60" />
+          <folding>
+            <element signature="e#131#171#0#PHP" expanded="false" />
+            <element signature="e#988#1291#0#PHP" expanded="false" />
+            <element signature="e#1297#2851#0#PHP" expanded="false" />
+            <element signature="e#2857#5768#0#PHP" expanded="false" />
+            <element signature="e#5774#8862#0#PHP" expanded="false" />
+            <element signature="e#5845#5995#0#PHP" expanded="false" />
+            <element signature="e#8868#9572#0#PHP" expanded="false" />
+            <element signature="e#9578#11078#0#PHP" expanded="false" />
+            <element signature="e#12556#13509#0#PHP" expanded="false" />
+            <element signature="e#13515#14531#0#PHP" expanded="false" />
+            <element signature="e#14537#15365#0#PHP" expanded="false" />
+            <element signature="e#15371#16277#0#PHP" expanded="false" />
+            <element signature="e#16283#16952#0#PHP" expanded="false" />
+            <element signature="e#16958#18336#0#PHP" expanded="false" />
+            <element signature="e#18342#20206#0#PHP" expanded="false" />
+            <element signature="e#20212#21286#0#PHP" expanded="false" />
+            <element signature="e#21292#22938#0#PHP" expanded="false" />
+            <element signature="e#22944#23477#0#PHP" expanded="false" />
+            <element signature="e#23483#25413#0#PHP" expanded="false" />
+            <element signature="e#25419#27231#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/uploadForm.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2424">
+          <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+          <folding>
+            <marker date="1517160831781" expanded="true" signature="6554:6588" ph="..." />
+            <marker date="1517160831781" expanded="true" signature="6890:6902" ph="..." />
+            <marker date="1517160831781" expanded="true" signature="7035:7062" ph="..." />
+            <marker date="1517160831781" expanded="true" signature="7147:7164" ph="..." />
+            <marker date="1517160831781" expanded="true" signature="7264:7275" ph="..." />
+            <marker date="1517160831781" expanded="true" signature="7362:7379" ph="..." />
+            <marker date="1517160831781" expanded="true" signature="7390:7402" ph="..." />
+            <marker date="1517160831781" expanded="true" signature="7622:7632" ph="..." />
+            <marker date="1517160831781" expanded="true" signature="8840:8874" ph="..." />
+            <marker date="1517160831781" expanded="true" signature="9027:9061" ph="..." />
+            <marker date="1517160831781" expanded="true" signature="9089:9106" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/fileUpload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="105" column="20" lean-forward="false" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!block;n#itemAdd#0" expanded="false" />
+            <element signature="e#3201#5101#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/activate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="42" column="66" lean-forward="false" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/public/js/event_activate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="53" column="102" lean-forward="false" selection-start-line="53" selection-start-column="102" selection-end-line="53" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Repository/SubscribeEventRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="115" column="54" lean-forward="false" selection-start-line="115" selection-start-column="54" selection-end-line="115" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <element signature="e#130#193#0#PHP" expanded="true" />
+            <element signature="e#512#1836#0#PHP" expanded="false" />
+            <element signature="e#1842#2464#0#PHP" expanded="false" />
+            <element signature="e#2470#4530#0#PHP" expanded="false" />
+            <element signature="e#4536#6380#0#PHP" expanded="false" />
+            <element signature="e#6386#7334#0#PHP" expanded="false" />
+            <element signature="e#7340#9109#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Controller/InscriptionsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="361" column="48" lean-forward="false" selection-start-line="361" selection-start-column="48" selection-end-line="361" selection-end-column="48" />
+          <folding>
+            <element signature="e#775#3447#0#PHP" expanded="false" />
+            <element signature="e#3451#5327#0#PHP" expanded="false" />
+            <element signature="e#5333#5453#0#PHP" expanded="false" />
+            <element signature="e#5459#7918#0#PHP" expanded="false" />
+            <element signature="e#7924#9500#0#PHP" expanded="false" />
+            <element signature="e#9506#11582#0#PHP" expanded="false" />
+            <element signature="e#11588#12515#0#PHP" expanded="false" />
+            <element signature="e#12521#14291#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/public/js/payement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="61" column="57" lean-forward="true" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
           <folding />
         </state>
       </provider>

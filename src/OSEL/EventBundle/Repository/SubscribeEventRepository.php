@@ -114,7 +114,6 @@ class SubscribeEventRepository extends \Doctrine\ORM\EntityRepository
             $totalPrice += $inscription->getPrix();
             if($inscription->getPaye())
                 $totalPaid += $inscription->getPrix();
-
         }
 
 

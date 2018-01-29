@@ -10,9 +10,11 @@ namespace OSEL\EventBundle\Controller;
 
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use OSEL\EventBundle\Entity\Event;
+use OSEL\EventBundle\Form\ActivateEventType;
 use OSEL\EventBundle\Form\EventType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 
 class EventsController extends Controller
@@ -187,6 +189,57 @@ class EventsController extends Controller
             $request->getSession()->getFlashBag()->add('ERROR', 'Vous n\'avez pas acces à cette page');
             return $this->redirect($this->generateUrl('osel_core_home'));
         }
+    }
+
+    public function activateEventAction($id, Request $request)
+    {
+        $event = $this->getDoctrine()->getManager()->getRepository('OSELEventBundle:Event')->find($id);
+
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_WEEKEND'))
+        {
+            $form = $this->get('form.factory')->create(ActivateEventType::class, $event);
+
+            if ($form->handleRequest($request)->isValid()) {
+
+
+                $em = $this->getDoctrine()->getManager();
+
+                if($event->getActive())
+                {
+                    $events = $this->getDoctrine()->getManager()->getRepository('OSELEventBundle:Event')->findAll();
+                    foreach ($events as $e)
+                    {
+                        $e->setActive(false);
+                        $em->persist($e);
+                    }
+                    $event->setActive(true);
+                }
+
+                $em->persist($event);
+                $em->flush();
+
+                if($request->isXmlHttpRequest())
+                {
+                    $json = json_encode(array(
+                        'id'    => $event->getId(),
+                        'actif' => $event->getActive(),
+                    ));
+
+                    $response = new Response($json);
+                    $response->headers->set('Content-Type', 'application/json');
+
+                    return $response;
+                }
+
+                $request->getSession()->getFlashBag()->add('success', 'L\'Evenement a bient été activé/désactivé');
+
+                return $this->redirect($this->generateUrl('osel_event_list'));
+            }
+        }
+
+        return $this->render('OSELEventBundle:inscriptions:payement.html.twig', array(
+            'form' => $form->createView(),
+        ));
     }
 
 }

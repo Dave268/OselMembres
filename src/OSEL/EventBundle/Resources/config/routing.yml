@@ -38,6 +38,10 @@ osel_event_view:
     path:     /weekend/{id}
     defaults: { _controller: OSELEventBundle:Events:view, id: 0 }
 
+osel_event_activate:
+    path:   /activate-event/{id}
+    defaults:  { _controller: OSELEventBundle:Events:activateEvent, id: 0}
+
 osel_event_add_inscription:
     path:     /nouvelle-inscription-weekend
     defaults: { _controller: OSELEventBundle:Inscriptions:add }

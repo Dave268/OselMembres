@@ -14,6 +14,7 @@ function elementClicked() {
 }
 
 function editableTextBlurred() {
+    $('#modalLoad').modal("show");
     if($(this).val() == '')
     {
         var html = '0';
@@ -55,12 +56,12 @@ function editableTextBlurred() {
                 url: $url,
                 data: $data,
                 method: 'post',
-                xhr: function() { $('#modalLoad').modal("show");},
                 dataType: 'json',
                 cache: false,
                 success: function (obj) {
                     viewableText.attr('data-id', obj.id);
-                    $('#prixTotal').html(obj.paye);
+                    $('#prixTotal').html(obj.prix);
+                    $('#payeTotal').html(obj.paye);
                     console.log('réussi');
                 },
                 complete: function () {
@@ -98,6 +99,7 @@ $(document).ready(function() {
     $(".inscription_activate").click(function (e) {
 
         e.preventDefault();
+        $('#modalLoad').modal("show");
         var $href = $(this).attr('href');
         var $id = $(this).attr('obj');
 
@@ -138,12 +140,12 @@ $(document).ready(function() {
                 url: $url,
                 data: $data,
                 method: 'post',
-                xhr: function() { $('#modalLoad').modal("show");},
                 dataType: 'json',
                 cache: false,
                 success: function (obj) {
                     var check = $('#inscription_' + obj.id + ' i');
                     $('#payeTotal').html(obj.paye);
+                    console.log(obj.paye);
 
                     console.log('réussi');
 

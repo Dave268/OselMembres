@@ -1,20 +1,10 @@
-/**
- * Created by davidgoubau on 04/05/2017.
- */
 $(document).ready(function() {
-
-    $(".selectMembres").change(function()
-    {
-        var $href = $(this).children(":selected").attr('value');
-
-        window.location.href = $href;
-    });
-
-    $(".user_activate").click(function (e) {
+    $(".event_activate").click(function (e) {
 
         e.preventDefault();
         $('#modalLoad').modal("show");
         var $href = $(this).attr('href');
+        console.log($href);
         var $id = $(this).attr('obj');
 
         $('<div></div>').load($href + ' form', function () {
@@ -23,22 +13,19 @@ $(document).ready(function() {
 
             //set checkbox
             var $cb = $form.find('input[type="checkbox"]');
-			
-			var $precheck = $('#user_actif_' + $id + ' i');
 
-			if($cb.prop("checked"))
-			{
-				//$precheck.attr('class', "state-icon glyphicon  glyphicon-unchecked");
-				//console.log("On  décheck");
-				var control = true;
-			}
-			else
-			{
-				//$precheck.attr('class', "state-icon glyphicon  glyphicon-check");
-				//console.log("On  check");
-				var control = false;
-			}
-				
+            var $precheck = $('#inscription_' + $id + ' i');
+            if ($cb.prop("checked")) {
+                $precheck.attr('class', "state-icon glyphicon  glyphicon-unchecked");
+                console.log("On  décheck");
+                var control = true;
+            }
+            else {
+                $precheck.attr('class', "state-icon glyphicon  glyphicon-check");
+                console.log("On  check");
+                var control = false;
+            }
+
 
             //toggle
             $cb.prop('checked', !$cb.prop('checked'));
@@ -58,18 +45,19 @@ $(document).ready(function() {
                 dataType: 'json',
                 cache: false,
                 success: function (obj) {
-                    var check = $('#user_actif_' + obj.id + ' i');
+                    var check = $('#event_' + obj.id + ' i');
+                    $('#payeTotal').html(obj.paye);
 
                     console.log('réussi');
 
-                    if (obj.enabled && obj.enabled != control) {
+                    if (obj.actif && obj.actif != control) {
+                        $('.event_activate i').attr('class', "state-icon glyphicon glyphicon-unchecked");
                         check.attr('class', "state-icon glyphicon  glyphicon-check");
                     }
-					else if(!obj.enabled && obj.enabled != control)
-                    {
+                    else if (!obj.actif && obj.actif != control) {
                         check.attr('class', "state-icon glyphicon  glyphicon-unchecked");
                     }
-					
+
                 },
                 complete: function () {
                     console.log("complete!");

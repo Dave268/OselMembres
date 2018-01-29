@@ -1,13 +1,14 @@
 section.bg-img-responsive {
   background-repeat:no-repeat;
+  background-size:cover;
   position:relative;
-  min-width:100%;
+  width:100%;
   min-height:100vh;
   background-position:center center;
   display:table;
 }
 
-.jumbotron {
+section.bg-img-responsive .jumbotron {
   background-color:transparent;
   display:table-cell;
   vertical-align:middle;

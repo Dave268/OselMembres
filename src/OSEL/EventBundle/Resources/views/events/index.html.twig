@@ -7,8 +7,6 @@
 {% endblock %}
 
 {% block head %}
-    <script src="{{ asset('bundles/oseluser/js/actif.js') }}"></script>
-    <script src="{{ asset('js/delete.js') }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -84,7 +82,7 @@
                                             <td>{% if event.active %}<strong>{{ event.dateStart|date("d/m/Y H:i") }}</strong>{% else %}{{ event.dateStart|date("d/m/Y H:i") }}{% endif %}</td>
                                             <td>{% if event.active %}<strong>{{ event.dateEnd|date("d/m/Y H:i") }}</strong>{% else %}{{ event.dateEnd|date("d/m/Y H:i") }}{% endif %}</td>
                                             <td><a href="{{ path('osel_event_view_place', {'id': event.place.id}) }}">{% if event.active %}<strong>{{ event.place.title }}</strong>{% else %}{{ event.place.title }}{% endif %}</a></td>
-
+                                            <td id="event_{{ event.id }}">{% if is_granted('ROLE_WEEKEND') %}<a class="event_activate" href="{{ path('osel_event_activate', {'id': event.id}) }}" obj="{{ event.id }}">{% endif %}{% if event.active %} <i class="state-icon glyphicon glyphicon-check"></i>{% else %}<i class="state-icon glyphicon glyphicon-unchecked"></i>{% endif %}{% if is_granted('ROLE_WEEKEND') %}</a>{% endif %}</td>
                                                 <td class="hidden-xs">
                                                     <div class="btn-group" role="group" style="min-width:136px;">
                                                         <button class="btn btn-info btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('osel_event_view', {'id': event.id}) }}'">voir</button>
@@ -132,4 +130,7 @@
 
 
 
+{% endblock %}
+{% block script %}
+    <script src="{{ asset('bundles/oselevent/js/event_activate.js') }}"></script>
 {% endblock %}

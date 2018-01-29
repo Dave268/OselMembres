@@ -294,7 +294,7 @@ class InscriptionsController extends Controller
                 $em->persist($subscription);
                 $em->flush();
 
-                $price = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getPrice($id);
+                $price = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getPrice($idEvent);
 
                 if($request->isXmlHttpRequest())
                 {
@@ -322,7 +322,7 @@ class InscriptionsController extends Controller
         ));
     }
 
-    public function  modifyPrixAction($id, Request $request)
+    public function modifyPrixAction($id, Request $request)
     {
         if ($this->get('security.authorization_checker')->isGranted('ROLE_TRESORIER'))
         {
@@ -354,11 +354,12 @@ class InscriptionsController extends Controller
 
 
                     if ($request->isXmlHttpRequest()) {
-                        $price = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getPrice($id);
+                        $price = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getPrice($event->getId());
 
                         $json = json_encode(array(
                             'id' => $subscription->getId(),
-                            'paye'  => $price[0]
+                            'prix'  => $price[0],
+                            'paye'  => $price[1]
                         ));
 
                         $response = new Response($json);
