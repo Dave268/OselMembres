@@ -49,6 +49,7 @@
                                 <div class="btn-group" role="group" style="min-width:180px;">
                                     <button class="btn btn-info btn-xs" type="button" onclick="window.location.href='{{ path('osel_event_add_individual_inscription', {'id': event.id}) }}'">Ajouter une inscription</button>
                                     <button class="btn btn-warning btn-xs" type="button" onclick="window.location.href='{{ path('osel_event_list_inscription_simple', {'id': id, 'page': page , 'criteria': criteria, 'desc': desc, 'presence': presence, 'nbPerPage':nbPerPage}) }}'">Vue Simple</button>
+                                    <button class="btn btn-success btn-xs" type="button" onclick="window.location.href='{{ path('osel_event_export', {'id': id }) }}'">Exporter</button>
 								</div>
                             </div>
 							<div class="col-md-3 col-sm-3">

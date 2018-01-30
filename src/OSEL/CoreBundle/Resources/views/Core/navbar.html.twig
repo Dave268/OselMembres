@@ -55,7 +55,7 @@
                 {% elseif is_granted('ROLE_USER') %}
                     <li {% if app.request.get('_route') == 'osel_score_index' %}
                         active
-                    {% endif %} role="presentation"><a href="{{ path('osel_musicsheet_index') }}">Partitions </a></li>
+                    {% endif %} role="presentation"><a href="{{ path('osel_score_index') }}">Partitions </a></li>
                 {% endif %}
 
                 {% if is_granted('ROLE_CA') %}

@@ -83,3 +83,7 @@ osel_event_inscription_prix:
 osel_event_test_subscriptions:
     path:   /test/nbsubscriptions
     defaults:  { _controller: OSELEventBundle:Test:nbsubscriptions}
+
+osel_event_export:
+    path:   /export-event/{id}
+    defaults:  { _controller: OSELEventBundle:Inscriptions:exportEvent, id: 0}

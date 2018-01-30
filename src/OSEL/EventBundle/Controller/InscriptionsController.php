@@ -20,6 +20,7 @@ use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class InscriptionsController extends Controller
 {
@@ -375,6 +376,94 @@ class InscriptionsController extends Controller
                     'form' => $form->createView()));
             }
         }
+    }
+
+    public function exportEventAction($id, Request $request)
+    {
+        $listInscriptions = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getSubscriptions($id, 1, 1000, 'lastname', 0, 0);
+        $price = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getPrice($id);
+        $nbSubscribe = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getNbParticipants($id);
+        $nbParticipants = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->getNbSubscriptions($id);
+        $event = $this->getDoctrine()->getManager()->getRepository(Event::class)->find($id);
+
+
+
+        $response = new StreamedResponse();
+        $response->setCallback(function() use ($listInscriptions, $price, $nbSubscribe, $nbParticipants, $event) {
+            $handle = fopen('php://output', 'w+');
+
+            $header = array('Nom','Prénom','Part de', 'Transport', 'Nb de Places');
+            $subheader = array($nbParticipants,'','','','');
+
+            foreach ($event->getSubEvents() as $sub)
+            {
+                array_push($header, $sub->getTitle());
+                array_push($subheader, $sub->getNbSubscriptions());
+            }
+            array_push($header, 'prix');
+            array_push($header, 'A payé');
+            array_push($subheader, $price[0]);
+            array_push($subheader, $price[1]);
+
+            fputcsv($handle, $header, ';');
+            fputcsv($handle, $subheader, ';');
+
+
+            foreach ($listInscriptions as $i) {
+                $temp = array($i->getUser()->getLastname(), $i->getUser()->getName(), $i->getCity(), $i->getTransport(), $i->getNbPlaces());
+                foreach ($event->getSubEvents() as $s)
+                {
+                    $tb = false;
+                    foreach ($i->getSubEvents() as $isub)
+                    {
+
+                        if($isub->getId() == $s->getId())
+                        {
+                            $tb = true;
+                        }
+                    }
+
+                    if(!$i->getPresence())
+                    {
+                        array_push($temp, '');
+                    }
+                    else if($tb)
+                    {
+                        array_push($temp, 'x');
+                    }
+                    else {
+                        array_push($temp, '');
+                    }
+
+                }
+
+                if(!$i->getPresence() OR $i->getPrix() == 0)
+                {
+                    array_push($temp, '0');
+                    array_push($temp, '/');
+                }
+                else
+                {
+                    array_push($temp, $i->getPrix());
+                    if($i->getPaye())
+                    {
+                        array_push($temp, 'x');
+                    }
+                    else{
+                        array_push($temp, '');
+                    }
+                }
+
+                fputcsv($handle, $temp, ';');
+            }
+
+            fclose($handle);
+        });
+
+        $response->headers->set('Content-Type', 'application/force-download; charset=utf-8');
+        $response->headers->set('Content-Disposition','attachment; filename="export-inscriptions-weekend.csv"');
+
+        return $response;
     }
 
 }
