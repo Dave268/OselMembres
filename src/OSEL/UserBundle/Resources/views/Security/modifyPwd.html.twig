@@ -7,9 +7,14 @@
     <div class="container">
         <div class="row row-login">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-                <h2 class="text-center">{{ title }}</h2>
+                <h2 class="text-center">Modifier mot de passe</h2>
                 <div class="well">
                     {{ form_start(form) }}
+                    <div class="form-group">
+                        {{ form_label(form.oldpwd, "Ancien mot de passe:", {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.oldpwd, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(form.oldpwd) }}
+                    </div>
                     <div class="form-group">
                         {{ form_label(form.pwd1, "Nouveau mot de passe:", {'label_attr': {'class': 'control-label'}}) }}
                         {{ form_widget(form.pwd1, {'attr': {'class': 'form-control'}}) }}

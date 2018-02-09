@@ -84,8 +84,26 @@ class SecurityController extends Controller
                 }
 
                 $em = $this->getDoctrine()->getManager();
-                $em->persist($user);
-                $em->flush();
+                try {
+                    $em->persist($user);
+                    $em->flush();
+                } catch(PDOException $e) {
+
+                    try {
+                        $em->persist($user);
+                        $em->flush();
+                    } catch(\Doctrine\DBAL\DBALException $e) {
+
+                        if( \preg_match( "%Duplicate entry%", $e->getMessage() ) ) {
+                            $request->getSession()->getFlashBag()->add('ERROR', 'Ce Username existe déjà, veuillez en choisir un autre');
+                            return $this->render('OSELUserBundle:User:add.html.twig', array(
+                                'form' => $form->createView()));
+                        }
+
+                        else throw $e;
+                    }
+                }
+
 
                 $mail = $this->container->get('OSEL_User.registerMail');
 
@@ -101,9 +119,7 @@ class SecurityController extends Controller
 
 
 			return $this->render('OSELUserBundle:User:add.html.twig', array(
-				'form' => $form->createView(),
-				'selectedPage'	=> 'membres'
-				));  
+				'form' => $form->createView()));
     }
 
     public function modifyAction($id, Request $request)
@@ -126,8 +142,19 @@ class SecurityController extends Controller
 			
 			if ($form->handleRequest($request)->isValid()) {
 			    $em = $this->getDoctrine()->getManager();
-			    $em->persist($user);
-			    $em->flush();
+                try {
+                    $em->persist($user);
+                    $em->flush();
+                } catch(\Doctrine\DBAL\DBALException $e) {
+
+                        if( \preg_match( "%Duplicate entry%", $e->getMessage() ) ) {
+                            $request->getSession()->getFlashBag()->add('ERROR', 'Ce Username existe déjà, veuillez en choisir un autre');
+                            return $this->render('OSELUserBundle:User:add.html.twig', array(
+                                'form' => $form->createView()));
+                        }
+
+                        else throw $e;
+                }
 
 			    $request->getSession()->getFlashBag()->add('success', 'Les modifications ont bien été enregistré');
 
@@ -142,9 +169,77 @@ class SecurityController extends Controller
 			}
 
         return $this->render('OSELUserBundle:User:add.html.twig', array(
-          'form' => $form->createView(),
-		  'selectedPage'	=> 'membres'
-        ));
+          'form' => $form->createView()));
+    }
+
+    public function changePassAction($id, Request $request)
+    {
+        $user = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->findOneBy(array('id' => $id));
+        if($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
+            $idUser = 0;
+        }
+        else{
+            $idUser = $this->get('security.token_storage')->getToken()->getUser()->getId();
+        }
+
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_SECRETAIRE') && $id != $idUser)
+        {
+            $request->getSession()->getFlashBag()->add('ERROR', 'Vous n\'avez pas droit d\'exécuter cette action');
+            return $this->redirect($this->generateUrl('osel_core_home'));
+        }
+
+        $formData = array();
+        $form = $this->get('form.factory')->createBuilder(FormType::class, $formData)
+            ->add('oldpwd',     PasswordType::class)
+            ->add('pwd1',       PasswordType::class)
+            ->add('pwd2',       PasswordType::class)
+            ->add('Envoyer',    SubmitType::class)
+            ->getForm();
+
+        if ($request->isMethod('POST')) {
+            $form->handleRequest($request);
+            $formData = $form->getData();
+            $oldpwd = $user->getPassword();
+            $newpwd = $this->get('security.encoder_factory')->getEncoder($user)->encodePassword($formData['oldpwd'], $user->getSalt());
+
+
+            if( $oldpwd != $newpwd) {
+                $request->getSession()->getFlashBag()->add('ERROR', 'L\'ancien mot de passe ne correspond pas');
+                return $this->render('OSELUserBundle:Security:modifyPwd.html.twig', array(
+                    'form' => $form->createView()));
+            }
+
+            if ($formData['pwd1'] != $formData['pwd2']) {
+                $request->getSession()->getFlashBag()->add('ERROR', 'Les deux mots de passe ne sont pas identique');
+                return $this->render('OSELUserBundle:Security:modifyPwd.html.twig', array(
+                    'form' => $form->createView()));
+            }
+
+                $pwd = $this->get('security.encoder_factory')->getEncoder($user)->encodePassword($formData['pwd1'], $user->getSalt());
+
+                $user->setPassword($pwd);
+
+                $em = $this->getDoctrine()->getManager();
+
+            try {
+                $em->persist($user);
+                $em->flush();
+            } catch(\Doctrine\DBAL\DBALException $e) {
+
+                    $request->getSession()->getFlashBag()->add('ERROR', $e->getMessage());
+                    return $this->render('OSELUserBundle:Security:modifyPwd.html.twig', array(
+                        'form' => $form->createView()));
+            }
+
+                $request->getSession()->getFlashBag()->add('success', 'Votre nouveau mot de passe à bien été validé');
+
+                return $this->redirect($this->generateUrl('osel_core_home'));
+
+
+        }
+
+        return $this->render('OSELUserBundle:Security:modifyPwd.html.twig', array(
+          'form' => $form->createView()));
     }
 
     public function modifyCompleteAction($id, Request $request)
@@ -315,7 +410,7 @@ class SecurityController extends Controller
                                 $em->persist($user);
                                 $em->flush();
 
-                                $request->getSession()->getFlashBag()->add('notice', 'Votre nouveau mot de passe à bien été validé');
+                                $request->getSession()->getFlashBag()->add('success', 'Votre nouveau mot de passe à bien été validé');
 
                                 return $this->redirect($this->generateUrl('osel_core_home'));
                             } else {

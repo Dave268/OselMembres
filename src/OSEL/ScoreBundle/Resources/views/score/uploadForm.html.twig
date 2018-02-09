@@ -134,9 +134,10 @@
                         var filesize = $(this).get(0).files[i].size;
 
                         var extension = filename.replace(/^.*\./, '').toLowerCase();
+						console.log(extension);
                         var listItem = null;
 
-                        if(extension === 'pdf' && filesize < 5000000)
+                        if(extension === 'pdf' && filesize < 50000000)
                         {
                             var formData = new FormData();
                             var unique = uniqId(i);

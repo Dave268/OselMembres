@@ -51,6 +51,10 @@ modify:
     path:   /modify/{id}
     defaults:  { _controller: OSELUserBundle:Security:modify, id: 0 }
 
+changePass:
+    path:   /changepass/{id}
+    defaults:  { _controller: OSELUserBundle:Security:changePass, id: 0 }
+
 user_modify_complete:
     path:   /modifyComplete/{id}
     defaults:  { _controller: OSELUserBundle:Security:modifyComplete, id: 0 }

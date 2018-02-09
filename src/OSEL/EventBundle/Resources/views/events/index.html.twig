@@ -69,6 +69,7 @@
                                         <th><a href="{% if criteria == 'dateStart' and desc == 0 %}{{ path('osel_event_list', {'page': page , 'criteria': 'dateStart', 'desc': '1'}) }}{% else %}{{ path('osel_event_list', {'page': page , 'criteria': 'dateStart', 'desc': '0'}) }}{% endif %}">Date Début</a></th>
                                         <th><a href="{% if criteria == 'dateEnd' and desc == 0 %}{{ path('osel_event_list', {'page': page , 'criteria': 'dateEnd', 'desc': '1'}) }}{% else %}{{ path('osel_event_list', {'page': page , 'criteria': 'dateEnd', 'desc': '0'}) }}{% endif %}">Date Fin</a></th>
                                         <th><a href="{% if criteria == 'lieu' and desc == 0 %}{{ path('osel_event_list', {'page': page , 'criteria': 'lieu', 'desc': '1'}) }}{% else %}{{ path('osel_event_list', {'page': page , 'criteria': 'lieu', 'desc': '0'}) }}{% endif %}">Lieu</a></th>
+                                        <th><a href="{% if criteria == 'actif' and desc == 0 %}{{ path('osel_event_list', {'page': page , 'criteria': 'actif', 'desc': '1'}) }}{% else %}{{ path('osel_event_list', {'page': page , 'criteria': 'actif', 'desc': '0'}) }}{% endif %}">Actif</a></th>
                                         <th class="hidden-xs">action </th>
                                     </tr>
                                     </thead>

@@ -130,8 +130,21 @@ class ScoreController extends Controller
                 }
             }
 
-            $em->persist($score);
-            $em->flush();
+            try {
+                $em->persist($score);
+                $em->flush();
+            } catch(\Doctrine\DBAL\DBALException $e) {
+
+                if( \preg_match( "%Duplicate entry%", $e->getMessage() ) ) {
+                    $request->getSession()->getFlashBag()->add('ERROR', 'Cette partition existe déjà, veuillez choisir un autre nom, ou modifiez la partition existente');
+                    return $this->get('templating')->renderResponse('ScoreBundle:score:scoreForm.html.twig', array(
+                        'form'    => $scoreForm->createView()
+                    ));
+                }
+
+                else throw $e;
+            }
+
 
             //$request->getSession()->getFlashBag()->add('success', 'La partition a bien été crée');
 
@@ -201,15 +214,30 @@ class ScoreController extends Controller
             $composer->setComposer($composer->getLastName() . " " . $composer->getName());
 
 
-            if($composer->getId() !== null)
-            {
-                $request->getSession()->getFlashBag()->add('success', 'La compositeur a bien été modifié');
+
+
+            try {
+                if($composer->getId() !== null)
+                {
+                    $message = 'La compositeur a bien été modifié';
+                }
+                else{
+                    $message = 'La compositeur a bien été ajouté';
+                }
+                $em->persist($composer);
+                $em->flush();
+            } catch(\Doctrine\DBAL\DBALException $e) {
+
+                if( \preg_match( "%Duplicate entry%", $e->getMessage() ) ) {
+                    $request->getSession()->getFlashBag()->add('ERROR', 'Ce Compositeur existe déjà, veuillez choisir un autre nom, ou modifiez la partition existente');
+                    return $this->get('templating')->renderResponse('ScoreBundle:score:composerForm.html.twig', array(
+                        'form'    => $composerForm->createView()
+                    ));
+                }
+
+                else throw $e;
             }
-            else{
-                $request->getSession()->getFlashBag()->add('success', 'La compositeur a bien été ajouté');
-            }
-            $em->persist($composer);
-            $em->flush();
+            $request->getSession()->getFlashBag()->add('success', $message);
 
 
 

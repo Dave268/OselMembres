@@ -16,7 +16,6 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new OSEL\CoreBundle\OSELCoreBundle(),
-            new OSEL\MusicsheetBundle\OSELMusicsheetBundle(),
             new OSEL\UserBundle\OSELUserBundle(),
             new OSEL\InfoBundle\OSELInfoBundle(),
             new CoreSphere\ConsoleBundle\CoreSphereConsoleBundle(),

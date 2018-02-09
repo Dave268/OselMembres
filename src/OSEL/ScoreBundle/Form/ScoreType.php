@@ -21,8 +21,8 @@ class ScoreType extends AbstractType
     {
         $builder
             ->add('title',  TextType::class)
-            ->add('year',   TextType::class)
-            ->add('actif',  CheckboxType::class)
+            ->add('year',   TextType::class, array('required' => false))
+            ->add('actif',  CheckboxType::class, array('required' => false))
             ->add('composer', EntityType::class, array(
                 'class'     => 'ScoreBundle:Composer',
                 'choice_label'  => 'composer',
