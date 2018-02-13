@@ -1,0 +1,11 @@
+osel_documents_index:
+    path:     /index/{idDir}/{rank}/{criteria}/{order}
+    defaults: { _controller: DocumentBundle:Document:index, idDir: 0 , rank: 1, criteria: name, order: ASC }
+
+osel_documents_add_file:
+    path:     /ajouter-un-fichier/{idDir}
+    defaults: { _controller: DocumentBundle:Document:addFile, idDir: 0}
+
+osel_documents_add_dir:
+    path:     /ajouter-un-dossier/{idDir}
+    defaults: { _controller: DocumentBundle:Document:addDirectory, idDir: 0}

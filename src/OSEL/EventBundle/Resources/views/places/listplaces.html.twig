@@ -71,7 +71,7 @@
                                         <th><a href="{% if criteria == 'email' and desc == 0 %}{{ path('osel_event_list_places', {'page': page , 'criteria': 'email', 'desc': '1'}) }}{% else %}{{ path('osel_event_list_places', {'page': page , 'criteria': 'email', 'desc': '0'}) }}{% endif %}">Adresse Mail</a></th>
                                         <th>GSM/téléphone</th>
                                         {% if is_granted('ROLE_WEEKEND') %}<th><a href="{% if criteria == 'city' and desc == 0 %}{{ path('osel_event_list_places', {'page': page , 'criteria': 'city', 'desc': '1'}) }}{% else %}{{ path('osel_event_list_places', {'page': page , 'criteria': 'city', 'desc': '0'}) }}{% endif %}">Adresse </th>
-                                            <th class="hidden-xs">action </th>{% endif %}
+                                            <th>action </th>{% endif %}
                                     </tr>
                                     </thead>
                                     <tbody style="font-size:10px;">
@@ -90,7 +90,7 @@
                                                             <td> - </td>
                                                         {% endif %}
 
-                                                        <td class="hidden-xs">
+                                                        <td>
                                                             <div class="btn-group" role="group" style="min-width:136px;">
                                                                 <button class="btn btn-info btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('osel_event_view_place', {'id': place.id}) }}'">voir</button>
                                                                 <button class="btn btn-success btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('osel_event_modify_place', {'id': place.id}) }}'">Modifier </button>

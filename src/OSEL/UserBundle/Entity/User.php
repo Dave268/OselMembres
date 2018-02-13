@@ -334,6 +334,30 @@ class User implements AdvancedUserInterface, \Serializable
      */
     private $composerbios_modified;
 
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\DocumentBundle\Entity\File", mappedBy="user")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $files;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\DocumentBundle\Entity\File", mappedBy="lastUser")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $files_modified;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\DocumentBundle\Entity\Directory", mappedBy="user")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $directories;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\DocumentBundle\Entity\Directory", mappedBy="lastUser")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $directories_modified;
+
 
     public function __construct()
     {
@@ -1939,5 +1963,141 @@ class User implements AdvancedUserInterface, \Serializable
     public function getComposerbiosModified()
     {
         return $this->composerbios_modified;
+    }
+
+    /**
+     * Add file
+     *
+     * @param \OSEL\DocumentBundle\Entity\File $file
+     *
+     * @return User
+     */
+    public function addFile(\OSEL\DocumentBundle\Entity\File $file)
+    {
+        $this->files[] = $file;
+
+        return $this;
+    }
+
+    /**
+     * Remove file
+     *
+     * @param \OSEL\DocumentBundle\Entity\File $file
+     */
+    public function removeFile(\OSEL\DocumentBundle\Entity\File $file)
+    {
+        $this->files->removeElement($file);
+    }
+
+    /**
+     * Get files
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFiles()
+    {
+        return $this->files;
+    }
+
+    /**
+     * Add filesModified
+     *
+     * @param \OSEL\DocumentBundle\Entity\File $filesModified
+     *
+     * @return User
+     */
+    public function addFilesModified(\OSEL\DocumentBundle\Entity\File $filesModified)
+    {
+        $this->files_modified[] = $filesModified;
+
+        return $this;
+    }
+
+    /**
+     * Remove filesModified
+     *
+     * @param \OSEL\DocumentBundle\Entity\File $filesModified
+     */
+    public function removeFilesModified(\OSEL\DocumentBundle\Entity\File $filesModified)
+    {
+        $this->files_modified->removeElement($filesModified);
+    }
+
+    /**
+     * Get filesModified
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFilesModified()
+    {
+        return $this->files_modified;
+    }
+
+    /**
+     * Add directory
+     *
+     * @param \OSEL\DocumentBundle\Entity\Directory $directory
+     *
+     * @return User
+     */
+    public function addDirectory(\OSEL\DocumentBundle\Entity\Directory $directory)
+    {
+        $this->directories[] = $directory;
+
+        return $this;
+    }
+
+    /**
+     * Remove directory
+     *
+     * @param \OSEL\DocumentBundle\Entity\Directory $directory
+     */
+    public function removeDirectory(\OSEL\DocumentBundle\Entity\Directory $directory)
+    {
+        $this->directories->removeElement($directory);
+    }
+
+    /**
+     * Get directories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDirectories()
+    {
+        return $this->directories;
+    }
+
+    /**
+     * Add directoriesModified
+     *
+     * @param \OSEL\DocumentBundle\Entity\Directory $directoriesModified
+     *
+     * @return User
+     */
+    public function addDirectoriesModified(\OSEL\DocumentBundle\Entity\Directory $directoriesModified)
+    {
+        $this->directories_modified[] = $directoriesModified;
+
+        return $this;
+    }
+
+    /**
+     * Remove directoriesModified
+     *
+     * @param \OSEL\DocumentBundle\Entity\Directory $directoriesModified
+     */
+    public function removeDirectoriesModified(\OSEL\DocumentBundle\Entity\Directory $directoriesModified)
+    {
+        $this->directories_modified->removeElement($directoriesModified);
+    }
+
+    /**
+     * Get directoriesModified
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDirectoriesModified()
+    {
+        return $this->directories_modified;
     }
 }

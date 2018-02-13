@@ -1,3 +1,7 @@
+document:
+    resource: "@DocumentBundle/Resources/config/routing.yml"
+    prefix:   /documents
+
 score:
     resource: "@ScoreBundle/Resources/config/routing.yml"
     prefix:   /partitions

@@ -88,7 +88,7 @@
 											<th>GSM/téléphone</th>
 											<th class="hidden-xs"><a href="{% if criteria == 'birthday' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'birthday', 'desc': '1', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'birthday', 'desc': '0', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% endif %}">Date de Naissance</a></th>
 											{% if is_granted('ROLE_SECRETAIRE') %}<th><a href="{% if criteria == 'city' and desc == 0 %}{{ path('osel_user_index', {'page': page , 'criteria': 'city', 'desc': '1', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% else %}{{ path('osel_user_index', {'page': page , 'criteria': 'city', 'desc': '0', 'enabled': enabled, 'nbPerPage': nbPerPage}) }}{% endif %}">Adresse </th>
-											<th class="hidden-xs">action </th>{% endif %}
+											<th>action </th>{% endif %}
 										</tr>
 									</thead>
 									<tbody style="font-size:10px;">
@@ -98,7 +98,7 @@
 											<a href="{{ path('osel_user_view', {'id': user.id}) }}">
 												<tr>
 													{% if is_granted('ROLE_SECRETAIRE') %}
-														<td id="user_actif_{{ user.id }}"><a class="user_activate" href="{{ path('user_modify_complete', {'id': user.id}) }}" obj="{{ user.id }}">{% if user.enabled %} <i class="state-icon glyphicon glyphicon-check"></i>{% else %}<i class="state-icon glyphicon glyphicon-unchecked"></i>{% endif %}</a></td>
+														<td id class="hidden-xs="user_actif_{{ user.id }}"><a class="user_activate" href="{{ path('user_modify_complete', {'id': user.id}) }}" obj="{{ user.id }}">{% if user.enabled %} <i class="state-icon glyphicon glyphicon-check"></i>{% else %}<i class="state-icon glyphicon glyphicon-unchecked"></i>{% endif %}</a></td>
 														<td>{{ user.username }}</td>
 													{% endif %}
 													<td>{{ user.lastname }}</td>
@@ -115,7 +115,7 @@
 															<td> - </td>
 														{% endif %}
 
-														<td class="hidden-xs">
+														<td>
 															<div class="btn-group" role="group" style="min-width:136px;">
 																<button class="btn btn-success btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('modify', {'id': user.id}) }}'">Modifier</button>
 																<button class="btn btn-warning btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('osel_user_view', {'id': user.id}) }}'">Voir</button>

@@ -63,7 +63,7 @@ class ImgComposer
      *
      * @ORM\Column(name="actif", type="boolean", nullable=true)
      */
-    private $actif = false;
+    private $actif = true;
 
     /**
      * @ORM\ManyToOne(targetEntity="OSEL\UserBundle\Entity\User", inversedBy="composerimgs")

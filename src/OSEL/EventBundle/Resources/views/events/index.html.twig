@@ -70,7 +70,7 @@
                                         <th><a href="{% if criteria == 'dateEnd' and desc == 0 %}{{ path('osel_event_list', {'page': page , 'criteria': 'dateEnd', 'desc': '1'}) }}{% else %}{{ path('osel_event_list', {'page': page , 'criteria': 'dateEnd', 'desc': '0'}) }}{% endif %}">Date Fin</a></th>
                                         <th><a href="{% if criteria == 'lieu' and desc == 0 %}{{ path('osel_event_list', {'page': page , 'criteria': 'lieu', 'desc': '1'}) }}{% else %}{{ path('osel_event_list', {'page': page , 'criteria': 'lieu', 'desc': '0'}) }}{% endif %}">Lieu</a></th>
                                         <th><a href="{% if criteria == 'actif' and desc == 0 %}{{ path('osel_event_list', {'page': page , 'criteria': 'actif', 'desc': '1'}) }}{% else %}{{ path('osel_event_list', {'page': page , 'criteria': 'actif', 'desc': '0'}) }}{% endif %}">Actif</a></th>
-                                        <th class="hidden-xs">action </th>
+                                        <th>action </th>
                                     </tr>
                                     </thead>
                                     <tbody style="font-size:10px;">
@@ -84,7 +84,7 @@
                                             <td>{% if event.active %}<strong>{{ event.dateEnd|date("d/m/Y H:i") }}</strong>{% else %}{{ event.dateEnd|date("d/m/Y H:i") }}{% endif %}</td>
                                             <td><a href="{{ path('osel_event_view_place', {'id': event.place.id}) }}">{% if event.active %}<strong>{{ event.place.title }}</strong>{% else %}{{ event.place.title }}{% endif %}</a></td>
                                             <td id="event_{{ event.id }}">{% if is_granted('ROLE_WEEKEND') %}<a class="event_activate" href="{{ path('osel_event_activate', {'id': event.id}) }}" obj="{{ event.id }}">{% endif %}{% if event.active %} <i class="state-icon glyphicon glyphicon-check"></i>{% else %}<i class="state-icon glyphicon glyphicon-unchecked"></i>{% endif %}{% if is_granted('ROLE_WEEKEND') %}</a>{% endif %}</td>
-                                                <td class="hidden-xs">
+                                                <td>
                                                     <div class="btn-group" role="group" style="min-width:136px;">
                                                         <button class="btn btn-info btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('osel_event_view', {'id': event.id}) }}'">voir</button>
                                                         <button class="btn btn-warning btn-xs visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline" type="button" style="height:19px;font-size:10px;" onclick="window.location.href='{{ path('osel_event_list_inscription', {'id': event.id}) }}'">Inscriptions</button>

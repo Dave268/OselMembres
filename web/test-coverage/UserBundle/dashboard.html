@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/david/Documents/OselMembres/src/OSEL/UserBundle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../.css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../.css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../.css/style.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+  <script src="../.js/html5shiv.min.js"></script>
+  <script src="../.js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="../index.html">/home/david/Documents/OselMembres/src/OSEL</a></li>
+        <li><a href="index.html">UserBundle</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/ExportFilesController.php.html#14">OSEL\UserBundle\Controller\ExportFilesController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#14">OSEL\UserBundle\Entity\Roles</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Mails/RegisterMail.php.html#6">OSEL\UserBundle\Mails\RegisterMail</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Listener/AuthenticationListener.php.html#15">OSEL\UserBundle\Listener\AuthenticationListener</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/UserType.php.html#21">OSEL\UserBundle\Form\UserType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/UserCompleteType.php.html#11">OSEL\UserBundle\Form\UserCompleteType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RolesType.php.html#9">OSEL\UserBundle\Form\RolesType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/UserRepository.php.html#15">OSEL\UserBundle\Entity\UserRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#16">OSEL\UserBundle\Entity\User</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#14">OSEL\UserBundle\Entity\Temp</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Login.php.html#13">OSEL\UserBundle\Entity\Login</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#24">OSEL\UserBundle\Controller\SecurityController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Instruments.php.html#13">OSEL\UserBundle\Entity\Instruments</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Groupes.php.html#13">OSEL\UserBundle\Entity\Groupes</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DependencyInjection/OSELUserExtension.php.html#15">OSEL\UserBundle\DependencyInjection\OSELUserExtension</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DependencyInjection/Configuration.php.html#13">OSEL\UserBundle\DependencyInjection\Configuration</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadRoles.php.html#10">OSEL\UserBundle\DataFixtures\ORM\LoadRoles</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadInstruments.php.html#10">OSEL\UserBundle\DataFixtures\ORM\LoadInstruments</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadGroupes.php.html#10">OSEL\UserBundle\DataFixtures\ORM\LoadGroupes</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#8">OSEL\UserBundle\Controller\UserController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Mails/ResetMail.php.html#13">OSEL\UserBundle\Mails\ResetMail</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Entity/User.php.html#16">OSEL\UserBundle\Entity\User</a></td><td class="text-right">22952</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#24">OSEL\UserBundle\Controller\SecurityController</a></td><td class="text-right">3782</td></tr>
+       <tr><td><a href="Controller/ExportFilesController.php.html#14">OSEL\UserBundle\Controller\ExportFilesController</a></td><td class="text-right">1122</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#8">OSEL\UserBundle\Controller\UserController</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Form/UserType.php.html#21">OSEL\UserBundle\Form\UserType</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Listener/AuthenticationListener.php.html#15">OSEL\UserBundle\Listener\AuthenticationListener</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Entity/UserRepository.php.html#15">OSEL\UserBundle\Entity\UserRepository</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadGroupes.php.html#10">OSEL\UserBundle\DataFixtures\ORM\LoadGroupes</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadInstruments.php.html#10">OSEL\UserBundle\DataFixtures\ORM\LoadInstruments</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadRoles.php.html#10">OSEL\UserBundle\DataFixtures\ORM\LoadRoles</a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/ExportFilesController.php.html#16"><abbr title="OSEL\UserBundle\Controller\ExportFilesController::indexAction">indexAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1339"><abbr title="OSEL\UserBundle\Entity\User::addRidingGroupMembre">addRidingGroupMembre</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1171"><abbr title="OSEL\UserBundle\Entity\User::getHeaders">getHeaders</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1176"><abbr title="OSEL\UserBundle\Entity\User::toArray">toArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1237"><abbr title="OSEL\UserBundle\Entity\User::addTemp">addTemp</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1249"><abbr title="OSEL\UserBundle\Entity\User::removeTemp">removeTemp</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1259"><abbr title="OSEL\UserBundle\Entity\User::getTemps">getTemps</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1271"><abbr title="OSEL\UserBundle\Entity\User::addEvent">addEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1283"><abbr title="OSEL\UserBundle\Entity\User::removeEvent">removeEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1293"><abbr title="OSEL\UserBundle\Entity\User::getEvents">getEvents</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1305"><abbr title="OSEL\UserBundle\Entity\User::addRidingGroup">addRidingGroup</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1317"><abbr title="OSEL\UserBundle\Entity\User::removeRidingGroup">removeRidingGroup</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1327"><abbr title="OSEL\UserBundle\Entity\User::getRidingGroups">getRidingGroups</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1351"><abbr title="OSEL\UserBundle\Entity\User::removeRidingGroupMembre">removeRidingGroupMembre</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1156"><abbr title="OSEL\UserBundle\Entity\User::removeUserRole">removeUserRole</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1361"><abbr title="OSEL\UserBundle\Entity\User::getRidingGroupMembres">getRidingGroupMembres</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1373"><abbr title="OSEL\UserBundle\Entity\User::addSubEvent">addSubEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1385"><abbr title="OSEL\UserBundle\Entity\User::removeSubEvent">removeSubEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1395"><abbr title="OSEL\UserBundle\Entity\User::getSubEvents">getSubEvents</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1407"><abbr title="OSEL\UserBundle\Entity\User::addSubscribeEvent">addSubscribeEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1419"><abbr title="OSEL\UserBundle\Entity\User::removeSubscribeEvent">removeSubscribeEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1429"><abbr title="OSEL\UserBundle\Entity\User::getSubscribeEvents">getSubscribeEvents</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1441"><abbr title="OSEL\UserBundle\Entity\User::addYearMedia">addYearMedia</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1453"><abbr title="OSEL\UserBundle\Entity\User::removeYearMedia">removeYearMedia</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1463"><abbr title="OSEL\UserBundle\Entity\User::getYearMedias">getYearMedias</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1475"><abbr title="OSEL\UserBundle\Entity\User::addAlbumMedia">addAlbumMedia</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1166"><abbr title="OSEL\UserBundle\Entity\User::getUserRoles">getUserRoles</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1142"><abbr title="OSEL\UserBundle\Entity\User::addUserRole">addUserRole</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1497"><abbr title="OSEL\UserBundle\Entity\User::getAlbumMedias">getAlbumMedias</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1010"><abbr title="OSEL\UserBundle\Entity\User::addGroupe">addGroupe</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#883"><abbr title="OSEL\UserBundle\Entity\User::setDateLastLogin">setDateLastLogin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#895"><abbr title="OSEL\UserBundle\Entity\User::getDateLastLogin">getDateLastLogin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#906"><abbr title="OSEL\UserBundle\Entity\User::setNewsletter">setNewsletter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#918"><abbr title="OSEL\UserBundle\Entity\User::getNewsletter">getNewsletter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#929"><abbr title="OSEL\UserBundle\Entity\User::setEmergencylastname">setEmergencylastname</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#941"><abbr title="OSEL\UserBundle\Entity\User::getEmergencylastname">getEmergencylastname</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#952"><abbr title="OSEL\UserBundle\Entity\User::setEmergencyname">setEmergencyname</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#964"><abbr title="OSEL\UserBundle\Entity\User::getEmergencyname">getEmergencyname</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#975"><abbr title="OSEL\UserBundle\Entity\User::addLogin">addLogin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#989"><abbr title="OSEL\UserBundle\Entity\User::removeLogin">removeLogin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#999"><abbr title="OSEL\UserBundle\Entity\User::getLogins">getLogins</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1022"><abbr title="OSEL\UserBundle\Entity\User::removeGroupe">removeGroupe</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1126"><abbr title="OSEL\UserBundle\Entity\User::getRoles">getRoles</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1032"><abbr title="OSEL\UserBundle\Entity\User::getGroupes">getGroupes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1043"><abbr title="OSEL\UserBundle\Entity\User::addInstrument">addInstrument</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1057"><abbr title="OSEL\UserBundle\Entity\User::removeInstrument">removeInstrument</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1067"><abbr title="OSEL\UserBundle\Entity\User::getInstruments">getInstruments</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1072"><abbr title="OSEL\UserBundle\Entity\User::defineRest">defineRest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1078"><abbr title="OSEL\UserBundle\Entity\User::eraseCredentials">eraseCredentials</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1082"><abbr title="OSEL\UserBundle\Entity\User::isAccountNonExpired">isAccountNonExpired</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1087"><abbr title="OSEL\UserBundle\Entity\User::isAccountNonLocked">isAccountNonLocked</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1092"><abbr title="OSEL\UserBundle\Entity\User::isCredentialsNonExpired">isCredentialsNonExpired</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1097"><abbr title="OSEL\UserBundle\Entity\User::isEnabled">isEnabled</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1103"><abbr title="OSEL\UserBundle\Entity\User::serialize">serialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1115"><abbr title="OSEL\UserBundle\Entity\User::unserialize">unserialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1487"><abbr title="OSEL\UserBundle\Entity\User::removeAlbumMedia">removeAlbumMedia</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1509"><abbr title="OSEL\UserBundle\Entity\User::addMedia">addMedia</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#860"><abbr title="OSEL\UserBundle\Entity\User::setDateUpdate">setDateUpdate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RolesType.php.html#26"><abbr title="OSEL\UserBundle\Form\RolesType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1861"><abbr title="OSEL\UserBundle\Entity\User::removeComposerimgsModified">removeComposerimgsModified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1871"><abbr title="OSEL\UserBundle\Entity\User::getComposerimgsModified">getComposerimgsModified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1883"><abbr title="OSEL\UserBundle\Entity\User::addComposerbio">addComposerbio</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1895"><abbr title="OSEL\UserBundle\Entity\User::removeComposerbio">removeComposerbio</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1905"><abbr title="OSEL\UserBundle\Entity\User::getComposerbios">getComposerbios</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1917"><abbr title="OSEL\UserBundle\Entity\User::addComposerbiosModified">addComposerbiosModified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1929"><abbr title="OSEL\UserBundle\Entity\User::removeComposerbiosModified">removeComposerbiosModified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1939"><abbr title="OSEL\UserBundle\Entity\User::getComposerbiosModified">getComposerbiosModified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/UserRepository.php.html#17"><abbr title="OSEL\UserBundle\Entity\UserRepository::getUsers">getUsers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/UserRepository.php.html#52"><abbr title="OSEL\UserBundle\Entity\UserRepository::getExportQuery">getExportQuery</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RolesType.php.html#15"><abbr title="OSEL\UserBundle\Form\RolesType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/UserCompleteType.php.html#17"><abbr title="OSEL\UserBundle\Form\UserCompleteType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1837"><abbr title="OSEL\UserBundle\Entity\User::getComposerimgs">getComposerimgs</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/UserCompleteType.php.html#26"><abbr title="OSEL\UserBundle\Form\UserCompleteType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/UserCompleteType.php.html#36"><abbr title="OSEL\UserBundle\Form\UserCompleteType::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/UserType.php.html#25"><abbr title="OSEL\UserBundle\Form\UserType::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/UserType.php.html#33"><abbr title="OSEL\UserBundle\Form\UserType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/UserType.php.html#83"><abbr title="OSEL\UserBundle\Form\UserType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/UserType.php.html#93"><abbr title="OSEL\UserBundle\Form\UserType::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Listener/AuthenticationListener.php.html#30"><abbr title="OSEL\UserBundle\Listener\AuthenticationListener::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Listener/AuthenticationListener.php.html#43"><abbr title="OSEL\UserBundle\Listener\AuthenticationListener::onAuthenticationFailure">onAuthenticationFailure</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Listener/AuthenticationListener.php.html#54"><abbr title="OSEL\UserBundle\Listener\AuthenticationListener::onAuthenticationSuccess">onAuthenticationSuccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Mails/RegisterMail.php.html#11"><abbr title="OSEL\UserBundle\Mails\RegisterMail::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Mails/RegisterMail.php.html#18"><abbr title="OSEL\UserBundle\Mails\RegisterMail::sendRegisterMail">sendRegisterMail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Mails/ResetMail.php.html#18"><abbr title="OSEL\UserBundle\Mails\ResetMail::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1849"><abbr title="OSEL\UserBundle\Entity\User::addComposerimgsModified">addComposerimgsModified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1827"><abbr title="OSEL\UserBundle\Entity\User::removeComposerimg">removeComposerimg</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1521"><abbr title="OSEL\UserBundle\Entity\User::removeMedia">removeMedia</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1657"><abbr title="OSEL\UserBundle\Entity\User::removeImageNews">removeImageNews</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1531"><abbr title="OSEL\UserBundle\Entity\User::getMedias">getMedias</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1543"><abbr title="OSEL\UserBundle\Entity\User::addTypeMedia">addTypeMedia</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1555"><abbr title="OSEL\UserBundle\Entity\User::removeTypeMedia">removeTypeMedia</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1565"><abbr title="OSEL\UserBundle\Entity\User::getTypeMedias">getTypeMedias</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1577"><abbr title="OSEL\UserBundle\Entity\User::addRedirectionMail">addRedirectionMail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1589"><abbr title="OSEL\UserBundle\Entity\User::removeRedirectionMail">removeRedirectionMail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1599"><abbr title="OSEL\UserBundle\Entity\User::getRedirectionMails">getRedirectionMails</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1611"><abbr title="OSEL\UserBundle\Entity\User::addNews">addNews</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1623"><abbr title="OSEL\UserBundle\Entity\User::removeNews">removeNews</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1633"><abbr title="OSEL\UserBundle\Entity\User::getNews">getNews</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1645"><abbr title="OSEL\UserBundle\Entity\User::addImageNews">addImageNews</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1667"><abbr title="OSEL\UserBundle\Entity\User::getImageNews">getImageNews</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1815"><abbr title="OSEL\UserBundle\Entity\User::addComposerimg">addComposerimg</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1679"><abbr title="OSEL\UserBundle\Entity\User::addScore">addScore</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1691"><abbr title="OSEL\UserBundle\Entity\User::removeScore">removeScore</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1701"><abbr title="OSEL\UserBundle\Entity\User::getScores">getScores</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1713"><abbr title="OSEL\UserBundle\Entity\User::addScoresModified">addScoresModified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1725"><abbr title="OSEL\UserBundle\Entity\User::removeScoresModified">removeScoresModified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1735"><abbr title="OSEL\UserBundle\Entity\User::getScoresModified">getScoresModified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1747"><abbr title="OSEL\UserBundle\Entity\User::addComposer">addComposer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1759"><abbr title="OSEL\UserBundle\Entity\User::removeComposer">removeComposer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1769"><abbr title="OSEL\UserBundle\Entity\User::getComposers">getComposers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1781"><abbr title="OSEL\UserBundle\Entity\User::addComposersModified">addComposersModified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1793"><abbr title="OSEL\UserBundle\Entity\User::removeComposersModified">removeComposersModified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#1803"><abbr title="OSEL\UserBundle\Entity\User::getComposersModified">getComposersModified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#872"><abbr title="OSEL\UserBundle\Entity\User::getDateUpdate">getDateUpdate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#849"><abbr title="OSEL\UserBundle\Entity\User::getDateAdd">getDateAdd</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ExportFilesController.php.html#88"><abbr title="OSEL\UserBundle\Controller\ExportFilesController::exportAction">exportAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#84"><abbr title="OSEL\UserBundle\Entity\Roles::setUser">setUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Login.php.html#44"><abbr title="OSEL\UserBundle\Entity\Login::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Login.php.html#54"><abbr title="OSEL\UserBundle\Entity\Login::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Login.php.html#65"><abbr title="OSEL\UserBundle\Entity\Login::setLogin">setLogin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Login.php.html#77"><abbr title="OSEL\UserBundle\Entity\Login::getLogin">getLogin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Login.php.html#88"><abbr title="OSEL\UserBundle\Entity\Login::setUser">setUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Login.php.html#100"><abbr title="OSEL\UserBundle\Entity\Login::getUser">getUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Login.php.html#111"><abbr title="OSEL\UserBundle\Entity\Login::setName">setName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Login.php.html#123"><abbr title="OSEL\UserBundle\Entity\Login::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#50"><abbr title="OSEL\UserBundle\Entity\Roles::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#61"><abbr title="OSEL\UserBundle\Entity\Roles::setRole">setRole</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#73"><abbr title="OSEL\UserBundle\Entity\Roles::getRole">getRole</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#96"><abbr title="OSEL\UserBundle\Entity\Roles::getUser">getUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Instruments.php.html#96"><abbr title="OSEL\UserBundle\Entity\Instruments::removeUser">removeUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#103"><abbr title="OSEL\UserBundle\Entity\Roles::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#115"><abbr title="OSEL\UserBundle\Entity\Roles::addUser">addUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#127"><abbr title="OSEL\UserBundle\Entity\Roles::removeUser">removeUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#137"><abbr title="OSEL\UserBundle\Entity\Roles::getUsers">getUsers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#149"><abbr title="OSEL\UserBundle\Entity\Roles::addDocument">addDocument</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#161"><abbr title="OSEL\UserBundle\Entity\Roles::removeDocument">removeDocument</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#171"><abbr title="OSEL\UserBundle\Entity\Roles::getDocuments">getDocuments</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#184"><abbr title="OSEL\UserBundle\Entity\Roles::setName">setName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Roles.php.html#196"><abbr title="OSEL\UserBundle\Entity\Roles::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#71"><abbr title="OSEL\UserBundle\Entity\Temp::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#83"><abbr title="OSEL\UserBundle\Entity\Temp::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Instruments.php.html#106"><abbr title="OSEL\UserBundle\Entity\Instruments::getUsers">getUsers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Instruments.php.html#84"><abbr title="OSEL\UserBundle\Entity\Instruments::addUser">addUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#107"><abbr title="OSEL\UserBundle\Entity\Temp::getSha">getSha</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#507"><abbr title="OSEL\UserBundle\Controller\SecurityController::sendInscriptionMailAction">sendInscriptionMailAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ExportFilesController.php.html#90"><abbr title="OSEL\UserBundle\Controller\ExportFilesController::anonymousFunction:90#681">anonymousFunction:90#681</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ExportFilesController.php.html#145"><abbr title="OSEL\UserBundle\Controller\ExportFilesController::exportContactAction">exportContactAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ExportFilesController.php.html#147"><abbr title="OSEL\UserBundle\Controller\ExportFilesController::anonymousFunction:147#1058">anonymousFunction:147#1058</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#26"><abbr title="OSEL\UserBundle\Controller\SecurityController::loginAction">loginAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#44"><abbr title="OSEL\UserBundle\Controller\SecurityController::registerAction">registerAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#125"><abbr title="OSEL\UserBundle\Controller\SecurityController::modifyAction">modifyAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#175"><abbr title="OSEL\UserBundle\Controller\SecurityController::changePassAction">changePassAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#245"><abbr title="OSEL\UserBundle\Controller\SecurityController::modifyCompleteAction">modifyCompleteAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#327"><abbr title="OSEL\UserBundle\Controller\SecurityController::deleteAction">deleteAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#359"><abbr title="OSEL\UserBundle\Controller\SecurityController::setPassAction">setPassAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#444"><abbr title="OSEL\UserBundle\Controller\SecurityController::sendResetMailAction">sendResetMailAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#10"><abbr title="OSEL\UserBundle\Controller\UserController::indexAction">indexAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Instruments.php.html#73"><abbr title="OSEL\UserBundle\Entity\Instruments::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#40"><abbr title="OSEL\UserBundle\Controller\UserController::viewAction">viewAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadGroupes.php.html#12"><abbr title="OSEL\UserBundle\DataFixtures\ORM\LoadGroupes::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadInstruments.php.html#12"><abbr title="OSEL\UserBundle\DataFixtures\ORM\LoadInstruments::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadRoles.php.html#12"><abbr title="OSEL\UserBundle\DataFixtures\ORM\LoadRoles::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DependencyInjection/Configuration.php.html#18"><abbr title="OSEL\UserBundle\DependencyInjection\Configuration::getConfigTreeBuilder">getConfigTreeBuilder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DependencyInjection/OSELUserExtension.php.html#20"><abbr title="OSEL\UserBundle\DependencyInjection\OSELUserExtension::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Groupes.php.html#37"><abbr title="OSEL\UserBundle\Entity\Groupes::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Groupes.php.html#48"><abbr title="OSEL\UserBundle\Entity\Groupes::setGroupe">setGroupe</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Groupes.php.html#60"><abbr title="OSEL\UserBundle\Entity\Groupes::getGroupe">getGroupe</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Instruments.php.html#43"><abbr title="OSEL\UserBundle\Entity\Instruments::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Instruments.php.html#54"><abbr title="OSEL\UserBundle\Entity\Instruments::setInstrument">setInstrument</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Instruments.php.html#66"><abbr title="OSEL\UserBundle\Entity\Instruments::getInstrument">getInstrument</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#95"><abbr title="OSEL\UserBundle\Entity\Temp::setSha">setSha</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#119"><abbr title="OSEL\UserBundle\Entity\Temp::setRole">setRole</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#837"><abbr title="OSEL\UserBundle\Entity\User::setDateAdd">setDateAdd</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#676"><abbr title="OSEL\UserBundle\Entity\User::setCountry">setCountry</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#549"><abbr title="OSEL\UserBundle\Entity\User::getInstrument">getInstrument</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#561"><abbr title="OSEL\UserBundle\Entity\User::setProfession">setProfession</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#573"><abbr title="OSEL\UserBundle\Entity\User::getProfession">getProfession</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#584"><abbr title="OSEL\UserBundle\Entity\User::setStreet">setStreet</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#596"><abbr title="OSEL\UserBundle\Entity\User::getStreet">getStreet</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#607"><abbr title="OSEL\UserBundle\Entity\User::setNumber">setNumber</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#619"><abbr title="OSEL\UserBundle\Entity\User::getNumber">getNumber</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#630"><abbr title="OSEL\UserBundle\Entity\User::setPostal">setPostal</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#642"><abbr title="OSEL\UserBundle\Entity\User::getPostal">getPostal</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#653"><abbr title="OSEL\UserBundle\Entity\User::setCity">setCity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#665"><abbr title="OSEL\UserBundle\Entity\User::getCity">getCity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#688"><abbr title="OSEL\UserBundle\Entity\User::getCountry">getCountry</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#526"><abbr title="OSEL\UserBundle\Entity\User::getLastname">getLastname</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#699"><abbr title="OSEL\UserBundle\Entity\User::setPhone">setPhone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#711"><abbr title="OSEL\UserBundle\Entity\User::getPhone">getPhone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#722"><abbr title="OSEL\UserBundle\Entity\User::setMobilephone">setMobilephone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#734"><abbr title="OSEL\UserBundle\Entity\User::getMobilephone">getMobilephone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#745"><abbr title="OSEL\UserBundle\Entity\User::setEmergencycontact">setEmergencycontact</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#757"><abbr title="OSEL\UserBundle\Entity\User::getEmergencycontact">getEmergencycontact</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#768"><abbr title="OSEL\UserBundle\Entity\User::setEmergencyrelation">setEmergencyrelation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#780"><abbr title="OSEL\UserBundle\Entity\User::getEmergencyrelation">getEmergencyrelation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#791"><abbr title="OSEL\UserBundle\Entity\User::setEmergencyphone">setEmergencyphone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#803"><abbr title="OSEL\UserBundle\Entity\User::getEmergencyphone">getEmergencyphone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#814"><abbr title="OSEL\UserBundle\Entity\User::setBirthday">setBirthday</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#826"><abbr title="OSEL\UserBundle\Entity\User::getBirthday">getBirthday</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#537"><abbr title="OSEL\UserBundle\Entity\User::setInstrument">setInstrument</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#514"><abbr title="OSEL\UserBundle\Entity\User::setLastname">setLastname</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#131"><abbr title="OSEL\UserBundle\Entity\Temp::getRole">getRole</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#338"><abbr title="OSEL\UserBundle\Entity\User::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#143"><abbr title="OSEL\UserBundle\Entity\Temp::setDateAdd">setDateAdd</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#155"><abbr title="OSEL\UserBundle\Entity\Temp::getDateAdd">getDateAdd</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#167"><abbr title="OSEL\UserBundle\Entity\Temp::setValidity">setValidity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#179"><abbr title="OSEL\UserBundle\Entity\Temp::getValidity">getValidity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#191"><abbr title="OSEL\UserBundle\Entity\Temp::setActive">setActive</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#203"><abbr title="OSEL\UserBundle\Entity\Temp::getActive">getActive</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#215"><abbr title="OSEL\UserBundle\Entity\Temp::setUser">setUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#227"><abbr title="OSEL\UserBundle\Entity\Temp::getUser">getUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#239"><abbr title="OSEL\UserBundle\Entity\Temp::setCount">setCount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#251"><abbr title="OSEL\UserBundle\Entity\Temp::getCount">getCount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Temp.php.html#259"><abbr title="OSEL\UserBundle\Entity\Temp::increaseCount">increaseCount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#355"><abbr title="OSEL\UserBundle\Entity\User::updateDate">updateDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#503"><abbr title="OSEL\UserBundle\Entity\User::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#365"><abbr title="OSEL\UserBundle\Entity\User::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#376"><abbr title="OSEL\UserBundle\Entity\User::setUsername">setUsername</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#388"><abbr title="OSEL\UserBundle\Entity\User::getUsername">getUsername</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#399"><abbr title="OSEL\UserBundle\Entity\User::setPassword">setPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#411"><abbr title="OSEL\UserBundle\Entity\User::getPassword">getPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#422"><abbr title="OSEL\UserBundle\Entity\User::setSalt">setSalt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#434"><abbr title="OSEL\UserBundle\Entity\User::getSalt">getSalt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#445"><abbr title="OSEL\UserBundle\Entity\User::setEmail">setEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#457"><abbr title="OSEL\UserBundle\Entity\User::getEmail">getEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#468"><abbr title="OSEL\UserBundle\Entity\User::setEnabled">setEnabled</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#480"><abbr title="OSEL\UserBundle\Entity\User::getEnabled">getEnabled</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#491"><abbr title="OSEL\UserBundle\Entity\User::setName">setName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Mails/ResetMail.php.html#25"><abbr title="OSEL\UserBundle\Mails\ResetMail::sendRegisterMail">sendRegisterMail</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/SecurityController.php.html#44"><abbr title="OSEL\UserBundle\Controller\SecurityController::registerAction">registerAction</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#359"><abbr title="OSEL\UserBundle\Controller\SecurityController::setPassAction">setPassAction</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Controller/ExportFilesController.php.html#16"><abbr title="OSEL\UserBundle\Controller\ExportFilesController::indexAction">indexAction</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Controller/ExportFilesController.php.html#88"><abbr title="OSEL\UserBundle\Controller\ExportFilesController::exportAction">exportAction</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Controller/ExportFilesController.php.html#90"><abbr title="OSEL\UserBundle\Controller\ExportFilesController::anonymousFunction:90#681">anonymousFunction:90#681</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Entity/User.php.html#1176"><abbr title="OSEL\UserBundle\Entity\User::toArray">toArray</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#125"><abbr title="OSEL\UserBundle\Controller\SecurityController::modifyAction">modifyAction</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#175"><abbr title="OSEL\UserBundle\Controller\SecurityController::changePassAction">changePassAction</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#245"><abbr title="OSEL\UserBundle\Controller\SecurityController::modifyCompleteAction">modifyCompleteAction</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#327"><abbr title="OSEL\UserBundle\Controller\SecurityController::deleteAction">deleteAction</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#40"><abbr title="OSEL\UserBundle\Controller\UserController::viewAction">viewAction</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#10"><abbr title="OSEL\UserBundle\Controller\UserController::indexAction">indexAction</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#444"><abbr title="OSEL\UserBundle\Controller\SecurityController::sendResetMailAction">sendResetMailAction</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#507"><abbr title="OSEL\UserBundle\Controller\SecurityController::sendInscriptionMailAction">sendInscriptionMailAction</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Entity/UserRepository.php.html#17"><abbr title="OSEL\UserBundle\Entity\UserRepository::getUsers">getUsers</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Listener/AuthenticationListener.php.html#54"><abbr title="OSEL\UserBundle\Listener\AuthenticationListener::onAuthenticationSuccess">onAuthenticationSuccess</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/ExportFilesController.php.html#147"><abbr title="OSEL\UserBundle\Controller\ExportFilesController::anonymousFunction:147#1058">anonymousFunction:147#1058</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/ExportFilesController.php.html#145"><abbr title="OSEL\UserBundle\Controller\ExportFilesController::exportContactAction">exportContactAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Form/UserType.php.html#33"><abbr title="OSEL\UserBundle\Form\UserType::buildForm">buildForm</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#26"><abbr title="OSEL\UserBundle\Controller\SecurityController::loginAction">loginAction</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadGroupes.php.html#12"><abbr title="OSEL\UserBundle\DataFixtures\ORM\LoadGroupes::load">load</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadInstruments.php.html#12"><abbr title="OSEL\UserBundle\DataFixtures\ORM\LoadInstruments::load">load</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadRoles.php.html#12"><abbr title="OSEL\UserBundle\DataFixtures\ORM\LoadRoles::load">load</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#338"><abbr title="OSEL\UserBundle\Entity\User::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#1126"><abbr title="OSEL\UserBundle\Entity\User::getRoles">getRoles</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 5.3.0</a> using <a href="https://secure.php.net/" target="_top">PHP 7.1.11-0ubuntu0.17.10.1</a> with <a href="https://xdebug.org/">Xdebug 2.5.5</a> and <a href="https://phpunit.de/">PHPUnit 6.5.5</a> at Tue Feb 13 10:31:53 UTC 2018.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../.js/jquery.min.js" type="text/javascript"></script>
+  <script src="../.js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../.js/holder.min.js" type="text/javascript"></script>
+  <script src="../.js/d3.min.js" type="text/javascript"></script>
+  <script src="../.js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([21,0,0,0,0,0,0,0,0,0,0,5], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([229,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,33,"<a href=\"Controller\/ExportFilesController.php.html#14\">OSEL\\UserBundle\\Controller\\ExportFilesController<\/a>"],[0,61,"<a href=\"Controller\/SecurityController.php.html#24\">OSEL\\UserBundle\\Controller\\SecurityController<\/a>"],[0,10,"<a href=\"Controller\/UserController.php.html#8\">OSEL\\UserBundle\\Controller\\UserController<\/a>"],[0,2,"<a href=\"DataFixtures\/ORM\/LoadGroupes.php.html#10\">OSEL\\UserBundle\\DataFixtures\\ORM\\LoadGroupes<\/a>"],[0,2,"<a href=\"DataFixtures\/ORM\/LoadInstruments.php.html#10\">OSEL\\UserBundle\\DataFixtures\\ORM\\LoadInstruments<\/a>"],[0,2,"<a href=\"DataFixtures\/ORM\/LoadRoles.php.html#10\">OSEL\\UserBundle\\DataFixtures\\ORM\\LoadRoles<\/a>"],[0,1,"<a href=\"DependencyInjection\/Configuration.php.html#13\">OSEL\\UserBundle\\DependencyInjection\\Configuration<\/a>"],[0,1,"<a href=\"DependencyInjection\/OSELUserExtension.php.html#15\">OSEL\\UserBundle\\DependencyInjection\\OSELUserExtension<\/a>"],[0,3,"<a href=\"Entity\/Groupes.php.html#13\">OSEL\\UserBundle\\Entity\\Groupes<\/a>"],[100,0,"<a href=\"Entity\/GroupesRepository.php.html#13\">OSEL\\UserBundle\\Entity\\GroupesRepository<\/a>"],[0,7,"<a href=\"Entity\/Instruments.php.html#13\">OSEL\\UserBundle\\Entity\\Instruments<\/a>"],[100,0,"<a href=\"Entity\/InstrumentsRepository.php.html#13\">OSEL\\UserBundle\\Entity\\InstrumentsRepository<\/a>"],[0,8,"<a href=\"Entity\/Login.php.html#13\">OSEL\\UserBundle\\Entity\\Login<\/a>"],[0,14,"<a href=\"Entity\/Roles.php.html#14\">OSEL\\UserBundle\\Entity\\Roles<\/a>"],[100,0,"<a href=\"Entity\/RolesRepository.php.html#13\">OSEL\\UserBundle\\Entity\\RolesRepository<\/a>"],[0,17,"<a href=\"Entity\/Temp.php.html#14\">OSEL\\UserBundle\\Entity\\Temp<\/a>"],[0,151,"<a href=\"Entity\/User.php.html#16\">OSEL\\UserBundle\\Entity\\User<\/a>"],[0,5,"<a href=\"Entity\/UserRepository.php.html#15\">OSEL\\UserBundle\\Entity\\UserRepository<\/a>"],[0,2,"<a href=\"Form\/RolesType.php.html#9\">OSEL\\UserBundle\\Form\\RolesType<\/a>"],[0,3,"<a href=\"Form\/UserCompleteType.php.html#11\">OSEL\\UserBundle\\Form\\UserCompleteType<\/a>"],[0,6,"<a href=\"Form\/UserType.php.html#21\">OSEL\\UserBundle\\Form\\UserType<\/a>"],[0,6,"<a href=\"Listener\/AuthenticationListener.php.html#15\">OSEL\\UserBundle\\Listener\\AuthenticationListener<\/a>"],[0,2,"<a href=\"Mails\/RegisterMail.php.html#6\">OSEL\\UserBundle\\Mails\\RegisterMail<\/a>"],[0,2,"<a href=\"Mails\/ResetMail.php.html#13\">OSEL\\UserBundle\\Mails\\ResetMail<\/a>"],[100,0,"<a href=\"OSELUserBundle.php.html#7\">OSEL\\UserBundle\\OSELUserBundle<\/a>"],[100,0,"<a href=\"Repository\/TempRepository.php.html#11\">OSEL\\UserBundle\\Repository\\TempRepository<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,9,"<a href=\"Controller\/ExportFilesController.php.html#16\">OSEL\\UserBundle\\Controller\\ExportFilesController::indexAction<\/a>"],[0,9,"<a href=\"Controller\/ExportFilesController.php.html#88\">OSEL\\UserBundle\\Controller\\ExportFilesController::exportAction<\/a>"],[0,9,"<a href=\"Controller\/ExportFilesController.php.html#90\">OSEL\\UserBundle\\Controller\\ExportFilesController::anonymousFunction:90#681<\/a>"],[0,3,"<a href=\"Controller\/ExportFilesController.php.html#145\">OSEL\\UserBundle\\Controller\\ExportFilesController::exportContactAction<\/a>"],[0,3,"<a href=\"Controller\/ExportFilesController.php.html#147\">OSEL\\UserBundle\\Controller\\ExportFilesController::anonymousFunction:147#1058<\/a>"],[0,2,"<a href=\"Controller\/SecurityController.php.html#26\">OSEL\\UserBundle\\Controller\\SecurityController::loginAction<\/a>"],[0,10,"<a href=\"Controller\/SecurityController.php.html#44\">OSEL\\UserBundle\\Controller\\SecurityController::registerAction<\/a>"],[0,8,"<a href=\"Controller\/SecurityController.php.html#125\">OSEL\\UserBundle\\Controller\\SecurityController::modifyAction<\/a>"],[0,8,"<a href=\"Controller\/SecurityController.php.html#175\">OSEL\\UserBundle\\Controller\\SecurityController::changePassAction<\/a>"],[0,8,"<a href=\"Controller\/SecurityController.php.html#245\">OSEL\\UserBundle\\Controller\\SecurityController::modifyCompleteAction<\/a>"],[0,6,"<a href=\"Controller\/SecurityController.php.html#327\">OSEL\\UserBundle\\Controller\\SecurityController::deleteAction<\/a>"],[0,10,"<a href=\"Controller\/SecurityController.php.html#359\">OSEL\\UserBundle\\Controller\\SecurityController::setPassAction<\/a>"],[0,5,"<a href=\"Controller\/SecurityController.php.html#444\">OSEL\\UserBundle\\Controller\\SecurityController::sendResetMailAction<\/a>"],[0,4,"<a href=\"Controller\/SecurityController.php.html#507\">OSEL\\UserBundle\\Controller\\SecurityController::sendInscriptionMailAction<\/a>"],[0,5,"<a href=\"Controller\/UserController.php.html#10\">OSEL\\UserBundle\\Controller\\UserController::indexAction<\/a>"],[0,5,"<a href=\"Controller\/UserController.php.html#40\">OSEL\\UserBundle\\Controller\\UserController::viewAction<\/a>"],[0,2,"<a href=\"DataFixtures\/ORM\/LoadGroupes.php.html#12\">OSEL\\UserBundle\\DataFixtures\\ORM\\LoadGroupes::load<\/a>"],[0,2,"<a href=\"DataFixtures\/ORM\/LoadInstruments.php.html#12\">OSEL\\UserBundle\\DataFixtures\\ORM\\LoadInstruments::load<\/a>"],[0,2,"<a href=\"DataFixtures\/ORM\/LoadRoles.php.html#12\">OSEL\\UserBundle\\DataFixtures\\ORM\\LoadRoles::load<\/a>"],[0,1,"<a href=\"DependencyInjection\/Configuration.php.html#18\">OSEL\\UserBundle\\DependencyInjection\\Configuration::getConfigTreeBuilder<\/a>"],[0,1,"<a href=\"DependencyInjection\/OSELUserExtension.php.html#20\">OSEL\\UserBundle\\DependencyInjection\\OSELUserExtension::load<\/a>"],[0,1,"<a href=\"Entity\/Groupes.php.html#37\">OSEL\\UserBundle\\Entity\\Groupes::getId<\/a>"],[0,1,"<a href=\"Entity\/Groupes.php.html#48\">OSEL\\UserBundle\\Entity\\Groupes::setGroupe<\/a>"],[0,1,"<a href=\"Entity\/Groupes.php.html#60\">OSEL\\UserBundle\\Entity\\Groupes::getGroupe<\/a>"],[0,1,"<a href=\"Entity\/Instruments.php.html#43\">OSEL\\UserBundle\\Entity\\Instruments::getId<\/a>"],[0,1,"<a href=\"Entity\/Instruments.php.html#54\">OSEL\\UserBundle\\Entity\\Instruments::setInstrument<\/a>"],[0,1,"<a href=\"Entity\/Instruments.php.html#66\">OSEL\\UserBundle\\Entity\\Instruments::getInstrument<\/a>"],[0,1,"<a href=\"Entity\/Instruments.php.html#73\">OSEL\\UserBundle\\Entity\\Instruments::__construct<\/a>"],[0,1,"<a href=\"Entity\/Instruments.php.html#84\">OSEL\\UserBundle\\Entity\\Instruments::addUser<\/a>"],[0,1,"<a href=\"Entity\/Instruments.php.html#96\">OSEL\\UserBundle\\Entity\\Instruments::removeUser<\/a>"],[0,1,"<a href=\"Entity\/Instruments.php.html#106\">OSEL\\UserBundle\\Entity\\Instruments::getUsers<\/a>"],[0,1,"<a href=\"Entity\/Login.php.html#44\">OSEL\\UserBundle\\Entity\\Login::__construct<\/a>"],[0,1,"<a href=\"Entity\/Login.php.html#54\">OSEL\\UserBundle\\Entity\\Login::getId<\/a>"],[0,1,"<a href=\"Entity\/Login.php.html#65\">OSEL\\UserBundle\\Entity\\Login::setLogin<\/a>"],[0,1,"<a href=\"Entity\/Login.php.html#77\">OSEL\\UserBundle\\Entity\\Login::getLogin<\/a>"],[0,1,"<a href=\"Entity\/Login.php.html#88\">OSEL\\UserBundle\\Entity\\Login::setUser<\/a>"],[0,1,"<a href=\"Entity\/Login.php.html#100\">OSEL\\UserBundle\\Entity\\Login::getUser<\/a>"],[0,1,"<a href=\"Entity\/Login.php.html#111\">OSEL\\UserBundle\\Entity\\Login::setName<\/a>"],[0,1,"<a href=\"Entity\/Login.php.html#123\">OSEL\\UserBundle\\Entity\\Login::getName<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#50\">OSEL\\UserBundle\\Entity\\Roles::getId<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#61\">OSEL\\UserBundle\\Entity\\Roles::setRole<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#73\">OSEL\\UserBundle\\Entity\\Roles::getRole<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#84\">OSEL\\UserBundle\\Entity\\Roles::setUser<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#96\">OSEL\\UserBundle\\Entity\\Roles::getUser<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#103\">OSEL\\UserBundle\\Entity\\Roles::__construct<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#115\">OSEL\\UserBundle\\Entity\\Roles::addUser<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#127\">OSEL\\UserBundle\\Entity\\Roles::removeUser<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#137\">OSEL\\UserBundle\\Entity\\Roles::getUsers<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#149\">OSEL\\UserBundle\\Entity\\Roles::addDocument<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#161\">OSEL\\UserBundle\\Entity\\Roles::removeDocument<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#171\">OSEL\\UserBundle\\Entity\\Roles::getDocuments<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#184\">OSEL\\UserBundle\\Entity\\Roles::setName<\/a>"],[0,1,"<a href=\"Entity\/Roles.php.html#196\">OSEL\\UserBundle\\Entity\\Roles::getName<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#71\">OSEL\\UserBundle\\Entity\\Temp::__construct<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#83\">OSEL\\UserBundle\\Entity\\Temp::getId<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#95\">OSEL\\UserBundle\\Entity\\Temp::setSha<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#107\">OSEL\\UserBundle\\Entity\\Temp::getSha<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#119\">OSEL\\UserBundle\\Entity\\Temp::setRole<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#131\">OSEL\\UserBundle\\Entity\\Temp::getRole<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#143\">OSEL\\UserBundle\\Entity\\Temp::setDateAdd<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#155\">OSEL\\UserBundle\\Entity\\Temp::getDateAdd<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#167\">OSEL\\UserBundle\\Entity\\Temp::setValidity<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#179\">OSEL\\UserBundle\\Entity\\Temp::getValidity<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#191\">OSEL\\UserBundle\\Entity\\Temp::setActive<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#203\">OSEL\\UserBundle\\Entity\\Temp::getActive<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#215\">OSEL\\UserBundle\\Entity\\Temp::setUser<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#227\">OSEL\\UserBundle\\Entity\\Temp::getUser<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#239\">OSEL\\UserBundle\\Entity\\Temp::setCount<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#251\">OSEL\\UserBundle\\Entity\\Temp::getCount<\/a>"],[0,1,"<a href=\"Entity\/Temp.php.html#259\">OSEL\\UserBundle\\Entity\\Temp::increaseCount<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#338\">OSEL\\UserBundle\\Entity\\User::__construct<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#355\">OSEL\\UserBundle\\Entity\\User::updateDate<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#365\">OSEL\\UserBundle\\Entity\\User::getId<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#376\">OSEL\\UserBundle\\Entity\\User::setUsername<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#388\">OSEL\\UserBundle\\Entity\\User::getUsername<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#399\">OSEL\\UserBundle\\Entity\\User::setPassword<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#411\">OSEL\\UserBundle\\Entity\\User::getPassword<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#422\">OSEL\\UserBundle\\Entity\\User::setSalt<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#434\">OSEL\\UserBundle\\Entity\\User::getSalt<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#445\">OSEL\\UserBundle\\Entity\\User::setEmail<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#457\">OSEL\\UserBundle\\Entity\\User::getEmail<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#468\">OSEL\\UserBundle\\Entity\\User::setEnabled<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#480\">OSEL\\UserBundle\\Entity\\User::getEnabled<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#491\">OSEL\\UserBundle\\Entity\\User::setName<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#503\">OSEL\\UserBundle\\Entity\\User::getName<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#514\">OSEL\\UserBundle\\Entity\\User::setLastname<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#526\">OSEL\\UserBundle\\Entity\\User::getLastname<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#537\">OSEL\\UserBundle\\Entity\\User::setInstrument<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#549\">OSEL\\UserBundle\\Entity\\User::getInstrument<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#561\">OSEL\\UserBundle\\Entity\\User::setProfession<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#573\">OSEL\\UserBundle\\Entity\\User::getProfession<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#584\">OSEL\\UserBundle\\Entity\\User::setStreet<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#596\">OSEL\\UserBundle\\Entity\\User::getStreet<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#607\">OSEL\\UserBundle\\Entity\\User::setNumber<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#619\">OSEL\\UserBundle\\Entity\\User::getNumber<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#630\">OSEL\\UserBundle\\Entity\\User::setPostal<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#642\">OSEL\\UserBundle\\Entity\\User::getPostal<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#653\">OSEL\\UserBundle\\Entity\\User::setCity<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#665\">OSEL\\UserBundle\\Entity\\User::getCity<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#676\">OSEL\\UserBundle\\Entity\\User::setCountry<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#688\">OSEL\\UserBundle\\Entity\\User::getCountry<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#699\">OSEL\\UserBundle\\Entity\\User::setPhone<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#711\">OSEL\\UserBundle\\Entity\\User::getPhone<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#722\">OSEL\\UserBundle\\Entity\\User::setMobilephone<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#734\">OSEL\\UserBundle\\Entity\\User::getMobilephone<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#745\">OSEL\\UserBundle\\Entity\\User::setEmergencycontact<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#757\">OSEL\\UserBundle\\Entity\\User::getEmergencycontact<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#768\">OSEL\\UserBundle\\Entity\\User::setEmergencyrelation<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#780\">OSEL\\UserBundle\\Entity\\User::getEmergencyrelation<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#791\">OSEL\\UserBundle\\Entity\\User::setEmergencyphone<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#803\">OSEL\\UserBundle\\Entity\\User::getEmergencyphone<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#814\">OSEL\\UserBundle\\Entity\\User::setBirthday<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#826\">OSEL\\UserBundle\\Entity\\User::getBirthday<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#837\">OSEL\\UserBundle\\Entity\\User::setDateAdd<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#849\">OSEL\\UserBundle\\Entity\\User::getDateAdd<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#860\">OSEL\\UserBundle\\Entity\\User::setDateUpdate<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#872\">OSEL\\UserBundle\\Entity\\User::getDateUpdate<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#883\">OSEL\\UserBundle\\Entity\\User::setDateLastLogin<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#895\">OSEL\\UserBundle\\Entity\\User::getDateLastLogin<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#906\">OSEL\\UserBundle\\Entity\\User::setNewsletter<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#918\">OSEL\\UserBundle\\Entity\\User::getNewsletter<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#929\">OSEL\\UserBundle\\Entity\\User::setEmergencylastname<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#941\">OSEL\\UserBundle\\Entity\\User::getEmergencylastname<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#952\">OSEL\\UserBundle\\Entity\\User::setEmergencyname<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#964\">OSEL\\UserBundle\\Entity\\User::getEmergencyname<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#975\">OSEL\\UserBundle\\Entity\\User::addLogin<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#989\">OSEL\\UserBundle\\Entity\\User::removeLogin<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#999\">OSEL\\UserBundle\\Entity\\User::getLogins<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1010\">OSEL\\UserBundle\\Entity\\User::addGroupe<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1022\">OSEL\\UserBundle\\Entity\\User::removeGroupe<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1032\">OSEL\\UserBundle\\Entity\\User::getGroupes<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1043\">OSEL\\UserBundle\\Entity\\User::addInstrument<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1057\">OSEL\\UserBundle\\Entity\\User::removeInstrument<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1067\">OSEL\\UserBundle\\Entity\\User::getInstruments<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1072\">OSEL\\UserBundle\\Entity\\User::defineRest<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1078\">OSEL\\UserBundle\\Entity\\User::eraseCredentials<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1082\">OSEL\\UserBundle\\Entity\\User::isAccountNonExpired<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1087\">OSEL\\UserBundle\\Entity\\User::isAccountNonLocked<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1092\">OSEL\\UserBundle\\Entity\\User::isCredentialsNonExpired<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1097\">OSEL\\UserBundle\\Entity\\User::isEnabled<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1103\">OSEL\\UserBundle\\Entity\\User::serialize<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1115\">OSEL\\UserBundle\\Entity\\User::unserialize<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#1126\">OSEL\\UserBundle\\Entity\\User::getRoles<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1142\">OSEL\\UserBundle\\Entity\\User::addUserRole<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1156\">OSEL\\UserBundle\\Entity\\User::removeUserRole<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1166\">OSEL\\UserBundle\\Entity\\User::getUserRoles<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1171\">OSEL\\UserBundle\\Entity\\User::getHeaders<\/a>"],[0,9,"<a href=\"Entity\/User.php.html#1176\">OSEL\\UserBundle\\Entity\\User::toArray<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1237\">OSEL\\UserBundle\\Entity\\User::addTemp<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1249\">OSEL\\UserBundle\\Entity\\User::removeTemp<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1259\">OSEL\\UserBundle\\Entity\\User::getTemps<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1271\">OSEL\\UserBundle\\Entity\\User::addEvent<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1283\">OSEL\\UserBundle\\Entity\\User::removeEvent<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1293\">OSEL\\UserBundle\\Entity\\User::getEvents<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1305\">OSEL\\UserBundle\\Entity\\User::addRidingGroup<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1317\">OSEL\\UserBundle\\Entity\\User::removeRidingGroup<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1327\">OSEL\\UserBundle\\Entity\\User::getRidingGroups<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1339\">OSEL\\UserBundle\\Entity\\User::addRidingGroupMembre<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1351\">OSEL\\UserBundle\\Entity\\User::removeRidingGroupMembre<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1361\">OSEL\\UserBundle\\Entity\\User::getRidingGroupMembres<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1373\">OSEL\\UserBundle\\Entity\\User::addSubEvent<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1385\">OSEL\\UserBundle\\Entity\\User::removeSubEvent<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1395\">OSEL\\UserBundle\\Entity\\User::getSubEvents<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1407\">OSEL\\UserBundle\\Entity\\User::addSubscribeEvent<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1419\">OSEL\\UserBundle\\Entity\\User::removeSubscribeEvent<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1429\">OSEL\\UserBundle\\Entity\\User::getSubscribeEvents<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1441\">OSEL\\UserBundle\\Entity\\User::addYearMedia<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1453\">OSEL\\UserBundle\\Entity\\User::removeYearMedia<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1463\">OSEL\\UserBundle\\Entity\\User::getYearMedias<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1475\">OSEL\\UserBundle\\Entity\\User::addAlbumMedia<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1487\">OSEL\\UserBundle\\Entity\\User::removeAlbumMedia<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1497\">OSEL\\UserBundle\\Entity\\User::getAlbumMedias<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1509\">OSEL\\UserBundle\\Entity\\User::addMedia<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1521\">OSEL\\UserBundle\\Entity\\User::removeMedia<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1531\">OSEL\\UserBundle\\Entity\\User::getMedias<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1543\">OSEL\\UserBundle\\Entity\\User::addTypeMedia<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1555\">OSEL\\UserBundle\\Entity\\User::removeTypeMedia<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1565\">OSEL\\UserBundle\\Entity\\User::getTypeMedias<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1577\">OSEL\\UserBundle\\Entity\\User::addRedirectionMail<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1589\">OSEL\\UserBundle\\Entity\\User::removeRedirectionMail<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1599\">OSEL\\UserBundle\\Entity\\User::getRedirectionMails<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1611\">OSEL\\UserBundle\\Entity\\User::addNews<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1623\">OSEL\\UserBundle\\Entity\\User::removeNews<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1633\">OSEL\\UserBundle\\Entity\\User::getNews<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1645\">OSEL\\UserBundle\\Entity\\User::addImageNews<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1657\">OSEL\\UserBundle\\Entity\\User::removeImageNews<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1667\">OSEL\\UserBundle\\Entity\\User::getImageNews<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1679\">OSEL\\UserBundle\\Entity\\User::addScore<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1691\">OSEL\\UserBundle\\Entity\\User::removeScore<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1701\">OSEL\\UserBundle\\Entity\\User::getScores<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1713\">OSEL\\UserBundle\\Entity\\User::addScoresModified<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1725\">OSEL\\UserBundle\\Entity\\User::removeScoresModified<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1735\">OSEL\\UserBundle\\Entity\\User::getScoresModified<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1747\">OSEL\\UserBundle\\Entity\\User::addComposer<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1759\">OSEL\\UserBundle\\Entity\\User::removeComposer<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1769\">OSEL\\UserBundle\\Entity\\User::getComposers<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1781\">OSEL\\UserBundle\\Entity\\User::addComposersModified<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1793\">OSEL\\UserBundle\\Entity\\User::removeComposersModified<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1803\">OSEL\\UserBundle\\Entity\\User::getComposersModified<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1815\">OSEL\\UserBundle\\Entity\\User::addComposerimg<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1827\">OSEL\\UserBundle\\Entity\\User::removeComposerimg<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1837\">OSEL\\UserBundle\\Entity\\User::getComposerimgs<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1849\">OSEL\\UserBundle\\Entity\\User::addComposerimgsModified<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1861\">OSEL\\UserBundle\\Entity\\User::removeComposerimgsModified<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1871\">OSEL\\UserBundle\\Entity\\User::getComposerimgsModified<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1883\">OSEL\\UserBundle\\Entity\\User::addComposerbio<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1895\">OSEL\\UserBundle\\Entity\\User::removeComposerbio<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1905\">OSEL\\UserBundle\\Entity\\User::getComposerbios<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1917\">OSEL\\UserBundle\\Entity\\User::addComposerbiosModified<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1929\">OSEL\\UserBundle\\Entity\\User::removeComposerbiosModified<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#1939\">OSEL\\UserBundle\\Entity\\User::getComposerbiosModified<\/a>"],[0,4,"<a href=\"Entity\/UserRepository.php.html#17\">OSEL\\UserBundle\\Entity\\UserRepository::getUsers<\/a>"],[0,1,"<a href=\"Entity\/UserRepository.php.html#52\">OSEL\\UserBundle\\Entity\\UserRepository::getExportQuery<\/a>"],[0,1,"<a href=\"Form\/RolesType.php.html#15\">OSEL\\UserBundle\\Form\\RolesType::buildForm<\/a>"],[0,1,"<a href=\"Form\/RolesType.php.html#26\">OSEL\\UserBundle\\Form\\RolesType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/UserCompleteType.php.html#17\">OSEL\\UserBundle\\Form\\UserCompleteType::buildForm<\/a>"],[0,1,"<a href=\"Form\/UserCompleteType.php.html#26\">OSEL\\UserBundle\\Form\\UserCompleteType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/UserCompleteType.php.html#36\">OSEL\\UserBundle\\Form\\UserCompleteType::getName<\/a>"],[0,1,"<a href=\"Form\/UserType.php.html#25\">OSEL\\UserBundle\\Form\\UserType::__construct<\/a>"],[0,3,"<a href=\"Form\/UserType.php.html#33\">OSEL\\UserBundle\\Form\\UserType::buildForm<\/a>"],[0,1,"<a href=\"Form\/UserType.php.html#83\">OSEL\\UserBundle\\Form\\UserType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/UserType.php.html#93\">OSEL\\UserBundle\\Form\\UserType::getName<\/a>"],[0,1,"<a href=\"Listener\/AuthenticationListener.php.html#30\">OSEL\\UserBundle\\Listener\\AuthenticationListener::__construct<\/a>"],[0,1,"<a href=\"Listener\/AuthenticationListener.php.html#43\">OSEL\\UserBundle\\Listener\\AuthenticationListener::onAuthenticationFailure<\/a>"],[0,4,"<a href=\"Listener\/AuthenticationListener.php.html#54\">OSEL\\UserBundle\\Listener\\AuthenticationListener::onAuthenticationSuccess<\/a>"],[0,1,"<a href=\"Mails\/RegisterMail.php.html#11\">OSEL\\UserBundle\\Mails\\RegisterMail::__construct<\/a>"],[0,1,"<a href=\"Mails\/RegisterMail.php.html#18\">OSEL\\UserBundle\\Mails\\RegisterMail::sendRegisterMail<\/a>"],[0,1,"<a href=\"Mails\/ResetMail.php.html#18\">OSEL\\UserBundle\\Mails\\ResetMail::__construct<\/a>"],[0,1,"<a href=\"Mails\/ResetMail.php.html#25\">OSEL\\UserBundle\\Mails\\ResetMail::sendRegisterMail<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

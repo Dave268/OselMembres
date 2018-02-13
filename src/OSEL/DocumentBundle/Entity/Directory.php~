@@ -1,0 +1,412 @@
+<?php
+
+namespace OSEL\DocumentBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Directory
+ *
+ * @ORM\Table(name="osel_documents_directory")
+ * @ORM\Entity(repositoryClass="OSEL\DocumentBundle\Repository\DirectoryRepository")
+ * @ORM\HasLifecycleCallbacks()
+ */
+class Directory
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="idDir", type="integer", nullable=true)
+     */
+    private $idDir;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="path", type="string", length=255)
+     */
+    private $path;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="rank", type="integer")
+     */
+    private $rank;
+
+    /**
+     * @ORM\Column(name="nb_files", type="integer")
+     */
+    private $nbFiles = 0;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateAdd", type="datetime")
+     */
+    private $dateAdd;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateUpdate", type="datetime", nullable=true)
+     */
+    private $dateUpdate;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="enabled", type="boolean")
+     */
+    private $enabled = true;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="OSEL\UserBundle\Entity\User", inversedBy="directories")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $user;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="OSEL\UserBundle\Entity\User", inversedBy="directories_modified")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $lastUser;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\DocumentBundle\Entity\File", cascade={"persist"}, mappedBy="directory")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $files;
+
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="OSEL\UserBundle\Entity\Roles", inversedBy="directories")
+     */
+    private $role;
+
+    public function __construct()
+    {
+        $this->dateAdd  = new \DateTime();
+    }
+
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function updateDate()
+    {
+        $this->setDateUpdate(new \DateTime());
+    }
+
+    public function increaseFiles()
+    {
+        $this->nbFiles++;
+    }
+
+    public function decreaseFiles()
+    {
+        $this->nbFiles--;
+    }
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Directory
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set path
+     *
+     * @param string $path
+     *
+     * @return Directory
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+
+    /**
+     * Set rank
+     *
+     * @param integer $rank
+     *
+     * @return Directory
+     */
+    public function setRank($rank)
+    {
+        $this->rank = $rank;
+
+        return $this;
+    }
+
+    /**
+     * Get rank
+     *
+     * @return int
+     */
+    public function getRank()
+    {
+        return $this->rank;
+    }
+
+    /**
+     * Set dateAdd
+     *
+     * @param \DateTime $dateAdd
+     *
+     * @return Directory
+     */
+    public function setDateAdd($dateAdd)
+    {
+        $this->dateAdd = $dateAdd;
+
+        return $this;
+    }
+
+    /**
+     * Get dateAdd
+     *
+     * @return \DateTime
+     */
+    public function getDateAdd()
+    {
+        return $this->dateAdd;
+    }
+
+    /**
+     * Set dateUpdate
+     *
+     * @param \DateTime $dateUpdate
+     *
+     * @return Directory
+     */
+    public function setDateUpdate($dateUpdate)
+    {
+        $this->dateUpdate = $dateUpdate;
+
+        return $this;
+    }
+
+    /**
+     * Get dateUpdate
+     *
+     * @return \DateTime
+     */
+    public function getDateUpdate()
+    {
+        return $this->dateUpdate;
+    }
+
+    /**
+     * Set enabled
+     *
+     * @param boolean $enabled
+     *
+     * @return Directory
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get enabled
+     *
+     * @return bool
+     */
+    public function getEnabled()
+    {
+        return $this->enabled;
+    }
+
+    /**
+     * Set nbFiles
+     *
+     * @param integer $nbFiles
+     *
+     * @return Directory
+     */
+    public function setNbFiles($nbFiles)
+    {
+        $this->nbFiles = $nbFiles;
+
+        return $this;
+    }
+
+    /**
+     * Get nbFiles
+     *
+     * @return integer
+     */
+    public function getNbFiles()
+    {
+        return $this->nbFiles;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \OSEL\UserBundle\Entity\User $user
+     *
+     * @return Directory
+     */
+    public function setUser(\OSEL\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \OSEL\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set lastUser
+     *
+     * @param \OSEL\UserBundle\Entity\User $lastUser
+     *
+     * @return Directory
+     */
+    public function setLastUser(\OSEL\UserBundle\Entity\User $lastUser = null)
+    {
+        $this->lastUser = $lastUser;
+
+        return $this;
+    }
+
+    /**
+     * Get lastUser
+     *
+     * @return \OSEL\UserBundle\Entity\User
+     */
+    public function getLastUser()
+    {
+        return $this->lastUser;
+    }
+
+    /**
+     * Add file
+     *
+     * @param \OSEL\DocumentBundle\Entity\File $file
+     *
+     * @return Directory
+     */
+    public function addFile(\OSEL\DocumentBundle\Entity\File $file)
+    {
+        $this->files[] = $file;
+
+        return $this;
+    }
+
+    /**
+     * Remove file
+     *
+     * @param \OSEL\DocumentBundle\Entity\File $file
+     */
+    public function removeFile(\OSEL\DocumentBundle\Entity\File $file)
+    {
+        $this->files->removeElement($file);
+    }
+
+    /**
+     * Get files
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFiles()
+    {
+        return $this->files;
+    }
+
+
+    /**
+     * Set role
+     *
+     * @param \OSEL\UserBundle\Entity\Roles $role
+     *
+     * @return Directory
+     */
+    public function setRole(\OSEL\UserBundle\Entity\Roles $role = null)
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    /**
+     * Get role
+     *
+     * @return \OSEL\UserBundle\Entity\Roles
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
+}

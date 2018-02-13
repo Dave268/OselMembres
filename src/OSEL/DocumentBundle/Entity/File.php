@@ -1,0 +1,504 @@
+<?php
+
+namespace OSEL\DocumentBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
+/**
+ * File
+ *
+ * @ORM\Table(name="osel_document_file")
+ * @ORM\Entity(repositoryClass="OSEL\DocumentBundle\Repository\FileRepository")
+ * @ORM\HasLifecycleCallbacks()
+ */
+class File
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="originalName", type="string", length=255, nullable=true)
+     */
+    private $originalName;
+
+    /**
+     * @ORM\Column(name="path", type="string", length=255)
+     */
+    private $path;
+
+    /**
+     * @ORM\Column(name="size", type="string", length=255)
+     */
+    private $size;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=255)
+     */
+    private $type;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="rank", type="integer")
+     */
+    private $rank;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateAdd", type="datetime")
+     */
+    private $dateAdd;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateUpdate", type="datetime", nullable=true)
+     */
+    private $dateUpdate;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="enabled", type="boolean")
+     */
+    private $enabled = true;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="OSEL\UserBundle\Entity\User", inversedBy="files")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $user;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="OSEL\UserBundle\Entity\User", inversedBy="files_modified")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $lastUser;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="OSEL\DocumentBundle\Entity\Directory", inversedBy="files"  )
+     */
+    private $directory;
+
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="OSEL\UserBundle\Entity\Roles", inversedBy="files")
+     */
+    private $role;
+
+    private $file;
+
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->dateAdd = new \DateTime();
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function updateDate()
+    {
+        $this->setDateUpdate(new \DateTime());
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function increase()
+    {
+        $this->getDirectory()->increaseFiles();
+    }
+
+    /**
+     * @ORM\PreRemove
+     */
+    public function decrease()
+    {
+        $this->getDirectory()->decreaseFiles();
+    }
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return File
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set type
+     *
+     * @param string $type
+     *
+     * @return File
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set rank
+     *
+     * @param integer $rank
+     *
+     * @return File
+     */
+    public function setRank($rank)
+    {
+        $this->rank = $rank;
+
+        return $this;
+    }
+
+    /**
+     * Get rank
+     *
+     * @return int
+     */
+    public function getRank()
+    {
+        return $this->rank;
+    }
+
+    /**
+     * Set dateAdd
+     *
+     * @param \DateTime $dateAdd
+     *
+     * @return File
+     */
+    public function setDateAdd($dateAdd)
+    {
+        $this->dateAdd = $dateAdd;
+
+        return $this;
+    }
+
+    /**
+     * Get dateAdd
+     *
+     * @return \DateTime
+     */
+    public function getDateAdd()
+    {
+        return $this->dateAdd;
+    }
+
+    /**
+     * Set dateUpdate
+     *
+     * @param \DateTime $dateUpdate
+     *
+     * @return File
+     */
+    public function setDateUpdate($dateUpdate)
+    {
+        $this->dateUpdate = $dateUpdate;
+
+        return $this;
+    }
+
+    /**
+     * Get dateUpdate
+     *
+     * @return \DateTime
+     */
+    public function getDateUpdate()
+    {
+        return $this->dateUpdate;
+    }
+
+    /**
+     * Set originalName
+     *
+     * @param string $originalName
+     *
+     * @return File
+     */
+    public function setOriginalName($originalName)
+    {
+        $this->originalName = $originalName;
+
+        return $this;
+    }
+
+    /**
+     * Get originalName
+     *
+     * @return string
+     */
+    public function getOriginalName()
+    {
+        return $this->originalName;
+    }
+
+    /**
+     * Set path
+     *
+     * @param string $path
+     *
+     * @return File
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+
+    /**
+     * Set size
+     *
+     * @param string $size
+     *
+     * @return File
+     */
+    public function setSize($size)
+    {
+        $this->size = $size;
+
+        return $this;
+    }
+
+    /**
+     * Get size
+     *
+     * @return string
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
+     * Set enabled
+     *
+     * @param boolean $enabled
+     *
+     * @return File
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get enabled
+     *
+     * @return boolean
+     */
+    public function getEnabled()
+    {
+        return $this->enabled;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \OSEL\UserBundle\Entity\User $user
+     *
+     * @return File
+     */
+    public function setUser(\OSEL\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \OSEL\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set lastUser
+     *
+     * @param \OSEL\UserBundle\Entity\User $lastUser
+     *
+     * @return File
+     */
+    public function setLastUser(\OSEL\UserBundle\Entity\User $lastUser = null)
+    {
+        $this->lastUser = $lastUser;
+
+        return $this;
+    }
+
+    /**
+     * Get lastUser
+     *
+     * @return \OSEL\UserBundle\Entity\User
+     */
+    public function getLastUser()
+    {
+        return $this->lastUser;
+    }
+
+    /**
+     * Set directory
+     *
+     * @param \OSEL\DocumentBundle\Entity\Directory $directory
+     *
+     * @return File
+     */
+    public function setDirectory(\OSEL\DocumentBundle\Entity\Directory $directory = null)
+    {
+        $this->directory = $directory;
+        $this->rank = $directory->getRank() + 1;
+
+        return $this;
+    }
+
+    /**
+     * Get directory
+     *
+     * @return \OSEL\DocumentBundle\Entity\Directory
+     */
+    public function getDirectory()
+    {
+        return $this->directory;
+    }
+
+    public function upload($path)
+    {
+        if (null === $this->file) {
+            return false;
+        }
+        if($this->file->getMaxFilesize() < $this->file->getClientSize())
+        {
+            return false;
+        }
+
+        $name = md5(uniqid(rand(), true)) .'.'. $this->file->guessExtension();
+        $this->name = $name;
+        $this->originalName = $this->file->getClientOriginalName();
+        $this->path = $path . "/" . $this->getDirectory()->getName();
+
+        $this->size = $this->file->getClientSize();
+        $this->type = $this->file->getMimeType();
+        $this->file->move($this->getUploadRootDir(), $name);
+
+        return true;
+    }
+
+    protected function getUploadRootDir()
+    {
+        // On retourne le chemin relatif vers l'image pour notre code PHP
+        return __DIR__ . '/../../../../web/'. $this->getPath();
+    }
+
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    public function setFile(UploadedFile $file = null)
+    {
+        $this->file = $file;
+    }
+
+    /**
+     * Set role
+     *
+     * @param \OSEL\UserBundle\Entity\Roles $role
+     *
+     * @return File
+     */
+    public function setRole(\OSEL\UserBundle\Entity\Roles $role = null)
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    /**
+     * Get role
+     *
+     * @return \OSEL\UserBundle\Entity\Roles
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
+}

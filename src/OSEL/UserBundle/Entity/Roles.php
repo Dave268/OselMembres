@@ -37,10 +37,29 @@ class Roles extends Role
     private $name;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="rank", type="integer")
+     */
+    private $rank;
+
+    /**
      * @ORM\ManyToMany(targetEntity="OSEL\UserBundle\Entity\User", mappedBy="userRoles")
      * @ORM\JoinColumn(nullable=true)
      */
     private $users;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\DocumentBundle\Entity\Directory", mappedBy="role")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $directories;
+
+    /**
+     * @ORM\OneToMany(targetEntity="OSEL\DocumentBundle\Entity\File", mappedBy="role")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $files;
 
     /**
      * Get id
@@ -142,7 +161,7 @@ class Roles extends Role
     /**
      * Add document
      *
-     * @param \OSEL\DocBundle\Entity\Document $document
+     * @param \OSEL\DocumentBundle\Entity\Document $document
      *
      * @return Roles
      */
@@ -156,7 +175,7 @@ class Roles extends Role
     /**
      * Remove document
      *
-     * @param \OSEL\DocBundle\Entity\Document $document
+     * @param \OSEL\DocumentBundle\Entity\Document $document
      */
     public function removeDocument(\OSEL\DocBundle\Entity\Document $document)
     {
@@ -196,5 +215,98 @@ class Roles extends Role
     public function getName()
     {
         return $this->name;
+    }
+
+
+    /**
+     * Add directory
+     *
+     * @param \OSEL\DocumentBundle\Entity\Directory $directory
+     *
+     * @return Roles
+     */
+    public function addDirectory(\OSEL\DocumentBundle\Entity\Directory $directory)
+    {
+        $this->directories[] = $directory;
+
+        return $this;
+    }
+
+    /**
+     * Remove directory
+     *
+     * @param \OSEL\DocumentBundle\Entity\Directory $directory
+     */
+    public function removeDirectory(\OSEL\DocumentBundle\Entity\Directory $directory)
+    {
+        $this->directories->removeElement($directory);
+    }
+
+    /**
+     * Get directories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDirectories()
+    {
+        return $this->directories;
+    }
+
+    /**
+     * Add file
+     *
+     * @param \OSEL\DocumentBundle\Entity\File $file
+     *
+     * @return Roles
+     */
+    public function addFile(\OSEL\DocumentBundle\Entity\File $file)
+    {
+        $this->files[] = $file;
+
+        return $this;
+    }
+
+    /**
+     * Remove file
+     *
+     * @param \OSEL\DocumentBundle\Entity\File $file
+     */
+    public function removeFile(\OSEL\DocumentBundle\Entity\File $file)
+    {
+        $this->files->removeElement($file);
+    }
+
+    /**
+     * Get files
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFiles()
+    {
+        return $this->files;
+    }
+
+    /**
+     * Set rank
+     *
+     * @param integer $rank
+     *
+     * @return Roles
+     */
+    public function setRank($rank)
+    {
+        $this->rank = $rank;
+
+        return $this;
+    }
+
+    /**
+     * Get rank
+     *
+     * @return integer
+     */
+    public function getRank()
+    {
+        return $this->rank;
     }
 }

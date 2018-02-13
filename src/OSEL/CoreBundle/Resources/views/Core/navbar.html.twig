@@ -59,12 +59,9 @@
                 {% endif %}
 
                 {% if is_granted('ROLE_CA') %}
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Documents <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="{{ path('construction') }}">Liste documents</a></li>
-                            <li role="presentation"><a href="{{ path('construction') }}">Gestion des documents</a></li>
-                        </ul>
-                    </li>
+                    <li {% if app.request.get('_route') == 'osel_documents_index'%}
+                            class="active"
+                            {% endif %}role="presentation"><a href="{{ path('osel_documents_index') }}">Documents</a></li>
                 {% endif %}
 
                 {% if is_granted('ROLE_USER') %}
