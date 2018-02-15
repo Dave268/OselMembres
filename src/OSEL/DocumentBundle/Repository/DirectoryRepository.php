@@ -10,4 +10,49 @@ namespace OSEL\DocumentBundle\Repository;
  */
 class DirectoryRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findByRank($rank, $criteria, $order)
+    {
+        $qb = $this
+            ->createQueryBuilder('a')
+            ->where('a.rank = :rank')
+            ->setParameter('rank', $rank)
+            ->orderBy('a.' . $criteria, $order);
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    public function findByDir($id, $criteria, $order)
+    {
+        if($id > 0)
+        {
+            $qb = $this
+                ->createQueryBuilder('a')
+                ->where('a.idDir = :dirid')
+                ->setParameter('dirid', $id)
+                ->orderBy('a.' . $criteria, $order);
+
+            return $qb
+                ->getQuery()
+                ->getResult()
+                ;
+        }
+
+        return $this->findByRank(1, $criteria, $order);
+    }
+
+    public function findByPath($path)
+    {
+            $qb = $this
+                ->createQueryBuilder('a')
+                ->andWhere('a.path LIKE :path')
+                ->setParameter('path', $path . "%");
+
+            return $qb
+                ->getQuery()
+                ->getResult()
+                ;
+    }
 }

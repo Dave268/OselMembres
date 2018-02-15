@@ -158,40 +158,6 @@ class Roles extends Role
         return $this->users;
     }
 
-    /**
-     * Add document
-     *
-     * @param \OSEL\DocumentBundle\Entity\Document $document
-     *
-     * @return Roles
-     */
-    public function addDocument(\OSEL\DocBundle\Entity\Document $document)
-    {
-        $this->documents[] = $document;
-
-        return $this;
-    }
-
-    /**
-     * Remove document
-     *
-     * @param \OSEL\DocumentBundle\Entity\Document $document
-     */
-    public function removeDocument(\OSEL\DocBundle\Entity\Document $document)
-    {
-        $this->documents->removeElement($document);
-    }
-
-    /**
-     * Get documents
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getDocuments()
-    {
-        return $this->documents;
-    }
-
 
     /**
      * Set name

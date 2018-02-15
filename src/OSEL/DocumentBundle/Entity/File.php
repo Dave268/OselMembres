@@ -26,16 +26,23 @@ class File
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=255, nullable=true)
      */
     private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="originalName", type="string", length=255, nullable=true)
+     * @ORM\Column(name="originalName", type="string", length=255)
      */
     private $originalName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="icon", type="string", length=255)
+     */
+    private $icon;
 
     /**
      * @ORM\Column(name="path", type="string", length=255)
@@ -450,13 +457,52 @@ class File
             return false;
         }
 
-        $name = md5(uniqid(rand(), true)) .'.'. $this->file->guessExtension();
+        if($this->file->guessExtension() == 'mpga')
+        {
+            $extension = 'mp3';
+        }
+        else{
+            $extension = $this->file->guessExtension();
+        }
+
+        $name = md5(uniqid(rand(), true)) .'.'. $extension;
         $this->name = $name;
         $this->originalName = $this->file->getClientOriginalName();
         $this->path = $path . "/" . $this->getDirectory()->getName();
 
+
+
         $this->size = $this->file->getClientSize();
-        $this->type = $this->file->getMimeType();
+        $this->type = $extension;
+
+        if(preg_match('#pdf#i', $this->type)){
+            $this->icon = 'fa fa-file-pdf-o';
+        }
+        elseif (preg_match('#doc#i', $this->type)){
+            $this->icon = 'fa fa-file-word-o';
+        }
+        elseif (preg_match('#xls#i', $this->type)){
+            $this->icon = 'fa fa-file-excel-o';
+        }
+        elseif (preg_match('#jpg|jpeg|png|bmp#i', $this->type)){
+            $this->icon = 'fa fa-file-image-o';
+        }
+        elseif (preg_match('#wav|aif|mp3#i', $this->type)){
+            $this->icon = 'fa fa-file-audio-o';
+        }
+        elseif (preg_match('#zip|tar|gz|7z|rar|bz#i', $this->type)){
+            $this->icon = 'fa fa-file-archive-o';
+        }
+        elseif (preg_match('#mov|mp4|mxf|wmv|flv|avi|qt|m4p#i', $this->type)){
+            $this->icon = 'fa fa-file-video-o';
+        }
+        elseif (preg_match('#css|html|twig|php|cpp|asp#i', $this->type)){
+            $this->icon = 'fa fa-file-code-o';
+        }
+        else{
+            $this->icon = 'fa fa-file-o';
+        }
+
         $this->file->move($this->getUploadRootDir(), $name);
 
         return true;
@@ -500,5 +546,29 @@ class File
     public function getRole()
     {
         return $this->role;
+    }
+
+    /**
+     * Set icon
+     *
+     * @param string $icon
+     *
+     * @return File
+     */
+    public function setIcon($icon)
+    {
+        $this->icon = $icon;
+
+        return $this;
+    }
+
+    /**
+     * Get icon
+     *
+     * @return string
+     */
+    public function getIcon()
+    {
+        return $this->icon;
     }
 }

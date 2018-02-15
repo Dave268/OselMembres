@@ -1,16 +1,20 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: david
+ * Date: 15.02.18
+ * Time: 11:12
+ */
 
 namespace OSEL\DocumentBundle\Form;
 
-use Doctrine\ORM\EntityRepository;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class DirectoryType extends AbstractType
+class ActivateDirType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -18,21 +22,11 @@ class DirectoryType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('originalName',       TextType::class)
-            ->add('role', EntityType::class, array(
-                'class'     => 'OSELUserBundle:Roles',
-                'choice_label'  => 'name',
-                'query_builder' => function(EntityRepository $er){
-                    return $er->createQueryBuilder('s')
-                        ->where('s.role != :role')
-                        ->setParameter('role', 'ROLE_USER')
-                        ->orderBy('s.rank', 'ASC');
-                },
-                'multiple'  => false))
+            ->add('enabled',        CheckboxType::class, array('required' => false))
             ->add('save',           SubmitType::class);
     }/**
-     * {@inheritdoc}
-     */
+ * {@inheritdoc}
+ */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
@@ -47,6 +41,4 @@ class DirectoryType extends AbstractType
     {
         return 'osel_documentbundle_directory';
     }
-
-
 }

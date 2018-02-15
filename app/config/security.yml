@@ -27,7 +27,6 @@ security:
         user_db:
             entity:
                 class: OSEL\UserBundle\Entity\User
-                property: username
 
         in_memory:
             memory:

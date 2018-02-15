@@ -10,4 +10,20 @@ namespace OSEL\DocumentBundle\Repository;
  */
 class FileRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findByDir($id, $criteria, $order)
+    {
+        $qb = $this
+            ->createQueryBuilder('a')
+            ->leftJoin('a.directory', 'c')
+            ->addSelect('c')
+        ;
+
+        $qb->where($qb->expr()->in('c.id', $id));
+        $qb->orderBy('a.' . $criteria, $order);
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }

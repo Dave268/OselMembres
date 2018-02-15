@@ -32,9 +32,16 @@ class Directory
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=255, nullable=true)
      */
     private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="originalName", type="string", length=255)
+     */
+    private $originalName;
 
     /**
      * @var string
@@ -49,6 +56,13 @@ class Directory
      * @ORM\Column(name="rank", type="integer")
      */
     private $rank;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=255)
+     */
+    private $type = 'directory';
 
     /**
      * @ORM\Column(name="nb_files", type="integer")
@@ -103,6 +117,7 @@ class Directory
     public function __construct()
     {
         $this->dateAdd  = new \DateTime();
+        $this->name = md5(uniqid(rand(), true));
     }
 
 
@@ -408,5 +423,53 @@ class Directory
     public function getRole()
     {
         return $this->role;
+    }
+
+    /**
+     * Set idDir
+     *
+     * @param integer $idDir
+     *
+     * @return Directory
+     */
+    public function setIdDir($idDir)
+    {
+        $this->idDir = $idDir;
+
+        return $this;
+    }
+
+    /**
+     * Get idDir
+     *
+     * @return integer
+     */
+    public function getIdDir()
+    {
+        return $this->idDir;
+    }
+
+    /**
+     * Set originalName
+     *
+     * @param string $originalName
+     *
+     * @return Directory
+     */
+    public function setOriginalName($originalName)
+    {
+        $this->originalName = $originalName;
+
+        return $this;
+    }
+
+    /**
+     * Get originalName
+     *
+     * @return string
+     */
+    public function getOriginalName()
+    {
+        return $this->originalName;
     }
 }

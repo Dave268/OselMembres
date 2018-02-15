@@ -16,6 +16,11 @@
   font-size:20px;
 }
 
+.thread span.iconH {
+  float:right;
+  font-size: 1.1em;
+}
+
 .thread span.icon a:hover {
   opacity:1;
 }
@@ -35,9 +40,22 @@
   display:inline-block;
 }
 
+.thread .timeH {
+  font-weight:bold;
+  width:68px;
+  font-size: 1.1em;
+  display:inline-block;
+}
+
 .thread .title {
   padding:2px 5px;
   font-size:18px;
+}
+
+.thread .titleH {
+  font-weight:bold;
+  padding:2px 5px;
+  font-size:1.1em;
 }
 
 .thread:hover {

@@ -32,9 +32,16 @@ class Directory
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=255, nullable=true)
      */
     private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="originalName", type="string", length=255)
+     */
+    private $originalName;
 
     /**
      * @var string
@@ -49,6 +56,13 @@ class Directory
      * @ORM\Column(name="rank", type="integer")
      */
     private $rank;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=255)
+     */
+    private $type;
 
     /**
      * @ORM\Column(name="nb_files", type="integer")
@@ -103,6 +117,7 @@ class Directory
     public function __construct()
     {
         $this->dateAdd  = new \DateTime();
+        $this->name = md5(uniqid(rand(), true));
     }
 
 
@@ -432,5 +447,53 @@ class Directory
     public function getIdDir()
     {
         return $this->idDir;
+    }
+
+    /**
+     * Set originalName
+     *
+     * @param string $originalName
+     *
+     * @return Directory
+     */
+    public function setOriginalName($originalName)
+    {
+        $this->originalName = $originalName;
+
+        return $this;
+    }
+
+    /**
+     * Get originalName
+     *
+     * @return string
+     */
+    public function getOriginalName()
+    {
+        return $this->originalName;
+    }
+
+    /**
+     * Set type
+     *
+     * @param string $type
+     *
+     * @return Directory
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }

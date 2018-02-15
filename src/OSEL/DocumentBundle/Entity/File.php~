@@ -26,16 +26,23 @@ class File
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=255, nullable=true)
      */
     private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="originalName", type="string", length=255, nullable=true)
+     * @ORM\Column(name="originalName", type="string", length=255)
      */
     private $originalName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="icon", type="string", length=255)
+     */
+    private $icon;
 
     /**
      * @ORM\Column(name="path", type="string", length=255)
@@ -454,6 +461,8 @@ class File
         $this->name = $name;
         $this->originalName = $this->file->getClientOriginalName();
         $this->path = $path . "/" . $this->getDirectory()->getName();
+        $this->icon = 'fa fa-file-o';
+
 
         $this->size = $this->file->getClientSize();
         $this->type = $this->file->getMimeType();
@@ -500,5 +509,29 @@ class File
     public function getRole()
     {
         return $this->role;
+    }
+
+    /**
+     * Set icon
+     *
+     * @param string $icon
+     *
+     * @return File
+     */
+    public function setIcon($icon)
+    {
+        $this->icon = $icon;
+
+        return $this;
+    }
+
+    /**
+     * Get icon
+     *
+     * @return string
+     */
+    public function getIcon()
+    {
+        return $this->icon;
     }
 }

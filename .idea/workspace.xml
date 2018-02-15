@@ -2,21 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b44466-ec2e-4594-a066-e5ecf12552b1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Controller/DocumentController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/directories/form.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/documents/index.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/files/form.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/ActivateDirType.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/ActivateFileType.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/FileModifyType.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/public/js/activate.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/documents/activate.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/files/modifyForm.html.twig" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/navbar.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/navbar.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/listplaces.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/listplaces.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/ImgComposer.php" afterPath="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/ImgComposer.php" />
+      <change beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Controller/DocumentController.php" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Controller/DocumentController.php" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/Directory.php" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/Directory.php" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/File.php" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/File.php" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/DirectoryType.php" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/DirectoryType.php" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Repository/DirectoryRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Repository/DirectoryRepository.php" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Repository/FileRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Repository/FileRepository.php" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/config/routing.yml" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/directories/form.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/directories/form.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/documents/index.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/documents/index.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Roles.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Roles.php" />
       <change beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php" />
-      <change beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/UserRepository.php" afterPath="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/UserRepository.php" />
+      <change beforePath="$PROJECT_DIR$/web/css/list.css" afterPath="$PROJECT_DIR$/web/css/list.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,6 +36,7 @@
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
@@ -41,11 +48,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="DocumentController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Controller/DocumentController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="583">
+              <caret line="550" column="133" lean-forward="false" selection-start-line="550" selection-start-column="133" selection-end-line="550" selection-end-column="133" />
+              <folding>
+                <element signature="e#130#171#0#PHP" expanded="true" />
+                <element signature="e#765#2422#0#PHP" expanded="false" />
+                <element signature="e#2428#4255#0#PHP" expanded="false" />
+                <element signature="e#4261#7089#0#PHP" expanded="false" />
+                <element signature="e#7095#9028#0#PHP" expanded="false" />
+                <element signature="e#9034#10574#0#PHP" expanded="false" />
+                <element signature="e#10580#11465#0#PHP" expanded="false" />
+                <element signature="e#11471#12574#0#PHP" expanded="false" />
+                <element signature="e#12580#14026#0#PHP" expanded="false" />
+                <element signature="e#14032#16986#0#PHP" expanded="false" />
+                <element signature="e#16992#19007#0#PHP" expanded="false" />
+                <element signature="e#19013#20382#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DirectoryRepository.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Repository/DirectoryRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="643">
+              <caret line="50" column="52" lean-forward="false" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="756">
+              <caret line="42" column="62" lean-forward="false" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -54,55 +94,10 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/documents/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="136" lean-forward="false" selection-start-line="22" selection-start-column="136" selection-end-line="22" selection-end-column="136" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/FileType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="29" selection-end-column="38" />
+            <state relative-caret-position="507">
+              <caret line="59" column="97" lean-forward="false" selection-start-line="59" selection-start-column="97" selection-end-line="59" selection-end-column="97" />
               <folding>
-                <element signature="e#44#78#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DocumentController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Controller/DocumentController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="129" column="14" lean-forward="true" selection-start-line="129" selection-start-column="14" selection-end-line="129" selection-end-column="14" />
-              <folding>
-                <element signature="e#130#171#0#PHP" expanded="true" />
-                <element signature="e#600#3466#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/directories/form.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DirectoryType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/DirectoryType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-              <folding>
-                <element signature="e#44#78#0#PHP" expanded="true" />
+                <element signature="e#4410#4455#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,38 +106,39 @@
       <file leaf-file-name="Directory.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/Directory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+            <state relative-caret-position="287">
+              <caret line="397" column="24" lean-forward="false" selection-start-line="397" selection-start-column="20" selection-end-line="397" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoreController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Controller/ScoreController.php">
+      <file leaf-file-name="gestion.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/gestion.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="195" column="12" lean-forward="false" selection-start-line="195" selection-start-column="12" selection-end-line="196" selection-end-column="13" />
-              <folding>
-                <element signature="e#988#1291#0#PHP" expanded="false" />
-                <element signature="e#1297#2851#0#PHP" expanded="false" />
-                <element signature="e#2857#6365#0#PHP" expanded="false" />
-                <element signature="e#10085#10789#0#PHP" expanded="false" />
-                <element signature="e#10795#12295#0#PHP" expanded="false" />
-                <element signature="e#12301#13767#0#PHP" expanded="false" />
-                <element signature="e#13773#14726#0#PHP" expanded="false" />
-                <element signature="e#14732#15748#0#PHP" expanded="false" />
-                <element signature="e#15754#16582#0#PHP" expanded="false" />
-                <element signature="e#16588#17494#0#PHP" expanded="false" />
-                <element signature="e#17500#18169#0#PHP" expanded="false" />
-                <element signature="e#18175#19553#0#PHP" expanded="false" />
-                <element signature="e#19559#21423#0#PHP" expanded="false" />
-                <element signature="e#21429#22503#0#PHP" expanded="false" />
-                <element signature="e#22509#24155#0#PHP" expanded="false" />
-                <element signature="e#24161#24694#0#PHP" expanded="false" />
-                <element signature="e#24700#26630#0#PHP" expanded="false" />
-                <element signature="e#26636#28448#0#PHP" expanded="false" />
-              </folding>
+            <state relative-caret-position="560">
+              <caret line="78" column="787" lean-forward="false" selection-start-line="78" selection-start-column="787" selection-end-line="78" selection-end-column="961" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="File.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/File.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="467" column="16" lean-forward="false" selection-start-line="467" selection-start-column="16" selection-end-line="467" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Roles.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Roles.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1728">
+              <caret line="97" column="15" lean-forward="false" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,17 +155,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getUr</find>
-      <find>addCom</find>
-      <find>btn-ok</find>
-      <find>debug-url</find>
       <find>dateBirt</find>
       <find>datebi</find>
       <find>fil</find>
       <find>addsc</find>
       <find>addbio</find>
       <find>addBi</find>
-      <find>path</find>
       <find>bio</find>
       <find>getOri</find>
       <find>increa</find>
@@ -189,6 +180,11 @@
       <find>file</find>
       <find>ro</find>
       <find>role</find>
+      <find>addD</find>
+      <find>getPa</find>
+      <find>path</find>
+      <find>getRol</find>
+      <find>getF</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/var</dir>
@@ -202,16 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Composer.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/uploadForm.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/fileUpload.js" />
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/gestion.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/form.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/PartsRepository.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/ScoreRepository.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/form.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/head.html.twig" />
         <option value="$PROJECT_DIR$/web/css/Jumbotron-Advanced-Responsive-Tint.css" />
         <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/view.html.twig" />
         <option value="$PROJECT_DIR$/src/OSEL/EventBundle/Form/ActivateEventType.php" />
@@ -241,18 +227,28 @@
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/files/form.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/File.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Roles.php" />
         <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/FileType.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/Directory.php" />
         <option value="$PROJECT_DIR$/src/OSEL/ScoreBundle/Controller/ScoreController.php" />
-        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/documents/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/UserRepository.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/FileModifyType.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/files/modifyForm.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Roles.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Repository/FileRepository.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/ActivateFileType.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/ActivateDirType.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/public/js/activate.js" />
         <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/DirectoryType.php" />
         <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/directories/form.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/list.css" />
+        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/Directory.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/File.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/documents/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Controller/DocumentController.php" />
+        <option value="$PROJECT_DIR$/src/OSEL/DocumentBundle/Repository/DirectoryRepository.php" />
       </list>
     </option>
   </component>
@@ -379,12 +375,6 @@
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -407,6 +397,14 @@
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="DocumentBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DocumentBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
@@ -448,7 +446,36 @@
               <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="DocumentBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DocumentBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DocumentBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DocumentBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="directories" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
@@ -473,7 +500,17 @@
             <path>
               <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
               <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ScoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OselMembres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OselMembres" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="OSEL" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ScoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -487,15 +524,17 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/public" />
+      <recent name="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/documents" />
+      <recent name="$PROJECT_DIR$/src/OSEL/ScoreBundle" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/public/js" />
       <recent name="$PROJECT_DIR$/web/img" />
       <recent name="$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score" />
       <recent name="$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core" />
       <recent name="$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places" />
-      <recent name="$PROJECT_DIR$/src/OSEL" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/OSEL/ScoreBundle" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -580,12 +619,14 @@
       <workItem from="1518182152460" duration="6375000" />
       <workItem from="1518349254754" duration="3226000" />
       <workItem from="1518460489358" duration="1241000" />
-      <workItem from="1518517420294" duration="10420000" />
+      <workItem from="1518517420294" duration="10516000" />
+      <workItem from="1518600017897" duration="7649000" />
+      <workItem from="1518687258818" duration="21056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="332177000" />
+    <option name="totallyTimeSpent" value="360978000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -628,145 +669,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Controller/ScoreController.php</url>
-          <line>512</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="46" />
+      <option name="time" value="48" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/pwdReset.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="56" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/public/js/passwordscheck.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="42" column="43" lean-forward="false" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/Security/modifyPwd.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/events/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="72" column="43" lean-forward="false" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/inscriptions/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/EventBundle/Resources/views/places/listplaces.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1656">
-          <caret line="92" column="59" lean-forward="false" selection-start-line="92" selection-start-column="59" selection-end-line="92" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters_ovh.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="90" column="47" lean-forward="false" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/CoreBundle/Resources/views/Core/navbar.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="61" column="60" lean-forward="false" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Controller/DefaultController.php" />
-    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/gestion.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="129" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Entity/Composer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="121" column="7" lean-forward="false" selection-start-line="119" selection-start-column="4" selection-end-line="135" selection-end-column="5" />
-          <folding>
-            <element signature="e#43#91#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Controller/DefaultControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -778,19 +689,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5346">
-          <caret line="47" column="4" lean-forward="false" selection-start-line="47" selection-start-column="4" selection-end-line="51" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Form/RolesType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,7 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="517">
           <caret line="73" column="41" lean-forward="false" selection-start-line="69" selection-start-column="24" selection-end-line="73" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -806,7 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,7 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -822,15 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1183">
           <caret line="115" column="54" lean-forward="false" selection-start-line="115" selection-start-column="54" selection-end-line="115" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="24" column="48" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="24" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -838,9 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="54" />
-          <folding>
-            <element signature="e#41#81#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,7 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -856,9 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="42" />
-          <folding>
-            <element signature="e#41#81#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -882,9 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#104#136#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -892,7 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,9 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#46#103#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,7 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="69" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -918,7 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -926,15 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Repository/FileRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -942,19 +807,139 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Roles.php">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/UserRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="157">
+          <caret line="78" column="64" lean-forward="false" selection-start-line="78" selection-start-column="64" selection-end-line="78" selection-end-column="64" />
+          <folding>
+            <element signature="e#42#76#0#PHP" expanded="false" />
+            <marker date="1518612083077" expanded="true" signature="1944:2031" ph="SELECT u FRO... SurgeworksCoreBundle" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/files/modifyForm.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/FileModifyType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+          <folding>
+            <element signature="e#124#158#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/files/form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="41" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/ScoreRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="21" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/activate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-149">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/FileType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="12" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Form/ActivatePartType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/documents/activate.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Repository/FileRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/ActivateDirType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/ActivateFileType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/DirectoryType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/directories/form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -962,22 +947,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/Directory.php">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Resources/views/User/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        <state relative-caret-position="576">
+          <caret line="80" column="378" lean-forward="true" selection-start-line="80" selection-start-column="61" selection-end-line="80" selection-end-column="378" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-487">
+          <caret line="34" column="18" lean-forward="true" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/list.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504">
+          <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/public/js/activate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/public/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1518182285312" expanded="true" signature="1365:1379" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Resources/views/score/gestion.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="78" column="787" lean-forward="false" selection-start-line="78" selection-start-column="787" selection-end-line="78" selection-end-column="961" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/UserBundle/Entity/Roles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1728">
+          <caret line="97" column="15" lean-forward="false" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/File.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="467" column="16" lean-forward="false" selection-start-line="467" selection-start-column="16" selection-end-line="467" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/documents/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="59" column="97" lean-forward="false" selection-start-line="59" selection-start-column="97" selection-end-line="59" selection-end-column="97" />
+          <folding>
+            <element signature="e#4410#4455#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="42" column="62" lean-forward="false" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Controller/ScoreController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="195" column="12" lean-forward="false" selection-start-line="195" selection-start-column="12" selection-end-line="196" selection-end-column="13" />
+        <state relative-caret-position="427">
+          <caret line="421" column="5" lean-forward="true" selection-start-line="398" selection-start-column="4" selection-end-line="421" selection-end-column="5" />
           <folding>
             <element signature="e#988#1291#0#PHP" expanded="false" />
             <element signature="e#1297#2851#0#PHP" expanded="false" />
             <element signature="e#2857#6365#0#PHP" expanded="false" />
+            <element signature="e#6371#10079#0#PHP" expanded="false" />
             <element signature="e#10085#10789#0#PHP" expanded="false" />
             <element signature="e#10795#12295#0#PHP" expanded="false" />
             <element signature="e#12301#13767#0#PHP" expanded="false" />
@@ -997,76 +1059,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/documents/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/Directory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="136" lean-forward="false" selection-start-line="22" selection-start-column="136" selection-end-line="22" selection-end-column="136" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Entity/File.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="61" selection-end-column="18" />
-          <folding>
-            <element signature="e#46#78#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/FileType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="29" selection-end-column="38" />
-          <folding>
-            <element signature="e#44#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Form/DirectoryType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-          <folding>
-            <element signature="e#44#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/files/form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="62" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Resources/views/directories/form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+        <state relative-caret-position="287">
+          <caret line="397" column="24" lean-forward="false" selection-start-line="397" selection-start-column="20" selection-end-line="397" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Controller/DocumentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="129" column="14" lean-forward="true" selection-start-line="129" selection-start-column="14" selection-end-line="129" selection-end-column="14" />
+        <state relative-caret-position="583">
+          <caret line="550" column="133" lean-forward="false" selection-start-line="550" selection-start-column="133" selection-end-line="550" selection-end-column="133" />
           <folding>
             <element signature="e#130#171#0#PHP" expanded="true" />
-            <element signature="e#600#3466#0#PHP" expanded="false" />
+            <element signature="e#765#2422#0#PHP" expanded="false" />
+            <element signature="e#2428#4255#0#PHP" expanded="false" />
+            <element signature="e#4261#7089#0#PHP" expanded="false" />
+            <element signature="e#7095#9028#0#PHP" expanded="false" />
+            <element signature="e#9034#10574#0#PHP" expanded="false" />
+            <element signature="e#10580#11465#0#PHP" expanded="false" />
+            <element signature="e#11471#12574#0#PHP" expanded="false" />
+            <element signature="e#12580#14026#0#PHP" expanded="false" />
+            <element signature="e#14032#16986#0#PHP" expanded="false" />
+            <element signature="e#16992#19007#0#PHP" expanded="false" />
+            <element signature="e#19013#20382#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/ScoreBundle/Repository/ComposerRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="35" column="12" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="36" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSEL/DocumentBundle/Repository/DirectoryRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="50" column="52" lean-forward="false" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>

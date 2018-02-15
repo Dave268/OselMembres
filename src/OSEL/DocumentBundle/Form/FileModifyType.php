@@ -1,16 +1,21 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: david
+ * Date: 14.02.18
+ * Time: 14:05
+ */
 
 namespace OSEL\DocumentBundle\Form;
 
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class DirectoryType extends AbstractType
+class FileModifyType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -31,12 +36,12 @@ class DirectoryType extends AbstractType
                 'multiple'  => false))
             ->add('save',           SubmitType::class);
     }/**
-     * {@inheritdoc}
-     */
+ * {@inheritdoc}
+ */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'OSEL\DocumentBundle\Entity\Directory'
+            'data_class' => 'OSEL\DocumentBundle\Entity\File'
         ));
     }
 
@@ -45,7 +50,7 @@ class DirectoryType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'osel_documentbundle_directory';
+        return 'osel_documentbundle_file';
     }
 
 

@@ -1,11 +1,43 @@
 osel_documents_index:
-    path:     /index/{idDir}/{rank}/{criteria}/{order}
-    defaults: { _controller: DocumentBundle:Document:index, idDir: 0 , rank: 1, criteria: name, order: ASC }
+    path:     /index/{idDir}/{criteria}/{order}
+    defaults: { _controller: DocumentBundle:Document:index, idDir: 0, criteria: name, order: ASC }
 
 osel_documents_add_file:
     path:     /ajouter-un-fichier/{idDir}
     defaults: { _controller: DocumentBundle:Document:addFile, idDir: 0}
 
+osel_documents_modify_file:
+    path:     /modifier-un-fichier/{id}
+    defaults: { _controller: DocumentBundle:Document:modifyFile, id: 0}
+
+osel_documents_activate_file:
+    path:     /activer-un-fichier/{id}
+    defaults: { _controller: DocumentBundle:Document:activateFile, id: 0}
+
+osel_documents_download_file:
+    path:     /télécharger-un-fichier/{id}
+    defaults: { _controller: DocumentBundle:Document:downloadFile, id: 0}
+
+osel_documents_view_file:
+    path:     /afficher-un-fichier/{id}
+    defaults: { _controller: DocumentBundle:Document:viewFile, id: 0}
+
+osel_documents_delete_file:
+    path:     /supprimer-un-fichier/{id}
+    defaults: { _controller: DocumentBundle:Document:deleteFile, id: 0}
+
 osel_documents_add_dir:
-    path:     /ajouter-un-dossier/{idDir}
-    defaults: { _controller: DocumentBundle:Document:addDirectory, idDir: 0}
+    path:     /ajouter-un-dossier/{idDir}/{id}
+    defaults: { _controller: DocumentBundle:Document:addDirectory, idDir: 0, id: 0}
+
+osel_documents_activate_dir:
+    path:     /activer-un-dossier/{id}
+    defaults: { _controller: DocumentBundle:Document:activateDir, id: 0}
+
+osel_documents_download_dir:
+    path:     /télécharger-un-dossier/{id}
+    defaults: { _controller: DocumentBundle:Document:downloadDir, id: 0}
+
+osel_documents_delete_dir:
+    path:     /supprimer-un-dossier/{id}
+    defaults: { _controller: DocumentBundle:Document:deleteDir, id: 0}

@@ -3,7 +3,7 @@
 {% extends "OSELCoreBundle:Core:layout.html.twig" %}
 
 {% block title %}
-    Ajouter un Dossier
+    Ajouter un fichier
 {% endblock %}
 
 {% block head %}
@@ -20,7 +20,7 @@
                 <div class="panel-body" style="padding:20px;padding-top:10px;">
                     {{ form_start(form, {'attr': {'class': 'bootstrap-form-with-validation', "id":"formScore"}}) }}
                     <div class="form-group">
-                        {{ form_label(form.originalName, "Nom du dossier:", {'label-attr': {'class': 'control-label'}}) }}
+                        {{ form_label(form.originalName, "Nom du fichier:", {'label-attr': {'class': 'control-label'}}) }}
                         {{ form_widget(form.originalName, { 'attr': {'class': 'form-control'}}) }}
                     </div>
                     <div class="form-group">
