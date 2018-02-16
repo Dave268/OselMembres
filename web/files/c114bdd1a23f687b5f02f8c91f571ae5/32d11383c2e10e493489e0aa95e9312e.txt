@@ -1,0 +1,12 @@
+Nom;Prénom;"Part de";Transport;"Nb de Places";"vendredi soir";"Vendredi nuit";"Petit-Dej Samedi";"Répétition Samedi Matin";"Lunch Samedi";"Répétition Samedi Après-midi";"Souper Samedi";"Samedi Nuit";"Petit-Dej Dimanche";"Répétition Dimanche Matin";"Lunch Dimanche";"Répétition Samedi Après-midi";prix;"A payé"
+8;;;;;5;5;6;6;6;8;8;8;8;8;8;8;200;0
+Baussay;Augustin;Liège;"Cherche covoiturage";0;;;x;x;x;x;x;x;x;x;x;x;25;
+Dupret;Pauline;Louvain-la-Neuve;Voiture;0;x;x;x;x;x;x;x;x;x;x;x;x;25;
+Goubau;David;Bruxelles-Laeken;Voiture;2;x;x;x;x;x;x;x;x;x;x;x;x;25;
+Laperche;Alice;Louvain-la-Neuve;Voiture;0;x;x;x;x;x;x;x;x;x;x;x;x;25;
+Luyckx;Adrien;LLN;"Tranport en Commun";0;x;x;x;x;x;x;x;x;x;x;x;x;25;
+Peschi;Lorraine;"Bruxelles ou Lln";"Cherche covoiturage";0;x;x;x;x;x;x;x;x;x;x;x;x;25;
+Pirlot;Gilles;;Voiture;0;;;;;;;;;;;;;0;/
+Roux;Lionel;Bruxelles;Voiture;3;;;;;;x;x;x;x;x;x;x;25;
+Serwinska;Paulina;;Voiture;0;;;;;;;;;;;;;0;/
+Thonon;Salomé;;"Tranport en Commun";0;;;;;;x;x;x;x;x;x;x;25;

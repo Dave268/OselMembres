@@ -1,3 +1,3 @@
-folder:/home/david/Documents/OselMembres/web/files/acf61f555fe8443165cc9a6a840ca17b/ce42f5749c8f99e2c924578b626211cd/511ab07a69b84aafba38f24cfbfdf7dd
-foldertemp:/acf61f555fe8443165cc9a6a840ca17b/ce42f5749c8f99e2c924578b626211cd/511ab07a69b84aafba38f24cfbfdf7dd
-path:/2017-2018/test/ranj
+folder:/home/david/Documents/OselMembres/web/files/c114bdd1a23f687b5f02f8c91f571ae5/4070f74a02c83313a68ad817ca77dcc5
+foldertemp:/4070f74a02c83313a68ad817ca77dcc5
+path:/Finances

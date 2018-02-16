@@ -13,6 +13,7 @@ use OSEL\DocumentBundle\Entity\File;
 use OSEL\DocumentBundle\Form\ActivateDirType;
 use OSEL\DocumentBundle\Form\ActivateFileType;
 use OSEL\DocumentBundle\Form\DirectoryType;
+use OSEL\DocumentBundle\Form\FileModifyType;
 use OSEL\DocumentBundle\Form\FileType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -58,6 +59,47 @@ class DocumentController extends Controller
         }
         fclose($myfile);
         closedir($handle);
+    }
+
+    public function searchAction($text, $id, Request $request)
+    {
+        if(!$this->get('security.authorization_checker')->isGranted('ROLE_CA')){
+            return $this->redirectToRoute('osel_core_home');
+        }
+        if(!$request->isXmlHttpRequest()) {
+            return $this->redirectToRoute('osel_documents_index');
+        }
+
+        if($text == '%%%')
+        {
+            $dirs = $this->getDoctrine()->getManager()->getRepository('DocumentBundle:Directory')->findByDir($id, 'originalName', 'ASC');
+            $files = $this->getDoctrine()->getManager()->getRepository('DocumentBundle:File')->findByDir($id, 'originalName', 'ASC');
+        }
+        else
+        {
+            $folder = $this->getDoctrine()->getManager()->getRepository('DocumentBundle:Directory')->find($id);
+            $dirs = $this->getDoctrine()->getManager()->getRepository('DocumentBundle:Directory')->findSearch($text, $folder->getPath() . "/" . $folder->getName());
+            $files = $this->getDoctrine()->getManager()->getRepository('DocumentBundle:File')->findSearch($text, $folder->getPath() . "/" . $folder->getName());
+        }
+
+        $object = array();
+
+        foreach ($dirs as $dir)
+        {
+            array_push($object, array("id"=>$dir->getId(), 'originalName' => $dir->getOriginalName(), 'dateAdd' => $dir->getDateAdd()->format('d/m/Y h:i'), 'dateModified' => $dir->getDateUpdate()->format('d/m/Y h:i'), 'enabled' => $dir->getEnabled(), 'role' => $dir->getRole()->getName(), 'isdir' => $dir->getType(), 'icon' => 'glyphicon glyphicon-folder-open'));
+        }
+
+        foreach ($files as $file)
+        {
+            array_push($object, array("id"=>$file->getId(), 'originalName' => $file->getOriginalName(), 'dateAdd' => $file->getDateAdd()->format('d/m/Y h:i'), 'dateModified' => $file->getDateUpdate()->format('d/m/Y h:i'), 'enabled' => $file->getEnabled(), 'role' => $file->getRole()->getName(), 'isdir' => $file->getType(), 'icon' => $file->getIcon()));
+        }
+
+        $json = json_encode($object);
+
+        $response = new Response($json);
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
     }
 
     public function indexAction($idDir, $criteria, $order, Request $request)
@@ -180,6 +222,11 @@ class DocumentController extends Controller
 
         $file = $this->getDoctrine()->getManager()->getRepository('DocumentBundle:File')->find($id);
 
+        if($file != null && !$file->getEnabled()){
+            $request->getSession()->getFlashBag()->add('ERROR', 'Ce fichier est verrouillé');
+            return $this->redirectToRoute('osel_documents_index');
+        }
+
         if($file != null && !$this->get('security.authorization_checker')->isGranted($file->getRole()->getRole())){
             $request->getSession()->getFlashBag()->add('ERROR', 'Vous ne pouvez pas modifier ce fichier');
             return $this->redirectToRoute('osel_documents_index');
@@ -204,8 +251,7 @@ class DocumentController extends Controller
                 $em->flush();
 
             return $this->redirectToRoute('osel_documents_index', array(
-                'id' => $file->getDirectory()->getId(),
-                'rank' => $file->getDirectory()->getRank()
+                'idDir' => $file->getDirectory()->getId(),
             ));
 
         }
@@ -387,7 +433,6 @@ class DocumentController extends Controller
 
         if($request->isMethod('POST') && $fileForm->handleRequest($request)->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $newDir->setType($newDir->getOriginalName());
             if($idDir > 0)
             {
                 $newDir->setIdDir($idDir);
@@ -455,7 +500,8 @@ class DocumentController extends Controller
         $form = $this->get('form.factory')->create(ActivateDirType::class, $dir);
 
         if ($form->handleRequest($request)->isValid()) {
-            $files = $this->getDoctrine()->getManager()->getRepository('DocumentBundle:File')->findByDir($dir->getId(), 'name', 'ASC');
+            $subDirs = $this->getDoctrine()->getManager()->getRepository('DocumentBundle:Directory')->findByPath($dir->getPath() . "/" . $dir->getName());
+            $files = $this->getDoctrine()->getManager()->getRepository('DocumentBundle:File')->findByPath($dir->getPath() . "/" . $dir->getName());
             $em = $this->getDoctrine()->getManager();
 
             if($dir->getEnabled())
@@ -464,7 +510,10 @@ class DocumentController extends Controller
                     $file->setEnabled(true);
                     $em->persist($file);
                 }
-                $request->getSession()->getFlashBag()->add('success', 'Le Dossier et toutes ces fichiers ont bien été déverouillés');
+                foreach ($subDirs as $subDir){
+                    $subDir->setEnabled(true);
+                    $em->persist($subDir);
+                }
             }
             else
             {
@@ -472,7 +521,10 @@ class DocumentController extends Controller
                     $file->setEnabled(false);
                     $em->persist($file);
                 }
-                $request->getSession()->getFlashBag()->add('success', 'Le Dossier et toutes ces fichiers ont bien été verouillés');
+                foreach ($subDirs as $subDir){
+                    $subDir->setEnabled(false);
+                    $em->persist($subDir);
+                }
             }
 
             $em->persist($dir);
@@ -491,7 +543,7 @@ class DocumentController extends Controller
                 return $response;
             }
 
-
+            $request->getSession()->getFlashBag()->add('success', 'Le Dossier et toutes ces fichiers et sous-dossiers ont bien été (dé)verouillés');
 
             return $redirect;
         }
@@ -549,9 +601,16 @@ class DocumentController extends Controller
         rename( $path, $this->container->getParameter('kernel.project_dir') . "/web/" ."files/trash/" . $dir->getName() . $dir->getOriginalName());
 
         $subDirs = $this->getDoctrine()->getManager()->getRepository('DocumentBundle:Directory')->findByPath($dir->getPath() . "/" . $dir->getName());
+        $files = $this->getDoctrine()->getManager()->getRepository('DocumentBundle:File')->findByPath($dir->getPath() . "/" . $dir->getName());
 
 
-        foreach ($dir->getFiles() as $file)
+        foreach ($subDirs as $subDir)
+        {
+            //unlink($path . "/" . $file->getName());
+            $em->remove($subDir);
+        }
+
+        foreach ($files as $file)
         {
             //unlink($path . "/" . $file->getName());
             $em->remove($file);

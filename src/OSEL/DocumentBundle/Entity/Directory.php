@@ -62,7 +62,7 @@ class Directory
      *
      * @ORM\Column(name="type", type="string", length=255)
      */
-    private $type;
+    private $type = 'folder';
 
     /**
      * @ORM\Column(name="nb_files", type="integer")

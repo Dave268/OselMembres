@@ -26,4 +26,34 @@ class FileRepository extends \Doctrine\ORM\EntityRepository
             ->getResult()
             ;
     }
+
+    public function findByPath($path)
+    {
+        $qb = $this
+            ->createQueryBuilder('a')
+            ->where('a.path LIKE :path')
+            ->setParameter('path', $path . "%");
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    public function findSearch($text, $path)
+    {
+        $qb = $this
+            ->createQueryBuilder('a')
+            ->where('a.path LIKE :path')
+            ->setParameter('path', $path . "%")
+            ->andWhere('a.originalName LIKE :originalName')
+            ->setParameter('originalName', "%" . $text . "%")
+            ->orderBy('a.originalName')
+        ;
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }

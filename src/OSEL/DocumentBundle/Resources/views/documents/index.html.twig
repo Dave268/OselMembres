@@ -27,7 +27,7 @@
                     <form>
                         <div class="form-group">
                             <div class="input-group"><span class="input-group-addon"> <i class="glyphicon glyphicon-search"></i></span>
-                                <input class="form-control" type="search" name="search" id="searchComposer">
+                                <input class="form-control" type="search" name="search" id="search" data-id="{{ idDir }}">
                             </div>
                         </div>
                         {% if idDir > 0 and directory is not null %}
@@ -48,7 +48,8 @@
                             <span class="timeH" style="padding-right:0px;padding-left:0px;"><a href="{% if criteria == 'type' and order == 'ASC' %}{{ path('osel_documents_index', {'idDir': idDir , 'criteria': 'type', 'order': 'DESC'}) }}{% else %}{{ path('osel_documents_index', {'idDir': idDir , 'criteria': 'type ', 'order': 'ASC'}) }}{% endif %}">Type</a></span>
                             <span class="titleH"><a href="{% if criteria == 'originalName' and order == 'ASC' %}{{ path('osel_documents_index', {'idDir': idDir , 'criteria': 'originalName', 'order': 'DESC'}) }}{% else %}{{ path('osel_documents_index', {'idDir': idDir , 'criteria': 'originalName', 'order': 'ASC'}) }}{% endif %}">Nom</a></span>
                             <span class="iconH" style="float:right;font-size: 1.1em;"><em> - Action - </em></span>
-                            <span style="float:right;margin-right: 50px; font-size: 1.1em;"><a href="{% if criteria == 'dateAdd' and order == 'ASC' %}{{ path('osel_documents_index', {'idDir': idDir , 'criteria': 'dateAdd', 'order': 'DESC'}) }}{% else %}{{ path('osel_documents_index', {'idDir': idDir , 'criteria': 'dateAdd', 'order': 'ASC'}) }}{% endif %}"><em> - Date - </em></a></span>
+                            <span style="float:right;margin-right: 100px; font-size: 1.1em;"><a href="{% if criteria == 'dateAdd' and order == 'ASC' %}{{ path('osel_documents_index', {'idDir': idDir , 'criteria': 'dateAdd', 'order': 'DESC'}) }}{% else %}{{ path('osel_documents_index', {'idDir': idDir , 'criteria': 'dateAdd', 'order': 'ASC'}) }}{% endif %}"><em> - Date - </em></a></span>
+                            <span style="float:right;margin-right: 100px; font-size: 1.1em;"><em> - Autorisation - </em></span>
                         </li>
                     </ul>
                     <hr style="margin-bottom: 0px;margin-top: 0px;border-color: rgba(0,0,0,0.3);" />
@@ -57,18 +58,22 @@
                             <li class="thread"><span class="time" style="padding-right:0px;padding-left:0px;"><i class="glyphicon glyphicon-folder-open" style="font-size:20px;color:rgb(84,132,254);"></i></span><span class="title"><a href="{{ path('osel_documents_index', {'idDir' : dir.id}) }}" style="color:#666666;">{{ dir.originalName }} </a></span>
                                 <span class="icon">
                                     <a href="{{ path('osel_documents_download_dir', {'id' : dir.id}) }}" class="flag"><i class="fa fa-download"></i></a>
+                                    <a href="{{ path('osel_documents_add_dir', {'id' : dir.id}) }}" class="flag"><i class="glyphicon glyphicon-pencil"></i></a>
                                     <a data-href="{{ path('osel_documents_delete_dir', {'id': dir.id}) }}" data-toggle="modal" data-target="#confirm-delete" class="flag"><i class="glyphicon glyphicon-trash"></i></a>
                                     <a href="{{ path('osel_documents_activate_dir', {'id' : dir.id}) }}" class="flag activate"><i class="fa {% if dir.enabled %}fa-unlock{% else %}fa-lock{% endif %}"></i></a></span>
                                 <span style="float:right;color: rgba(0,0,0,0.4);margin-right: 50px; font-size: 1.1em;"><em> - {{ dir.dateAdd|date("d/m/Y h:i") }} - </em></span>
+                                <span style="float:right;color: rgba(0,0,0,0.4);margin-right: 50px; font-size: 1.1em;"><em> - {{ dir.role.name }} - </em></span>
                             </li>
                         {% endfor %}
                         {% for file in files %}
                             <li class="thread"><span class="time" style="padding-right:0px;padding-left:0px;"><i class="{{ file.icon }}" style="font-size:20px;color:rgb(84,132,254);"></i></span><span class="title"><a href="{{ path('osel_documents_view_file', {'id' : file.id}) }}" style="color:#666666;">{{ file.originalName }} </a></span>
                                 <span class="icon">
                                     <a href="{{ path('osel_documents_download_file', {'id' : file.id}) }}" class="flag"><i class="fa fa-download"></i></a>
+                                    <a href="{{ path('osel_documents_modify_file', {'id' : file.id}) }}" class="flag"><i class="glyphicon glyphicon-pencil"></i></a>
                                     <a data-href="{{ path('osel_documents_delete_file', {'id': file.id}) }}" data-toggle="modal" data-target="#confirm-delete" class="flag"><i class="glyphicon glyphicon-trash"></i></a>
                                     <a href="{{ path('osel_documents_activate_file', {'id' : file.id}) }}" class="flag activate"><i class="fa {% if file.enabled %}fa-unlock{% else %}fa-lock{% endif %}"></i></a></span>
                                 <span style="float:right;color: rgba(0,0,0,0.4);margin-right: 50px; font-size: 1.1em;"><em> - {{ file.dateAdd|date("d/m/Y h:i") }} - </em></span>
+                                <span style="float:right;color: rgba(0,0,0,0.4);margin-right: 50px; font-size: 1.1em;"><em> - {{ file.role.name }} - </em></span>
                             </li>
                         {% endfor %}
                     </ul>
@@ -80,4 +85,5 @@
 {% endblock %}
 {% block script %}
     <script src="{{ asset('bundles/document/js/activate.js') }}"></script>
+    <script src="{{ asset('bundles/document/js/search.js') }}"></script>
 {% endblock %}
