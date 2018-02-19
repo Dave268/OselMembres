@@ -1,4 +1,3 @@
-
 $(document).ready( function() {
     $(".activate").click(function (e) {
 
@@ -49,6 +48,22 @@ $(document).ready( function() {
                 dataType: 'json',
                 success: function (obj) {
                     console.log('réussi' + obj.id);
+                    var temp = $("#" + obj.data + obj.id);
+                    console.log(obj.data + obj.id);
+                    if(obj.enabled)
+                    {
+                        //temp.addClass("newDir");
+                        temp.click(function (e) {
+                            e.preventDefault();
+                            getForm($(this));
+                        });
+                    }
+                    else
+                    {
+                        //temp.removeClass("newDir");
+                        temp.unbind( "click" );
+                    }
+
                 },
                 complete: function () {
                     console.log("complete!");

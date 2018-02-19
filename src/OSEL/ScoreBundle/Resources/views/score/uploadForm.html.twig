@@ -54,11 +54,12 @@
 {% block script %}
     <script src="{{ asset('bundles/score/js/fileUpload.js') }}"></script>
     <script>
-        function uniqId(number) {
-            return Math.round((new Date().getTime() + (Math.random() * 100)) * number);
-        }
+
 
         $(document).ready(function() {
+            function uniqId(number) {
+                return '_' + Math.random().toString(36).substr(2, 9);
+            }
 
             $("#formFileLaunch").click(function () {
                     $("#uploadFile").click();
@@ -141,6 +142,7 @@
                         {
                             var formData = new FormData();
                             var unique = uniqId(i);
+                            console.log(unique);
                             listItem = jQuery("<a class=\"list-group-item\" id=\"item" + unique + "\"></a>");
                             var row = jQuery("<div class=\"row\" id=\"file" + unique + "\"></div>");
                             var columnone = jQuery("<div class=\"col-md-2 col-sm-2\"></div>").html("<i class=\"fa fa-file-pdf-o\" style=\"font-size:35px;color:rgb(193,0,0);\"></i>");
@@ -148,8 +150,8 @@
                             var spanone = jQuery("<span></span>");
                             var inputtext = jQuery("<input type=\"text\" data-val=\"" + filename + "\" value=\"" + filename + "\" style=\"width: 100%;\"/>");
                             var iconcheck = jQuery("<span> <i id=\"icon" + unique + "\" class=\"fa fa-check hidden\" style=\"font-size:20px;color:green;\"></i></span>");
-                            var progressbar = jQuery("<div style=\"padding-top:10px;\"></div>").html("<progress id=\"progress" + unique + "\" value=\"0\" min=\"0\" max=\"100\" style=\"width:100%;\"></progress>");
-                            //var progressbar = jQuery("<div style=\"padding-top:10px;\" style=\"width: 100%;\"></div>").html("<div id=\"progress" + unique + "\"  class=\"progress\"><div class=\"progress-bar progress-bar-success progress-bar-striped active\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\">0%</div> </div>");
+                            //var progressbar = jQuery("<div style=\"padding-top:10px;\"></div>").html("<progress id=\"progress" + unique + "\" value=\"0\" min=\"0\" max=\"100\" style=\"width:100%;\"></progress>");
+                            var progressbar = jQuery("<div style=\"padding-top:10px;\" style=\"width: 100%;\"></div>").html("<div class=\"progress\"><div id=\"progress" + unique + "\" class=\"progress-bar progress-bar-success progress-bar-striped active\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\">0%</div> </div>");
 
                             inputtext.appendTo(spanone);
                             spanone.appendTo(columntwo);

@@ -111,7 +111,7 @@ $.fn.upload = function(remote, successFn, progressFn, formFn, numFilesFn, iconFn
                 myXhr = $.ajaxSettings.xhr();
                 if(myXhr.upload && progressFn){
                     myXhr.upload.addEventListener("progress", function(prog) {
-                        var value = ~~((prog.loaded / prog.total));
+                        var value = ~~((prog.loaded / prog.total)*100);
 
                         // if we passed a progress function
                         if (typeof progressFn === "function") {
@@ -119,13 +119,14 @@ $.fn.upload = function(remote, successFn, progressFn, formFn, numFilesFn, iconFn
 
                             // if we passed a progress element
                         } else if (progressFn) {
-                            $(progressFn).val(value);
-                            //$(progressFn + ":first-child").attr("aria-valuenow", value);
+                            //$(progressFn).val(value);
+                            $(progressFn).attr("aria-valuenow", value);
+                            $(progressFn).text(value + "%");
                             //$(progressFn).attr("value", value);
-                            //$(progressFn).css({
-                            //    'width': value + '%'
-                            //});
-                            console.log("value" + value);
+                            $(progressFn).css({
+                                'width': value + '%'
+                            });
+                            console.log("value: " + value);
                         }
                     }, false);
                 }
@@ -137,7 +138,7 @@ $.fn.upload = function(remote, successFn, progressFn, formFn, numFilesFn, iconFn
             contentType: false,
             processData: false,
             success: function (obj) {
-                $(progressFn).hide();
+                $(progressFn).parent().hide();
                 $(iconFn).removeClass("hidden")
                 //console.log(obj.id);
                 itemAdd(obj.id, deleteFN);

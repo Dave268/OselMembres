@@ -208,7 +208,8 @@ class DocumentController extends Controller
         }
 
         return $this->get('templating')->renderResponse('DocumentBundle:files:form.html.twig', array(
-            'form'    => $fileForm->createView()
+            'form'      => $fileForm->createView(),
+            'idDir'     => $idDir
         ));
 
     }
@@ -224,7 +225,8 @@ class DocumentController extends Controller
 
         if($file != null && !$file->getEnabled()){
             $request->getSession()->getFlashBag()->add('ERROR', 'Ce fichier est verrouillé');
-            return $this->redirectToRoute('osel_documents_index');
+            return $this->redirectToRoute('osel_documents_index', array(
+                'idDir' => $file->getDirectory()->getId()));
         }
 
         if($file != null && !$this->get('security.authorization_checker')->isGranted($file->getRole()->getRole())){
@@ -257,7 +259,8 @@ class DocumentController extends Controller
         }
 
         return $this->get('templating')->renderResponse('DocumentBundle:files:modifyForm.html.twig', array(
-            'form'    => $fileForm->createView()
+            'form'      => $fileForm->createView(),
+            'id'     => $file->getId()
         ));
 
     }
@@ -285,6 +288,7 @@ class DocumentController extends Controller
                 $json = json_encode(array(
                     'id'    => $file->getId(),
                     'enabled' => $file->getEnabled(),
+                    'data'  => 'file',
                 ));
 
                 $response = new Response($json);
@@ -427,6 +431,12 @@ class DocumentController extends Controller
         }
         else{
             $newDir = $this->getDoctrine()->getManager()->getRepository('DocumentBundle:Directory')->find($id);
+
+            if($newDir != null && !$newDir->getEnabled()){
+                $request->getSession()->getFlashBag()->add('ERROR', 'Ce dossier est verrouillé');
+                return $this->redirectToRoute('osel_documents_index', array(
+                    'idDir' => $idDir));
+            }
         }
 
         $fileForm = $this->createForm(DirectoryType::class, $newDir);
@@ -481,8 +491,10 @@ class DocumentController extends Controller
 
         }
 
+
         return $this->get('templating')->renderResponse('DocumentBundle:directories:form.html.twig', array(
-            'form'    => $fileForm->createView()
+            'form'      => $fileForm->createView(),
+            'idDir'     => $idDir
         ));
 
     }
@@ -533,8 +545,9 @@ class DocumentController extends Controller
             if($request->isXmlHttpRequest())
             {
                 $json = json_encode(array(
-                    'id'    => $dir->getId(),
-                    'enabled' => $dir->getEnabled(),
+                    'id'        => $dir->getId(),
+                    'enabled'   => $dir->getEnabled(),
+                    'data'  => 'dir'
                 ));
 
                 $response = new Response($json);
@@ -627,5 +640,14 @@ class DocumentController extends Controller
 
         return new RedirectResponse($referer);
 
+    }
+
+    public function errorLockedAction($idDir, Request $request)
+    {
+            $request->getSession()->getFlashBag()->add('ERROR', 'Ce Fichier est Verouillé');
+
+            return $this->redirectToRoute('osel_documents_index', array(
+                'idDir' => $idDir
+            ));
     }
 }
