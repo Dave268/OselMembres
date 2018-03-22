@@ -98,7 +98,7 @@
 											<a href="{{ path('osel_user_view', {'id': user.id}) }}">
 												<tr>
 													{% if is_granted('ROLE_SECRETAIRE') %}
-														<td id class="hidden-xs="user_actif_{{ user.id }}"><a class="user_activate" href="{{ path('user_modify_complete', {'id': user.id}) }}" obj="{{ user.id }}">{% if user.enabled %} <i class="state-icon glyphicon glyphicon-check"></i>{% else %}<i class="state-icon glyphicon glyphicon-unchecked"></i>{% endif %}</a></td>
+														<td class="hidden-xs" id="user_actif_{{ user.id }}"><a class="user_activate" href="{{ path('user_modify_complete', {'id': user.id}) }}" obj="{{ user.id }}">{% if user.enabled %} <i class="state-icon glyphicon glyphicon-check"></i>{% else %}<i class="state-icon glyphicon glyphicon-unchecked"></i>{% endif %}</a></td>
 														<td>{{ user.username }}</td>
 													{% endif %}
 													<td>{{ user.lastname }}</td>

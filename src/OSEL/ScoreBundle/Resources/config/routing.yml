@@ -31,6 +31,8 @@ osel_score_delete_score:
 osel_score_create_score:
     path:     /creer-partition/{id}
     defaults: { _controller: ScoreBundle:Score:createScore, id: 0}
+    options:
+                expose: true
 
 osel_score_add_composer:
     path:     /ajouter-un-compositeur/{id}
@@ -69,9 +71,11 @@ osel_score_activate_part:
 osel_score_activate_score:
     path:   /Activation-morceau/{id}
     defaults:  { _controller: ScoreBundle:Score:activateScore, id: 0}
+    options:
+                expose: true
 
 osel_score_search:
-    path:   /search/{text}
+    path:   /search/{text}/{letter}
     defaults:  { _controller: ScoreBundle:Score:search}
     options:
             expose: true
@@ -79,6 +83,8 @@ osel_score_search:
 osel_score_view_composer:
     path:     /apercu-compositeur/{id}
     defaults: { _controller: ScoreBundle:Score:viewComposer, id: 0}
+    options:
+                expose: true
 
 osel_score_add_composer_bio:
     path:     /ajouter-un-texte-compositeur/{idcomposer}/{id}

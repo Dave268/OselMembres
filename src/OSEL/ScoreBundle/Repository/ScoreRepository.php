@@ -45,4 +45,21 @@ class ScoreRepository extends \Doctrine\ORM\EntityRepository
             ->getResult()
             ;
     }
+    public function findSearch($text)
+    {
+        $qb = $this
+            ->createQueryBuilder('a')
+            ->where('a.title LIKE :title')
+            ->setParameter('title', "%" . $text . "%")
+            ->orderBy('a.title')
+            ->setFirstResult( 0 )
+            ->setMaxResults( 10 );
+        ;
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
 }

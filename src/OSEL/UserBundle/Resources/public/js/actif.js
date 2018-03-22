@@ -26,18 +26,18 @@ $(document).ready(function() {
 			
 			var $precheck = $('#user_actif_' + $id + ' i');
 
-			if($cb.prop("checked"))
-			{
-				//$precheck.attr('class', "state-icon glyphicon  glyphicon-unchecked");
-				//console.log("On  décheck");
-				var control = true;
-			}
-			else
-			{
-				//$precheck.attr('class', "state-icon glyphicon  glyphicon-check");
-				//console.log("On  check");
-				var control = false;
-			}
+            if($cb.prop("checked"))
+            {
+                $precheck.attr('class', "state-icon glyphicon  glyphicon-unchecked");
+                console.log("On  décheck");
+                var control = true;
+            }
+            else
+            {
+                $precheck.attr('class', "state-icon glyphicon  glyphicon-check");
+                console.log("On  check");
+                var control = false;
+            }
 				
 
             //toggle

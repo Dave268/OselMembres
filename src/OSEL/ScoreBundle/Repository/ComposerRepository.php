@@ -62,9 +62,9 @@ class ComposerRepository extends \Doctrine\ORM\EntityRepository
         $qb = $this
             ->createQueryBuilder('a')
             ->where('a.composer LIKE :composer')
-            ->setParameter('composer', $text . "%")
+            ->setParameter('composer', "%" . $text . "%")
             ->orWhere('a.name LIKE :name')
-            ->setParameter('name', $text . "%")
+            ->setParameter('name', "%" . $text . "%")
             ->orderBy('a.composer')
             ->setFirstResult( 0 )
             ->setMaxResults( 10 );

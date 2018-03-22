@@ -341,7 +341,7 @@ class ScoreController extends Controller
         return $response;
     }
 
-    public function searchAction($text, Request $request)
+    public function searchAction($text, $letter, Request $request)
     {
         if(!$this->get('security.authorization_checker')->isGranted('ROLE_PARTITION')){
             return $this->redirectToRoute('osel_core_home');
@@ -349,14 +349,28 @@ class ScoreController extends Controller
         if(!$request->isXmlHttpRequest()) {
             return $this->redirectToRoute('osel_score_gestion');
         }
+        if($text == '%%%')
+        {
+            $composers = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Composer')->findComposers($letter);
+            $scores = array();
+        }
+        else
+            {
+            $composers = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Composer')->findSearch($text);
+            $scores = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Score')->findSearch($text);
+        }
 
-        $composers = $this->getDoctrine()->getManager()->getRepository('ScoreBundle:Composer')->findSearch($text);
+
         $em = $this->getDoctrine()->getManager();
         $object = array();
 
         foreach ($composers as $composer)
         {
-            array_push($object, array("id"=>$composer->getId(), 'composer' =>$composer->getComposer(), 'scores' => $composer->getNbScores(), 'actif' => $composer->getActif()));
+            array_push($object, array("id"=>$composer->getId(), 'composer' =>$composer->getComposer(), 'scores' => $composer->getNbScores(), 'actif' => $composer->getActif(), 'type' => 'composer'));
+        }
+        foreach ($scores as $composer)
+        {
+            array_push($object, array("id"=>$composer->getId(), 'composer' =>$composer->getTitle(), 'scores' => $composer->getNbParts(), 'actif' => $composer->getActif(), 'type' => 'score'));
         }
 
         $json = json_encode($object);

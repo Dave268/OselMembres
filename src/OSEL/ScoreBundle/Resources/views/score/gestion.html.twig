@@ -28,7 +28,7 @@
                     <form>
                         <div class="form-group">
                             <div class="input-group"><span class="input-group-addon"> <i class="glyphicon glyphicon-search"></i></span>
-                                <input class="form-control" type="search" name="search" id="searchComposer">
+                                <input class="form-control" type="search" name="search" id="searchComposer" data-letter="{{ letter }}">
                             </div>
                         </div>
                         <ol class="breadcrumb" style="padding-bottom:0px;">
@@ -114,8 +114,25 @@
 
 {% endblock %}
 {% block script %}
-    <script src="{{ asset('bundles/score/js/activate.js') }}"></script>
     <script src="{{ asset('bundles/score/js/search.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+
+            function load_js() {
+                var head = document.getElementsByTagName('body')[0];
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = '{{ asset('bundles/score/js/activate.js') }}';
+                head.appendChild(script);
+            }
+
+            load_js();
+            $(document).ajaxStop(function () {
+                load_js();
+            });
+        });
+    </script>
+
     <script>
         function nextletter(letter) {
             console.log("check route");
@@ -126,5 +143,7 @@
                 'letter': nextstring
             }));
         }
+
+
     </script>
 {% endblock %}
