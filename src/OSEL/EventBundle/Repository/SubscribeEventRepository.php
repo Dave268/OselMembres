@@ -74,7 +74,7 @@ class SubscribeEventRepository extends \Doctrine\ORM\EntityRepository
         return count($qb->getQuery()->getResult());
 
     }
-	
+
 	public function getNbParticipants($id)
     {
         $qb = $this->createQueryBuilder('a')
@@ -120,7 +120,6 @@ class SubscribeEventRepository extends \Doctrine\ORM\EntityRepository
         return array($totalPrice, $totalPaid);
 
     }
-
 
     public function findByUser($id, $idEvent)
     {

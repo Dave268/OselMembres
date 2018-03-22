@@ -21,11 +21,7 @@
                     <div class="form-group">
                         <div class="btn-group" role="group">
                             <a class="btn btn-success newDir" type="button" data-type="Nouveau dossier" href="{{ path('osel_documents_add_dir', {'idDir' : idDir}) }}"><i class="glyphicon glyphicon-plus"></i> Nouveau Dossier</a>
-                            <a class="btn btn-success newDir" type="button" data-type="Nouveau fichier" href="{{ path('osel_documents_add_file', {'idDir' : idDir}) }}"><i class="glyphicon glyphicon-plus"></i> Ajouter un fichier</a>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button class="btn btn-warning" type="button" onclick="window.location.href='{{ path('osel_documents_add_dir', {'idDir' : idDir}) }}'"><i class="glyphicon glyphicon-plus"></i> Backup</button>
-                            <button class="btn btn-danger" type="button" onclick="window.location.href='{{ path('osel_documents_add_file', {'idDir' : idDir}) }}'" {% if not is_granted('ROLE_WEBMASTER') %}Disabled{% endif %}><i class="glyphicon glyphicon-plus"></i> Backup Complet</button>
+                            <a class="btn btn-success {% if idDir > 0 %}newDir{% endif %}" type="button" data-type="Nouveau fichier" href="{{ path('osel_documents_add_file', {'idDir' : idDir}) }}"><i class="glyphicon glyphicon-plus"></i> Ajouter un fichier</a>
                         </div>
                     </div>
                     <form>
@@ -64,7 +60,7 @@
                                     <a href="{{ path('osel_documents_download_dir', {'id' : dir.id}) }}" class="flag"><i class="fa fa-download"></i></a>
                                     <a id="dir{{ dir.id }}" href="{{ path('osel_documents_add_dir', {'idDir': idDir, 'id' : dir.id}) }}" class="flag {% if dir.enabled %}newDir{% endif %}" data-type="Modifier Dossier"><i class="glyphicon glyphicon-pencil"></i></a>
                                     <a data-href="{{ path('osel_documents_delete_dir', {'id': dir.id}) }}" data-toggle="modal" data-target="#confirm-delete" class="flag"><i class="glyphicon glyphicon-trash"></i></a>
-                                    <a href="{{ path('osel_documents_activate_dir', {'id' : dir.id}) }}" class="flag activate"><i class="fa {% if dir.enabled %}fa-unlock{% else %}fa-lock{% endif %}"></i></a></span>
+                                    <a href="{{ path('osel_documents_activate_dir', {'id' : dir.id}) }}" class="flag activate"><i class="fa {% if dir.enabled %}fa-unlock{% else %}fa-lock{% endif %}">{% if not dir.enabled %}&nbsp{% endif %}</i></a></span>
                                 <span style="float:right;color: rgba(0,0,0,0.4);margin-right: 50px; font-size: 1.1em;"><em> - {{ dir.dateAdd|date("d/m/Y h:i") }} - </em></span>
                                 <span style="float:right;color: rgba(0,0,0,0.4);margin-right: 50px; font-size: 1.1em;"><em> - {{ dir.role.name }} - </em></span>
                             </li>
@@ -75,7 +71,7 @@
                                     <a href="{{ path('osel_documents_download_file', {'id' : file.id}) }}" class="flag"><i class="fa fa-download"></i></a>
                                     <a id="file{{ file.id }}" href="{{ path('osel_documents_modify_file', {'id' : file.id}) }}" class="flag {% if file.enabled %}newDir{% endif %}" data-type="Modifier Fichier"><i class="glyphicon glyphicon-pencil"></i></a>
                                     <a data-href="{{ path('osel_documents_delete_file', {'id': file.id}) }}" data-toggle="modal" data-target="#confirm-delete" class="flag"><i class="glyphicon glyphicon-trash"></i></a>
-                                    <a href="{{ path('osel_documents_activate_file', {'id' : file.id}) }}" class="flag activate"><i class="fa {% if file.enabled %}fa-unlock{% else %}fa-lock{% endif %}"></i></a></span>
+                                    <a href="{{ path('osel_documents_activate_file', {'id' : file.id}) }}" class="flag activate"><i class="fa {% if file.enabled %}fa-unlock{% else %}fa-lock{% endif %}">{% if not file.enabled %}&nbsp{% endif %}</i></a></span>
                                 <span style="float:right;color: rgba(0,0,0,0.4);margin-right: 50px; font-size: 1.1em;"><em> - {{ file.dateAdd|date("d/m/Y h:i") }} - </em></span>
                                 <span style="float:right;color: rgba(0,0,0,0.4);margin-right: 50px; font-size: 1.1em;"><em> - {{ file.role.name }} - </em></span>
                             </li>

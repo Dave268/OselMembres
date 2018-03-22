@@ -20,11 +20,13 @@ $(document).ready( function() {
             var control = false;
             if ($cb.prop("checked")) {
                 $icon.attr('class', "fa fa-lock");
+                $icon.html('&nbsp');
                 console.log("On  décheck");
                 control = true;
             }
             else {
                 $icon.attr('class', "fa fa-unlock");
+                $icon.html('');
                 console.log("On  check");
                 control = false;
             }

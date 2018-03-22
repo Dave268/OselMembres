@@ -63,7 +63,7 @@ class SecurityController extends Controller
 
             if ($form->handleRequest($request)->isValid()) 
             {
-                if($user->getRoles() === null)
+                if($user->getRoles() == null)
                 {
                     $role = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:Roles')->findOneBy(array('role' => 'ROLE_USER'));
                     $user->addUserRole($role);

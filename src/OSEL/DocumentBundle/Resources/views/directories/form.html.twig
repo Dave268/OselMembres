@@ -2,13 +2,14 @@
 <div class="panel-body" style="padding:20px;padding-top:10px;">
     {{ form_start(form, {'attr': {'class': 'bootstrap-form-with-validation', "id":"formScore", "action": path('osel_documents_add_dir', {'idDir' : idDir})}}) }}
     <div class="form-group">
-        {{ form_label(form.originalName, "Nom du dossier:", {'label-attr': {'class': 'control-label'}}) }}
-        {{ form_widget(form.originalName, { 'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="form-group">
         {{ form_label(form.role, "autorisation:", {'label-attr': {'class': 'control-label'}}) }}
         {{ form_widget(form.role, { 'attr': {'class': 'form-control'}}) }}
     </div>
+    <div class="form-group">
+        {{ form_label(form.originalName, "Nom du dossier:", {'label-attr': {'class': 'control-label'}}) }}
+        {{ form_widget(form.originalName, { 'attr': {'class': 'form-control'}}) }}
+    </div>
+
     <div class="form-group">
         {{ form_widget(form.save, {'attr': {'class': 'btn btn-success submit-button'}, 'label': 'Enregistrer'}) }}
         <!--<button class="btn btn-success btn-sm" type="submit">Envoyer </button>-->

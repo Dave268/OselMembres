@@ -35,6 +35,8 @@ osel_documents_download_file:
 osel_documents_view_file:
     path:     /afficher-un-fichier/{id}
     defaults: { _controller: DocumentBundle:Document:viewFile, id: 0}
+    options:
+            expose: true
 
 osel_documents_delete_file:
     path:     /supprimer-un-fichier/{id}
@@ -69,4 +71,3 @@ osel_documents_delete_dir:
 osel_documents_error_locked:
     path:     /fichier-verouille/{idDir}
     defaults: { _controller: DocumentBundle:Document:errorLocked, idDir: 0}
-

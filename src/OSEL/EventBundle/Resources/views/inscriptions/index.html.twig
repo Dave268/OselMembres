@@ -43,6 +43,7 @@
                                 <select class="input-sm selectMembres" style="width:180px;min-width:180px;height:22px;padding-top:0px;padding-bottom:0px;">
                                     <option value="{{ path('osel_event_list_inscription', {'id': id, 'page': page , 'criteria': criteria, 'desc': desc, presence: '1', 'nbPerPage':nbPerPage}) }}" {% if presence %}selected=""{% endif %}>Présents</option>
                                     <option value="{{ path('osel_event_list_inscription', {'id': id, 'page': page , 'criteria': criteria, 'desc': desc, presence: '0'}) }}" {% if not presence %}selected=""{% endif %}>tous les inscrits</option>
+                                    <option value="{{ path('osel_event_list_non_inscrits', {'id': id, 'page': page , 'desc': desc, 'nbPerPage':nbPerPage}) }}" {% if noninscrits is defined %}selected=""{% endif %}>Ceux qui n'ont pas encore répondu</option>
                                 </select>
                             </div>
                             <div class="col-md-4 col-sm-3">

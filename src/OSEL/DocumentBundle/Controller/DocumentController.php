@@ -25,11 +25,11 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 class DocumentController extends Controller
 {
     private function folderToZip($folder, &$zipFile, $exclusiveLength) {
-        $myfile = fopen($this->get('kernel')->getProjectDir() . "/web/files/temp/newfile.txt", "w");
+        //$myfile = fopen($this->get('kernel')->getProjectDir() . "/web/files/temp/newfile.txt", "w");
         $handle = opendir($folder);
         $foldertemp = substr($folder, $exclusiveLength);
-        fwrite($myfile, "folder:" .$folder . "\n");
-        fwrite($myfile, "foldertemp:" .$foldertemp . "\n");
+        //fwrite($myfile, "folder:" .$folder . "\n");
+        //fwrite($myfile, "foldertemp:" .$foldertemp . "\n");
         $split = explode("/", $foldertemp);
         $path = '';
         for($i = 0; $i < count($split); $i++)
@@ -41,7 +41,7 @@ class DocumentController extends Controller
             }
         }
 
-        fwrite($myfile, "path:" .$path . "\n");
+        //fwrite($myfile, "path:" .$path . "\n");
         while (false !== $f = readdir($handle)) {
             if ($f != '.' && $f != '..') {
                 $filePath = "$folder/$f";
@@ -57,7 +57,7 @@ class DocumentController extends Controller
                 }
             }
         }
-        fclose($myfile);
+        //fclose($myfile);
         closedir($handle);
     }
 
@@ -196,6 +196,7 @@ class DocumentController extends Controller
                 }
                 $em->persist($file);
                 $em->flush();
+
             }
             else{
                 $request->getSession()->getFlashBag()->add('ERROR', 'Une erreur s\'est produite');
@@ -580,10 +581,10 @@ class DocumentController extends Controller
             $path = $this->get('kernel')->getProjectDir() . "/web/" . $dir->getPath() . "/" . $dir->getName();
 
 
-            $filePath = $this->get('kernel')->getProjectDir() . "/web/files/temp/temp.zip";
+            $filePath = $this->get('kernel')->getProjectDir() . "/web/files/temp/" . md5(uniqid(null, true)) . ".zip";
 
-            //$handle = fopen($filePath, "w");
-            //fclose($handle);
+            $handle = fopen($filePath, "w");
+            fclose($handle);
 
 
             $za = new \ZipArchive();
@@ -650,4 +651,5 @@ class DocumentController extends Controller
                 'idDir' => $idDir
             ));
     }
+
 }

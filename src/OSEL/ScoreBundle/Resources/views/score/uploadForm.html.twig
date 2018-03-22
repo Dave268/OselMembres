@@ -57,6 +57,15 @@
 
 
         $(document).ready(function() {
+            $(document).ajaxStart(function(){
+                // Show image container
+                $("#confirmUpload").prop("disabled",true);
+            });
+            $(document).ajaxStop(function(){
+                // Hide image container
+                $("#confirmUpload").prop("disabled",false);
+            });
+
             function uniqId(number) {
                 return '_' + Math.random().toString(36).substr(2, 9);
             }

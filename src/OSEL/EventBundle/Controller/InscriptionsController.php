@@ -124,6 +124,51 @@ class InscriptionsController extends Controller
       
     }
 
+    public function noninscritsAction($id, $page, $criteria, $desc, $nbPerPage, Request $request)
+    {
+
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_WEEKEND')) {
+            if ($page < 1) {
+                $request->getSession()->getFlashBag()->add('ERROR', 'Cette page n\'existe pas');
+            }
+
+            $users = $this->getDoctrine()->getManager()->getRepository('OSELUserBundle:User')->getUsers($page, $nbPerPage, 1, $criteria, $desc);
+
+            $nbPages = ceil(count($users) / $nbPerPage);
+            if ($page > $nbPages){
+                throw $this->createNotFoundException("La page ".$page." n'existe pas.");
+            }
+
+            $noninscrits = array();
+
+            foreach ( $users as $user)
+            {
+                $subscription = $this->getDoctrine()->getManager()->getRepository(SubscribeEvent::class)->findByUser($user->getId(), $id);
+                if($subscription == null)
+                {
+                    array_push($noninscrits, $user);
+                }
+            }
+
+            $event = $this->getDoctrine()->getManager()->getRepository(Event::class)->findOneBy(array('id' => $id));
+
+            return $this->render('OSELEventBundle:inscriptions:nonindex.html.twig', array(
+                'event'             => $event,
+                'id'                => $id,
+                'page'              => $page,
+                'criteria'          => $criteria,
+                'desc'              => $desc,
+                'nbPages'           => $nbPages,
+                'nbPerPage'			=> $nbPerPage,
+                'noninscrits'       => $noninscrits));
+        }
+        else
+        {
+            $request->getSession()->getFlashBag()->add('ERROR', 'Vous n\'avez pas acces à cette page');
+            return $this->redirect($this->generateUrl('osel_core_home'));
+        }
+    }
+
     public function viewAction($id)
     {
         return $this->render('OSELEventBundle:inscriptions:view.html.twig');

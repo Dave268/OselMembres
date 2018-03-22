@@ -26,9 +26,7 @@ $("#search").keyup(function(){
                 var container = $("#fileList");
                 container.html('');
                 $.each(obj, function(index,object){
-                    var indexRoute = Routing.generate('osel_documents_index', {
-                        'idDir': object.id
-                    });
+
 
                     var fileicon = object.icon;
 
@@ -38,6 +36,9 @@ $("#search").keyup(function(){
                         var modify = Routing.generate('osel_documents_add_dir', {'id': object.id});
                         var remove = Routing.generate('osel_documents_delete_dir', {'id': object.id});
                         var activate = Routing.generate('osel_documents_activate_dir', {'id': object.id})
+                        var indexRoute = Routing.generate('osel_documents_index', {
+                            'idDir': object.id
+                        });
                     }
                     else
                     {
@@ -45,6 +46,9 @@ $("#search").keyup(function(){
                         var modify = Routing.generate('osel_documents_modify_file', {'id': object.id});
                         var remove = Routing.generate('osel_documents_delete_file', {'id': object.id});
                         var activate = Routing.generate('osel_documents_activate_file', {'id': object.id});
+                        var indexRoute = Routing.generate('osel_documents_view_file', {
+                            'id': object.id
+                        });
                     }
 
                     if(object.enabled)
